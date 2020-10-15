@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  15 OCT 2020 10:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  15 OCT 2020 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4298,7 +4298,7 @@ exmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/newtx/txmiaSTbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/newpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (37 pages, 702792 bytes).
+Output written on main.pdf (37 pages, 702807 bytes).
 PDF statistics:
  1346 PDF objects out of 1440 (max. 8388607)
  1151 compressed objects within 12 object streams
