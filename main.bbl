@@ -1,0 +1,337 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{wikipediabigo}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Big O notation}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Big_O_notation
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Big_O_notation
+      \endverb
+      \keyw{big O,algorithms,complexity}
+    \endentry
+    \entry{wikirecursion}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{title}{Recursion (computer science)}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Recursion_(computer_science)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Recursion_(computer_science)
+      \endverb
+      \keyw{recursion,algorithms,complexity}
+    \endentry
+    \entry{wikidatastructure}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{title}{Data structure}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Data_structure
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Data_structure
+      \endverb
+      \keyw{data structure,algorithms,complexity}
+    \endentry
+    \entry{wikidatatype}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{title}{Data type}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Data_type
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Data_type
+      \endverb
+      \keyw{data type,algorithms,complexity}
+    \endentry
+    \entry{wikiabstractdatatype}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labeltitlesource}{title}
+      \field{title}{Abstract data type}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Abstract_data_type
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Abstract_data_type
+      \endverb
+      \keyw{abstract data type,algorithms,complexity}
+    \endentry
+    \entry{wikicollection}{online}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labeltitlesource}{title}
+      \field{title}{Collection (abstract data type)}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Collection_(abstract_data_type)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Collection_(abstract_data_type)
+      \endverb
+      \keyw{collection,algorithms,complexity}
+    \endentry
+    \entry{wikiarray}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labeltitlesource}{title}
+      \field{title}{Array data structure}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Array_data_structure
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Array_data_structure
+      \endverb
+      \keyw{array,algorithms,complexity}
+    \endentry
+    \entry{wikilinkedlist}{online}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labeltitlesource}{title}
+      \field{title}{Linked list}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Linked_list
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Linked_list
+      \endverb
+      \keyw{linked list,algorithms,complexity}
+    \endentry
+    \entry{wikidoublylinkedlist}{online}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labeltitlesource}{title}
+      \field{title}{Doubly linked list}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Doubly_linked_list
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Doubly_linked_list
+      \endverb
+      \keyw{doubly linked list,algorithms,complexity}
+    \endentry
+    \entry{wikistack}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Stack (abstract data type)}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+      \endverb
+      \keyw{stack,algorithms,complexity}
+    \endentry
+    \entry{wikiqueue}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Queue (abstract data type)}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+      \endverb
+      \keyw{queue,algorithms,complexity}
+    \endentry
+    \entry{wikiset}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Set}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Set_(abstract_data_type)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Set_(abstract_data_type)
+      \endverb
+      \keyw{set,algorithms,complexity}
+    \endentry
+    \entry{wikihashmap}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Hash Map}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Associative_array
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Associative_array
+      \endverb
+      \keyw{hash map,associative array,algorithms,complexity}
+    \endentry
+    \entry{wikihashtable}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Hash Talbe}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Hash_table
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Hash_table
+      \endverb
+      \keyw{hash table,algorithms,complexity}
+    \endentry
+    \entry{wikihashfunction}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Hash Talbe}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Hash_function
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Hash_function
+      \endverb
+      \keyw{hash function,algorithms,complexity}
+    \endentry
+    \entry{wikisearch}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Search algorithm}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Search_algorithm
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Search_algorithm
+      \endverb
+      \keyw{search algorithm,algorithms,complexity}
+    \endentry
+    \entry{wikisorting}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Sorting algorithm}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Sorting_algorithm
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Sorting_algorithm
+      \endverb
+      \keyw{sorting algorithm,algorithms,complexity}
+    \endentry
+    \entry{wikibinarysearch}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Binary search algorithm}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Binary_search_algorithm
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Binary_search_algorithm
+      \endverb
+      \keyw{binary search algorithm,algorithms,complexity}
+    \endentry
+    \entry{wikibubblesort}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Bubble sort}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Bubble_sort
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Bubble_sort
+      \endverb
+      \keyw{bubble sort,algorithms,complexity}
+    \endentry
+    \entry{wikimergesort}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{title}{Merge sort}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Merge_sort
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Merge_sort
+      \endverb
+      \keyw{merge sort,algorithms,complexity}
+    \endentry
+    \entry{wikiqicksort}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{title}{Quicksort}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Quicksort
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Quicksort
+      \endverb
+      \keyw{quicksort,algorithms,complexity}
+    \endentry
+    \entry{wikiheapsort}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{title}{Heapsort}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Heapsort
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Heapsort
+      \endverb
+      \keyw{heapsort,algorithms,complexity}
+    \endentry
+    \entry{quicksortcode}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{title}{Quicksort python implementation}
+      \verb{urlraw}
+      \verb https://www.educative.io/edpresso/how-to-implement-quicksort-in-python
+      \endverb
+      \verb{url}
+      \verb https://www.educative.io/edpresso/how-to-implement-quicksort-in-python
+      \endverb
+      \keyw{quicksort,python,algorithms,complexity}
+    \endentry
+    \entry{wikitrees}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{title}{Trees}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Tree_(data_structure)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Tree_(data_structure)
+      \endverb
+      \keyw{trees,algorithms,complexity}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

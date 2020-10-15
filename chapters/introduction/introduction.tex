@@ -1,0 +1,129 @@
+\setchapterimage[6.5cm]{chapters/introduction/images/big_o_plots.png}
+\setchapterpreamble[u]{\margintoc}
+\chapter{Preliminaries Concepts}
+\labch{preliminariesconcepts}
+
+\footnotetext{The credits for the image above the chapter title go to:
+	\url{https://www.bigocheatsheet.com/}}
+
+\section{Computational Complexity}
+The computational complexity of an algorithm is the amount of resources needed for solving it. The computational complexity is the minimum complexity of all possible implementations for solving a given algorithm, included also the unknown ones.
+
+The amount of needed resources for solving an algorithm varies with the size of the input \(n\). The computational complexity in general is the function \(n \rightarrow f(n)\), and it represents the worst case complexity or average complexity over all inputs of size \(n\).
+
+When the kind of the complexity is not explicitly indicated, generally is meant to be the \textbf{Time Complexity}, which is different from computer to computer, and is generally expressed as as the number of elementary operations required to solve a given algorithm. It is assumed that these elementary operations take the same time for being solved. The computational complexity can be related also to the memory consumption.
+
+Synonymous  for Computational Complexity are: Complexity, and Efficiency.
+
+\section{Big O Notation}
+The Big O notation \cite{wikipediabigo} (\href{https://en.wikipedia.org/wiki/Big_O_notation}{Big O Notation, Wikipedia}) describe the behavior of a function when its argument tents to infinity or a particular value.
+
+\begin{definition}
+\labdef{bigOdef}
+Let \(f\) be a real or complex value function and let \(g\) be a real function. Let both functions be defined on the same positive and real unbounded interval, and let \(g(x)\) be strictly positive for all large enough \(x\) values \(g(x) > 0, \forall x\) large enough. Thus: \(f(x)=O(g(x)) \) as \(x \rightarrow \infty \) if \(\exists\) \(M \in \mathbb{R} \), \(M>0\) and \(x_{0} \in \mathbb{R} \) such that \(|f(x)| \leq Mg(x)\) \(\forall x \geq x_{0}\). 
+\end{definition}
+Usually \(f(x)=O(g(x))\) is used as \(x \rightarrow \infty\), but it can be defined also for the case \(x \rightarrow a\), where \(a\) is a real number.
+
+\(O\) notation is asymptotic for big \(x\), so the important terms are the ones which grow faster than the others, which became irrelevant.
+
+\begin{example}
+In \(f(x) = 6x^{4} - 2x^{3} + 5\) as \(x \rightarrow \infty\), \(6x^{4}\) it the fastest growing term. \(6\) is a constant and can be omitted, thus \(f(x)=O(x^{4})\).  
+\end{example}
+
+\subsection{Properties}
+Here are listed some simple properties about Big O notation.
+\begin{kaobox}[frametitle=Product-Sum-Multiplication by a constant]
+\textbf{Product} \\
+\(f_{1}=O(g_{1})\) and \(f_{2}=O(g_{2})\) \(\Rightarrow\) \(f_{1}f_{2}=O(g_{1}g_{2})\)
+\\
+\textbf{Sum} \\
+\(f_{1}=O(g_{1})\) and \(f_{2}=O(g_{2})\) \(\Rightarrow\) \(f_{1}f_{2}=O(max(f_{1}, f_{2}))\)
+\\
+\textbf{Multiplication by a constant} \\
+Let \(k\) be a nonzero constant, then: 
+\(O(k|g)=O(g)\), \(f=O(g)\) \(\Rightarrow\)\(kf=O(g)\)
+\end{kaobox}
+
+\begin{kaobox}[frametitle=Logarithm and Exponential]
+Let \(c\) be a nonzero constant, then: \(O(\log n^{c}) = O(\log n)\) (\(\log n^{c} = c \log n\)).
+\\
+\(O(n^{c})\) and \(O(c^{n})\) are very different, if \(c>1\)the latter grows much faster.
+\\
+Let \(c\) be a nonzero constant. \((cn)^{2}=c^{2}n^{2} = O(n^{2})\), but \(2^{n}\) and \(3^{n}\) are not of the same order. In general \(2^{cn}=(2^{c})^{n}\) is not of the same order of \(2^{n}\).
+\end{kaobox}
+
+\begin{example}
+\(f = 9 \log n + 5(\log n)^{4} + 3n^{2} + 2n^{2} = O(n^{3})\) as \(n \rightarrow \infty\)
+\end{example}
+
+\begin{figure}[hb]
+	\includegraphics[width=14cm,height=6cm]{chapters/introduction/images/big_o_plots.png}
+	\caption[]{Plots of the main functions and their evaluation for computational complexity. Credits: \href{https://www.bigocheatsheet.com/}{bigocheatsheet.com}}
+	\labfig{bigoplots}
+\end{figure}
+
+\section{Time complexity evaluation example}
+Let us suppose we want to calculate the sum of all elements of a \(n\times n\) matrix. For evaluating the time complexity of this function we have to identify all the elementary operations, and evaluating their complexity based on how many times they are repeated. Here is the code for the function that calculate the sum of a matrix.
+
+\begin{lstlisting}[caption={Sum of all elements of a matrix.}]
+def find_sum_2d(array_2d):
+	totoal = 0 # -> O(1)
+	for each row in array_2d: # -> repeated n times
+		for each column in array_2d: # -> repeated n times
+			total += 1 # -> O(1)
+	return total # -> O(1)
+\end{lstlisting}
+
+The total time complexity is: 
+\[T = O(1) + n^{2}O(1) + O(1) = O(n^{2}) \]
+Where \(O(1)\) is a constant value.
+
+\section{Recursion}
+In recursion \cite{wikirecursion} (\href{https://en.wikipedia.org/wiki/Recursion_(computer_science)}{Recursion, Wikipedia}) a function calls itself again on a smaller size input, until the exit condition stops this self calling (recursive calling). There are three fundamentals elements in a recursive function:
+\begin{itemize}
+\item[1] A function that calls itself.
+\item[2] Exit condition. Without this condition a recursive function would call itself forever without an end.
+\item[3] Input alteration. When the function is called again the input is changed to a smaller dimension than the previous call.
+\end{itemize}
+
+\begin{figure}[hb]
+	\includegraphics[width=14cm,height=6cm]{chapters/introduction/images/recursion_1.pdf}
+	\caption[]{Pseudocode of a recursive function and its internal execution.}
+	\labfig{recursion_1}
+	\label{recursion_1}
+\end{figure}
+
+In recursion the exit condition is fundamental, because if it contains some errors the recursion will never end, resulting in an infinite process.
+
+\newpage
+\subsection{Python Implementation Examples}
+
+\begin{lstlisting}[caption={Implementation of the Fibonacci series with both iterative and recursive way.}]
+def fibonacci_iterative(position):
+	if position == 0:
+		return 0
+	elif position == 1:
+		return 1
+	else:
+		first = 0
+		second = 1
+		next = first + second
+		for i in range(2, position):
+			first = second
+			second = next
+			next = first + second
+		return next
+
+def fibonacci_recursive(position):
+	if position <= 1: # Exit condition
+		return position
+	return fibonacci(position - 1) + fibonacci(position - 2) # Calling the function on a smaller size input
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Implementation of calculating the factorial of a number using the recursive way.}]
+def factorial(n):
+	if n <= 1: # Exit condition
+		return n
+	else: 
+		return n*factorial(n - 1) # Calling the function on a smaller input
+\end{lstlisting}
