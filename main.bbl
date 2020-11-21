@@ -19,9 +19,22 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{wikipediabigo}{online}{}
+    \entry{wikipediacomplexity}{online}{}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Computational complexity}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Computational_complexity
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Computational_complexity
+      \endverb
+      \keyw{big O,algorithms,complexity}
+    \endentry
+    \entry{wikipediabigo}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labeltitlesource}{title}
       \field{title}{Big O notation}
       \verb{urlraw}
@@ -33,8 +46,8 @@
       \keyw{big O,algorithms,complexity}
     \endentry
     \entry{wikirecursion}{online}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{Recursion (computer science)}
       \verb{urlraw}
@@ -46,8 +59,8 @@
       \keyw{recursion,algorithms,complexity}
     \endentry
     \entry{wikidatastructure}{online}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{title}{Data structure}
       \verb{urlraw}
@@ -59,8 +72,8 @@
       \keyw{data structure,algorithms,complexity}
     \endentry
     \entry{wikidatatype}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labeltitlesource}{title}
       \field{title}{Data type}
       \verb{urlraw}
@@ -72,8 +85,8 @@
       \keyw{data type,algorithms,complexity}
     \endentry
     \entry{wikiabstractdatatype}{online}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labeltitlesource}{title}
       \field{title}{Abstract data type}
       \verb{urlraw}
@@ -85,8 +98,8 @@
       \keyw{abstract data type,algorithms,complexity}
     \endentry
     \entry{wikicollection}{online}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labeltitlesource}{title}
       \field{title}{Collection (abstract data type)}
       \verb{urlraw}
@@ -98,8 +111,8 @@
       \keyw{collection,algorithms,complexity}
     \endentry
     \entry{wikiarray}{online}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labeltitlesource}{title}
       \field{title}{Array data structure}
       \verb{urlraw}
@@ -111,8 +124,8 @@
       \keyw{array,algorithms,complexity}
     \endentry
     \entry{wikilinkedlist}{online}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labeltitlesource}{title}
       \field{title}{Linked list}
       \verb{urlraw}
@@ -124,8 +137,8 @@
       \keyw{linked list,algorithms,complexity}
     \endentry
     \entry{wikidoublylinkedlist}{online}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labeltitlesource}{title}
       \field{title}{Doubly linked list}
       \verb{urlraw}
@@ -254,8 +267,8 @@
       \keyw{binary search algorithm,algorithms,complexity}
     \endentry
     \entry{wikibubblesort}{online}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labeltitlesource}{title}
       \field{title}{Bubble sort}
       \verb{urlraw}

@@ -7,24 +7,22 @@
 	\url{https://www.bigocheatsheet.com/}}
 
 \section{Computational Complexity}
-The computational complexity of an algorithm is the amount of resources needed for solving it. The computational complexity is the minimum complexity of all possible implementations for solving a given algorithm, included also the unknown ones.
+The \textbf{computational complexity}, or \textbf{complexity}, of an algorithm is the amount of resources (time and memory) needed for solving it, and it is the minimum complexity of all possible implementations for solving that given algorithm, included also the unknown ones \cite{wikipediacomplexity} (\href{https://en.wikipedia.org/wiki/Computational_complexity}{Computational complexity, Wikipedia}).
 
-The amount of needed resources for solving an algorithm varies with the size of the input \(n\). The computational complexity in general is the function \(n \rightarrow f(n)\), and it represents the worst case complexity or average complexity over all inputs of size \(n\).
+The amount of needed resources for solving an algorithm varies with the size of the input \(n\). The computational complexity in general is a function \(n \rightarrow f(n)\), and it represents the worst case complexity or the average complexity over all the inputs of size \(n\).
 
-When the kind of the complexity is not explicitly indicated, generally is meant to be the \textbf{Time Complexity}, which is different from computer to computer, and is generally expressed as as the number of elementary operations required to solve a given algorithm. It is assumed that these elementary operations take the same time for being solved. The computational complexity can be related also to the memory consumption.
-
-Synonymous  for Computational Complexity are: Complexity, and Efficiency.
+When the kind of the complexity is not explicitly indicated, generally is meant to be the \textbf{time complexity}, which is different from computer to computer, and it is generally expressed as the number of elementary operations required to solve a given algorithm. It is assumed that these elementary operations take the same time for being solved. The computational complexity can be related also to the memory consumption.
 
 \section{Big O Notation}
-The Big O notation \cite{wikipediabigo} (\href{https://en.wikipedia.org/wiki/Big_O_notation}{Big O Notation, Wikipedia}) describe the behavior of a function when its argument tents to infinity or a particular value.
+The \textbf{Big O notation} \cite{wikipediabigo} (\href{https://en.wikipedia.org/wiki/Big_O_notation}{Big O Notation, Wikipedia}) describe the behavior of a function when its argument tents to infinity or to a particular value.
 
 \begin{definition}
 \labdef{bigOdef}
-Let \(f\) be a real or complex value function and let \(g\) be a real function. Let both functions be defined on the same positive and real unbounded interval, and let \(g(x)\) be strictly positive for all large enough \(x\) values \(g(x) > 0, \forall x\) large enough. Thus: \(f(x)=O(g(x)) \) as \(x \rightarrow \infty \) if \(\exists\) \(M \in \mathbb{R} \), \(M>0\) and \(x_{0} \in \mathbb{R} \) such that \(|f(x)| \leq Mg(x)\) \(\forall x \geq x_{0}\). 
+Let \(f\) be a real or complex value function and let \(g\) be a real function. Let both functions be defined on the same positive and real unbounded interval, and let \(g(x)\) be strictly positive for all large enough \(x\) values: \(g(x) > 0, \forall x\) large enough. Thus: \(f(x)=O(g(x)) \) as \(x \rightarrow \infty \) if \(\exists\) \(M \in \mathbb{R} \), \(M>0\) and \(x_{0} \in \mathbb{R} \) such that \(|f(x)| \leq Mg(x)\) \(\forall x \geq x_{0}\). 
 \end{definition}
-Usually \(f(x)=O(g(x))\) is used as \(x \rightarrow \infty\), but it can be defined also for the case \(x \rightarrow a\), where \(a\) is a real number.
+Usually \(f(x)=O(g(x))\) is used as \(x \rightarrow \infty\), but it can be also defined for the case \(x \rightarrow a\), where \(a\) is a real number.
 
-\(O\) notation is asymptotic for big \(x\), so the important terms are the ones which grow faster than the others, which became irrelevant.
+\(O\) notation is asymptotic for big \(x\), so the important terms are the ones which grow faster than the others, which become irrelevant.
 
 \begin{example}
 In \(f(x) = 6x^{4} - 2x^{3} + 5\) as \(x \rightarrow \infty\), \(6x^{4}\) it the fastest growing term. \(6\) is a constant and can be omitted, thus \(f(x)=O(x^{4})\).  
@@ -45,9 +43,9 @@ Let \(k\) be a nonzero constant, then:
 \end{kaobox}
 
 \begin{kaobox}[frametitle=Logarithm and Exponential]
-Let \(c\) be a nonzero constant, then: \(O(\log n^{c}) = O(\log n)\) (\(\log n^{c} = c \log n\)).
+Let \(c\) be a nonzero constant, then: \(O(\log n^{c}) = O(\log n)\), because: (\(\log n^{c} = c \log n\)).
 \\
-\(O(n^{c})\) and \(O(c^{n})\) are very different, if \(c>1\)the latter grows much faster.
+\(O(n^{c})\) and \(O(c^{n})\) are very different, if \(c>1\) the latter grows much faster.
 \\
 Let \(c\) be a nonzero constant. \((cn)^{2}=c^{2}n^{2} = O(n^{2})\), but \(2^{n}\) and \(3^{n}\) are not of the same order. In general \(2^{cn}=(2^{c})^{n}\) is not of the same order of \(2^{n}\).
 \end{kaobox}
@@ -63,14 +61,14 @@ Let \(c\) be a nonzero constant. \((cn)^{2}=c^{2}n^{2} = O(n^{2})\), but \(2^{n}
 \end{figure}
 
 \section{Time complexity evaluation example}
-Let us suppose we want to calculate the sum of all elements of a \(n\times n\) matrix. For evaluating the time complexity of this function we have to identify all the elementary operations, and evaluating their complexity based on how many times they are repeated. Here is the code for the function that calculate the sum of a matrix.
+Let us suppose we want to calculate the sum of all elements of a \(n\times n\) matrix. For evaluating the time complexity of this function we have to identify all the elementary operations, and evaluating their complexity based on how many times they are repeated. Here is the pseudocode for the function that calculate the sum of a matrix.
 
 \begin{lstlisting}[caption={Sum of all elements of a matrix.}]
 def find_sum_2d(array_2d):
 	totoal = 0 # -> O(1)
 	for each row in array_2d: # -> repeated n times
 		for each column in array_2d: # -> repeated n times
-			total += 1 # -> O(1)
+			total += array_2d[column][row] # -> O(1)
 	return total # -> O(1)
 \end{lstlisting}
 
@@ -79,7 +77,7 @@ The total time complexity is:
 Where \(O(1)\) is a constant value.
 
 \section{Recursion}
-In recursion \cite{wikirecursion} (\href{https://en.wikipedia.org/wiki/Recursion_(computer_science)}{Recursion, Wikipedia}) a function calls itself again on a smaller size input, until the exit condition stops this self calling (recursive calling). There are three fundamentals elements in a recursive function:
+In recursion a function calls itself again on a smaller size input, until the exit condition stops this self calling (recursive calling) \cite{wikirecursion} (\href{https://en.wikipedia.org/wiki/Recursion_(computer_science)}{Recursion, Wikipedia}). There are three fundamentals elements in a recursive function:
 \begin{itemize}
 \item[1] A function that calls itself.
 \item[2] Exit condition. Without this condition a recursive function would call itself forever without an end.
@@ -107,12 +105,12 @@ def fibonacci_iterative(position):
 	else:
 		first = 0
 		second = 1
-		next = first + second
+		next_value = first + second
 		for i in range(2, position):
 			first = second
 			second = next
-			next = first + second
-		return next
+			next_value = first + second
+		return next_value
 
 def fibonacci_recursive(position):
 	if position <= 1: # Exit condition
