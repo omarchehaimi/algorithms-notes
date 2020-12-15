@@ -192,7 +192,7 @@
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labeltitlesource}{title}
-      \field{title}{Hash Map}
+      \field{title}{Hash map}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Associative_array
       \endverb
@@ -205,7 +205,7 @@
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labeltitlesource}{title}
-      \field{title}{Hash Talbe}
+      \field{title}{Hash talbe}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Hash_table
       \endverb
@@ -218,7 +218,7 @@
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labeltitlesource}{title}
-      \field{title}{Hash Talbe}
+      \field{title}{Hash function}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Hash_function
       \endverb

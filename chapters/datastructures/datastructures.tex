@@ -1,4 +1,3 @@
-\setchapterimage[6.5cm]{chapters/datastructures/images/linked_list_2.pdf}
 \setchapterpreamble[u]{\margintoc}
 \chapter{Data Structures}
 \labch{datastrucutres}
@@ -29,7 +28,7 @@ Adding or removing an element of an array could be a very expensive operation. T
 
 \newpage
 \section{Linked List}
-A \textbf{Linked List} is a linear collection in which each element has the data and a reference to the next element (a link) \cite{wikilinkedlist} (\href{https://en.wikipedia.org/wiki/Linked_list}{Linked List, Wikipedia}). 
+A \textbf{linked list} is a linear collection in which each element has the data and a reference to the next element (a link) \cite{wikilinkedlist} (\href{https://en.wikipedia.org/wiki/Linked_list}{Linked List, Wikipedia}). 
 \begin{figure}[hb]
 	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/linked_list_1.pdf}
 	\caption[]{An example of a linked list with the data and the reference to the next element.}
@@ -52,7 +51,7 @@ Operations like adding or removing an element in a linked list are very efficien
 	\label{linked_list_3}
 \end{figure}
 The complexity for adding or removing an element is constant \(O(1)\).
-Linked lists can be also \textbf{Doubly Linked List} (Figure \ref{linked_list_4}), which evry element has the reference to the previous and next element of the collection \cite{wikidoublylinkedlist} (\href{https://en.wikipedia.org/wiki/Doubly_linked_list}{Doubly linked list, Wikipedia}).
+Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}), which evry element has the reference to the previous and next element of the collection \cite{wikidoublylinkedlist} (\href{https://en.wikipedia.org/wiki/Doubly_linked_list}{Doubly linked list, Wikipedia}).
 \begin{figure}[hb]
 	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/linked_list_4.pdf}
 	\caption[]{Doubly Linked List.}
@@ -113,7 +112,7 @@ class LinkedList(Object):
 \end{lstlisting}
 \newpage
 \section{Stack}
-A \textbf{Stack} is abstract data type belonging to collections, in which only two operations are allowed \cite{wikistack} (\href{https://en.wikipedia.org/wiki/Stack_(abstract_data_type)}{Stack, Wikipedia}):
+A \textbf{stack} is abstract data type belonging to collections, in which only two operations are allowed \cite{wikistack} (\href{https://en.wikipedia.org/wiki/Stack_(abstract_data_type)}{Stack, Wikipedia}):
 \begin{itemize}
 \item[•] \textbf{Push}: add an element at the top of the stack
 \item[•] \textbf{Pop}: remove the newest element of the stack
@@ -160,7 +159,7 @@ class Stack(Object):
 \end{lstlisting}
 
 \section{Queue}
-A \textbf{Queue} is abstract data type belonging to collections very similar to the stacks. For a queue the admitted operations are only on the oldest element, thus the first element to be added \cite{wikiqueue} (\href{https://en.wikipedia.org/wiki/Queue_(abstract_data_type)}{Queue, Wikipedia}). The allowed operations on a queue are:
+A \textbf{queue} is abstract data type belonging to collections very similar to the stacks. For a queue the admitted operations are only on the oldest element, thus the first element to be added \cite{wikiqueue} (\href{https://en.wikipedia.org/wiki/Queue_(abstract_data_type)}{Queue, Wikipedia}). The allowed operations on a queue are:
 \begin{itemize}
 \item[•] \textbf{Enque}: adding an element at the bottom of the queue
 \item[•] \textbf{Deque}: removing the element at the head of the queue
@@ -177,7 +176,7 @@ The most efficient way to implement a queue is using linked lists.
 	\label{queue_1}
 \end{figure}
 
-A generalization of queues and linked lists are \textbf{Deques}, in which is possible to perform deque and enque operations on both the \textbf{Head} and \textbf{Tail}.
+A generalization of queues and linked lists are \textbf{deques}, in which is possible to perform deque and enque operations on both the \textbf{head} and \textbf{tail}.
 
 \begin{figure}[h]
 	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/queue_2.pdf}
@@ -186,7 +185,7 @@ A generalization of queues and linked lists are \textbf{Deques}, in which is pos
 	\label{queue_2}
 \end{figure}
 
-Another modification of queue are \textbf{Priority Queue}, in which each element has a priority (a numeric value that indicates its importance). When an element of the queue is removed (deque), the element to be removed is the one which has the highest priority. In case two or more elements have the same priority the oldest element is removed.
+Another modification of queue are \textbf{priority queue}, in which each element has a priority (a numeric value that indicates its importance). When an element of the queue is removed (deque), the element to be removed is the one which has the highest priority. In case two or more elements have the same priority the oldest element is removed.
 
 \begin{figure}[h]
 	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/queue_3.pdf}
@@ -213,10 +212,10 @@ class Queue(object):
 \end{lstlisting}
 
 \section{Set}
-A \textbf{Set} is an abstract data type in which the unique values are stored without a particular order \cite{wikiset} (\href{https://en.wikipedia.org/wiki/Set_(abstract_data_type)}{Set, Wikipedia}).
+A \textbf{set} is an abstract data type in which the unique values are stored without a particular order \cite{wikiset} (\href{https://en.wikipedia.org/wiki/Set_(abstract_data_type)}{Set, Wikipedia}).
 
 \section{Map}
-A \textbf{Map}, \textbf{Associative Array}, \textbf{Symbol Table}, or \textbf{Dictionary} is an abstract data type composed of a collection of (key, value) pairs \cite{wikihashmap} (\href{https://en.wikipedia.org/wiki/Associative_array}{Hash Map, Wikipedia}). The group of the key is a set, in which each element has a unique value. Map is a very useful data type, used in a lot of situations. 
+A \textbf{map}, \textbf{associative array}, \textbf{symbol table}, or \textbf{dictionary} is an abstract data type composed of a collection of (key, value) pairs \cite{wikihashmap} (\href{https://en.wikipedia.org/wiki/Associative_array}{Hash Map, Wikipedia}). The group of the key is a set, in which each element has a unique value. Map is a very useful data type, used in a lot of situations. 
 
 \begin{figure}[h]
 	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/map_1.pdf}
@@ -226,23 +225,23 @@ A \textbf{Map}, \textbf{Associative Array}, \textbf{Symbol Table}, or \textbf{Di
 \end{figure}
 
 \section{Hash Table}
-A \textbf{Hash Table} or \textbf{Hash Map} is a data structure that implements the map abstract data type \cite{wikihashtable} (\href{https://en.wikipedia.org/wiki/Hash_table}{Hash Table, Wikipedia}). Hash table uses the \textbf{Hash Function} for working \cite{wikihashfunction} (\href{https://en.wikipedia.org/wiki/Hash_function}{Hash Function, Wikipedia}). Using the hash function is called hashing.
+A \textbf{hash table} or \textbf{hash map} is a data structure that implements the map abstract data type \cite{wikihashtable} (\href{https://en.wikipedia.org/wiki/Hash_table}{Hash Table, Wikipedia}). Hash table uses the \textbf{hash function} for working \cite{wikihashfunction} (\href{https://en.wikipedia.org/wiki/Hash_function}{Hash Function, Wikipedia}). Using the hash function is called hashing.
 
 \subsection{Hashing}
 Hashing is an operation that allows to transform the value of a variable to another one which is much easier to find within a collection. If we want to find a value inside a collection (list, stack, queue, etc) the time requested for the search is linear with the size of the collection. In fact we have to check all the elements until the searched one is found (in case of stack and queue this is not true is only the last or the first element respectively is checked). For solving this problem and thus to find an element in a constant time hash function are used. 
 
 Let us consider the follow example, where we have an array in which we would like to store big random numbers. A simple way for hashing these numbers is to consider only the last numbers (56 and 17) and divide them for a fixed number. The reminder of the division is used as the new index of the array associated to the number (Figure ).
 
-What happen when the hash function transforms two different number in the same? In this case we have a \textbf{Collision} (Figure \ref{map_2}).
+What happen when the hash function transforms two different number in the same? In this case we have a \textbf{collision} (Figure \ref{map_2}).
 \begin{figure}[h]
 	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/map_2.pdf}
 	\caption[]{An example of collision and a possible way to solve this issue by using the bucket method.}
 	\labfig{map_2}
 	\label{map_2}
 \end{figure}
-In case of a collision there are several strategies for solving this issue: one way could be to change the the hash function, another one could be to use an array for storing different values associated to the same key (\textbf{Bucket}). For the last occurrence the worst case complexity for a search is \(O(n)\) (Figure \ref{map_2}).
+In case of a collision there are several strategies for solving this issue: one way could be to change the the hash function, another one could be to use an array for storing different values associated to the same key (\textbf{bucket}). For the last occurrence the worst case complexity for a search is \(O(n)\) (Figure \ref{map_2}).
 
-It does not exist a perfect hash function and a trade off must always be reached. A way to analyze a hash function is by using the \textbf{Load Factor} defined as follow: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save 10 values using 1000 buckets the Load Factor is equal to 0.01, and most of the buckets is empty. In this case is convenient to change the hash function by using less buckets. More the Load Factor is closed to 0 more the hash table will be empty (\textbf{Sparse}), and more the Load Factor is closed to 1 more the has table will be full and efficient. In case the Load Factor is bigger than 1 there is the certainty there will happen some collisions.
+It does not exist a perfect hash function and a trade off must always be reached. A way to analyze a hash function is by using the \textbf{load factor} defined as follow: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save 10 values using 1000 buckets the Load Factor is equal to 0.01, and most of the buckets is empty. In this case is convenient to change the hash function by using less buckets. More the Load Factor is closed to 0 more the hash table will be empty (\textbf{sparse}), and more the Load Factor is closed to 1 more the has table will be full and efficient. In case the Load Factor is bigger than 1 there is the certainty there will happen some collisions.
 Another example: let us consider a hash function that divide the numbers by 100. If we consider 100 values all multiple of 5, the Load Factor will be: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets = 100/100 = 1\). But this way is very slow and a different configuration should be used to make this more efficient. For example if we use more bucket, for example 107, we still avoid collisions and we do not have the hash map too much sparse.
 
 \section{String Keys}

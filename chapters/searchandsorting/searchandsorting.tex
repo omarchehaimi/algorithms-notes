@@ -1,8 +1,7 @@
-\setchapterimage[6.5cm]{chapters/searchandsorting/images/sorting_2.pdf}
 \setchapterpreamble[u]{\margintoc}
 \chapter{Searching and Sorting}
 \labch{searchandsorting}
-In this chapter are introduced the most important and used algorithms about \textbf{Searching}, which retrieve some data stored in a particular data structure \cite{wikisearch} (\href{https://en.wikipedia.org/wiki/Search_algorithm}{Search algorithm, Wikipedia}), and \textbf{Sorting}, which put in a certain order some data stored in a list \cite{wikisorting} (\href{https://en.wikipedia.org/wiki/Sorting_algorithm}{Sorting algorithm, Wikipedia}).
+In this chapter are introduced the most important and used algorithms about \textbf{searching}, which retrieve some data stored in a particular data structure \cite{wikisearch} (\href{https://en.wikipedia.org/wiki/Search_algorithm}{Search algorithm, Wikipedia}), and \textbf{sorting}, which put in a certain order some data stored in a list \cite{wikisorting} (\href{https://en.wikipedia.org/wiki/Sorting_algorithm}{Sorting algorithm, Wikipedia}).
 \section{Binary Search}
 Let us consider the problem of finding a number stored in an array with an \textbf{ascending} order (Figure \ref{sorting_1}).
 
@@ -15,7 +14,7 @@ Let us consider the problem of finding a number stored in an array with an \text
 
 A first way to tackle the problem could be to check all the numbers of the array, in others words this method consists in performing a loop all over the elements of the array and check one by one if the number where is the element we are looking for. The complexity of this method is \(O(n)\) because in the worst case we have to look at all the elements of the array. 
 
-There is a more efficient way to search an element in an ascending ordered array then the method showed previously. This method is called \textbf{Binary Search} \cite{wikibinarysearch} (\href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{Binary Search Algorithm, Wikipedia}).
+There is a more efficient way to search an element in an ascending ordered array then the method showed previously. This method is called \textbf{binary search} \cite{wikibinarysearch} (\href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{Binary Search Algorithm, Wikipedia}).
 Let us start to check as the first element the central value of the array (in case the array has an even number of elements there are two central values, and one can choose the bigger or the lower). If the central element is the one we are looking for the search ends, otherwise, because the array is ascending ordered, we can ignore one half of the array. If the central number is bigger than the number we are looking for thus we will ignore the right half of the array, if the central number is lower than the number we are looking for thus we will ignore the left half of the array. This procedure is repeated: we consider the central value of the new array, which has half of the size of the previous step, and we check is that value is the one we are looking for, and we repeat the procedure until or we find or we do not find the number we are looking for (Figure \ref{sorting_2}). 
 
 \begin{figure}[hb]
@@ -79,7 +78,7 @@ def binary_search(array_input, value):
 
 \newpage
 \section{Bubble Sort}
-\textbf{Bubble Sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two element at each step if they are in the wrong order, repeating this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this algorithm the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
+\textbf{bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two element at each step if they are in the wrong order, repeating this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this algorithm the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
 
 \begin{figure}[hb]
 	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_4.pdf}
@@ -121,7 +120,7 @@ def bubble_sort(array_input):
 \end{lstlisting}
 
 \section{Merge Sort}
-The \textbf{Merge Sort} algorithm works by dividing the array in single elements at first, grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort} (\href{https://en.wikipedia.org/wiki/Merge_sort}{Merge Sort, Wikipedia}).  This way of reducing a big problem in several smaller is called \textbf{Divide et Impera} (Divide and Conquer).
+The \textbf{merge sort} algorithm works by dividing the array in single elements at first, grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort} (\href{https://en.wikipedia.org/wiki/Merge_sort}{Merge Sort, Wikipedia}).  This way of reducing a big problem in several smaller is called \textbf{Divide et impera} (Divide and conquer).
 
 \begin{figure}[hb]
 	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_6.pdf}
@@ -216,7 +215,7 @@ def merge_sort(array_input):
 \end{figure}
 
 \section{Quicksort}
-The \textbf{Quicksort} is a sorting algorithm of the divide et impera type. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its left or on its right respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort} (\href{https://en.wikipedia.org/wiki/Quicksort}{Qicksort, Wikipedia}). 
+The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its left or on its right respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort} (\href{https://en.wikipedia.org/wiki/Quicksort}{Qicksort, Wikipedia}). 
 \begin{figure}[hb]
 	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_8.pdf}
 	\caption[]{Quicksort algorithm steps, part one.}
