@@ -1,15 +1,15 @@
-\setchapterpreamble[u]{\margintoc}
 \chapter{Searching and Sorting}
-\labch{searchandsorting}
+\label{chp: searchandsorting}
 In this chapter are introduced the most important and used algorithms about \textbf{searching}, which retrieve some data stored in a particular data structure \cite{wikisearch} (\href{https://en.wikipedia.org/wiki/Search_algorithm}{Search algorithm, Wikipedia}), and \textbf{sorting}, which put in a certain order some data stored in a list \cite{wikisorting} (\href{https://en.wikipedia.org/wiki/Sorting_algorithm}{Sorting algorithm, Wikipedia}).
 \section{Binary Search}
 Let us consider the problem of finding a number stored in an array with an \textbf{ascending} order (Figure \ref{sorting_1}).
 
-\begin{figure}[hb]
-	\includegraphics[width=11cm,height=4.5cm]{chapters/searchandsorting/images/sorting_1.pdf}
-	\caption[]{An array with numeric values ordered in an ascending order.}
-	\labfig{sorting_1}
-	\label{sorting_1}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_1.pdf}
+		\caption[An array with numeric values ordered in an ascending order]{An array with numeric values ordered in an ascending order}
+		\label{sorting_1}
+	\end{center}
 \end{figure}
 
 A first way to tackle the problem could be to check all the numbers of the array, in others words this method consists in performing a loop all over the elements of the array and check one by one if the number where is the element we are looking for. The complexity of this method is \(O(n)\) because in the worst case we have to look at all the elements of the array. 
@@ -17,19 +17,21 @@ A first way to tackle the problem could be to check all the numbers of the array
 There is a more efficient way to search an element in an ascending ordered array then the method showed previously. This method is called \textbf{binary search} \cite{wikibinarysearch} (\href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{Binary Search Algorithm, Wikipedia}).
 Let us start to check as the first element the central value of the array (in case the array has an even number of elements there are two central values, and one can choose the bigger or the lower). If the central element is the one we are looking for the search ends, otherwise, because the array is ascending ordered, we can ignore one half of the array. If the central number is bigger than the number we are looking for thus we will ignore the right half of the array, if the central number is lower than the number we are looking for thus we will ignore the left half of the array. This procedure is repeated: we consider the central value of the new array, which has half of the size of the previous step, and we check is that value is the one we are looking for, and we repeat the procedure until or we find or we do not find the number we are looking for (Figure \ref{sorting_2}). 
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_2.pdf}
-	\caption[]{Binary Search Algorithms steps.}
-	\labfig{sorting_2}
-	\label{sorting_2}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_2.pdf}
+		\caption[Binary search algorithms steps]{Binary search algorithms steps}
+		\label{sorting_2}
+	\end{center}
 \end{figure}
 
 \subsection{Efficiency of the Binary Search Algorithm}
 For evaluating the efficiency of this algorithm we have to evaluate the number of steps required for solving the problem. We already know that the efficiency of this algorithm will not be \(O(n)\), because in this algorithm not all the elements of the array are checked. The way for evaluating the complexity of an algorithm is to execute the algorithms varying the size of the input, and evaluating how many operations are done in the worst case. In the binary search algorithm the worst case is when the size of the array becomes one, so we find or we do not find the searched element at the end of the array splitting process.
 
-\begin{table}[h]
+\begin{table}[H]
 \caption[Binary Search Efficiency]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
-\labtab{binarysearchefficiency}
+\label{binarysearchefficiency}
+\centering
 \begin{tabular}{ | l | c | c | c | c | c | c | c | c | c |}
    
     \multicolumn{1}{l}{} & \multicolumn{1}{c}{} & 
@@ -51,10 +53,9 @@ We observe that the exponent of the power of two is the number of iteration minu
 \end{center}
 In general it is used \(log\) and is said that the binary search algorithm has a complexity of \(log(n)\). 
 
-\newpage
 \subsection{Binary Search Implementation}
 The following code is the python implementation of the binary search algorithm.
-\begin{lstlisting}[caption={Binary search python implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Binary search python implementation.}]
 def binary_search(array_input, value):
 	low = 0
 	high = len(array_input) - 1
@@ -69,29 +70,31 @@ def binary_search(array_input, value):
 	return -1
 \end{lstlisting}
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_3.pdf}
-	\caption[]{Array splitting in the implementation of the binary search algorithm.}
-	\labfig{sorting_3}
-	\label{sorting_3}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_3.pdf}
+		\caption[Array splitting in the implementation of the binary search algorithm]{Array splitting in the implementation of the binary search algorithm}
+		\label{sorting_3}
+	\end{center}
 \end{figure}
 
-\newpage
 \section{Bubble Sort}
 \textbf{bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two element at each step if they are in the wrong order, repeating this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this algorithm the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_4.pdf}
-	\caption[]{Bubble sort algorithm. The biggest element goes at the and of the array.}
-	\labfig{sorting_4}
-	\label{sorting_4}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_4.pdf}
+		\caption[Bubble sort algorithm]{In bubble sort the biggest element goes at the and of the array}
+		\label{sorting_4}
+	\end{center}
 \end{figure}
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_5.pdf}
-	\caption[]{The swapping process is repeated until the array is completely ordered.}
-	\labfig{sorting_5}
-	\label{sorting_5}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_5.pdf}
+		\caption[The swapping process is repeated until the array is completely ordered]{The swapping process is repeated until the array is completely ordered}
+		\label{sorting_5}
+	\end{center}
 \end{figure}
 
 \subsection{Efficiency of the Bubble Sort Algorithm}
@@ -105,7 +108,7 @@ In summary:
 
 \subsection{Bubble Sort Implementation}
 The following code is the python implementation of the bubble sort algorithm.
-\begin{lstlisting}[caption={Bubble Sort python implementation}]
+\begin{lstlisting}[firstnumber=1, caption={Bubble Sort python implementation}]
 def bubble_sort(array_input):
 	index = len(array_input) - 1
 	sorted = False
@@ -122,11 +125,12 @@ def bubble_sort(array_input):
 \section{Merge Sort}
 The \textbf{merge sort} algorithm works by dividing the array in single elements at first, grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort} (\href{https://en.wikipedia.org/wiki/Merge_sort}{Merge Sort, Wikipedia}).  This way of reducing a big problem in several smaller is called \textbf{Divide et impera} (Divide and conquer).
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_6.pdf}
-	\caption[]{Merge sort algorithm. The merging and sorting process is repeated until the array is again unified with all the elements sorted.}
-	\labfig{sorting_6}
-	\label{sorting_6}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.52]{chapters/searchandsorting/images/sorting_6.pdf}
+		\caption[Merge sort algorithm]{In merge sort merging and sorting process is repeated until the array is again unified with all the elements sorted}
+		\label{sorting_6}
+	\end{center}
 \end{figure}
 
 The steps are (Figure \ref{sorting_6}): 
@@ -143,9 +147,10 @@ The number of comparisons depends by the array size. For an array of two element
 
 How many iterations are required? In our example for an array of seven elements, the iterations required are three. From the subprocess of our example we observe that for an array of size four the number of iterations are two, for one of size three are two, and for one of size two is one. Thus we can create the following table:
 
-\begin{table}[h]
+\begin{table}[H]
 \caption[Merge Sort Efficiency]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
-\labtab{mergesortefficiency}
+\label{mergesortefficiency}
+\centering
 \begin{tabular}{ | l | c | c | c | c | c | c | c | c | c |}
    
     \multicolumn{1}{l}{} & \multicolumn{1}{c}{\(2^{0}\)} & 
@@ -165,10 +170,9 @@ In conclusion the efficiency if \(O(n \ log(n))\), which is better than \(O(n^{2
 
 The memory efficiency in this case is bigger than the bubble sort algorithm. For the merge sort some subarrays (in the worst case are \(n\)) are used and they need to be stored in the memory.
 
-\newpage
 \subsection{Merge Sort Implementation}
 The following code is the python implementation of the merge sort algorithm.
-\begin{lstlisting}[caption={Merge Sort python implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Merge Sort python implementation.}]
 def merge_sort(array_input):
 	
 	if len(array_input) > 1:
@@ -207,27 +211,30 @@ def merge_sort(array_input):
 	return array_input
 \end{lstlisting}
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_7.pdf}
-	\caption[]{Merge sort algorithm implementation.}
-	\labfig{sorting_7}
-	\label{sorting_7}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_7.pdf}
+		\caption[Merge sort algorithm implementation]{Merge sort algorithm implementation}
+		\label{sorting_7}
+	\end{center}
 \end{figure}
 
 \section{Quicksort}
 The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its left or on its right respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort} (\href{https://en.wikipedia.org/wiki/Quicksort}{Qicksort, Wikipedia}). 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_8.pdf}
-	\caption[]{Quicksort algorithm steps, part one.}
-	\labfig{sorting_8}
-	\label{sorting_8}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_8.pdf}
+		\caption[Quicksort algorithm part one]{Quicksort algorithm part one}
+		\label{sorting_8}
+	\end{center}
 \end{figure}
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_9.pdf}
-	\caption[]{Quicksort algorithm steps, part two.}
-	\labfig{sorting_9}
-	\label{sorting_9}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_9.pdf}
+		\caption[Quicksort algorithm steps part two]{Quicksort algorithm steps part two}
+		\label{sorting_9}
+	\end{center}
 \end{figure}
 
 Here are the steps of quicksort algorithm based on the example of Figure \ref{sorting_8} and Figure \ref{sorting_9}:
@@ -243,20 +250,22 @@ Evaluating the efficiency of quicksort is very hard. In the following there are 
 
 Let us consider first the worst case. In this situation the last elements of the array are the bigger ones, so it is necessary to check all the previous elements, by doing \(n^{2}\) comparisons Figure \ref{sorting_10}.
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_10.pdf}
-	\caption[]{Quicksort algorithm worst case.}
-	\labfig{sorting_10}
-	\label{sorting_10}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_10.pdf}
+		\caption[Quicksort algorithm worst case]{Quicksort algorithm worst case}
+		\label{sorting_10}
+	\end{center}
 \end{figure}
 
 In the best and in the average case the complexity is \(O(n log(n)\). The reason is because the first pivot tends to move at the center of the array, having in this way two subarrays. The pivots of these two subarrays will tend to move at their center and the process is repeated until all the elements have been a pivot, having in this way an ordered array.
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_11.pdf}
-	\caption[]{Quicksort algorithm best and average case.}
-	\labfig{sorting_11}
-	\label{sorting_11}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_11.pdf}
+		\caption[Quicksort algorithm best and average case]{Quicksort algorithm best and average case}
+		\label{sorting_11}
+	\end{center}
 \end{figure}
 
 The space complexity of quicksort is constant, \(O(1)\).
@@ -278,7 +287,7 @@ On the other hand merge sort is a better solution than quicksort and heapsort \c
 
 \subsection{Quicksort Implementation}
 The following code is the python implementation of the quicksort algorithm \cite{quicksortcode} (\href{https://www.educative.io/edpresso/how-to-implement-quicksort-in-python}{Quicksort Python Implementation}).
-\begin{lstlisting}[caption={Quicksort python implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Quicksort python implementation.}]
 def merge_sort(array_input):
 	
 	elements = len(array_input)
@@ -314,9 +323,10 @@ def merge_sort(array_input):
 	return array_input
 \end{lstlisting}
 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/searchandsorting/images/sorting_12.pdf}
-	\caption[]{Quicksort algorithm implementation.}
-	\labfig{sorting_12}
-	\label{sorting_12}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_12.pdf}
+		\caption[Quicksort algorithm implementation]{Quicksort algorithm implementation}
+		\label{sorting_12}
+	\end{center}
 \end{figure}

@@ -1,117 +1,106 @@
-\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
-\defcounter {refsection}{0}\relax
-\contentsline {chapter}{Preface}{v}{chapter*.1}%
-\defcounter {refsection}{0}\relax
-\contentsline {chapter}{\nonumberline Contents}{vi}{chapter*.2}%
-\defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {1}Preliminaries Concepts}{1}{chapter.1}%
-\defcounter {refsection}{0}\relax
-\etoc@startlocaltoc {2}
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {1.1}Computational Complexity}{1}{section.1.1}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {1.2}Big O Notation}{1}{section.1.2}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Properties}{1}{section*.3}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {1.3}Time complexity evaluation example}{2}{section.1.3}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {1.4}Recursion}{3}{section.1.4}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Python Implementation Examples}{4}{section*.6}%
-\defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {2}Data Structures}{5}{chapter.2}%
-\defcounter {refsection}{0}\relax
-\etoc@startlocaltoc {3}
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.1}Collection}{5}{section.2.1}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.2}List}{5}{section.2.2}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.3}Array}{5}{section.2.3}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.4}Linked List}{8}{section.2.4}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Linked List Implementation}{10}{section*.13}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.5}Stack}{11}{section.2.5}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Stack Implementation}{11}{section*.15}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.6}Queue}{12}{section.2.6}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Queue Implementation}{13}{section*.19}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.7}Set}{13}{section.2.7}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.8}Map}{13}{section.2.8}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.9}Hash Table}{14}{section.2.9}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Hashing}{14}{section*.21}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.10}String Keys}{15}{section.2.10}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline String Keys Implementation}{15}{section*.23}%
-\defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {3}Searching and Sorting}{17}{chapter.3}%
-\defcounter {refsection}{0}\relax
-\etoc@startlocaltoc {4}
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.1}Binary Search}{17}{section.3.1}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Efficiency of the Binary Search Algorithm}{18}{section*.26}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Binary Search Implementation}{19}{section*.28}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.2}Bubble Sort}{20}{section.3.2}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Efficiency of the Bubble Sort Algorithm}{20}{section*.32}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Bubble Sort Implementation}{21}{section*.33}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.3}Merge Sort}{21}{section.3.3}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Efficiency of the Merge Sort Algorithm}{22}{section*.35}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Merge Sort Implementation}{23}{section*.37}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.4}Quicksort}{24}{section.3.4}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Efficiency of the Quicksort Algorithm}{25}{section*.41}%
-\defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Quicksort and Merge Sort Comparison}{26}{section*.44}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Quicksort Implementation}{26}{section*.45}%
-\defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {4}Trees}{28}{chapter.4}%
-\defcounter {refsection}{0}\relax
-\etoc@startlocaltoc {5}
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.1}General Definitions}{28}{section.4.1}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.2}Tree Traversal}{29}{section.4.2}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Depth-first search}{29}{section*.51}%
-\defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Pre-order search}{29}{section*.52}%
-\defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline In-order search}{30}{section*.54}%
-\defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Post-order search}{30}{section*.56}%
-\defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.3}Binary Trees}{30}{section.4.3}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Search}{31}{section*.58}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Delete}{31}{section*.60}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Insert}{31}{section*.62}%
-\defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Perfect binary tree}{32}{section*.64}%
-\defcounter {refsection}{0}\relax
-\contentsline {part}{\nonumberline Appendix}{34}{part*.67}%
-\defcounter {refsection}{0}\relax
-\contentsline {chapter}{\nonumberline Bibliography}{35}{chapter*.68}%
+\defcounter {refsection}{0}\relax 
+\vspace {-\cftbeforepartskip }
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Preface}{iv}{dummy.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}{Preliminaries Concepts}}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}{Computational Complexity}}{1}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}{Big O Notation}}{1}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}{Properties}}{1}{subsection.1.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}{Time complexity evaluation example}}{2}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}{Recursion}}{3}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.1}{Python Implementation Examples}}{3}{subsection.1.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}{Data Structures}}{5}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}{Collection}}{5}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}{List}}{5}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}{Array}}{5}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}{Linked List}}{6}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}{Linked List Implementation}}{8}{subsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}{Stack}}{9}{section.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}{Stack Implementation}}{10}{subsection.2.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}{Queue}}{11}{section.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.1}{Queue Implementation}}{12}{subsection.2.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.7}{Set}}{12}{section.2.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.8}{Map}}{12}{section.2.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.9}{Hash Table}}{13}{section.2.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.9.1}{Hashing}}{13}{subsection.2.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.10}{String Keys}}{14}{section.2.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.10.1}{String Keys Implementation}}{15}{subsection.2.10.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}{Searching and Sorting}}{16}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}{Binary Search}}{16}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}{Efficiency of the Binary Search Algorithm}}{17}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}{Binary Search Implementation}}{18}{subsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}{Bubble Sort}}{18}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}{Efficiency of the Bubble Sort Algorithm}}{19}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}{Bubble Sort Implementation}}{20}{subsection.3.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}{Merge Sort}}{20}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}{Efficiency of the Merge Sort Algorithm}}{21}{subsection.3.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}{Merge Sort Implementation}}{22}{subsection.3.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}{Quicksort}}{23}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}{Efficiency of the Quicksort Algorithm}}{24}{subsection.3.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{{Quicksort and Merge Sort Comparison}}{25}{paragraph*.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}{Quicksort Implementation}}{25}{subsection.3.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}{Trees}}{28}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}{General Definitions}}{28}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}{Tree Traversal}}{29}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}{Depth-first search}}{30}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{{Pre-order search}}{30}{paragraph*.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{{In-order search}}{30}{paragraph*.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{{Post-order search}}{31}{paragraph*.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}{Binary Trees}}{31}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}{Search}}{31}{subsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}{Delete}}{32}{subsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}{Insert}}{33}{subsection.4.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.4}{Perfect binary tree}}{33}{subsection.4.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{34}{chapter*.45}%

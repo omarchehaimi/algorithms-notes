@@ -1,6 +1,7 @@
-\setchapterpreamble[u]{\margintoc}
 \chapter{Preliminaries Concepts}
-\labch{preliminariesconcepts}
+\label{preliminariesconcepts}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
 
 \section{Computational Complexity}
 The \textbf{computational complexity}, or \textbf{complexity}, of an algorithm is the amount of resources (time and memory) needed for solving it, and it is the minimum complexity of all possible implementations for solving that given algorithm, included also the unknown ones \cite{wikipediacomplexity} (\href{https://en.wikipedia.org/wiki/Computational_complexity}{Computational complexity, Wikipedia}).
@@ -13,7 +14,6 @@ When the kind of the complexity is not explicitly indicated, generally is meant 
 The \textbf{big O notation} \cite{wikipediabigo} (\href{https://en.wikipedia.org/wiki/Big_O_notation}{Big O Notation, Wikipedia}) describe the behavior of a function when its argument tents to infinity or to a particular value.
 
 \begin{definition}
-\labdef{bigOdef}
 Let \(f\) be a real or complex value function and let \(g\) be a real function. Let both functions be defined on the same positive and real unbounded interval, and let \(g(x)\) be strictly positive for all large enough \(x\) values: \(g(x) > 0, \forall x\) large enough. Thus: \(f(x)=O(g(x)) \) as \(x \rightarrow \infty \) if \(\exists\) \(M \in \mathbb{R} \), \(M>0\) and \(x_{0} \in \mathbb{R} \) such that \(|f(x)| \leq Mg(x)\) \(\forall x \geq x_{0}\). 
 \end{definition}
 Usually \(f(x)=O(g(x))\) is used as \(x \rightarrow \infty\), but it can be also defined for the case \(x \rightarrow a\), where \(a\) is a real number.
@@ -26,7 +26,7 @@ In \(f(x) = 6x^{4} - 2x^{3} + 5\) as \(x \rightarrow \infty\), \(6x^{4}\) it the
 
 \subsection{Properties}
 Here are listed some simple properties about Big O notation.
-\begin{kaobox}[frametitle=Product-Sum-Multiplication by a constant]
+\begin{definition}[Product-Sum-Multiplication by a constant]
 \textbf{Product} \\
 \(f_{1}=O(g_{1})\) and \(f_{2}=O(g_{2})\) \(\Rightarrow\) \(f_{1}f_{2}=O(g_{1}g_{2})\)
 \\
@@ -36,30 +36,32 @@ Here are listed some simple properties about Big O notation.
 \textbf{Multiplication by a constant} \\
 Let \(k\) be a nonzero constant, then: 
 \(O(k|g)=O(g)\), \(f=O(g)\) \(\Rightarrow\)\(kf=O(g)\)
-\end{kaobox}
+\end{definition}
 
-\begin{kaobox}[frametitle=Logarithm and Exponential]
+\begin{definition}[Logarithm and Exponential]
 Let \(c\) be a nonzero constant, then: \(O(\log n^{c}) = O(\log n)\), because: (\(\log n^{c} = c \log n\)).
 \\
 \(O(n^{c})\) and \(O(c^{n})\) are very different, if \(c>1\) the latter grows much faster.
 \\
 Let \(c\) be a nonzero constant. \((cn)^{2}=c^{2}n^{2} = O(n^{2})\), but \(2^{n}\) and \(3^{n}\) are not of the same order. In general \(2^{cn}=(2^{c})^{n}\) is not of the same order of \(2^{n}\).
-\end{kaobox}
+\end{definition}
 
 \begin{example}
 \(f = 9 \log n + 5(\log n)^{4} + 3n^{2} + 2n^{2} = O(n^{3})\) as \(n \rightarrow \infty\)
 \end{example}
 
 \begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/introduction/images/big_o_plots.png}
-	\caption[]{Plots of the main functions and their evaluation for computational complexity. Credits: \href{https://www.bigocheatsheet.com/}{bigocheatsheet.com}}
-	\labfig{bigoplots}
+	\begin{center}
+		\includegraphics[scale=.3]{chapters/introduction/images/big_o_plots.png}
+		\caption[Plots of the main functions and their evaluation for computational complexity]{Plots of the main functions and their evaluation for computational complexity. Credits: \href{https://www.bigocheatsheet.com/}{bigocheatsheet.com}}
+		\label{fig:bigoplots}
+	\end{center}
 \end{figure}
 
 \section{Time complexity evaluation example}
 Let us suppose we want to calculate the sum of all elements of a \(n\times n\) matrix. For evaluating the time complexity of this function we have to identify all the elementary operations, and evaluating their complexity based on how many times they are repeated. Here is the pseudocode for the function that calculate the sum of a matrix.
 
-\begin{lstlisting}[caption={Sum of all elements of a matrix.}]
+\begin{lstlisting}[firstnumber=1, caption={Sum of all elements of a matrix.}]
 def find_sum_2d(array_2d):
 	totoal = 0 # -> O(1)
 	for each row in array_2d: # -> repeated n times
@@ -81,18 +83,18 @@ In recursion a function calls itself again on a smaller size input, until the ex
 \end{itemize}
 
 \begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/introduction/images/recursion_1.pdf}
-	\caption[]{Pseudocode of a recursive function and its internal execution.}
-	\labfig{recursion_1}
-	\label{recursion_1}
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/introduction/images/recursion_1.pdf}
+		\caption[Pseudocode of a recursive function and its internal execution]{Pseudocode of a recursive function and its internal execution}
+		\label{fig:recursion_1}
+	\end{center}
 \end{figure}
 
 In recursion the exit condition is fundamental, because if it contains some errors the recursion will never end, resulting in an infinite process.
 
-\newpage
 \subsection{Python Implementation Examples}
 
-\begin{lstlisting}[caption={Implementation of the Fibonacci series with both iterative and recursive way.}]
+\begin{lstlisting}[firstnumber=1, caption={Implementation of the Fibonacci series with both iterative and recursive way.}]
 def fibonacci_iterative(position):
 	if position == 0:
 		return 0
@@ -114,10 +116,18 @@ def fibonacci_recursive(position):
 	return fibonacci(position - 1) + fibonacci(position - 2) # Calling the function on a smaller size input
 \end{lstlisting}
 
-\begin{lstlisting}[caption={Implementation of calculating the factorial of a number using the recursive way.}]
+\begin{lstlisting}[firstnumber=1, caption={Implementation of calculating the factorial of a number using the recursive way.}]
 def factorial(n):
 	if n <= 1: # Exit condition
 		return n
 	else: 
 		return n*factorial(n - 1) # Calling the function on a smaller input
 \end{lstlisting}
+
+\begin{figure}[hb]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/introduction/images/factorial.pdf}
+		\caption[Factorial recursive execution]{Factorial recursive execution}
+		\label{fig:factorial_1}
+	\end{center}
+\end{figure}

@@ -1,6 +1,5 @@
-\setchapterpreamble[u]{\margintoc}
 \chapter{Data Structures}
-\labch{datastrucutres}
+\label{chp: datastrucutres}
 A \textbf{data structure} is a data organization, management, and storage format that enables efficient access and modification of the collected data. The relationship among collected data, their properties, the operations that can be done on them, are all properties of the data structure \cite{wikidatastructure} (\href{https://en.wikipedia.org/wiki/Data_structure}{Data Structure, Wikipedia}). Data structure is the basis for an \textbf{abstract data type (ADT)}, a mathematical model for a \textbf{data type} \cite{wikidatatype} (\href{https://en.wikipedia.org/wiki/Data_type}{Data Type, Wikipedia}), which is defined by its behavior from the point of view of a user, its type of data, specifically in terms of possible values, by possible operations on these data, and by the behavior of these operations. This mathematical model contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not of a user \cite{wikiabstractdatatype} (\href{https://en.wikipedia.org/wiki/Abstract_data_type}{Abstract Data Type, Wikipedia}).
 \\
 In this chapter the most important data structures like \textbf{collections}, \textbf{lists}, \textbf{arrays}, \textbf{linked lists}, \textbf{stacks}, and \textbf{queues} are introduced. For each data structure are shown all the most important properties, operations, and implementations.
@@ -10,60 +9,67 @@ A \textbf{collection} is an object that groups several different elements in onl
 A \textbf{list} is a collection which represents a set of \textbf{ordered} elements, which can be also of different type. Same value elements can be repeated several times. Lists do not have a fixed size, and it is possible to add, to remove, and to modify all the elements in the list. The complexity of adding or removing an element is constant (\(O(1)\)).
 \section{Array}
 An \textbf{array} is a collection of elements of the same or also different type, in which each of them is identified with at least one \textbf{array index} or \textbf{key} \cite{wikiarray} (\href{https://en.wikipedia.org/wiki/Array_data_structure}{Array data structure, Wikipedia}). In some programming languages arrays have a fixed size, in others instead is fixed.
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/array_1.pdf}
-	\caption[]{An example of an array with elements and indexes.}
-	\labfig{array_1}
-\end{figure}
-\\
-For doing any allowed operation to an element of an array it is enough to know its index. 
-\\
-Adding or removing an element of an array could be a very expensive operation. This is because when a change take place to an element all the following indexes must be updated (Figure \ref{array_2}). The worst case complexity is \(O(n)\), where \(n\) is the size of the array.
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/array_2.pdf}
-	\caption[]{Removing or adding an element from an array and the indexes update. }
-	\labfig{array_2}
-	\label{array_2}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.6]{chapters/datastructures/images/array_1.pdf}
+		\caption[An example of an array with elements and indexes]{An example of an array with elements and indexes}
+		\label{array_1}
+	\end{center}
 \end{figure}
 
-\newpage
+For doing any allowed operation to an element of an array it is enough to know its index. 
+
+Adding or removing an element of an array could be a very expensive operation. This is because when a change take place to an element all the following indexes must be updated (Figure \ref{array_2}). The worst case complexity is \(O(n)\), where \(n\) is the size of the array.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/array_2.pdf}
+		\caption[Removing or adding an element from an array and the indexes update]{Removing or adding an element from an array and the indexes update}
+		\label{array_2}
+	\end{center}
+\end{figure}
+
 \section{Linked List}
 A \textbf{linked list} is a linear collection in which each element has the data and a reference to the next element (a link) \cite{wikilinkedlist} (\href{https://en.wikipedia.org/wiki/Linked_list}{Linked List, Wikipedia}). 
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/linked_list_1.pdf}
-	\caption[]{An example of a linked list with the data and the reference to the next element.}
-	\labfig{linked_list_1}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/linked_list_1.pdf}
+		\caption[An example of a linked list with the data and the reference to the next element]{An example of a linked list with the data and the reference to the next element}
+		\label{linked_list_1}
+	\end{center}
 \end{figure}
 In a linked list the order of the elements is not assured. 
 \\
 Operations like adding or removing an element in a linked list are very efficient, because it is enough to change the references of the elements involved in the operation. For example for adding a new element is enough to change the previous element reference to the just added element, and change the reference of the new element to the next element (Figure \ref{linked_list_2}). In case of removing an element it is enough to update the previous element's reference to the next element of the removed one (Figure \ref{linked_list_3}). 
-\begin{figure}[h]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/linked_list_2_1.pdf}
-	\caption[]{Adding a new element to the linked list. As explained before this operation is very efficient because it is enough to change the references of the new element and the previous element to the one just added.}
-	\labfig{linked_list_2}
-	\label{linked_list_2}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/linked_list_2.pdf}
+		\caption[Adding a new element to a linked list]{Adding a new element to the linked list. As explained before this operation is very efficient because it is enough to change the references of the new element and the previous element to the one just added}
+		\label{linked_list_2}
+	\end{center}
 \end{figure}
-\newpage
-\begin{figure}[]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/linked_list_3.pdf}
-	\caption[]{Removing an element to the linked list.}
-	\labfig{linked_list_3}
-	\label{linked_list_3}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/linked_list_3.pdf}
+		\caption[Removing an element to a linked list]{Removing an element to a linked list}
+		\label{linked_list_3}
+	\end{center}
 \end{figure}
 The complexity for adding or removing an element is constant \(O(1)\).
 Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}), which evry element has the reference to the previous and next element of the collection \cite{wikidoublylinkedlist} (\href{https://en.wikipedia.org/wiki/Doubly_linked_list}{Doubly linked list, Wikipedia}).
-\begin{figure}[hb]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/linked_list_4.pdf}
-	\caption[]{Doubly Linked List.}
-	\labfig{linked_list_4}
-	\label{linked_list_4}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/linked_list_4.pdf}
+		\caption[Doubly linked list]{Doubly linked list}
+		\label{linked_list_4}
+	\end{center}
 \end{figure} 
-\\
+
 Linked list are used for implementing other data structures such as lists, stacks, queues, and associative array.
-\newpage
+
 \subsection{Linked List Implementation}
 The following code is the implementation of a linked list in Python.
-\begin{lstlisting}[caption={Linked List implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Linked List implementation.}]
 class Element(object):
 
 	def __init__(self, value):
@@ -110,7 +116,7 @@ class LinkedList(Object):
 			new_element.next = self.head
 			self.head = new_element
 \end{lstlisting}
-\newpage
+
 \section{Stack}
 A \textbf{stack} is abstract data type belonging to collections, in which only two operations are allowed \cite{wikistack} (\href{https://en.wikipedia.org/wiki/Stack_(abstract_data_type)}{Stack, Wikipedia}):
 \begin{itemize}
@@ -118,15 +124,16 @@ A \textbf{stack} is abstract data type belonging to collections, in which only t
 \item[•] \textbf{Pop}: remove the newest element of the stack
 \end{itemize}
 In the stacks only the element at the top of the stack can be modified. The complexity remains constant for adding and removing operations. The stacks are also called \textbf{Last In, First Out} (\textbf{LIFO}).
-\begin{figure}[h]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/stack_1.pdf}
-	\caption[]{In a stack only the element at the top is modified.}
-	\labfig{stack_1}
-	\label{stack_1}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/stack_1.pdf}
+		\caption[In a stack only the element at the top is modified]{In a stack only the element at the top is modified}
+		\label{stack_1}
+	\end{center}
 \end{figure}
 \subsection{Stack Implementation}
 The following is the implementation in Python of a stack using the linked list.
-\begin{lstlisting}[caption={Stack implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Stack implementation.}]
 class Element(object):
 	...
 
@@ -169,34 +176,37 @@ For adding and removing operations the complexity remain constant. Queues are al
 
 The most efficient way to implement a queue is using linked lists.
 
-\begin{figure}[h]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/queue_1.pdf}
-	\caption[]{In a queue only the first element to be added can be removed or where a new element can be added.}
-	\labfig{queue_1}
-	\label{queue_1}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/queue_1.pdf}
+		\caption[Allowed operations on queue elements]{In a queue only the first element to be added can be removed or where a new element can be added}
+		\label{queue_1}
+	\end{center}
 \end{figure}
 
 A generalization of queues and linked lists are \textbf{deques}, in which is possible to perform deque and enque operations on both the \textbf{head} and \textbf{tail}.
 
-\begin{figure}[h]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/queue_2.pdf}
-	\caption[]{In a deque the operations can be done on both head and tail.}
-	\labfig{queue_2}
-	\label{queue_2}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/queue_2.pdf}
+		\caption[In a deque the operations can be done on both head and tail]{In a deque the operations can be done on both head and tail}
+		\label{queue_2}
+	\end{center}
 \end{figure}
 
 Another modification of queue are \textbf{priority queue}, in which each element has a priority (a numeric value that indicates its importance). When an element of the queue is removed (deque), the element to be removed is the one which has the highest priority. In case two or more elements have the same priority the oldest element is removed.
 
-\begin{figure}[h]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/queue_3.pdf}
-	\caption[]{A priority queue.}
-	\labfig{queue_3}
-	\label{queue_3}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/queue_3.pdf}
+		\caption[A priority queue]{A priority queue}
+		\label{queue_3}
+	\end{center}
 \end{figure}
 
 \subsection{Queue Implementation}
 The following is the implementation of a queue using the list of Python.
-\begin{lstlisting}[caption={Queue implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Queue implementation.}]
 class Queue(object):
 	def __init__(self, head=None):
 		self.storage = [head]
@@ -217,11 +227,12 @@ A \textbf{set} is an abstract data type in which the unique values are stored wi
 \section{Map}
 A \textbf{map}, \textbf{associative array}, \textbf{symbol table}, or \textbf{dictionary} is an abstract data type composed of a collection of (key, value) pairs \cite{wikihashmap} (\href{https://en.wikipedia.org/wiki/Associative_array}{Hash Map, Wikipedia}). The group of the key is a set, in which each element has a unique value. Map is a very useful data type, used in a lot of situations. 
 
-\begin{figure}[h]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/map_1.pdf}
-	\caption[]{An example of a map.}
-	\labfig{map_1}
-	\label{map_1}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/map_1.pdf}
+		\caption[An example of a map]{An example of a map}
+		\label{map_1}
+	\end{center}
 \end{figure}
 
 \section{Hash Table}
@@ -232,14 +243,15 @@ Hashing is an operation that allows to transform the value of a variable to anot
 
 Let us consider the follow example, where we have an array in which we would like to store big random numbers. A simple way for hashing these numbers is to consider only the last numbers (56 and 17) and divide them for a fixed number. The reminder of the division is used as the new index of the array associated to the number (Figure ).
 
-What happen when the hash function transforms two different number in the same? In this case we have a \textbf{collision} (Figure \ref{map_2}).
-\begin{figure}[h]
-	\includegraphics[width=14cm,height=6cm]{chapters/datastructures/images/map_2.pdf}
-	\caption[]{An example of collision and a possible way to solve this issue by using the bucket method.}
-	\labfig{map_2}
-	\label{map_2}
+What happen when the hash function transforms two different number in the same? In this case we have a \textbf{collision}. In case of a collision there are several strategies for solving this issue: one way could be to change the the hash function, another one could be to use an array for storing different values associated to the same key (\textbf{bucket}). For the last occurrence the worst case complexity for a search is \(O(n)\) (Figure \ref{map_2}).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/datastructures/images/map_2.pdf}
+		\caption[An example of collision and a possible way to solve this issue by using the bucket method]{An example of collision and a possible way to solve this issue by using the bucket method}
+		\label{map_2}
+	\end{center}
 \end{figure}
-In case of a collision there are several strategies for solving this issue: one way could be to change the the hash function, another one could be to use an array for storing different values associated to the same key (\textbf{bucket}). For the last occurrence the worst case complexity for a search is \(O(n)\) (Figure \ref{map_2}).
 
 It does not exist a perfect hash function and a trade off must always be reached. A way to analyze a hash function is by using the \textbf{load factor} defined as follow: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save 10 values using 1000 buckets the Load Factor is equal to 0.01, and most of the buckets is empty. In this case is convenient to change the hash function by using less buckets. More the Load Factor is closed to 0 more the hash table will be empty (\textbf{sparse}), and more the Load Factor is closed to 1 more the has table will be full and efficient. In case the Load Factor is bigger than 1 there is the certainty there will happen some collisions.
 Another example: let us consider a hash function that divide the numbers by 100. If we consider 100 values all multiple of 5, the Load Factor will be: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets = 100/100 = 1\). But this way is very slow and a different configuration should be used to make this more efficient. For example if we use more bucket, for example 107, we still avoid collisions and we do not have the hash map too much sparse.
@@ -253,7 +265,7 @@ This hash function works very well because it assures a very low probability of 
 The following is the implementation of the string key map in Python.
 
 The hash function of this implementation is: \(Hash \ Function = (ASCII[0]*100) + ASCII[1]\). In this code \textit{ord()} and \textit{char()} functions are used. \textit{ord()} takes a char as an argument and return the respective ASCII code (\(ord('U')=85\)), and \textit{char()} takes a numeric value as ASCII code and return the respective char (\(char(85)='U'\)).
-\begin{lstlisting}[caption={String key implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={String key implementation.}]
 class HashTable(object):
 	def __int__(self):
 		self.table = [None]*10000

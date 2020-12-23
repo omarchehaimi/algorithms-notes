@@ -1,8 +1,102 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
-\defcounter {refsection}{0}\relax
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax
-\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\deactivateaddvspace 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Plots of the main functions and their evaluation for computational complexity}}{2}{figure.caption.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2}{\ignorespaces Pseudocode of a recursive function and its internal execution}}{3}{figure.caption.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Factorial recursive execution}}{4}{figure.caption.3}%
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces An example of an array with elements and indexes}}{6}{figure.caption.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Removing or adding an element from an array and the indexes update}}{6}{figure.caption.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces An example of a linked list with the data and the reference to the next element}}{7}{figure.caption.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Adding a new element to a linked list}}{7}{figure.caption.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Removing an element to a linked list}}{8}{figure.caption.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Doubly linked list}}{8}{figure.caption.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces In a stack only the element at the top is modified}}{10}{figure.caption.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {11}{\ignorespaces Allowed operations on queue elements}}{11}{figure.caption.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12}{\ignorespaces In a deque the operations can be done on both head and tail}}{11}{figure.caption.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces A priority queue}}{12}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces An example of a map}}{13}{figure.caption.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces An example of collision and a possible way to solve this issue by using the bucket method}}{14}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {16}{\ignorespaces An array with numeric values ordered in an ascending order}}{16}{figure.caption.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {17}{\ignorespaces Binary search algorithms steps}}{17}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces Array splitting in the implementation of the binary search algorithm}}{18}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {19}{\ignorespaces Bubble sort algorithm}}{19}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {20}{\ignorespaces The swapping process is repeated until the array is completely ordered}}{19}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {21}{\ignorespaces Merge sort algorithm}}{20}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {22}{\ignorespaces Merge sort algorithm implementation}}{23}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {23}{\ignorespaces Quicksort algorithm part one}}{23}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {24}{\ignorespaces Quicksort algorithm steps part two}}{24}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {25}{\ignorespaces Quicksort algorithm worst case}}{25}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {26}{\ignorespaces Quicksort algorithm best and average case}}{25}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {27}{\ignorespaces Quicksort algorithm implementation}}{27}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {28}{\ignorespaces Elements of a tree and linked list}}{28}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {29}{\ignorespaces Possible structures of a tree}}{29}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {30}{\ignorespaces A tree and its fundamentals elements}}{29}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {31}{\ignorespaces The depth-first search and the breath-first search}}{30}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {32}{\ignorespaces Pre-order search}}{30}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {33}{\ignorespaces In-order search}}{31}{figure.caption.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {34}{\ignorespaces Post-order search}}{31}{figure.caption.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {35}{\ignorespaces Search on a tree}}{32}{figure.caption.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {36}{\ignorespaces Delete an element of a tree}}{32}{figure.caption.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {37}{\ignorespaces Add an element of a tree}}{33}{figure.caption.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {38}{\ignorespaces Perfect binary tree results}}{33}{figure.caption.44}%
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
