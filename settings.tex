@@ -1,0 +1,68 @@
+% Settings and packages
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{indentfirst}
+\usepackage{chngpage}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{lipsum}
+\usepackage{shapepar}
+\usepackage{pifont}
+\usepackage[eulerchapternumbers,subfig,beramono,eulermath,pdfspacing]{classicthesis}
+\usepackage{arsclassica}
+\usepackage{ccicons}
+
+% For forcing the position of a picture
+\usepackage{float}
+
+% For wrappint the text to a picture
+\usepackage{wrapfig}
+
+% Coloring boxes in a table
+\usepackage{color, colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+% For writing pseudocode
+\usepackage{algorithmic}
+
+% For having colored boxes for definitions and theorems
+\usepackage[most]{tcolorbox}
+
+\DeclareRobustCommand*{\classicthesis}{Classic\-Thesis}
+\DeclareRobustCommand*{\arsclassica}{{\normalfont\sffamily ArsClassica}}
+
+% Necessary for correct hyperlinks (to index, bib, etc.)
+\newcounter{dummy}
+
+% Nice macros for handling all acronyms in the thesis
+\usepackage{acronym}
+
+% Code
+\usepackage{listings}
+\newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
+\definecolor{lightergray}{gray}{0.99}
+\lstset{language=python,
+        keywordstyle=\color{RoyalBlue},
+        basicstyle=\small\ttfamily,
+        commentstyle=\color{Emerald}\ttfamily,
+        stringstyle=\rmfamily,
+        numberstyle=\scriptsize,
+        showstringspaces=false,
+        breaklines=true,
+        %frame=lines, % No lines to limit the code
+        backgroundcolor=\color{lightergray},
+        flexiblecolumns=true,
+        escapeinside={£*}{*£},
+        firstnumber=last,
+        numberfirstline=true,
+		numbers=left,
+}
+
+
+% Bibliography
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{main.bib} % Bibliography file

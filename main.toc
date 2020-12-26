@@ -103,4 +103,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.4}{Perfect binary tree}}{33}{subsection.4.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{{Bibliography}}{34}{chapter*.45}%
+\contentsline {part}{{Appendix}}{34}{part*.45}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}{Test}}{35}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{36}{chapter*.46}%

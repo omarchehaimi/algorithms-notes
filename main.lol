@@ -1,24 +1,22 @@
 \defcounter {refsection}{0}\relax 
-\deactivateaddvspace 
+\contentsline {lstlisting}{\numberline {1.1}Sum of all elements of a matrix.}{2}{lstlisting.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {1}Sum of all elements of a matrix.}{2}{lstlisting.1}%
+\contentsline {lstlisting}{\numberline {1.2}Implementation of the Fibonacci series with both iterative and recursive way.}{3}{lstlisting.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {2}Implementation of the Fibonacci series with both iterative and recursive way.}{3}{lstlisting.2}%
+\contentsline {lstlisting}{\numberline {1.3}Implementation of calculating the factorial of a number using the recursive way.}{4}{lstlisting.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {3}Implementation of calculating the factorial of a number using the recursive way.}{4}{lstlisting.3}%
+\contentsline {lstlisting}{\numberline {2.1}Linked List implementation.}{8}{lstlisting.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {4}Linked List implementation.}{8}{lstlisting.4}%
+\contentsline {lstlisting}{\numberline {2.2}Stack implementation.}{10}{lstlisting.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {5}Stack implementation.}{10}{lstlisting.5}%
+\contentsline {lstlisting}{\numberline {2.3}Queue implementation.}{12}{lstlisting.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {6}Queue implementation.}{12}{lstlisting.6}%
+\contentsline {lstlisting}{\numberline {2.4}String key implementation.}{15}{lstlisting.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {7}String key implementation.}{15}{lstlisting.7}%
+\contentsline {lstlisting}{\numberline {3.1}Binary search python implementation.}{18}{lstlisting.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {8}Binary search python implementation.}{18}{lstlisting.8}%
+\contentsline {lstlisting}{\numberline {3.2}Bubble Sort python implementation}{20}{lstlisting.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {9}Bubble Sort python implementation}{20}{lstlisting.9}%
+\contentsline {lstlisting}{\numberline {3.3}Merge Sort python implementation.}{22}{lstlisting.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {10}Merge Sort python implementation.}{22}{lstlisting.10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {11}Quicksort python implementation.}{26}{lstlisting.11}%
+\contentsline {lstlisting}{\numberline {3.4}Quicksort python implementation.}{26}{lstlisting.3.4}%
