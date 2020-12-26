@@ -1,1 +1,56 @@
-\chapter{Test}
+\chapter{Binary Search Complete Implementation}
+\label{binappendix}
+The best way to implement the tree data structure is to create a class for the nodes (\textbf{Node}) and a class for the binary tree (\textbf{BinaryTree}). As all the nodes if a binary trees has at most two children, in the class \textbf{Node} is enough to have three attributes: the value of the node, the left, and the right child, in turn of \textbf{Node} type as well. This way of implement tree is very similar to the one used for implement the linked list (\ref{linkedlist}).
+
+\begin{lstlisting}[firstnumber=1, caption={Class definition for a node and a tree}]
+class Node():
+
+	def __int__(self, value):
+		self.value = value
+		self.left = None
+		self.right = None
+
+class BinaryTree():
+
+	def __init__(self, root):
+		self.root = Node(root)
+\end{lstlisting}
+
+\begin{lstlisting}[firstnumber=1, caption={Tree operations implementation}]
+class BinaryTree():
+	...
+	
+	def print_tree(self):
+		return self.preorder_print(tree.root, "")[:-1]
+	
+	def preorder_search_recursive(self, start, find_val):
+		if start:
+			if start.value == find_val:
+				return True
+			else:
+				return preorder_search_recursive(start.left, find_val) or
+					   preorder_search_recursive(start.right, find_val)
+	
+	def preorder_search_iterative(self, start, find_val):
+		if start == None:
+			return None
+		stack = []
+		stack.push(start)
+		while not stack: # Keep cycle until the stack is empty
+			node = stack.pop()
+			if node == find_val:
+				return True
+			# Right child is pushed first so that the left one is processed first
+			if node.right:
+				stack.push(node.right)
+			if node.left:
+				stack.push(node.right)
+		
+		
+	def preorder_print(self, start, traversal):
+		if start:
+			traversal += (str(start.value) + "-")
+			traversal = self.preorder_print(start.left, traversal)
+			traversal = self.preorder_print(start.right,traversal)
+		return traversal
+\end{lstlisting}

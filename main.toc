@@ -103,8 +103,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.4}{Perfect binary tree}}{33}{subsection.4.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{{Appendix}}{34}{part*.45}%
+\contentsline {subsection}{\numberline {4.3.5}{Binary Tree Implementation}}{33}{subsection.4.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}{Test}}{35}{appendix.A}%
+\contentsline {part}{{Appendix}}{35}{part*.45}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{{Bibliography}}{36}{chapter*.46}%
+\contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{36}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{38}{chapter*.46}%

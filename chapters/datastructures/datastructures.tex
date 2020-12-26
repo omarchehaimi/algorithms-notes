@@ -29,6 +29,7 @@ Adding or removing an element of an array could be a very expensive operation. T
 \end{figure}
 
 \section{Linked List}
+\label{linkedlist}
 A \textbf{linked list} is a linear collection in which each element has the data and a reference to the next element (a link) \cite{wikilinkedlist} (\href{https://en.wikipedia.org/wiki/Linked_list}{Linked List, Wikipedia}). 
 \begin{figure}[H]
 	\begin{center}
@@ -70,13 +71,13 @@ Linked list are used for implementing other data structures such as lists, stack
 \subsection{Linked List Implementation}
 The following code is the implementation of a linked list in Python.
 \begin{lstlisting}[firstnumber=1, caption={Linked List implementation.}]
-class Element(object):
+class Element():
 
 	def __init__(self, value):
 		self.value = value
 		self.next = None
 		
-class LinkedList(Object):
+class LinkedList():
 
 	def __init__(self, head=None):
 		self.head = head
@@ -134,10 +135,10 @@ In the stacks only the element at the top of the stack can be modified. The comp
 \subsection{Stack Implementation}
 The following is the implementation in Python of a stack using the linked list.
 \begin{lstlisting}[firstnumber=1, caption={Stack implementation.}]
-class Element(object):
+class Element():
 	...
 
-class LinkedList(object):
+class LinkedList():
 	...
 	
 	def insert_first(self, new_element):
@@ -153,7 +154,7 @@ class LinkedList(object):
 		else:
 			return None
 
-class Stack(Object):
+class Stack():
 	
 	def __init__(self, top=None):
 		self.ll = LinkedList(top)
@@ -207,7 +208,7 @@ Another modification of queue are \textbf{priority queue}, in which each element
 \subsection{Queue Implementation}
 The following is the implementation of a queue using the list of Python.
 \begin{lstlisting}[firstnumber=1, caption={Queue implementation.}]
-class Queue(object):
+class Queue():
 	def __init__(self, head=None):
 		self.storage = [head]
 	
@@ -266,7 +267,7 @@ The following is the implementation of the string key map in Python.
 
 The hash function of this implementation is: \(Hash \ Function = (ASCII[0]*100) + ASCII[1]\). In this code \textit{ord()} and \textit{char()} functions are used. \textit{ord()} takes a char as an argument and return the respective ASCII code (\(ord('U')=85\)), and \textit{char()} takes a numeric value as ASCII code and return the respective char (\(char(85)='U'\)).
 \begin{lstlisting}[firstnumber=1, caption={String key implementation.}]
-class HashTable(object):
+class HashTable():
 	def __int__(self):
 		self.table = [None]*10000
 	

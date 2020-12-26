@@ -20,3 +20,11 @@
 \contentsline {lstlisting}{\numberline {3.3}Merge Sort python implementation.}{22}{lstlisting.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {3.4}Quicksort python implementation.}{26}{lstlisting.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.1}Class definition for a node and a tree}{34}{lstlisting.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.2}Pre-order traversal implementation}{34}{lstlisting.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree}{36}{lstlisting.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {A.2}Pre-order traversal implementation}{36}{lstlisting.A.2}%

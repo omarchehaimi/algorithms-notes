@@ -134,3 +134,44 @@ A perfect binary tree is a binary tree in which all the nodes have two children 
 When a new row is added, the number of nodes double. Given a level \(n\) the total number of nodes is \(2n + 1\).
 
 \subsection{Binary Tree Implementation}
+The following code is the recursive Python implementation of the pre-order traversal (Figure \ref{trees_5}). The full implementation of the all operations possible on trees (adding and removing nodes), as well as the other ways of traversing a tree is in appendix \ref{binappendix}.
+
+\begin{lstlisting}[firstnumber=1, caption={Class definition for a node and a tree}]
+class Node():
+
+	def __int__(self, value):
+		self.value = value
+		self.left = None
+		self.right = None
+
+class BinaryTree():
+
+	def __init__(self, root):
+		self.root = Node(root)
+\end{lstlisting}
+
+\begin{lstlisting}[firstnumber=1, caption={Pre-order traversal implementation}]
+class Node():
+	...
+
+class BinaryTree():
+	...
+	
+	def print_tree(self):
+		return self.preorder_print(tree.root, "")[:-1]
+	
+	def preorder_search_recursive(self, start, find_val):
+		if start:
+			if start.value == find_val:
+				return True
+			else:
+				return preorder_search_recursive(start.left, find_val) or
+					   preorder_search_recursive(start.right, find_val)	
+		
+	def preorder_print(self, start, traversal):
+		if start:
+			traversal += (str(start.value) + "-")
+			traversal = self.preorder_print(start.left, traversal)
+			traversal = self.preorder_print(start.right,traversal)
+		return traversal
+\end{lstlisting}
