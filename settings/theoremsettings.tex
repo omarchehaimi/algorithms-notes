@@ -1,0 +1,73 @@
+% Boxes for definitions and examples
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{amsthm}
+\usepackage{thmtools}
+
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={}{},
+    bodyfont=\normalfont\itshape,
+    headpunct={},
+    postheadspace=\newline,
+    postheadhook={\textcolor{black}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\parsep,
+    spaceabove=\parsep,
+    mdframed={
+        backgroundcolor=yellow!30, 
+        linecolor=yellow!90, 
+        innertopmargin=6pt,
+        roundcorner=5pt, 
+        innerbottommargin=6pt, 
+        skipbelow=\parsep, 
+        skipbelow=\parsep} 
+]{general}
+
+% Example
+\declaretheorem[
+    style=general,
+    name=Example,
+    numberwithin=chapter
+]{example}
+
+% Definition
+\declaretheorem[
+    style=general,
+    name=Definition,
+    numberwithin=chapter
+]{definition}
+
+% Remark
+\declaretheorem[
+	style=general,
+	name=Remark,
+	numberwithin=chapter,
+]{remark}
+
+% Theorem
+\declaretheorem[
+	style=general,
+	name=Theorem,
+	numberwithin=chapter
+]{theorem}
+
+% Proposition
+\declaretheorem[
+	style=general,
+	name=Proposition,
+	numberwithin=chapter
+]{proposition}
+
+% Lemma
+\declaretheorem[
+	style=general,
+	name=Lemma,
+	numberwithin=chapter
+]{lemma}
+
+% Corollary
+\declaretheorem[
+	style=general,
+	name=Corollary,
+	numberwithin=chapter
+]{corollary}

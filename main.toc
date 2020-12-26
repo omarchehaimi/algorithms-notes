@@ -11,9 +11,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}{Big O Notation}}{1}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}{Properties}}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}{Properties}}{2}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}{Time complexity evaluation example}}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.3}{Time complexity evaluation example}}{3}{section.1.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}{Recursion}}{3}{section.1.4}%
 \defcounter {refsection}{0}\relax 

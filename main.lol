@@ -1,7 +1,7 @@
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {1.1}Sum of all elements of a matrix.}{2}{lstlisting.1.1}%
+\contentsline {lstlisting}{\numberline {1.1}Sum of all elements of a matrix.}{3}{lstlisting.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {1.2}Implementation of the Fibonacci series with both iterative and recursive way.}{3}{lstlisting.1.2}%
+\contentsline {lstlisting}{\numberline {1.2}Implementation of the Fibonacci series with both iterative and recursive way.}{4}{lstlisting.1.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {1.3}Implementation of calculating the factorial of a number using the recursive way.}{4}{lstlisting.1.3}%
 \defcounter {refsection}{0}\relax 

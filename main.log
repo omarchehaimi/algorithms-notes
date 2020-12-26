@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  26 DEC 2020 13:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  26 DEC 2020 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -165,7 +165,8 @@ Class scrreprt Info: Using old \@makefntext due to compatibility level
 (scrreprt)           less than 3.22 on input line 7015.
 Class scrreprt Info: Redefining `\numberline' on input line 7028.
 \bibindent=\dimen134
-) (./settings.tex (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (./settings/settings.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
@@ -1503,65 +1504,240 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )))
+(./settings/theoremsettings.tex
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2019/11/29 v2.28 Module abspage for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2019/11/29 v2.28 Module base for zref (HO)
+Package zref Info: New property list: main on input line 763.
+Package zref Info: New property: default on input line 764.
+Package zref Info: New property: page on input line 765.
+)
+\c@abspage=\count466
+Package zref Info: New property: abspage on input line 66.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip152
+\c@mdf@globalstyle@cnt=\count467
+\mdf@skipabove@length=\skip153
+\mdf@skipbelow@length=\skip154
+\mdf@leftmargin@length=\skip155
+\mdf@rightmargin@length=\skip156
+\mdf@innerleftmargin@length=\skip157
+\mdf@innerrightmargin@length=\skip158
+\mdf@innertopmargin@length=\skip159
+\mdf@innerbottommargin@length=\skip160
+\mdf@splittopskip@length=\skip161
+\mdf@splitbottomskip@length=\skip162
+\mdf@outermargin@length=\skip163
+\mdf@innermargin@length=\skip164
+\mdf@linewidth@length=\skip165
+\mdf@innerlinewidth@length=\skip166
+\mdf@middlelinewidth@length=\skip167
+\mdf@outerlinewidth@length=\skip168
+\mdf@roundcorner@length=\skip169
+\mdf@footenotedistance@length=\skip170
+\mdf@userdefinedwidth@length=\skip171
+\mdf@needspace@length=\skip172
+\mdf@frametitleaboveskip@length=\skip173
+\mdf@frametitlebelowskip@length=\skip174
+\mdf@frametitlerulewidth@length=\skip175
+\mdf@frametitleleftmargin@length=\skip176
+\mdf@frametitlerightmargin@length=\skip177
+\mdf@shadowsize@length=\skip178
+\mdf@extratopheight@length=\skip179
+\mdf@subtitleabovelinewidth@length=\skip180
+\mdf@subtitlebelowlinewidth@length=\skip181
+\mdf@subtitleaboveskip@length=\skip182
+\mdf@subtitlebelowskip@length=\skip183
+\mdf@subtitleinneraboveskip@length=\skip184
+\mdf@subtitleinnerbelowskip@length=\skip185
+\mdf@subsubtitleabovelinewidth@length=\skip186
+\mdf@subsubtitlebelowlinewidth@length=\skip187
+\mdf@subsubtitleaboveskip@length=\skip188
+\mdf@subsubtitlebelowskip@length=\skip189
+\mdf@subsubtitleinneraboveskip@length=\skip190
+\mdf@subsubtitleinnerbelowskip@length=\skip191
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
+File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
+)
+\mdf@frametitlebox=\box82
+\mdf@footnotebox=\box83
+\mdf@splitbox@one=\box84
+\mdf@splitbox@two=\box85
+\mdf@splitbox@save=\box86
+\mdfsplitboxwidth=\skip192
+\mdfsplitboxtotalwidth=\skip193
+\mdfsplitboxheight=\skip194
+\mdfsplitboxdepth=\skip195
+\mdfsplitboxtotalheight=\skip196
+\mdfframetitleboxwidth=\skip197
+\mdfframetitleboxtotalwidth=\skip198
+\mdfframetitleboxheight=\skip199
+\mdfframetitleboxdepth=\skip256
+\mdfframetitleboxtotalheight=\skip257
+\mdffootnoteboxwidth=\skip258
+\mdffootnoteboxtotalwidth=\skip259
+\mdffootnoteboxheight=\skip260
+\mdffootnoteboxdepth=\skip261
+\mdffootnoteboxtotalheight=\skip262
+\mdftotallinewidth=\skip263
+\mdfboundingboxwidth=\skip264
+\mdfboundingboxtotalwidth=\skip265
+\mdfboundingboxheight=\skip266
+\mdfboundingboxdepth=\skip267
+\mdfboundingboxtotalheight=\skip268
+\mdf@freevspace@length=\skip269
+\mdf@horizontalwidthofbox@length=\skip270
+\mdf@verticalmarginwhole@length=\skip271
+\mdf@horizontalspaceofbox=\skip272
+\mdfsubtitleheight=\skip273
+\mdfsubsubtitleheight=\skip274
+\c@mdfcountframes=\count468
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count469
+\c@mdf@env@i=\count470
+\c@mdf@env@ii=\count471
+\c@mdf@zref@counter=\count472
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks47
+\thm@bodyfont=\toks48
+\thm@headfont=\toks49
+\thm@notefont=\toks50
+\thm@headpunct=\toks51
+\thm@preskip=\skip275
+\thm@postskip=\skip276
+\thm@headsep=\skip277
+\dth@everypar=\toks52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
+)
+Class scrreprt Info: amsthm's \deferred@thm@head patched.
+
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thmtools.sty
+Package: thmtools 2019/12/22 v68
+\thmt@toks=\toks53
+\c@thmt@dummyctr=\count473
+
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-patch.sty
+Package: thm-patch 2019/12/22 v68
+
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/parseargs.sty
+Package: parseargs 2019/12/22 v68
+\@parsespec=\toks54
+))
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-kv.sty
+Package: thm-kv 2019/12/22 v68
+Package thm-kv Info: Theorem names will be uppercased on input line 39.
+Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 155.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+Package: thm-autoref 2019/12/22 v68
+
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/aliasctr.sty
+Package: aliasctr 2019/12/22 v68
+))
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-listof.sty
+Package: thm-listof 2019/12/22 v68
+)
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-restate.sty
+Package: thm-restate 2019/12/22 v68
+)
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+Package: thm-amsthm 2019/12/22 v68
+\thmt@style@headstyle=\toks55
+))
+Package thmtools Info: Key `postheadhook' (with value `\textcolor {black}{\rule
+ [.6ex]{\linewidth }{0.4pt}}\\')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=general' on input line 24.
+Package thmtools Info: Key `mdframed' (with value ` backgroundcolor=yellow!30, 
+linecolor=yellow!90, innertopmargin=6pt, roundcorner=5pt, innerbottommargin=6pt
+, skipbelow=\parsep , skipbelow=\parsep ')
+(thmtools)             is not a known style key.
+(thmtools)             Will pass this to every \declaretheorem
+(thmtools)             that uses `style=general' on input line 24.
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line
+ 31.
+
+(/usr/share/texlive/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
+Package: thmdef-mdframed 2019/12/22 v68
+)
+\c@example=\count474
+\c@definition=\count475
+\c@remark=\count476
+\c@theorem=\count477
+\c@proposition=\count478
+\c@lemma=\count479
+\c@corollary=\count480
+)
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count466
-\@quotereset=\count467
+\@quotelevel=\count481
+\@quotereset=\count482
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Trying to load font information for T1+pplj on input line 1
-0.
+1.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplj.fd
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 )
-Package scrbase Info: activating english \contentsname on input line 10.
-Package scrbase Info: activating english \listfigurename on input line 10.
-Package scrbase Info: activating english \listtablename on input line 10.
+Package scrbase Info: activating english \contentsname on input line 11.
+Package scrbase Info: activating english \listfigurename on input line 11.
+Package scrbase Info: activating english \listtablename on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count468
+\scratchcounter=\count483
 \scratchdimen=\dimen299
-\scratchbox=\box82
-\nofMPsegments=\count469
-\nofMParguments=\count470
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count471
+\scratchbox=\box87
+\nofMPsegments=\count484
+\nofMParguments=\count485
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count486
 \MPscratchDim=\dimen300
-\MPnumerator=\count472
-\makeMPintoPDFobject=\count473
-\everyMPtoPDFconversion=\toks48
+\MPnumerator=\count487
+\makeMPintoPDFobject=\count488
+\everyMPtoPDFconversion=\toks57
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -1574,7 +1750,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 10.
+LaTeX Info: Redefining \microtypecontext on input line 11.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1586,8 +1762,8 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-\AtBeginShipoutBox=\box83
-Package hyperref Info: Link coloring ON on input line 10.
+\AtBeginShipoutBox=\box88
+Package hyperref Info: Link coloring ON on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1598,11 +1774,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count474
+\c@section@level=\count489
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
 
 (./main.out) (./main.out)
 \@outlinefile=\write7
@@ -1615,7 +1791,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 10.
+(scrreprt)           before \begin{document} on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
@@ -1625,10 +1801,10 @@ File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input lin
 e 168.
-\BKM@id=\count475
+\BKM@id=\count490
 ))
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count476
+\c@lstlisting=\count491
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1643,8 +1819,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 10.
-Package biblatex Info: Reference segment=0 on input line 10.
+Package biblatex Info: Reference section=0 on input line 11.
+Package biblatex Info: Reference segment=0 on input line 11.
 (./front/titlepage.tex
 LaTeX Font Info:    Trying to load font information for T1+iwona on input line 
 13.
@@ -1798,16 +1974,24 @@ Class scrreprt Warning: \float@listhead detected!
 
 ) [8] (./chapters/introduction/introduction.tex
 Chapter 1.
-\c@definition=\count477
-\c@example=\count478
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 17.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
+nput line 17.
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
 17.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 24.
+Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
+t line 24.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/b/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1817,18 +2001,27 @@ Package microtype Info: Character `029' is missing
 
 
 ]
-<chapters/introduction/images/big_o_plots.png, id=331, 1204.5pt x 758.835pt>
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 29.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 41.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 50.
+<chapters/introduction/images/big_o_plots.png, id=330, 1204.5pt x 758.835pt>
 File: chapters/introduction/images/big_o_plots.png Graphic file (type png)
 <use chapters/introduction/images/big_o_plots.png>
 Package pdftex.def Info: chapters/introduction/images/big_o_plots.png  used on 
 input line 55.
 (pdftex.def)             Requested size: 361.35278pt x 227.65225pt.
+ [2 <./chapters/introduction/images/big_o_plots.png (PNG copy)>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 64.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.50006pt on input line 64.
- [2 <./chapters/introduction/images/big_o_plots.png (PNG copy)>]
-<chapters/introduction/images/recursion_1.pdf, id=346, 301.59921pt x 139.4185pt
+<chapters/introduction/images/recursion_1.pdf, id=348, 301.59921pt x 139.4185pt
 >
 File: chapters/introduction/images/recursion_1.pdf Graphic file (type pdf)
 <use chapters/introduction/images/recursion_1.pdf>
@@ -1836,7 +2029,7 @@ Package pdftex.def Info: chapters/introduction/images/recursion_1.pdf  used on
 input line 87.
 (pdftex.def)             Requested size: 180.9609pt x 83.65173pt.
  [3 <./chapters/introduction/images/recursion_1.pdf>]
-<chapters/introduction/images/factorial.pdf, id=374, 486.54211pt x 375.57637pt>
+<chapters/introduction/images/factorial.pdf, id=369, 486.54211pt x 375.57637pt>
 
 File: chapters/introduction/images/factorial.pdf Graphic file (type pdf)
 <use chapters/introduction/images/factorial.pdf>
@@ -1846,7 +2039,7 @@ put line 129.
 ) (./chapters/datastructures/datastructures.tex
 Chapter 2.
 [4 <./chapters/introduction/images/factorial.pdf>]
-<chapters/datastructures/images/array_1.pdf, id=410, 409.71968pt x 105.27519pt>
+<chapters/datastructures/images/array_1.pdf, id=415, 409.71968pt x 105.27519pt>
 
 File: chapters/datastructures/images/array_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/array_1.pdf>
@@ -1857,14 +2050,14 @@ put line 14.
 
 
 ]
-<chapters/datastructures/images/array_2.pdf, id=424, 534.91182pt x 318.67087pt>
+<chapters/datastructures/images/array_2.pdf, id=429, 534.91182pt x 318.67087pt>
 
 File: chapters/datastructures/images/array_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/array_2.pdf>
 Package pdftex.def Info: chapters/datastructures/images/array_2.pdf  used on in
 put line 25.
 (pdftex.def)             Requested size: 320.94955pt x 191.20398pt.
-<chapters/datastructures/images/linked_list_1.pdf, id=427, 412.56496pt x 219.08
+<chapters/datastructures/images/linked_list_1.pdf, id=432, 412.56496pt x 219.08
 621pt>
 File: chapters/datastructures/images/linked_list_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_1.pdf>
@@ -1877,14 +2070,14 @@ mages/array_2.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/datastructures/images/array_
 2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/datastructures/images/linked_list_2.pdf, id=448, 503.61377pt x 327.20
+<chapters/datastructures/images/linked_list_2.pdf, id=453, 503.61377pt x 327.20
 67pt>
 File: chapters/datastructures/images/linked_list_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_2.pdf>
 Package pdftex.def Info: chapters/datastructures/images/linked_list_2.pdf  used
  on input line 45.
 (pdftex.def)             Requested size: 302.1706pt x 196.32552pt.
-<chapters/datastructures/images/linked_list_3.pdf, id=449, 372.73111pt x 315.82
+<chapters/datastructures/images/linked_list_3.pdf, id=454, 372.73111pt x 315.82
 558pt>
 File: chapters/datastructures/images/linked_list_3.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_3.pdf>
@@ -1898,7 +2091,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/datastructures/images/linked
 _list_2.pdf): PDF inclusion: multiple pdfs with page group included in a single
  page
 >]
-<chapters/datastructures/images/linked_list_4.pdf, id=470, 404.02913pt x 149.37
+<chapters/datastructures/images/linked_list_4.pdf, id=475, 404.02913pt x 149.37
 697pt>
 File: chapters/datastructures/images/linked_list_4.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_4.pdf>
@@ -1924,7 +2117,7 @@ LaTeX Font Info:    Trying to load font information for TS1+pplj on input line
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplj.fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 )
-<chapters/datastructures/images/stack_1.pdf, id=504, 438.17244pt x 194.90138pt>
+<chapters/datastructures/images/stack_1.pdf, id=509, 438.17244pt x 194.90138pt>
 
 File: chapters/datastructures/images/stack_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/stack_1.pdf>
@@ -1937,14 +2130,14 @@ Overfull \hbox (4.49666pt too wide) in paragraph at lines 175--176
 main con-stant. Queues
  []
 
-<chapters/datastructures/images/queue_1.pdf, id=587, 551.98347pt x 291.64075pt>
+<chapters/datastructures/images/queue_1.pdf, id=592, 551.98347pt x 291.64075pt>
 
 File: chapters/datastructures/images/queue_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/queue_1.pdf>
 Package pdftex.def Info: chapters/datastructures/images/queue_1.pdf  used on in
 put line 181.
 (pdftex.def)             Requested size: 331.19264pt x 174.9858pt.
-<chapters/datastructures/images/queue_2.pdf, id=588, 540.60239pt x 283.10492pt>
+<chapters/datastructures/images/queue_2.pdf, id=593, 540.60239pt x 283.10492pt>
 
 File: chapters/datastructures/images/queue_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/queue_2.pdf>
@@ -1957,7 +2150,7 @@ mages/queue_2.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/datastructures/images/queue_
 2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/datastructures/images/queue_3.pdf, id=608, 349.96889pt x 143.68642pt>
+<chapters/datastructures/images/queue_3.pdf, id=613, 349.96889pt x 143.68642pt>
 
 File: chapters/datastructures/images/queue_3.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/queue_3.pdf>
@@ -1970,14 +2163,14 @@ Overfull \hbox (5.35445pt too wide) in paragraph at lines 228--229
 14[][]] ([][]Hash Map, Wikipedia[][]).
  []
 
-<chapters/datastructures/images/map_1.pdf, id=613, 287.37285pt x 109.5431pt>
+<chapters/datastructures/images/map_1.pdf, id=618, 287.37285pt x 109.5431pt>
 File: chapters/datastructures/images/map_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/map_1.pdf>
 Package pdftex.def Info: chapters/datastructures/images/map_1.pdf  used on inpu
 t line 232.
 (pdftex.def)             Requested size: 172.42502pt x 65.72635pt.
 [12 <./chapters/datastructures/images/queue_3.pdf>]
-<chapters/datastructures/images/map_2.pdf, id=644, 514.99487pt x 352.81418pt>
+<chapters/datastructures/images/map_2.pdf, id=649, 514.99487pt x 352.81418pt>
 File: chapters/datastructures/images/map_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/map_2.pdf>
 Package pdftex.def Info: chapters/datastructures/images/map_2.pdf  used on inpu
@@ -1994,14 +2187,14 @@ n/10.95 Û\U/zeur/m/n/10.95 0\U/zeus/m/n/10.95 Ý ^^C
 ) (./chapters/searchandsorting/searchandsorting.tex
 Chapter 3.
 [15]
-<chapters/searchandsorting/images/sorting_1.pdf, id=704, 369.88583pt x 119.5015
+<chapters/searchandsorting/images/sorting_1.pdf, id=709, 369.88583pt x 119.5015
 7pt>
 File: chapters/searchandsorting/images/sorting_1.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_1.pdf>
 Package pdftex.def Info: chapters/searchandsorting/images/sorting_1.pdf  used o
 n input line 9.
 (pdftex.def)             Requested size: 221.9332pt x 71.70148pt.
-<chapters/searchandsorting/images/sorting_2.pdf, id=708, 540.60239pt x 369.8858
+<chapters/searchandsorting/images/sorting_2.pdf, id=713, 540.60239pt x 369.8858
 3pt>
 File: chapters/searchandsorting/images/sorting_2.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_2.pdf>
@@ -2013,14 +2206,14 @@ n input line 22.
 
  <./chapters/searchandsorting/images/sorting_1.pdf>] [17 <./chapters/searchands
 orting/images/sorting_2.pdf>]
-<chapters/searchandsorting/images/sorting_3.pdf, id=797, 324.3614pt x 204.85983
+<chapters/searchandsorting/images/sorting_3.pdf, id=802, 324.3614pt x 204.85983
 pt>
 File: chapters/searchandsorting/images/sorting_3.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_3.pdf>
 Package pdftex.def Info: chapters/searchandsorting/images/sorting_3.pdf  used o
 n input line 75.
 (pdftex.def)             Requested size: 194.61833pt x 122.91684pt.
-<chapters/searchandsorting/images/sorting_4.pdf, id=800, 543.44762pt x 369.8858
+<chapters/searchandsorting/images/sorting_4.pdf, id=805, 543.44762pt x 369.8858
 3pt>
 File: chapters/searchandsorting/images/sorting_4.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_4.pdf>
@@ -2028,7 +2221,7 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_4.pdf  used o
 n input line 86.
 (pdftex.def)             Requested size: 326.07108pt x 221.9332pt.
  [18 <./chapters/searchandsorting/images/sorting_3.pdf>]
-<chapters/searchandsorting/images/sorting_5.pdf, id=825, 543.44762pt x 372.7311
+<chapters/searchandsorting/images/sorting_5.pdf, id=830, 543.44762pt x 372.7311
 1pt>
 File: chapters/searchandsorting/images/sorting_5.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_5.pdf>
@@ -2042,7 +2235,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/searchandsorting/images/sort
 ing_5.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >]
-<chapters/searchandsorting/images/sorting_6.pdf, id=846, 514.99487pt x 372.7311
+<chapters/searchandsorting/images/sorting_6.pdf, id=851, 514.99487pt x 372.7311
 1pt>
 File: chapters/searchandsorting/images/sorting_6.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_6.pdf>
@@ -2050,7 +2243,7 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_6.pdf  used o
 n input line 130.
 (pdftex.def)             Requested size: 267.79887pt x 193.82127pt.
  [20 <./chapters/searchandsorting/images/sorting_6.pdf>] [21]
-<chapters/searchandsorting/images/sorting_7.pdf, id=877, 549.13818pt x 375.5763
+<chapters/searchandsorting/images/sorting_7.pdf, id=882, 549.13818pt x 375.5763
 7pt>
 File: chapters/searchandsorting/images/sorting_7.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_7.pdf>
@@ -2058,14 +2251,14 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_7.pdf  used o
 n input line 216.
 (pdftex.def)             Requested size: 329.48544pt x 225.34755pt.
  [22]
-<chapters/searchandsorting/images/sorting_8.pdf, id=920, 549.13818pt x 375.5763
+<chapters/searchandsorting/images/sorting_8.pdf, id=925, 549.13818pt x 375.5763
 7pt>
 File: chapters/searchandsorting/images/sorting_8.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_8.pdf>
 Package pdftex.def Info: chapters/searchandsorting/images/sorting_8.pdf  used o
 n input line 226.
 (pdftex.def)             Requested size: 329.48544pt x 225.34755pt.
-<chapters/searchandsorting/images/sorting_9.pdf, id=921, 549.13818pt x 307.2897
+<chapters/searchandsorting/images/sorting_9.pdf, id=926, 549.13818pt x 307.2897
 5pt>
 File: chapters/searchandsorting/images/sorting_9.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_9.pdf>
@@ -2079,7 +2272,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/searchandsorting/images/sort
 ing_8.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >]
-<chapters/searchandsorting/images/sorting_10.pdf, id=944, 369.88583pt x 110.965
+<chapters/searchandsorting/images/sorting_10.pdf, id=949, 369.88583pt x 110.965
 74pt>
 File: chapters/searchandsorting/images/sorting_10.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_10.pdf>
@@ -2087,7 +2280,7 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_10.pdf  used
 on input line 255.
 (pdftex.def)             Requested size: 221.9332pt x 66.57994pt.
  [24 <./chapters/searchandsorting/images/sorting_9.pdf>]
-<chapters/searchandsorting/images/sorting_11.pdf, id=957, 318.67087pt x 65.4413
+<chapters/searchandsorting/images/sorting_11.pdf, id=962, 318.67087pt x 65.4413
 5pt>
 File: chapters/searchandsorting/images/sorting_11.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_11.pdf>
@@ -2101,7 +2294,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/searchandsorting/images/sort
 ing_11.pdf): PDF inclusion: multiple pdfs with page group included in a single 
 page
 >]
-<chapters/searchandsorting/images/sorting_12.pdf, id=983, 549.13818pt x 372.731
+<chapters/searchandsorting/images/sorting_12.pdf, id=988, 549.13818pt x 372.731
 11pt>
 File: chapters/searchandsorting/images/sorting_12.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_12.pdf>
@@ -2111,13 +2304,13 @@ on input line 328.
 ) (./chapters/trees/trees.tex
 Chapter 4.
 [26] [27 <./chapters/searchandsorting/images/sorting_12.pdf>]
-<chapters/trees/images/trees_1.pdf, id=1034, 418.2555pt x 293.06339pt>
+<chapters/trees/images/trees_1.pdf, id=1039, 418.2555pt x 293.06339pt>
 File: chapters/trees/images/trees_1.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_1.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_1.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 250.95523pt x 175.83939pt.
-<chapters/trees/images/trees_2.pdf, id=1037, 364.19528pt x 239.00314pt>
+<chapters/trees/images/trees_2.pdf, id=1042, 364.19528pt x 239.00314pt>
 File: chapters/trees/images/trees_2.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_2.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_2.pdf  used on input line 
@@ -2127,13 +2320,13 @@ Package pdftex.def Info: chapters/trees/images/trees_2.pdf  used on input line
 
 
  <./chapters/trees/images/trees_1.pdf>]
-<chapters/trees/images/trees_3.pdf, id=1052, 551.98347pt x 321.51616pt>
+<chapters/trees/images/trees_3.pdf, id=1057, 551.98347pt x 321.51616pt>
 File: chapters/trees/images/trees_3.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_3.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_3.pdf  used on input line 
 31.
 (pdftex.def)             Requested size: 331.19264pt x 192.91118pt.
-<chapters/trees/images/trees_4.pdf, id=1054, 551.98347pt x 281.68228pt>
+<chapters/trees/images/trees_4.pdf, id=1059, 551.98347pt x 281.68228pt>
 File: chapters/trees/images/trees_4.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_4.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_4.pdf  used on input line 
@@ -2145,13 +2338,13 @@ Package pdftex.def Info: chapters/trees/images/trees_4.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_3.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_5.pdf, id=1075, 244.6937pt x 236.15787pt>
+<chapters/trees/images/trees_5.pdf, id=1080, 244.6937pt x 236.15787pt>
 File: chapters/trees/images/trees_5.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_5.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_5.pdf  used on input line 
 55.
 (pdftex.def)             Requested size: 146.81735pt x 141.6958pt.
-<chapters/trees/images/trees_6.pdf, id=1076, 244.6937pt x 236.15787pt>
+<chapters/trees/images/trees_6.pdf, id=1081, 244.6937pt x 236.15787pt>
 File: chapters/trees/images/trees_6.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_6.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_6.pdf  used on input line 
@@ -2163,13 +2356,13 @@ Package pdftex.def Info: chapters/trees/images/trees_6.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_5.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_7.pdf, id=1106, 244.6937pt x 236.15787pt>
+<chapters/trees/images/trees_7.pdf, id=1111, 244.6937pt x 236.15787pt>
 File: chapters/trees/images/trees_7.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_7.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_7.pdf  used on input line 
 77.
 (pdftex.def)             Requested size: 146.81735pt x 141.6958pt.
-<chapters/trees/images/trees_8.pdf, id=1107, 244.6937pt x 202.01457pt>
+<chapters/trees/images/trees_8.pdf, id=1112, 244.6937pt x 202.01457pt>
 File: chapters/trees/images/trees_8.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_8.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_8.pdf  used on input line 
@@ -2181,7 +2374,7 @@ Package pdftex.def Info: chapters/trees/images/trees_8.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_7.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_9.pdf, id=1140, 392.64803pt x 273.14645pt>
+<chapters/trees/images/trees_9.pdf, id=1145, 392.64803pt x 273.14645pt>
 File: chapters/trees/images/trees_9.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_9.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_9.pdf  used on input line 
@@ -2193,13 +2386,13 @@ Package pdftex.def Info: chapters/trees/images/trees_9.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_9.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_10.pdf, id=1164, 324.3614pt x 273.14645pt>
+<chapters/trees/images/trees_10.pdf, id=1169, 324.3614pt x 273.14645pt>
 File: chapters/trees/images/trees_10.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_10.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_10.pdf  used on input line
  117.
 (pdftex.def)             Requested size: 194.61833pt x 163.88913pt.
-<chapters/trees/images/trees_11.pdf, id=1165, 600.35315pt x 210.5504pt>
+<chapters/trees/images/trees_11.pdf, id=1170, 600.35315pt x 210.5504pt>
 File: chapters/trees/images/trees_11.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_11.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_11.pdf  used on input line
@@ -2219,14 +2412,14 @@ Appendix A.
 
 
 ]
-Overfull \hbox (2.89244pt too wide) in paragraph at lines 35--35
+Overfull \hbox (2.89244pt too wide) in paragraph at lines 36--36
 []\T1/pplj/m/n/10.95 Wikipedia. \T1/pplj/m/it/10.95 Set\T1/pplj/m/n/10.95 . \T1
 /pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$\T1/fvm/m/n/10.95 https : / / en 
 . wikipedia . org / wiki / Set _ (abstract _
  []
 
 
-Overfull \hbox (21.97382pt too wide) in paragraph at lines 35--35
+Overfull \hbox (21.97382pt too wide) in paragraph at lines 36--36
 []\T1/pplj/m/n/10.95 Wikipedia. \T1/pplj/m/it/10.95 Hash map\T1/pplj/m/n/10.95 
 . \T1/pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$\T1/fvm/m/n/10.95 https : / 
 / en . wikipedia . org / wiki / Associative _
@@ -2237,37 +2430,37 @@ Overfull \hbox (21.97382pt too wide) in paragraph at lines 35--35
 
 
 ]
-Overfull \hbox (6.25934pt too wide) in paragraph at lines 35--35
+Overfull \hbox (6.25934pt too wide) in paragraph at lines 36--36
 []\T1/pplj/m/n/10.95 Wikipedia. \T1/pplj/m/it/10.95 Quick-sort\T1/pplj/m/n/10.9
 5 . \T1/pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$\T1/fvm/m/n/10.95 https : 
 / / en . wikipedia . org / wiki / Quicksort$[][]\T1/pplj/m/n/10.95 . 
  []
 
 
-Overfull \hbox (11.2654pt too wide) in paragraph at lines 35--35
+Overfull \hbox (11.2654pt too wide) in paragraph at lines 36--36
 []\T1/pplj/m/n/10.95 Wikipedia. \T1/pplj/m/it/10.95 Quick-sort python im-ple-me
 n-ta-tion\T1/pplj/m/n/10.95 . \T1/pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$
 \T1/fvm/m/n/10.95 https : / / www . educative .
  []
 
 [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 42666 strings out of 481239
- 864240 string characters out of 5920377
- 1830522 words of memory out of 5000000
- 56615 multiletter control sequences out of 15000+600000
+ 44243 strings out of 481239
+ 895980 string characters out of 5920377
+ 1878036 words of memory out of 5000000
+ 58129 multiletter control sequences out of 15000+600000
  659349 words of font info for 179 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,23n,111p,10099b,3707s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2294,10 +2487,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/zapfding/uzdr.pfb>
-Output written on main.pdf (45 pages, 826770 bytes).
+Output written on main.pdf (45 pages, 827349 bytes).
 PDF statistics:
- 1590 PDF objects out of 1728 (max. 8388607)
- 1330 compressed objects within 14 object streams
- 427 named destinations out of 1000 (max. 500000)
+ 1595 PDF objects out of 1728 (max. 8388607)
+ 1335 compressed objects within 14 object streams
+ 432 named destinations out of 1000 (max. 500000)
  24867 words of extra memory for PDF output out of 24883 (max. 10000000)
 
