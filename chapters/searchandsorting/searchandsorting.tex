@@ -7,7 +7,7 @@ Let us consider the problem of finding a number stored in an array with an \text
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_1.pdf}
-		\caption[An array with numeric values ordered in an ascending order]{An array with numeric values ordered in an ascending order}
+		\caption[An array with numeric values ordered in an ascending order.]{An array with numeric values ordered in an ascending order.}
 		\label{sorting_1}
 	\end{center}
 \end{figure}
@@ -20,7 +20,7 @@ Let us start to check as the first element the central value of the array (in ca
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_2.pdf}
-		\caption[Binary search algorithms steps]{Binary search algorithms steps}
+		\caption[Binary search algorithms steps.]{Binary search algorithms steps.}
 		\label{sorting_2}
 	\end{center}
 \end{figure}
@@ -29,7 +29,7 @@ Let us start to check as the first element the central value of the array (in ca
 For evaluating the efficiency of this algorithm we have to evaluate the number of steps required for solving the problem. We already know that the efficiency of this algorithm will not be \(O(n)\), because in this algorithm not all the elements of the array are checked. The way for evaluating the complexity of an algorithm is to execute the algorithms varying the size of the input, and evaluating how many operations are done in the worst case. In the binary search algorithm the worst case is when the size of the array becomes one, so we find or we do not find the searched element at the end of the array splitting process.
 
 \begin{table}[H]
-\caption[Binary Search Efficiency]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
+\caption[Binary Search Efficiency.]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
 \label{binarysearchefficiency}
 \centering
 \begin{tabular}{ | l | c | c | c | c | c | c | c | c | c |}
@@ -73,7 +73,7 @@ def binary_search(array_input, value):
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_3.pdf}
-		\caption[Array splitting in the implementation of the binary search algorithm]{Array splitting in the implementation of the binary search algorithm}
+		\caption[Array splitting in the implementation of the binary search algorithm.]{Array splitting in the implementation of the binary search algorithm.}
 		\label{sorting_3}
 	\end{center}
 \end{figure}
@@ -84,7 +84,7 @@ def binary_search(array_input, value):
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_4.pdf}
-		\caption[Bubble sort algorithm]{In bubble sort the biggest element goes at the and of the array}
+		\caption[Bubble sort algorithm.]{In bubble sort the biggest element goes at the and of the array.}
 		\label{sorting_4}
 	\end{center}
 \end{figure}
@@ -92,7 +92,7 @@ def binary_search(array_input, value):
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_5.pdf}
-		\caption[The swapping process is repeated until the array is completely ordered]{The swapping process is repeated until the array is completely ordered}
+		\caption[The swapping process is repeated until the array is completely ordered.]{The swapping process is repeated until the array is completely ordered.}
 		\label{sorting_5}
 	\end{center}
 \end{figure}
@@ -108,7 +108,7 @@ In summary:
 
 \subsection{Bubble Sort Implementation}
 The following code is the python implementation of the bubble sort algorithm.
-\begin{lstlisting}[firstnumber=1, caption={Bubble Sort python implementation}]
+\begin{lstlisting}[firstnumber=1, caption={Bubble Sort python implementation}.]
 def bubble_sort(array_input):
 	index = len(array_input) - 1
 	sorted = False
@@ -128,7 +128,7 @@ The \textbf{merge sort} algorithm works by dividing the array in single elements
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.52]{chapters/searchandsorting/images/sorting_6.pdf}
-		\caption[Merge sort algorithm]{In merge sort merging and sorting process is repeated until the array is again unified with all the elements sorted}
+		\caption[Merge sort algorithm.]{In merge sort merging and sorting process is repeated until the array is again unified with all the elements sorted.}
 		\label{sorting_6}
 	\end{center}
 \end{figure}
@@ -148,7 +148,7 @@ The number of comparisons depends by the array size. For an array of two element
 How many iterations are required? In our example for an array of seven elements, the iterations required are three. From the subprocess of our example we observe that for an array of size four the number of iterations are two, for one of size three are two, and for one of size two is one. Thus we can create the following table:
 
 \begin{table}[H]
-\caption[Merge Sort Efficiency]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
+\caption[Merge Sort Efficiency.]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
 \label{mergesortefficiency}
 \centering
 \begin{tabular}{ | l | c | c | c | c | c | c | c | c | c |}
@@ -214,7 +214,7 @@ def merge_sort(array_input):
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_7.pdf}
-		\caption[Merge sort algorithm implementation]{Merge sort algorithm implementation}
+		\caption[Merge sort algorithm implementation.]{Merge sort algorithm implementation.}
 		\label{sorting_7}
 	\end{center}
 \end{figure}
@@ -224,7 +224,7 @@ The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It w
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_8.pdf}
-		\caption[Quicksort algorithm part one]{Quicksort algorithm part one}
+		\caption[Quicksort algorithm part one.]{Quicksort algorithm part one.}
 		\label{sorting_8}
 	\end{center}
 \end{figure}
@@ -232,7 +232,7 @@ The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It w
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_9.pdf}
-		\caption[Quicksort algorithm steps part two]{Quicksort algorithm steps part two}
+		\caption[Quicksort algorithm steps part two.]{Quicksort algorithm steps part two.}
 		\label{sorting_9}
 	\end{center}
 \end{figure}
@@ -253,7 +253,7 @@ Let us consider first the worst case. In this situation the last elements of the
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_10.pdf}
-		\caption[Quicksort algorithm worst case]{Quicksort algorithm worst case}
+		\caption[Quicksort algorithm worst case.]{Quicksort algorithm worst case.}
 		\label{sorting_10}
 	\end{center}
 \end{figure}
@@ -263,7 +263,7 @@ In the best and in the average case the complexity is \(O(n log(n)\). The reason
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_11.pdf}
-		\caption[Quicksort algorithm best and average case]{Quicksort algorithm best and average case}
+		\caption[Quicksort algorithm best and average case.]{Quicksort algorithm best and average case.}
 		\label{sorting_11}
 	\end{center}
 \end{figure}
@@ -326,7 +326,7 @@ def merge_sort(array_input):
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_12.pdf}
-		\caption[Quicksort algorithm implementation]{Quicksort algorithm implementation}
+		\caption[Quicksort algorithm implementation.]{Quicksort algorithm implementation.}
 		\label{sorting_12}
 	\end{center}
 \end{figure}

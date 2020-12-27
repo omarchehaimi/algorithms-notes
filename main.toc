@@ -109,4 +109,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{36}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{{Bibliography}}{38}{chapter*.46}%
+\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{37}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}{In-order Traversal}}{39}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{40}{section.A.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{43}{chapter*.49}%
