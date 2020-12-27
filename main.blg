@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'main.blg'
-[62] biber:322> INFO - === dom dic 27, 2020, 18:31:17
-[73] Biber.pm:415> INFO - Reading 'main.bcf'
-[127] Biber.pm:943> INFO - Found 25 citekeys in bib section 0
+[61] biber:322> INFO - === dom dic 27, 2020, 19:19:22
+[72] Biber.pm:415> INFO - Reading 'main.bcf'
+[126] Biber.pm:943> INFO - Found 25 citekeys in bib section 0
 [137] Biber.pm:4256> INFO - Processing section 0
-[138] Utils.pm:75> INFO - Globbing data source 'main.bib'
-[138] Utils.pm:91> INFO - Globbed data source 'main.bib' to main.bib
-[146] Biber.pm:4455> INFO - Looking for bibtex format file 'main.bib' for section 0
-[147] bibtex.pm:1653> INFO - LaTeX decoding ...
-[161] bibtex.pm:1471> INFO - Found BibTeX data source 'main.bib'
-[239] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[239] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[239] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[239] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[253] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[260] bbl.pm:755> INFO - Output to main.bbl
+[137] Utils.pm:75> INFO - Globbing data source 'main.bib'
+[137] Utils.pm:91> INFO - Globbed data source 'main.bib' to main.bib
+[145] Biber.pm:4455> INFO - Looking for bibtex format file 'main.bib' for section 0
+[146] bibtex.pm:1653> INFO - LaTeX decoding ...
+[160] bibtex.pm:1471> INFO - Found BibTeX data source 'main.bib'
+[237] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[237] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[237] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[237] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[251] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[258] bbl.pm:755> INFO - Output to main.bbl
