@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  28 DEC 2020 12:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  28 DEC 2020 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2461,10 +2461,9 @@ Overfull \hbox (109.7172pt too wide) in paragraph at lines 161--162
  [] 
  []
 
-[40] [41 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/append
-ix/images/appendixtree/treesappendix_3.pdf>]
+[40]
 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images
-/appendixtree/treesappendix_4.pdf, id=1458, 787.03165pt x 434.3313pt>
+/appendixtree/treesappendix_4.pdf, id=1442, 622.23335pt x 424.23058pt>
 File: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/i
 mages/appendixtree/treesappendix_4.pdf Graphic file (type pdf)
 <use /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/im
@@ -2472,14 +2471,16 @@ ages/appendixtree/treesappendix_4.pdf>
 Package pdftex.def Info: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/
 chapters/appendix/images/appendixtree/treesappendix_4.pdf  used on input line 1
 72.
-(pdftex.def)             Requested size: 472.22263pt x 260.60078pt.
+(pdftex.def)             Requested size: 373.34288pt x 254.5403pt.
 
-Overfull \hbox (102.22263pt too wide) in paragraph at lines 172--173
+Overfull \hbox (3.34288pt too wide) in paragraph at lines 172--173
  [] 
  []
 
-) [42 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/
-images/appendixtree/treesappendix_4.pdf>]
+[41 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/im
+ages/appendixtree/treesappendix_3.pdf>]) [42 </home/omar/Documenti/AlgorithmsNo
+tes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_4.pdf>
+]
 Overfull \hbox (2.89244pt too wide) in paragraph at lines 36--36
 []\T1/pplj/m/n/10.95 Wikipedia. \T1/pplj/m/it/10.95 Set\T1/pplj/m/n/10.95 . \T1
 /pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$\T1/fvm/m/n/10.95 https : / / en 
@@ -2555,7 +2556,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/zapfding/uzdr.pfb>
-Output written on main.pdf (53 pages, 929736 bytes).
+Output written on main.pdf (53 pages, 929724 bytes).
 PDF statistics:
  1918 PDF objects out of 2073 (max. 8388607)
  1629 compressed objects within 17 object streams
