@@ -103,16 +103,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.4}{Perfect binary tree}}{33}{subsection.4.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}{Binary Tree Implementation}}{33}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.5}{Binary Tree Implementation}}{34}{subsection.4.3.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{{Appendix}}{35}{part*.45}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{36}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{37}{section.A.1}%
+\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{36}{section.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}{In-order Traversal}}{39}{section.A.2}%
+\contentsline {section}{\numberline {A.2}{In-order Traversal}}{38}{section.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{40}{section.A.3}%
+\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{39}{section.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{{Bibliography}}{43}{chapter*.49}%
+\contentsline {section}{\numberline {A.4}{Summary on Tree Traversal}}{42}{section.A.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{43}{chapter*.50}%

@@ -23,12 +23,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {4.1}Class definition for a node and a tree.}{34}{lstlisting.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {4.2}Pre-order traversal implementation.}{34}{lstlisting.4.2}%
+\contentsline {lstlisting}{\numberline {4.2}Recursive pre-order traversal and search implementation.}{34}{lstlisting.4.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree.}{36}{lstlisting.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.2}Tree operations implementation.}{37}{lstlisting.A.2}%
+\contentsline {lstlisting}{\numberline {A.2}Recursive and iterative implementation of pre-order traversal.}{36}{lstlisting.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.3}Tree operations implementation.}{39}{lstlisting.A.3}%
+\contentsline {lstlisting}{\numberline {A.3}Tree operations implementation.}{38}{lstlisting.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.4}Tree operations implementation.}{40}{lstlisting.A.4}%
+\contentsline {lstlisting}{\numberline {A.4}Tree operations implementation.}{39}{lstlisting.A.4}%

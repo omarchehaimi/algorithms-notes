@@ -108,7 +108,7 @@ Before the delete process there is always a search one for finding the element t
 		\label{trees_9}
 	\end{center}
 \end{figure}
-
+AGGIUNGERE IL LIBRO DI ALGORITMI CITANDO CHE SIA UNA LETTURA APPROFONDITA PER MAGGIORI DETTAGLI.
 \subsection{Insert}
 Insert a new element to a binary tree is not a hard operation, because it is enough to find a node which can take a new children node. In the worst case to find the proper node in which a child can be add the farthest leaf must be reached (case 1 \ref{trees_10}).
 
@@ -119,7 +119,7 @@ Insert a new element to a binary tree is not a hard operation, because it is eno
 		\label{trees_10}
 	\end{center}
 \end{figure}
-
+AGGIUNGERE IL LIBRO DI ALGORITMI CITANDO CHE SIA UNA LETTURA APPROFONDITA PER MAGGIORI DETTAGLI.
 \subsection{Perfect binary tree}
 A perfect binary tree is a binary tree in which all the nodes have two children except the leaf which do not have any children. In this case the following results are valid
 
@@ -134,7 +134,7 @@ A perfect binary tree is a binary tree in which all the nodes have two children 
 When a new row is added, the number of nodes double. Given a level \(n\) the total number of nodes is \(2n + 1\).
 
 \subsection{Binary Tree Implementation}
-The following code is the recursive Python implementation of the pre-order traversal (Figure \ref{trees_5}). The full implementation of the all operations possible on trees (adding and removing nodes), as well as the other ways of traversing a tree is in appendix \ref{binappendix}.
+The following code is the recursive Python implementation of the pre-order search and traversal (Figure \ref{trees_5}). The recursive and iterative implementations of the other ways of search and traverse a tree are in appendix \ref{binappendix}.
 
 \begin{lstlisting}[firstnumber=1, caption={Class definition for a node and a tree.}]
 class Node():
@@ -150,16 +150,16 @@ class BinaryTree():
 		self.root = Node(root)
 \end{lstlisting}
 
-\begin{lstlisting}[firstnumber=1, caption={Pre-order traversal implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Recursive pre-order traversal and search implementation.}]
 class Node():
 	...
 
 class BinaryTree():
 	...
-	
+
 	def print_tree(self):
 		return self.preorder_print(tree.root, "")[:-1]
-	
+
 	def preorder_search_recursive(self, start, find_val):
 		if start:
 			if start.value == find_val:
@@ -167,7 +167,7 @@ class BinaryTree():
 			else:
 				return preorder_search_recursive(start.left, find_val) or
 					   preorder_search_recursive(start.right, find_val)	
-		
+	
 	def preorder_print(self, start, traversal):
 		if start:
 			traversal += (str(start.value) + "-")

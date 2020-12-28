@@ -103,8 +103,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {39}{\ignorespaces Pre-order iterative implementation example.}}{37}{figure.caption.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {40}{\ignorespaces In-order iterative implementation example.}}{39}{figure.caption.47}%
+\contentsline {figure}{\numberline {40}{\ignorespaces In-order iterative implementation example.}}{38}{figure.caption.47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {41}{\ignorespaces Post-order iterative implementation example.}}{42}{figure.caption.48}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Post-order iterative implementation example.}}{41}{figure.caption.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {42}{\ignorespaces Example of all traversal type on a tree.}}{42}{figure.caption.49}%
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 

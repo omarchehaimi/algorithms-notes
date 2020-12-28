@@ -1,6 +1,6 @@
 \chapter{Binary Search Complete Implementation}
 \label{binappendix}
-The best way to implement the tree data structure is to create a class for the nodes (\textbf{Node}) and a class for the binary tree (\textbf{BinaryTree}). As all the nodes if a binary trees has at most two children, in the class \textbf{Node} is enough to have three attributes: the value of the node, the left, and the right child, in turn of \textbf{Node} type as well. This way of implement tree is very similar to the one used for implement the linked list (\ref{linkedlist}).
+The best way to implement the tree data structure is to create a class for the nodes (\textbf{Node}) and a class for the binary tree (\textbf{BinaryTree}). As all the nodes of a binary trees has at most two children, in the class \textbf{Node} is enough to have three attributes: the value of the node, the left, and the right child, in turn of \textbf{Node} type as well. This way of implement tree is very similar to the one used for the linked list (\ref{linkedlist}).
 
 \begin{lstlisting}[firstnumber=1, caption={Class definition for a node and a tree.}]
 class Node():
@@ -16,26 +16,18 @@ class BinaryTree():
 		self.root = Node(root)
 \end{lstlisting}
 
-In this appendix there is a detailed description of all possible ways to perform a tree traversal in the case of depth-first search: pre-order traversal \ref{preorderappendix}, in-order traversal \ref{inorderappendix}, and post-order traversal \ref{postorderappendix}.
+In this appendix there is a detailed implementation, both recursive and iterative, of all possible ways to perform a tree traversal in the case of depth-first search: pre-order traversal \ref{preorderappendix}, in-order traversal \ref{inorderappendix}, and post-order traversal \ref{postorderappendix}. The convention followed here is to look up first at the left child always, and later look up the right one. The opposite approach is equivalent.
 
 \section{Pre-order Traversal}
 \label{preorderappendix}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_1.pdf}
-		\caption[Pre-order iterative implementation example.]{Pre-order iterative implementation example.}
-		\label{appendixtrees_1}
-	\end{center}
-\end{figure}
-
-\begin{lstlisting}[firstnumber=1, caption={Tree operations implementation.}]
+\begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of pre-order traversal.}]
 class BinaryTree():
 	...
-	
+
 	def print_tree(self):
 		return self.preorder_print(tree.root, "")[:-1]
-	
+
 	def preorder_search_recursive(self, start, find_val):
 		if start:
 			if start.value == find_val:
@@ -43,7 +35,7 @@ class BinaryTree():
 			else:
 				return preorder_search_recursive(start.left, find_val) or
 					   preorder_search_recursive(start.right, find_val)
-	
+
 	def preorder_search_iterative(self, start, find_val):
 		if start == None:
 			return None
@@ -58,8 +50,7 @@ class BinaryTree():
 				stack.push(node.right)
 			if node.left:
 				stack.push(node.right)
-		
-		
+
 	def preorder_print(self, start, traversal):
 		if start:
 			traversal += (str(start.value) + "-")
@@ -67,6 +58,14 @@ class BinaryTree():
 			traversal = self.preorder_print(start.right,traversal)
 		return traversal
 \end{lstlisting}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_1.pdf}
+		\caption[Pre-order iterative implementation example.]{Pre-order iterative implementation example.}
+		\label{appendixtrees_1}
+	\end{center}
+\end{figure}
 
 \section{In-order Traversal}
 \label{inorderappendix}
@@ -81,10 +80,10 @@ class BinaryTree():
 \begin{lstlisting}[firstnumber=1, caption={Tree operations implementation.}]
 class BinaryTree():
 	...
-	
+
 	def print_tree(self):
 		return self.preorder_print(tree.root, "")[:-1]
-	
+
 	def preorder_search_recursive(self, start, find_val):
 		if start:
 			if start.value == find_val:
@@ -92,7 +91,7 @@ class BinaryTree():
 			else:
 				return preorder_search_recursive(start.left, find_val) or
 					   preorder_search_recursive(start.right, find_val)
-	
+
 	def preorder_search_iterative(self, start, find_val):
 		if start == None:
 			return None
@@ -107,8 +106,7 @@ class BinaryTree():
 				stack.push(node.right)
 			if node.left:
 				stack.push(node.right)
-		
-		
+
 	def preorder_print(self, start, traversal):
 		if start:
 			traversal += (str(start.value) + "-")
@@ -123,10 +121,10 @@ class BinaryTree():
 \begin{lstlisting}[firstnumber=1, caption={Tree operations implementation.}]
 class BinaryTree():
 	...
-	
+
 	def print_tree(self):
 		return self.preorder_print(tree.root, "")[:-1]
-	
+
 	def preorder_search_recursive(self, start, find_val):
 		if start:
 			if start.value == find_val:
@@ -134,7 +132,7 @@ class BinaryTree():
 			else:
 				return preorder_search_recursive(start.left, find_val) or
 					   preorder_search_recursive(start.right, find_val)
-	
+
 	def preorder_search_iterative(self, start, find_val):
 		if start == None:
 			return None
@@ -149,8 +147,7 @@ class BinaryTree():
 				stack.push(node.right)
 			if node.left:
 				stack.push(node.right)
-		
-		
+
 	def preorder_print(self, start, traversal):
 		if start:
 			traversal += (str(start.value) + "-")
@@ -164,5 +161,16 @@ class BinaryTree():
 		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_3.pdf}
 		\caption[Post-order iterative implementation example.]{Post-order iterative implementation example.}
 		\label{appendixtrees_3}
+	\end{center}
+\end{figure}
+
+\section{Summary on Tree Traversal}
+In the following figure (Figure \ref{appendixtrees_4}) there is a comprehensive schema of all different type of tree traversal in the depth-first search case.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_4.pdf}
+		\caption[Example of all traversal type on a tree.]{Example of all traversal type on a tree.}
+		\label{appendixtrees_4}
 	\end{center}
 \end{figure}

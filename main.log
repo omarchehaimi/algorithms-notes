@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  27 DEC 2020 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  28 DEC 2020 12:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2010,7 +2010,7 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 48.
-<chapters/introduction/images/big_o_plots.png, id=362, 1204.5pt x 758.835pt>
+<chapters/introduction/images/big_o_plots.png, id=366, 1204.5pt x 758.835pt>
 File: chapters/introduction/images/big_o_plots.png Graphic file (type png)
 <use chapters/introduction/images/big_o_plots.png>
 Package pdftex.def Info: chapters/introduction/images/big_o_plots.png  used on 
@@ -2021,7 +2021,7 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 62.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.50006pt on input line 62.
-<chapters/introduction/images/recursion_1.pdf, id=381, 301.59921pt x 139.4185pt
+<chapters/introduction/images/recursion_1.pdf, id=385, 301.59921pt x 139.4185pt
 >
 File: chapters/introduction/images/recursion_1.pdf Graphic file (type pdf)
 <use chapters/introduction/images/recursion_1.pdf>
@@ -2029,7 +2029,7 @@ Package pdftex.def Info: chapters/introduction/images/recursion_1.pdf  used on
 input line 85.
 (pdftex.def)             Requested size: 180.9609pt x 83.65173pt.
  [3 <./chapters/introduction/images/recursion_1.pdf>]
-<chapters/introduction/images/factorial.pdf, id=401, 486.54211pt x 375.57637pt>
+<chapters/introduction/images/factorial.pdf, id=405, 486.54211pt x 375.57637pt>
 
 File: chapters/introduction/images/factorial.pdf Graphic file (type pdf)
 <use chapters/introduction/images/factorial.pdf>
@@ -2039,7 +2039,7 @@ put line 127.
 ) (./chapters/datastructures/datastructures.tex
 Chapter 2.
 [4 <./chapters/introduction/images/factorial.pdf>]
-<chapters/datastructures/images/array_1.pdf, id=448, 409.71968pt x 105.27519pt>
+<chapters/datastructures/images/array_1.pdf, id=452, 409.71968pt x 105.27519pt>
 
 File: chapters/datastructures/images/array_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/array_1.pdf>
@@ -2050,14 +2050,14 @@ put line 14.
 
 
 ]
-<chapters/datastructures/images/array_2.pdf, id=461, 534.91182pt x 318.67087pt>
+<chapters/datastructures/images/array_2.pdf, id=465, 534.91182pt x 318.67087pt>
 
 File: chapters/datastructures/images/array_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/array_2.pdf>
 Package pdftex.def Info: chapters/datastructures/images/array_2.pdf  used on in
 put line 25.
 (pdftex.def)             Requested size: 320.94955pt x 191.20398pt.
-<chapters/datastructures/images/linked_list_1.pdf, id=464, 412.56496pt x 219.08
+<chapters/datastructures/images/linked_list_1.pdf, id=468, 412.56496pt x 219.08
 621pt>
 File: chapters/datastructures/images/linked_list_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_1.pdf>
@@ -2070,14 +2070,14 @@ mages/array_2.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/datastructures/images/array_
 2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/datastructures/images/linked_list_2.pdf, id=485, 503.61377pt x 327.20
+<chapters/datastructures/images/linked_list_2.pdf, id=489, 503.61377pt x 327.20
 67pt>
 File: chapters/datastructures/images/linked_list_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_2.pdf>
 Package pdftex.def Info: chapters/datastructures/images/linked_list_2.pdf  used
  on input line 46.
 (pdftex.def)             Requested size: 302.1706pt x 196.32552pt.
-<chapters/datastructures/images/linked_list_3.pdf, id=486, 372.73111pt x 315.82
+<chapters/datastructures/images/linked_list_3.pdf, id=490, 372.73111pt x 315.82
 558pt>
 File: chapters/datastructures/images/linked_list_3.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_3.pdf>
@@ -2091,7 +2091,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/datastructures/images/linked
 _list_2.pdf): PDF inclusion: multiple pdfs with page group included in a single
  page
 >]
-<chapters/datastructures/images/linked_list_4.pdf, id=508, 404.02913pt x 149.37
+<chapters/datastructures/images/linked_list_4.pdf, id=512, 404.02913pt x 149.37
 697pt>
 File: chapters/datastructures/images/linked_list_4.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/linked_list_4.pdf>
@@ -2117,7 +2117,7 @@ LaTeX Font Info:    Trying to load font information for TS1+pplj on input line
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplj.fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 )
-<chapters/datastructures/images/stack_1.pdf, id=541, 438.17244pt x 194.90138pt>
+<chapters/datastructures/images/stack_1.pdf, id=545, 438.17244pt x 194.90138pt>
 
 File: chapters/datastructures/images/stack_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/stack_1.pdf>
@@ -2130,14 +2130,14 @@ Overfull \hbox (4.49666pt too wide) in paragraph at lines 176--177
 main con-stant. Queues
  []
 
-<chapters/datastructures/images/queue_1.pdf, id=625, 551.98347pt x 291.64075pt>
+<chapters/datastructures/images/queue_1.pdf, id=629, 551.98347pt x 291.64075pt>
 
 File: chapters/datastructures/images/queue_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/queue_1.pdf>
 Package pdftex.def Info: chapters/datastructures/images/queue_1.pdf  used on in
 put line 182.
 (pdftex.def)             Requested size: 331.19264pt x 174.9858pt.
-<chapters/datastructures/images/queue_2.pdf, id=626, 540.60239pt x 283.10492pt>
+<chapters/datastructures/images/queue_2.pdf, id=630, 540.60239pt x 283.10492pt>
 
 File: chapters/datastructures/images/queue_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/queue_2.pdf>
@@ -2150,7 +2150,7 @@ mages/queue_2.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/datastructures/images/queue_
 2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/datastructures/images/queue_3.pdf, id=645, 349.96889pt x 143.68642pt>
+<chapters/datastructures/images/queue_3.pdf, id=649, 349.96889pt x 143.68642pt>
 
 File: chapters/datastructures/images/queue_3.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/queue_3.pdf>
@@ -2163,14 +2163,14 @@ Overfull \hbox (5.35445pt too wide) in paragraph at lines 229--230
 14[][]] ([][]Hash Map, Wikipedia[][]).
  []
 
-<chapters/datastructures/images/map_1.pdf, id=650, 287.37285pt x 109.5431pt>
+<chapters/datastructures/images/map_1.pdf, id=654, 287.37285pt x 109.5431pt>
 File: chapters/datastructures/images/map_1.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/map_1.pdf>
 Package pdftex.def Info: chapters/datastructures/images/map_1.pdf  used on inpu
 t line 233.
 (pdftex.def)             Requested size: 172.42502pt x 65.72635pt.
 [12 <./chapters/datastructures/images/queue_3.pdf>]
-<chapters/datastructures/images/map_2.pdf, id=681, 514.99487pt x 352.81418pt>
+<chapters/datastructures/images/map_2.pdf, id=685, 514.99487pt x 352.81418pt>
 File: chapters/datastructures/images/map_2.pdf Graphic file (type pdf)
 <use chapters/datastructures/images/map_2.pdf>
 Package pdftex.def Info: chapters/datastructures/images/map_2.pdf  used on inpu
@@ -2187,14 +2187,14 @@ n/10.95 Û\U/zeur/m/n/10.95 0\U/zeus/m/n/10.95 Ý ^^C
 ) (./chapters/searchandsorting/searchandsorting.tex
 Chapter 3.
 [15]
-<chapters/searchandsorting/images/sorting_1.pdf, id=741, 369.88583pt x 119.5015
+<chapters/searchandsorting/images/sorting_1.pdf, id=745, 369.88583pt x 119.5015
 7pt>
 File: chapters/searchandsorting/images/sorting_1.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_1.pdf>
 Package pdftex.def Info: chapters/searchandsorting/images/sorting_1.pdf  used o
 n input line 9.
 (pdftex.def)             Requested size: 221.9332pt x 71.70148pt.
-<chapters/searchandsorting/images/sorting_2.pdf, id=745, 540.60239pt x 369.8858
+<chapters/searchandsorting/images/sorting_2.pdf, id=749, 540.60239pt x 369.8858
 3pt>
 File: chapters/searchandsorting/images/sorting_2.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_2.pdf>
@@ -2206,14 +2206,14 @@ n input line 22.
 
  <./chapters/searchandsorting/images/sorting_1.pdf>] [17 <./chapters/searchands
 orting/images/sorting_2.pdf>]
-<chapters/searchandsorting/images/sorting_3.pdf, id=834, 324.3614pt x 204.85983
+<chapters/searchandsorting/images/sorting_3.pdf, id=838, 324.3614pt x 204.85983
 pt>
 File: chapters/searchandsorting/images/sorting_3.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_3.pdf>
 Package pdftex.def Info: chapters/searchandsorting/images/sorting_3.pdf  used o
 n input line 75.
 (pdftex.def)             Requested size: 194.61833pt x 122.91684pt.
-<chapters/searchandsorting/images/sorting_4.pdf, id=837, 543.44762pt x 369.8858
+<chapters/searchandsorting/images/sorting_4.pdf, id=841, 543.44762pt x 369.8858
 3pt>
 File: chapters/searchandsorting/images/sorting_4.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_4.pdf>
@@ -2221,7 +2221,7 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_4.pdf  used o
 n input line 86.
 (pdftex.def)             Requested size: 326.07108pt x 221.9332pt.
  [18 <./chapters/searchandsorting/images/sorting_3.pdf>]
-<chapters/searchandsorting/images/sorting_5.pdf, id=863, 543.44762pt x 372.7311
+<chapters/searchandsorting/images/sorting_5.pdf, id=867, 543.44762pt x 372.7311
 1pt>
 File: chapters/searchandsorting/images/sorting_5.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_5.pdf>
@@ -2235,7 +2235,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/searchandsorting/images/sort
 ing_5.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >]
-<chapters/searchandsorting/images/sorting_6.pdf, id=883, 514.99487pt x 372.7311
+<chapters/searchandsorting/images/sorting_6.pdf, id=887, 514.99487pt x 372.7311
 1pt>
 File: chapters/searchandsorting/images/sorting_6.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_6.pdf>
@@ -2243,7 +2243,7 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_6.pdf  used o
 n input line 130.
 (pdftex.def)             Requested size: 267.79887pt x 193.82127pt.
  [20 <./chapters/searchandsorting/images/sorting_6.pdf>] [21]
-<chapters/searchandsorting/images/sorting_7.pdf, id=914, 549.13818pt x 375.5763
+<chapters/searchandsorting/images/sorting_7.pdf, id=918, 549.13818pt x 375.5763
 7pt>
 File: chapters/searchandsorting/images/sorting_7.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_7.pdf>
@@ -2251,14 +2251,14 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_7.pdf  used o
 n input line 216.
 (pdftex.def)             Requested size: 329.48544pt x 225.34755pt.
  [22]
-<chapters/searchandsorting/images/sorting_8.pdf, id=959, 549.13818pt x 375.5763
+<chapters/searchandsorting/images/sorting_8.pdf, id=963, 549.13818pt x 375.5763
 7pt>
 File: chapters/searchandsorting/images/sorting_8.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_8.pdf>
 Package pdftex.def Info: chapters/searchandsorting/images/sorting_8.pdf  used o
 n input line 226.
 (pdftex.def)             Requested size: 329.48544pt x 225.34755pt.
-<chapters/searchandsorting/images/sorting_9.pdf, id=960, 549.13818pt x 307.2897
+<chapters/searchandsorting/images/sorting_9.pdf, id=964, 549.13818pt x 307.2897
 5pt>
 File: chapters/searchandsorting/images/sorting_9.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_9.pdf>
@@ -2272,7 +2272,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/searchandsorting/images/sort
 ing_8.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >]
-<chapters/searchandsorting/images/sorting_10.pdf, id=982, 369.88583pt x 110.965
+<chapters/searchandsorting/images/sorting_10.pdf, id=986, 369.88583pt x 110.965
 74pt>
 File: chapters/searchandsorting/images/sorting_10.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_10.pdf>
@@ -2280,7 +2280,7 @@ Package pdftex.def Info: chapters/searchandsorting/images/sorting_10.pdf  used
 on input line 255.
 (pdftex.def)             Requested size: 221.9332pt x 66.57994pt.
  [24 <./chapters/searchandsorting/images/sorting_9.pdf>]
-<chapters/searchandsorting/images/sorting_11.pdf, id=994, 318.67087pt x 65.4413
+<chapters/searchandsorting/images/sorting_11.pdf, id=998, 318.67087pt x 65.4413
 5pt>
 File: chapters/searchandsorting/images/sorting_11.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_11.pdf>
@@ -2294,7 +2294,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./chapters/searchandsorting/images/sort
 ing_11.pdf): PDF inclusion: multiple pdfs with page group included in a single 
 page
 >]
-<chapters/searchandsorting/images/sorting_12.pdf, id=1020, 549.13818pt x 372.73
+<chapters/searchandsorting/images/sorting_12.pdf, id=1024, 549.13818pt x 372.73
 111pt>
 File: chapters/searchandsorting/images/sorting_12.pdf Graphic file (type pdf)
 <use chapters/searchandsorting/images/sorting_12.pdf>
@@ -2304,13 +2304,13 @@ on input line 328.
 ) (./chapters/trees/trees.tex
 Chapter 4.
 [26] [27 <./chapters/searchandsorting/images/sorting_12.pdf>]
-<chapters/trees/images/trees_1.pdf, id=1071, 418.2555pt x 293.06339pt>
+<chapters/trees/images/trees_1.pdf, id=1075, 418.2555pt x 293.06339pt>
 File: chapters/trees/images/trees_1.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_1.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_1.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 250.95523pt x 175.83939pt.
-<chapters/trees/images/trees_2.pdf, id=1074, 364.19528pt x 239.00314pt>
+<chapters/trees/images/trees_2.pdf, id=1078, 364.19528pt x 239.00314pt>
 File: chapters/trees/images/trees_2.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_2.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_2.pdf  used on input line 
@@ -2320,13 +2320,13 @@ Package pdftex.def Info: chapters/trees/images/trees_2.pdf  used on input line
 
 
  <./chapters/trees/images/trees_1.pdf>]
-<chapters/trees/images/trees_3.pdf, id=1091, 551.98347pt x 321.51616pt>
+<chapters/trees/images/trees_3.pdf, id=1095, 551.98347pt x 321.51616pt>
 File: chapters/trees/images/trees_3.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_3.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_3.pdf  used on input line 
 31.
 (pdftex.def)             Requested size: 331.19264pt x 192.91118pt.
-<chapters/trees/images/trees_4.pdf, id=1093, 551.98347pt x 281.68228pt>
+<chapters/trees/images/trees_4.pdf, id=1097, 551.98347pt x 281.68228pt>
 File: chapters/trees/images/trees_4.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_4.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_4.pdf  used on input line 
@@ -2338,13 +2338,13 @@ Package pdftex.def Info: chapters/trees/images/trees_4.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_3.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_5.pdf, id=1112, 244.6937pt x 236.15787pt>
+<chapters/trees/images/trees_5.pdf, id=1116, 244.6937pt x 236.15787pt>
 File: chapters/trees/images/trees_5.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_5.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_5.pdf  used on input line 
 55.
 (pdftex.def)             Requested size: 146.81735pt x 141.6958pt.
-<chapters/trees/images/trees_6.pdf, id=1113, 244.6937pt x 236.15787pt>
+<chapters/trees/images/trees_6.pdf, id=1117, 244.6937pt x 236.15787pt>
 File: chapters/trees/images/trees_6.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_6.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_6.pdf  used on input line 
@@ -2356,13 +2356,13 @@ Package pdftex.def Info: chapters/trees/images/trees_6.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_5.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_7.pdf, id=1143, 244.6937pt x 236.15787pt>
+<chapters/trees/images/trees_7.pdf, id=1147, 244.6937pt x 236.15787pt>
 File: chapters/trees/images/trees_7.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_7.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_7.pdf  used on input line 
 77.
 (pdftex.def)             Requested size: 146.81735pt x 141.6958pt.
-<chapters/trees/images/trees_8.pdf, id=1144, 244.6937pt x 202.01457pt>
+<chapters/trees/images/trees_8.pdf, id=1148, 244.6937pt x 202.01457pt>
 File: chapters/trees/images/trees_8.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_8.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_8.pdf  used on input line 
@@ -2374,7 +2374,7 @@ Package pdftex.def Info: chapters/trees/images/trees_8.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_7.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_9.pdf, id=1177, 392.64803pt x 273.14645pt>
+<chapters/trees/images/trees_9.pdf, id=1181, 392.64803pt x 273.14645pt>
 File: chapters/trees/images/trees_9.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_9.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_9.pdf  used on input line 
@@ -2386,13 +2386,13 @@ Package pdftex.def Info: chapters/trees/images/trees_9.pdf  used on input line
 pdfTeX warning: /usr/bin/pdflatex (file ./chapters/trees/images/trees_9.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<chapters/trees/images/trees_10.pdf, id=1201, 324.3614pt x 273.14645pt>
+<chapters/trees/images/trees_10.pdf, id=1206, 324.3614pt x 273.14645pt>
 File: chapters/trees/images/trees_10.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_10.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_10.pdf  used on input line
  117.
 (pdftex.def)             Requested size: 194.61833pt x 163.88913pt.
-<chapters/trees/images/trees_11.pdf, id=1202, 600.35315pt x 210.5504pt>
+<chapters/trees/images/trees_11.pdf, id=1207, 600.35315pt x 210.5504pt>
 File: chapters/trees/images/trees_11.pdf Graphic file (type pdf)
 <use chapters/trees/images/trees_11.pdf>
 Package pdftex.def Info: chapters/trees/images/trees_11.pdf  used on input line
@@ -2408,60 +2408,78 @@ PDF inclusion: multiple pdfs with page group included in a single page
 
 ] (./chapters/appendix/appendix.tex
 Appendix A.
+[36
+
+
+]
 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images
-/appendixtree/treesappendix_1.pdf, id=1271, 665.79446pt x 514.99487pt>
+/appendixtree/treesappendix_1.pdf, id=1303, 665.79446pt x 514.99487pt>
 File: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/i
 mages/appendixtree/treesappendix_1.pdf Graphic file (type pdf)
 <use /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/im
 ages/appendixtree/treesappendix_1.pdf>
 Package pdftex.def Info: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/
-chapters/appendix/images/appendixtree/treesappendix_1.pdf  used on input line 2
-6.
+chapters/appendix/images/appendixtree/treesappendix_1.pdf  used on input line 6
+4.
 (pdftex.def)             Requested size: 399.47975pt x 308.9993pt.
 
-Overfull \hbox (29.47975pt too wide) in paragraph at lines 26--27
+Overfull \hbox (29.47975pt too wide) in paragraph at lines 64--65
  [] 
  []
 
-[36
-
-
-] [37 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/
-images/appendixtree/treesappendix_1.pdf>]
 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images
-/appendixtree/treesappendix_2.pdf, id=1324, 654.41339pt x 759.6886pt>
+/appendixtree/treesappendix_2.pdf, id=1304, 654.41339pt x 759.6886pt>
 File: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/i
 mages/appendixtree/treesappendix_2.pdf Graphic file (type pdf)
 <use /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/im
 ages/appendixtree/treesappendix_2.pdf>
 Package pdftex.def Info: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/
 chapters/appendix/images/appendixtree/treesappendix_2.pdf  used on input line 7
-5.
+4.
 (pdftex.def)             Requested size: 392.65106pt x 455.81668pt.
 
-Overfull \hbox (22.65106pt too wide) in paragraph at lines 75--76
+Overfull \hbox (22.65106pt too wide) in paragraph at lines 74--75
  [] 
  []
 
-[38] [39 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/append
-ix/images/appendixtree/treesappendix_2.pdf>] [40]
+[37 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/im
+ages/appendixtree/treesappendix_1.pdf>] [38 </home/omar/Documenti/AlgorithmsNot
+es/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_2.pdf>]
+[39]
 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images
-/appendixtree/treesappendix_3.pdf, id=1423, 799.52248pt x 1038.52556pt>
+/appendixtree/treesappendix_3.pdf, id=1421, 799.52248pt x 1038.52556pt>
 File: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/i
 mages/appendixtree/treesappendix_3.pdf Graphic file (type pdf)
 <use /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/im
 ages/appendixtree/treesappendix_3.pdf>
 Package pdftex.def Info: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/
 chapters/appendix/images/appendixtree/treesappendix_3.pdf  used on input line 1
-64.
+61.
 (pdftex.def)             Requested size: 479.7172pt x 623.12015pt.
 
-Overfull \hbox (109.7172pt too wide) in paragraph at lines 164--165
+Overfull \hbox (109.7172pt too wide) in paragraph at lines 161--162
  [] 
  []
 
-) [41] [42 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appe
-ndix/images/appendixtree/treesappendix_3.pdf>]
+[40] [41 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/append
+ix/images/appendixtree/treesappendix_3.pdf>]
+</home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images
+/appendixtree/treesappendix_4.pdf, id=1458, 787.03165pt x 434.3313pt>
+File: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/i
+mages/appendixtree/treesappendix_4.pdf Graphic file (type pdf)
+<use /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/im
+ages/appendixtree/treesappendix_4.pdf>
+Package pdftex.def Info: /home/omar/Documenti/AlgorithmsNotes/algorithms-notes/
+chapters/appendix/images/appendixtree/treesappendix_4.pdf  used on input line 1
+72.
+(pdftex.def)             Requested size: 472.22263pt x 260.60078pt.
+
+Overfull \hbox (102.22263pt too wide) in paragraph at lines 172--173
+ [] 
+ []
+
+) [42 </home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/
+images/appendixtree/treesappendix_4.pdf>]
 Overfull \hbox (2.89244pt too wide) in paragraph at lines 36--36
 []\T1/pplj/m/n/10.95 Wikipedia. \T1/pplj/m/it/10.95 Set\T1/pplj/m/n/10.95 . \T1
 /pplj/m/sc/10.95 url\T1/pplj/m/n/10.95 : [][]$\T1/fvm/m/n/10.95 https : / / en 
@@ -2507,10 +2525,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 44473 strings out of 481239
- 901038 string characters out of 5920377
- 1908587 words of memory out of 5000000
- 58179 multiletter control sequences out of 15000+600000
+ 44479 strings out of 481239
+ 901642 string characters out of 5920377
+ 1909659 words of memory out of 5000000
+ 58185 multiletter control sequences out of 15000+600000
  659349 words of font info for 179 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,23n,111p,10099b,3711s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2537,10 +2555,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/zapfding/uzdr.pfb>
-Output written on main.pdf (53 pages, 915767 bytes).
+Output written on main.pdf (53 pages, 929736 bytes).
 PDF statistics:
- 1905 PDF objects out of 2073 (max. 8388607)
- 1619 compressed objects within 17 object streams
- 608 named destinations out of 1000 (max. 500000)
- 24914 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1918 PDF objects out of 2073 (max. 8388607)
+ 1629 compressed objects within 17 object streams
+ 607 named destinations out of 1000 (max. 500000)
+ 24927 words of extra memory for PDF output out of 29859 (max. 10000000)
 
