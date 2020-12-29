@@ -20,13 +20,25 @@ In this appendix there is a detailed implementation, both recursive and iterativ
 
 \section{Pre-order Traversal}
 \label{preorderappendix}
+In the pre-order traversal the left subtree is traversed first, and later the right one. This process is repeated until all the nodes of the tree are visited. For implementing the pre-order traversal iteratively we need a stack (\ref{stack}).
+
+The steps to repeat until the stack is empty are:
+\begin{itemize}
+\item pop an element from the stack and visit it
+\item push to the stack the right children of the popped element
+\item push to the stack the left children of the popped element
+\end{itemize}
+Because in a stack the first element to be processed is the last one to be added (LIFO), by adding first the right children we know that the left one will be processed first.
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of pre-order traversal.}]
 class BinaryTree():
 	...
 
-	def print_tree(self):
-		return self.preorder_print(tree.root, "")[:-1]
+	def recursive_print_tree(self):
+		return self.preorder_recursive_print(tree.root, "")[:-1]
+	
+	def iterative_print_tree(self):
+		return self.preorder_search_iterative(self, tree.root, "")
 
 	def preorder_search_recursive(self, start, find_val):
 		if start:
@@ -39,10 +51,12 @@ class BinaryTree():
 	def preorder_search_iterative(self, start, find_val):
 		if start == None:
 			return None
+		visited = []		
 		stack = []
 		stack.push(start)
 		while not stack: # Keep cycle until the stack is empty
 			node = stack.pop()
+			visited.append(node)
 			if node == find_val:
 				return True
 			# Right child is pushed first so that the left one is processed first
@@ -50,8 +64,9 @@ class BinaryTree():
 				stack.push(node.right)
 			if node.left:
 				stack.push(node.right)
+		return visited
 
-	def preorder_print(self, start, traversal):
+	def preorder_recursive_print(self, start, traversal):
 		if start:
 			traversal += (str(start.value) + "-")
 			traversal = self.preorder_print(start.left, traversal)
