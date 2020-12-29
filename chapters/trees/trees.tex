@@ -35,7 +35,7 @@ All this definitions are defined in following figure (Figure \ref{trees_3}).
 \end{figure}
 
 \section{Tree Traversal}
-Which way is the most efficient for visiting all the nodes of a tree? Is it more efficient looking layer by layer or looking at subtrees? There are two different ways to traverse a tree: the \textbf{depth-first search} (\textbf{DFS}) and the \textbf{breath-first search} (\textbf{BFS}). In the first one the priority is to look at the children of a node, instead in the second one the priority is to look at the node of the same layer \ref{trees_4}.
+Which way is the most efficient for visiting all the nodes of a tree? Is it more efficient looking layer by layer or looking at subtrees? There are two different approach to traverse a tree: the \textbf{depth-first search} (\textbf{DFS}) and the \textbf{breath-first search} (\textbf{BFS}). In the first one the priority is to look at the children of a node, instead in the second one the priority is to look at the node of the same layer \ref{trees_4}.
 
 \begin{figure}[H]
 	\begin{center}
@@ -48,6 +48,7 @@ Which way is the most efficient for visiting all the nodes of a tree? Is it more
 \subsection{Depth-first search}
 In the depth-first search there are several different ways to perform a search on a tree.
 \paragraph{Pre-order search}
+\label{preorder}
 In the \textbf{pre-order search} the first node to be checked as visited is the root. The following node is the left child by convention. Once checked the left child the process is repeated until the first node without any children is reached. At that point the same process is applied to the right side: all the nodes on the right are checked until all the nodes are checked as visited \ref{trees_5}.
 
 \begin{figure}[H]
@@ -59,6 +60,7 @@ In the \textbf{pre-order search} the first node to be checked as visited is the 
 \end{figure}
 
 \paragraph{In-order search}
+\label{inorder}
 In the \textbf{in-order search} the first node to be checked is the first node without children on the left side. Once checked off this node the next one to be checked off is its parent, and the process is repeated again on the right side of the nodes, until all the nodes are checked off.
 
 \begin{figure}[H]
@@ -70,6 +72,7 @@ In the \textbf{in-order search} the first node to be checked is the first node w
 \end{figure}
 
 \paragraph{Post-order search}
+\label{postorder}
 In the \textbf{post-order search} the first node to be checked off is the first node without children on the left side. Once checked off this node the next one to be checked off is the one which does not have any children. Once all the nodes of the current left subtree without any children are checked off, the parents can be checked off, and the whole process is repeated until all the nodes are checked off.
 
 \begin{figure}[H]
@@ -87,9 +90,9 @@ To search an element in the tree one of the previous methods can be used. Becaus
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_8.pdf}
-		\caption[Search on a tree.]{Search on a tree.}
-		\label{trees_8}
+		\includegraphics[scale=.6]{chapters/trees/images/trees_12.pdf}
+		\caption[Example of tree search and traversal.]{Example of tree search and traversal.}
+		\label{trees_12}
 	\end{center}
 \end{figure}
 
@@ -164,9 +167,8 @@ class BinaryTree():
 		if start:
 			if start.value == find_val:
 				return True
-			else:
-				return preorder_search_recursive(start.left, find_val) or
-					   preorder_search_recursive(start.right, find_val)	
+			self.preorder_search_recursive(start.left, find_val)
+			self.preorder_search_recursive(start.right, find_val)	
 	
 	def preorder_print(self, start, traversal):
 		if start:

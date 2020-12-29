@@ -2208,6 +2208,7 @@
     <bcf:citekey order="24">wikiqicksort</bcf:citekey>
     <bcf:citekey order="25">quicksortcode</bcf:citekey>
     <bcf:citekey order="26">wikitrees</bcf:citekey>
+    <bcf:citekey order="27">wikitreestrav</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

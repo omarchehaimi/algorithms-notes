@@ -18,17 +18,42 @@ class BinaryTree():
 
 In this appendix there is a detailed implementation, both recursive and iterative, of all possible ways to perform a tree traversal in the case of depth-first search: pre-order traversal \ref{preorderappendix}, in-order traversal \ref{inorderappendix}, and post-order traversal \ref{postorderappendix}. The convention followed here is to look up first at the left child always, and later look up the right one. The opposite approach is equivalent.
 
+The pseudocode of the iterative implementations is taken from \cite{wikitreestrav}(\href{https://en.wikipedia.org/wiki/Tree_traversal}{Tree traversal, Wikipedia}).
+
 \section{Pre-order Traversal}
 \label{preorderappendix}
-In the pre-order traversal the left subtree is traversed first, and later the right one. This process is repeated until all the nodes of the tree are visited. For implementing the pre-order traversal iteratively we need a stack (\ref{stack}).
+In the pre-order traversal every new node is first checked as visited, and the left subtree is traversed first, and later the right one. This process is repeated until all the nodes of the tree are visited (\ref{preorder}). 
 
-The steps to repeat until the stack is empty are:
-\begin{itemize}
-\item pop an element from the stack and visit it
-\item push to the stack the right children of the popped element
-\item push to the stack the left children of the popped element
-\end{itemize}
-Because in a stack the first element to be processed is the last one to be added (LIFO), by adding first the right children we know that the left one will be processed first.
+For implementing the pre-order traversal iteratively a stack (\ref{stack}) is used. 
+The steps are:
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\LinesNumbered
+  	\SetKwFunction{FIterativePreorder}{Iterative-Preorder}
+  	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FIterativePreorder{$node$}}{
+  			\If{node == \textbf{null}}{
+  				\KwRet
+  			}
+  			s $\leftarrow$ \textbf{empty stack}\;
+  			s.push(node)\;
+  			\While{\textbf{not} s.isEmpty()}{
+				node $\leftarrow$ s.pop()\;
+				visit(node)\;  			
+  				\CommentSty{Right child is pushed first so that left is processed first (LIFO)}
+  				
+  				\If{node.right $\neq$ \textbf{null}}{
+  					s.push(node.right)\;
+  				}
+    	    	\If{node.left $\neq$ \textbf{null}}{
+  					s.push(node.left)\;
+  				}
+        	}
+  	}
+  	\;
+\caption{Pre-order iterative implementation pseudocode.}
+\end{algorithm}
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of pre-order traversal.}]
 class BinaryTree():
@@ -44,9 +69,8 @@ class BinaryTree():
 		if start:
 			if start.value == find_val:
 				return True
-			else:
-				return preorder_search_recursive(start.left, find_val) or
-					   preorder_search_recursive(start.right, find_val)
+			self.preorder_search_recursive(start.left, find_val) or
+			self.preorder_search_recursive(start.right, find_val)
 
 	def preorder_search_iterative(self, start, find_val):
 		if start == None:
@@ -61,9 +85,9 @@ class BinaryTree():
 				return True
 			# Right child is pushed first so that the left one is processed first
 			if node.right:
-				stack.push(node.right)
+				stack.append(node.right)
 			if node.left:
-				stack.push(node.right)
+				stack.append(node.right)
 		return visited
 
 	def preorder_recursive_print(self, start, traversal):
@@ -84,6 +108,76 @@ class BinaryTree():
 
 \section{In-order Traversal}
 \label{inorderappendix}
+In the in-order traversal the first node to be checked is the first leaf of the left subtree. The second one is the parent of the first checked node, and then the right subtree is checked repeating the previous process. All this process is repeated until all the nodes are visited or the value is found \ref{inorder}. 
+
+For implementing the in-order traversal iteratively a stack is used. The steps are:
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\LinesNumbered
+  	\SetKwFunction{FIterativeInorder}{Iterative-Inorder}
+  	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FIterativeInorder{$node$}}{
+  			s $\leftarrow$ \textbf{empty stack}\;
+  			\While{\textbf{not} s.isEmpty() \textbf{or} node $\neq$ \textbf{null}}{
+  				\If{node $\neq$ \textbf{null}}{
+  					s.push(node)\;
+  					node $\leftarrow$ node.left\;
+  				}
+    	    	\Else{
+    	    		node $\leftarrow$ s.pop()\;
+    	    		visit(node)\;
+    	    		node $\leftarrow$ node.right\;
+    	    	}
+        	}
+  	}
+  	\;
+\caption{In-order iterative implementation pseudocode.}
+\end{algorithm}
+
+\begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of in-order traversal.}]
+class BinaryTree():
+	...
+
+	def recursive_print_tree(self):
+		return self.inorder_recursive_print(tree.root, "")[:-1]
+	
+	def iterative_print_tree(self):
+		return self.inorder_search_iterative(self, tree.root, "")
+
+	def inorder_search_recursive(self, start, find_val):
+		if start:
+			self.inorder_search_recursive(start.left, find_val)
+			if start.value == find_val:
+				return True
+			self.inorder_search_recursive(start.right, find_val)
+
+	def inorder_search_iterative(self, start, find_val):
+		if start == None:
+			return None
+		stack = []
+		stack.append(start)
+		current = start
+		visited = []
+		while (not stack) or (current != None):
+			if current != None:
+				stack.append(current)
+				current = current.left
+			else:
+				current = stack.pop()
+				if current.value == find_val:
+					return True
+				visited.append(current)
+				current = current.right
+
+	def inorder_recursive_print(self, start, traversal):
+		if start:
+			traversal = self.preorder_print(start.left, traversal)
+			traversal += (str(start.value) + "-")
+			traversal = self.preorder_print(start.right,traversal)
+		return traversal
+\end{lstlisting}
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_2.pdf}
@@ -92,82 +186,53 @@ class BinaryTree():
 	\end{center}
 \end{figure}
 
-\begin{lstlisting}[firstnumber=1, caption={Tree operations implementation.}]
-class BinaryTree():
-	...
-
-	def print_tree(self):
-		return self.preorder_print(tree.root, "")[:-1]
-
-	def preorder_search_recursive(self, start, find_val):
-		if start:
-			if start.value == find_val:
-				return True
-			else:
-				return preorder_search_recursive(start.left, find_val) or
-					   preorder_search_recursive(start.right, find_val)
-
-	def preorder_search_iterative(self, start, find_val):
-		if start == None:
-			return None
-		stack = []
-		stack.push(start)
-		while not stack: # Keep cycle until the stack is empty
-			node = stack.pop()
-			if node == find_val:
-				return True
-			# Right child is pushed first so that the left one is processed first
-			if node.right:
-				stack.push(node.right)
-			if node.left:
-				stack.push(node.right)
-
-	def preorder_print(self, start, traversal):
-		if start:
-			traversal += (str(start.value) + "-")
-			traversal = self.preorder_print(start.left, traversal)
-			traversal = self.preorder_print(start.right,traversal)
-		return traversal
-\end{lstlisting}
-
 \section{Post-order Traversal}
 \label{postorderappendix}
+In the post-order traversal the first node to be checked is the first leaf of the left subtree. The second node is the right node of the parent of the first checked node. Once checked the right side of the subtree also the parent is checked and the process is repeated until all the node are visited or the value is found \ref{postorder}. 
 
-\begin{lstlisting}[firstnumber=1, caption={Tree operations implementation.}]
+For implementing the post-order traversal iteratively a stack is used. The steps are (Figure \ref{appendixtrees_3}):
+\begin{itemize}
+	\item[1] Initialize the stack, and set \textit{last visited node} as null, and \textit{current node} as the node where to start the search.
+	\item[] Repeat until the stack is empty or \textit{current node} is not null:
+	\begin{itemize}
+		\item[If] 
+		\item[b]
+	\end{itemize}
+\end{itemize}
+
+\begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of post-order traversal.}]
 class BinaryTree():
 	...
 
-	def print_tree(self):
-		return self.preorder_print(tree.root, "")[:-1]
+	def recursive_print_tree(self):
+		return self.postorder_recursive_print(tree.root, "")[:-1]
+	
+	def iterative_print_tree(self):
+		return self.postorder_search_iterative(tree.root, "")
 
-	def preorder_search_recursive(self, start, find_val):
+	def postorder_search_recursive(self, start, find_val):
 		if start:
+			self.postorder_search_recursive(start.left, find_val)
+			self.postorder_search_recursive(start.right, find_val)
 			if start.value == find_val:
 				return True
-			else:
-				return preorder_search_recursive(start.left, find_val) or
-					   preorder_search_recursive(start.right, find_val)
 
-	def preorder_search_iterative(self, start, find_val):
+	def postorder_search_iterative(self, start, find_val):
 		if start == None:
 			return None
 		stack = []
 		stack.push(start)
-		while not stack: # Keep cycle until the stack is empty
-			node = stack.pop()
-			if node == find_val:
-				return True
-			# Right child is pushed first so that the left one is processed first
-			if node.right:
-				stack.push(node.right)
-			if node.left:
-				stack.push(node.right)
+		last_visited = None
+		visited = []
+		current = start
+		while (not stack) or (current != None):
+			
 
-	def preorder_print(self, start, traversal):
+	def postorder_recursive_print(self, start, traversal):
 		if start:
-			traversal += (str(start.value) + "-")
 			traversal = self.preorder_print(start.left, traversal)
 			traversal = self.preorder_print(start.right,traversal)
+			traversal += (str(start.value) + "-")
 		return traversal
 \end{lstlisting}
 
@@ -176,16 +241,5 @@ class BinaryTree():
 		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_3.pdf}
 		\caption[Post-order iterative implementation example.]{Post-order iterative implementation example.}
 		\label{appendixtrees_3}
-	\end{center}
-\end{figure}
-
-\section{Summary on Tree Traversal}
-In the following figure (Figure \ref{appendixtrees_4}) there is a comprehensive schema of all different type of tree traversal in the depth-first search case.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_4.pdf}
-		\caption[Example of all traversal type on a tree.]{Example of all traversal type on a tree.}
-		\label{appendixtrees_4}
 	\end{center}
 \end{figure}
