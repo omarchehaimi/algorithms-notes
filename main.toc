@@ -105,14 +105,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.5}{Binary Tree Implementation}}{34}{subsection.4.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{{Appendix}}{36}{part*.45}%
+\contentsline {section}{\numberline {4.4}{Binary Search Trees (BST)}}{35}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{37}{appendix.A}%
+\contentsline {subsection}{\numberline {4.4.1}{Binary Search Tree Implementation}}{36}{subsection.4.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{37}{section.A.1}%
+\contentsline {section}{\numberline {4.5}{Heap}}{37}{section.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}{In-order Traversal}}{39}{section.A.2}%
+\contentsline {subsection}{\numberline {4.5.1}{Heapify}}{38}{subsection.4.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{41}{section.A.3}%
+\contentsline {subsection}{\numberline {4.5.2}{Heap Implementation}}{38}{subsection.4.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{{Bibliography}}{44}{chapter*.49}%
+\contentsline {part}{{Appendix}}{39}{part*.50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{40}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{40}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}{In-order Traversal}}{43}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{45}{section.A.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{49}{chapter*.54}%

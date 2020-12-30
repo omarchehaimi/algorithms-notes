@@ -24,34 +24,42 @@ The pseudocode of the iterative implementations is taken from \cite{wikitreestra
 \label{preorderappendix}
 In the pre-order traversal every new node is first checked as visited, and the left subtree is traversed first, and later the right one. This process is repeated until all the nodes of the tree are visited (\ref{preorder}). 
 
-For implementing the pre-order traversal iteratively a stack (\ref{stack}) is used. 
-The steps are:
+For implementing the pre-order traversal iteratively a stack (\ref{stack}) is used. The steps are \cite{wikitreestrav}:
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
 	\LinesNumbered
   	\SetKwFunction{FIterativePreorder}{Iterative-Preorder}
+  	\SetKwFunction{FRecursivePreorder}{Recursive-Preorder}
   	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FRecursivePreorder{$node$}}{
+		\If{(\normalfont{node == \textbf{null}})}{
+			\KwRet
+		}
+		visit(node)\;
+		Recursive-Preorder(node.left)\;
+		Recursive-Preorder(node.right)\;
+  	}
+  	\;
   	\Fn{\FIterativePreorder{$node$}}{
-  			\If{node == \textbf{null}}{
+  			\If{(\normalfont{node == \textbf{null}})}{
   				\KwRet
   			}
   			s $\leftarrow$ \textbf{empty stack}\;
   			s.push(node)\;
-  			\While{\textbf{not} s.isEmpty()}{
+  			\While{(\normalfont{\textbf{not} s.isEmpty()})}{
 				node $\leftarrow$ s.pop()\;
 				visit(node)\;  			
-  				\CommentSty{Right child is pushed first so that left is processed first (LIFO)}
+  				\CommentSty{$/*$ Right child is pushed first so that left is processed first (LIFO) $*/$}\;
   				
-  				\If{node.right $\neq$ \textbf{null}}{
+  				\If{(\normalfont{node.right $\neq$ \textbf{null}})}{
   					s.push(node.right)\;
   				}
-    	    	\If{node.left $\neq$ \textbf{null}}{
+    	    	\If{(\normalfont{node.left $\neq$ \textbf{null}})}{
   					s.push(node.left)\;
   				}
         	}
   	}
-  	\;
 \caption{Pre-order iterative implementation pseudocode.}
 \end{algorithm}
 
@@ -69,7 +77,7 @@ class BinaryTree():
 		if start:
 			if start.value == find_val:
 				return True
-			self.preorder_search_recursive(start.left, find_val) or
+			self.preorder_search_recursive(start.left, find_val)
 			self.preorder_search_recursive(start.right, find_val)
 
 	def preorder_search_iterative(self, start, find_val):
@@ -93,8 +101,8 @@ class BinaryTree():
 	def preorder_recursive_print(self, start, traversal):
 		if start:
 			traversal += (str(start.value) + "-")
-			traversal = self.preorder_print(start.left, traversal)
-			traversal = self.preorder_print(start.right,traversal)
+			traversal = self.preorder_recursive_print(start.left, traversal)
+			traversal = self.preorder_recursive_print(start.right,traversal)
 		return traversal
 \end{lstlisting}
 
@@ -110,17 +118,27 @@ class BinaryTree():
 \label{inorderappendix}
 In the in-order traversal the first node to be checked is the first leaf of the left subtree. The second one is the parent of the first checked node, and then the right subtree is checked repeating the previous process. All this process is repeated until all the nodes are visited or the value is found \ref{inorder}. 
 
-For implementing the in-order traversal iteratively a stack is used. The steps are:
+For implementing the in-order traversal iteratively a stack is used. The steps are \cite{wikitreestrav}:
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
 	\LinesNumbered
   	\SetKwFunction{FIterativeInorder}{Iterative-Inorder}
+  	\SetKwFunction{FRecursiveInorder}{Recursive-Inorder}
   	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FRecursiveInorder{$node$}}{
+		\If{(\normalfont{node == \textbf{null}})}{
+			\KwRet
+		}
+		Recursive-Inorder(node.left)\;
+		visit(node)\;
+		Recursive-Inorder(node.right)\;
+  	}
+  	\;
   	\Fn{\FIterativeInorder{$node$}}{
   			s $\leftarrow$ \textbf{empty stack}\;
-  			\While{\textbf{not} s.isEmpty() \textbf{or} node $\neq$ \textbf{null}}{
-  				\If{node $\neq$ \textbf{null}}{
+  			\While{(\normalfont{\textbf{not} s.isEmpty() \textbf{or} node $\neq$ \textbf{null}})}{
+  				\If{(\normalfont{node $\neq$ \textbf{null}})}{
   					s.push(node)\;
   					node $\leftarrow$ node.left\;
   				}
@@ -131,7 +149,6 @@ For implementing the in-order traversal iteratively a stack is used. The steps a
     	    	}
         	}
   	}
-  	\;
 \caption{In-order iterative implementation pseudocode.}
 \end{algorithm}
 
@@ -169,12 +186,13 @@ class BinaryTree():
 					return True
 				visited.append(current)
 				current = current.right
-
+		return visited		
+		
 	def inorder_recursive_print(self, start, traversal):
 		if start:
-			traversal = self.preorder_print(start.left, traversal)
+			traversal = self.inorder_recursive_print(start.left, traversal)
 			traversal += (str(start.value) + "-")
-			traversal = self.preorder_print(start.right,traversal)
+			traversal = self.inorder_recursive_print(start.right,traversal)
 		return traversal
 \end{lstlisting}
 
@@ -190,15 +208,47 @@ class BinaryTree():
 \label{postorderappendix}
 In the post-order traversal the first node to be checked is the first leaf of the left subtree. The second node is the right node of the parent of the first checked node. Once checked the right side of the subtree also the parent is checked and the process is repeated until all the node are visited or the value is found \ref{postorder}. 
 
-For implementing the post-order traversal iteratively a stack is used. The steps are (Figure \ref{appendixtrees_3}):
-\begin{itemize}
-	\item[1] Initialize the stack, and set \textit{last visited node} as null, and \textit{current node} as the node where to start the search.
-	\item[] Repeat until the stack is empty or \textit{current node} is not null:
-	\begin{itemize}
-		\item[If] 
-		\item[b]
-	\end{itemize}
-\end{itemize}
+Also in this case for implementing the post-order traversal iteratively a stack is used. The steps are \cite{wikitreestrav}:
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\LinesNumbered
+  	\SetKwFunction{FIterativePostorder}{Iterative-Postorder}
+  	\SetKwFunction{FRecursivePostorder}{Recursive-Postorder}
+  	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FRecursivePostorder{$node$}}{
+		\If{(\normalfont{node == \textbf{null}})}{
+			\KwRet
+		}
+		Recursive-Postorder(node.left)\;
+		Recursive-Postorder(node.right)\;
+		visit(node)\;
+  	}
+  	\;
+  	\Fn{\FIterativePostorder{$node$}}{
+  			s $\leftarrow$ \textbf{empty stack}\;
+  			lastNodeVisited $\leftarrow$ \textbf{null}\;
+  			\While{(\normalfont{\textbf{not} s.isEmpty() \textbf{or} node $\neq$ \textbf{null}})}{
+  				\If{(\normalfont{node $\neq$ \textbf{null}})}{
+  					s.push(node)\;
+  					node $\leftarrow$ node.left\;
+  				}
+    	    	\Else{
+    	    		peekNode $\leftarrow$ s.peek()\;
+    	    		\CommentSty{$/*$ If right child exists and traversing node from left child, then move right $/*$}\;
+    	    		
+    	    		\If{(\normalfont{peekNode.right $\neq$ \textbf{null} \textbf{and} lastNodeVisited $\neq$ peekNode.right})}{
+    	    			node $\leftarrow$ peekNode.right\;
+    	    		}
+    	    		\Else{
+    	    			visit(peekNode)\;
+    	    			lastVisitedNode $\leftarrow$ s.pop()\;
+    	    		}
+    	    	}
+        	}
+  	}
+\caption{Post-order iterative implementation pseudocode.}
+\end{algorithm}
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of post-order traversal.}]
 class BinaryTree():
@@ -222,16 +272,30 @@ class BinaryTree():
 			return None
 		stack = []
 		stack.push(start)
-		last_visited = None
+		last_visited_node = None
 		visited = []
 		current = start
 		while (not stack) or (current != None):
-			
+			if current != None:
+				s.push(current)
+				current = current.left
+			else:
+				# Take the last element of the stack
+				peeked_node = stack[-1]
+				# If right child exists and traversing node from left child, then move right
+				if (peeked_node.right != null and last_visited_node != peeked_node.right):
+					current = peeked_node.right
+				else:
+					if peeked_node == find_val:
+						return True
+					visited.append(peeked_node)
+					last_visited_node = stack.pop()
+		return visited
 
 	def postorder_recursive_print(self, start, traversal):
 		if start:
-			traversal = self.preorder_print(start.left, traversal)
-			traversal = self.preorder_print(start.right,traversal)
+			traversal = self.postorder_recursive_print(start.left, traversal)
+			traversal = self.postorder_recursive_print(start.right,traversal)
 			traversal += (str(start.value) + "-")
 		return traversal
 \end{lstlisting}

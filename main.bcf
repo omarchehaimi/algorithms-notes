@@ -2208,7 +2208,13 @@
     <bcf:citekey order="24">wikiqicksort</bcf:citekey>
     <bcf:citekey order="25">quicksortcode</bcf:citekey>
     <bcf:citekey order="26">wikitrees</bcf:citekey>
-    <bcf:citekey order="27">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="27">wikibinsearchtree</bcf:citekey>
+    <bcf:citekey order="28">goodrich2013data</bcf:citekey>
+    <bcf:citekey order="29">wikiheap</bcf:citekey>
+    <bcf:citekey order="30">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="31">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="32">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="33">wikitreestrav</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

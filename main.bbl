@@ -669,7 +669,7 @@
       \endverb
       \keyw{trees,algorithms,complexity}
     \endentry
-    \entry{wikitreestrav}{online}{}
+    \entry{wikibinsearchtree}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -684,6 +684,99 @@
       \field{extraname}{26}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Binary search tree}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Binary_search_tree
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Binary_search_tree
+      \endverb
+      \keyw{trees,binary search}
+    \endentry
+    \entry{goodrich2013data}{book}{}
+      \name{author}{3}{}{%
+        {{hash=6a8d3f9c65dfb1c309b367e976ec86cd}{%
+           family={Goodrich},
+           familyi={G\bibinitperiod},
+           given={M.T.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4eb856834e0abf9dd0e9ef7a6e7c9714}{%
+           family={Tamassia},
+           familyi={T\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=56c0467cd1853d6c2cdd9f550d5b991c}{%
+           family={Goldwasser},
+           familyi={G\bibinitperiod},
+           given={M.H.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Incorporated}%
+      }
+      \strng{namehash}{6ae976cb0acee0b1388cc1c3601b95bf}
+      \strng{fullhash}{6ae976cb0acee0b1388cc1c3601b95bf}
+      \strng{bibnamehash}{6ae976cb0acee0b1388cc1c3601b95bf}
+      \strng{authorbibnamehash}{6ae976cb0acee0b1388cc1c3601b95bf}
+      \strng{authornamehash}{6ae976cb0acee0b1388cc1c3601b95bf}
+      \strng{authorfullhash}{6ae976cb0acee0b1388cc1c3601b95bf}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781118476734}
+      \field{title}{Data Structures and Algorithms in Python}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=2UccAAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=2UccAAAAQBAJ
+      \endverb
+    \endentry
+    \entry{wikiheap}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{27}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Heap}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Heap_(data_structure)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Heap_(data_structure)
+      \endverb
+      \keyw{trees,heap}
+    \endentry
+    \entry{wikitreestrav}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{28}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Trees traversal}

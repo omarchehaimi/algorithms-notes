@@ -99,9 +99,9 @@ To search an element in the tree one of the previous methods can be used. Becaus
 \subsection{Delete}
 Before the delete process there is always a search one for finding the element to be deleted. If the element to be deleted is a leaf, deleting it is not a problem because there are not any children to be moved. Instead if the node to be removed has some children there are several opportunities to reorganize the nodes, because the condition for a binary tree must remain valid (a node can have at most two nodes). So there are several strategies. Let us consider the following tree \ref{trees_9}. 
 \begin{itemize}
-\item If the node to be removed has only one child it can be replaced by the child node (case 1 \ref{trees_9}).
-\item If the node to be removed has two children it can be replaced with the child node which has no children node (case 2 \ref{trees_9}).
-\item If the node to be removed has two children which have again children as well, in this case there are several options which can be done. For example on child node can be moved to the position of the one to be removed (case 3 \ref{trees_9}).
+\item If the node to be removed has only one child it can be replaced by the child node (case 1 Figure \ref{trees_9}).
+\item If the node to be removed has two children it can be replaced with the child node which has no children node (case 2 Figure \ref{trees_9}).
+\item If the node to be removed has two children which have again children as well, in this case there are several options which can be done. For example on child node can be moved to the position of the one to be removed (case 3 Figure \ref{trees_9}).
 \end{itemize} 
 
 \begin{figure}[H]
@@ -177,3 +177,119 @@ class BinaryTree():
 			traversal = self.preorder_print(start.right,traversal)
 		return traversal
 \end{lstlisting}
+
+\section{Binary Search Trees (BST)}
+Performing operations such as search, addition, or removal of an element it is a very efficient process if the binary tree is ordered. A binary tree is ordered if for all nodes the left child has a minor value, and the right child has a greater value than the considered node \cite{wikibinsearchtree}(\href{https://en.wikipedia.org/wiki/Binary_search_tree}{Binary search tree, Wikipedia}).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/trees/images/trees_13.pdf}
+		\caption[Search on an ordered binary tree.]{Search on an ordered binary tree.}
+		\label{trees_13}
+	\end{center}
+\end{figure}
+
+For example in Figure \ref{trees_13} is an ordered tree. Let us consider we would like to find the node which value is 7. Because the tree is ordered for efficiently finding 7 is enough to compare 7 with the value of the node and choose every time if to search on the right or on the left. In this way for finding a value is not mandatory to look at all the nodes, and the complexity for this operation is \(log(n)\).
+
+Let us consider instead we would like to add a new node of value 4 to the tree of Figure \ref{trees_13}. Because the tree is ordered, there is only one place in which the node can be added. In the case of the tree in Figure \ref{trees_13} the node can be easily added because there is an empty space that can correctly take it (Figure \ref{trees_14}). In this case the complexity for this operation is again \(log(n)\).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/trees/images/trees_14.pdf}
+		\caption[Addition on an ordered binary tree.]{Addition on an ordered binary tree.}
+		\label{trees_14}
+	\end{center}
+\end{figure}
+
+In case the position of the node is already occupied, adding the node could be a very difficult task. For a more complete and formal description of this topic refer to \cite{goodrich2013data} in the chapter about trees.
+
+When all the possible nodes are present in each level the tree is said \textbf{balanced}. In Figure \ref{trees_14} there is an example of a balanced tree.
+When instead a tree has all its children nodes which have always a bigger value, all the tree is on the right, and it is said to be \textbf{unbalanced}. In this case the search of an element has a \(O(n)\) complexity in the worst case.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/trees/images/trees_15.pdf}
+		\caption[Add an element on an ordered binary tree.]{Add an element on an ordered binary tree.}
+		\label{trees_15}
+	\end{center}
+\end{figure}
+
+\subsection{Binary Search Tree Implementation}
+The following code is the python implementation of the search and addition operations performed on a ordered binary tree.
+
+\begin{lstlisting}[firstnumber=1, caption={implementation of insert and search operation for a binary search tree.}]
+class BST():
+
+	def __int__(self, root):
+		self.root = Node(root)
+
+	def insert(self, new_val):
+		self.insert_helper(self.root, new_val)
+	
+	def insert_helper(self, current, new_val):
+		if current.value < new_val:
+			if current.right:
+				self.insert_helper(current.right, new_val)
+			else:
+				self.current.right = Node(new_val)
+		else:
+			if current.left:
+				self.insert_helper(current.left, new_val)
+			else:
+				current.left = Node(new_val)
+	
+	def search(self, find_val):
+		return self.search_helper(self.root, find_val)
+	
+	def search_helper(self, current, find_val):
+		if current:
+			if current.value == find_val:
+				return True
+			elif current.value < find_val:
+				return self.search_helper(current.right, find_val)
+			else:
+				return self.search_helper(current.left, find_val)
+		return False
+\end{lstlisting}
+
+\section{Heap}
+\textbf{Heaps} are particular tree-based data structure in which the elements are ordered in increasing or decreasing order \cite{wikiheap} (\href{https://en.wikipedia.org/wiki/Heap_(data_structure)}{Heap, Wikipedia}). Heaps are a very efficient implementation of the abstract data type priority queue \ref{queue}. The value with the highest (or lowest) priority is always stored at the root. Heaps are very useful when an element with a high (or low) priority must be repeatedly removed from the heap. Moreover, heaps are not sorted structure, but are regarded as partially ordered.    
+
+We say the \textit{max heap} (Figure \ref{trees_16} (a)) if for every node its children have the values less or equal than the one of the parent (the root has always the highest value). We say instead \textit{min heap} (Figure \ref{trees_16} (b)) if for every node its children have the values higher or equal than the on of the parent (the root has the lowest value).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/trees/images/trees_16.pdf}
+		\caption[Max heap and min heap example.]{Max heap and min heap example.}
+		\label{trees_16}
+	\end{center}
+\end{figure}
+
+In general heaps are not binary trees so they can have more than two nodes.
+
+In a max heap tree the search of the biggest value is called \textbf{peek} and it has a constant complexity (\(O(1)\)). For searching other values instead we have to check node by node as the ordering of the left and right side is not guarantee. The average case is \(O(\frac{n}{2})\ = \ O(n)\).
+\subsection{Heapify}
+Let us consider we would like to add a new node to a heap. In this case the node to be add must respect the heap condition. For doing so the node is added in the first available position, and later the node of the heap are swapped in order to keep true the heap condition.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/trees/images/trees_17.pdf}
+		\caption[Add a new node to a heap.]{Add a new node to a heap.}
+		\label{trees_17}
+	\end{center}
+\end{figure}
+
+In the example of Figure \ref{trees_17} only one swap is necessary. The complexity of adding a new element and swap all the node, in order to keep valid the heap condition, is \(log(n)\), and in the worst case the highest number of operations correspond to the height of the tree.
+
+\subsection{Heap Implementation}
+To implement a heap we can use an array. The usage of an array for implement a heap is shown in the following figure (Figure 
+
+\section{Red-Black Tree}
+They are very common trees which respect the following properties:
+\begin{itemize}
+\item[1]
+\item[2]
+\item[3]
+\item[4]
+\item[5]
+\end{itemize} 
