@@ -109,20 +109,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.4.1}{Binary Search Tree Implementation}}{36}{subsection.4.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}{Heap}}{37}{section.4.5}%
+\contentsline {section}{\numberline {4.5}{Heaps}}{37}{section.4.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.1}{Heapify}}{38}{subsection.4.5.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.2}{Heap Implementation}}{38}{subsection.4.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{{Appendix}}{39}{part*.50}%
+\contentsline {section}{\numberline {4.6}{Self-balancing Binary Search Trees}}{39}{section.4.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{40}{appendix.A}%
+\contentsline {section}{\numberline {4.7}{Red-Black Trees}}{39}{section.4.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{40}{section.A.1}%
+\contentsline {chapter}{\numberline {5}{Networks}}{42}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}{In-order Traversal}}{43}{section.A.2}%
+\contentsline {section}{\numberline {5.1}{General Definitions}}{42}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{45}{section.A.3}%
+\contentsline {part}{{Appendix}}{43}{part*.55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{{Bibliography}}{49}{chapter*.54}%
+\contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{44}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{44}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}{In-order Traversal}}{47}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{49}{section.A.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{53}{chapter*.59}%

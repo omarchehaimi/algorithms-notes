@@ -103,18 +103,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {40}{\ignorespaces Addition on an ordered binary tree.}}{35}{figure.caption.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {41}{\ignorespaces Add an element on an ordered binary tree.}}{36}{figure.caption.47}%
+\contentsline {figure}{\numberline {41}{\ignorespaces An unbalanced binary tree.}}{36}{figure.caption.47}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {42}{\ignorespaces Max heap and min heap example.}}{37}{figure.caption.48}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {43}{\ignorespaces Add a new node to a heap.}}{38}{figure.caption.49}%
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {44}{\ignorespaces Implementation example of a heap using an array.}}{38}{figure.caption.50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {45}{\ignorespaces Example of balancing an unbalanced tree.}}{39}{figure.caption.51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {46}{\ignorespaces A red-black tree.}}{40}{figure.caption.52}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {47}{\ignorespaces Insertion of a new node and the following updating of the color nodes.}}{40}{figure.caption.53}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {48}{\ignorespaces Left and right rotation for balancing the tree after an insertion.}}{41}{figure.caption.54}%
+\defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {44}{\ignorespaces Pre-order iterative implementation example.}}{42}{figure.caption.51}%
+\ttl@tocsep 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {45}{\ignorespaces In-order iterative implementation example.}}{45}{figure.caption.52}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Pre-order iterative implementation example.}}{46}{figure.caption.56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {46}{\ignorespaces Post-order iterative implementation example.}}{48}{figure.caption.53}%
+\contentsline {figure}{\numberline {50}{\ignorespaces In-order iterative implementation example.}}{49}{figure.caption.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {51}{\ignorespaces Post-order iterative implementation example.}}{52}{figure.caption.58}%
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 

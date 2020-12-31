@@ -27,10 +27,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {4.3}implementation of insert and search operation for a binary search tree.}{36}{lstlisting.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree.}{40}{lstlisting.A.1}%
+\contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree.}{44}{lstlisting.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.2}Recursive and iterative implementation of pre-order traversal.}{41}{lstlisting.A.2}%
+\contentsline {lstlisting}{\numberline {A.2}Recursive and iterative implementation of pre-order traversal.}{45}{lstlisting.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.3}Recursive and iterative implementation of in-order traversal.}{43}{lstlisting.A.3}%
+\contentsline {lstlisting}{\numberline {A.3}Recursive and iterative implementation of in-order traversal.}{47}{lstlisting.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.4}Recursive and iterative implementation of post-order traversal.}{46}{lstlisting.A.4}%
+\contentsline {lstlisting}{\numberline {A.4}Recursive and iterative implementation of post-order traversal.}{50}{lstlisting.A.4}%
