@@ -79,25 +79,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {28}{\ignorespaces Elements of a tree and linked list.}}{28}{figure.caption.31}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {29}{\ignorespaces Possible structures of a tree.}}{29}{figure.caption.32}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Possible structures of a tree.}}{28}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {30}{\ignorespaces A tree and its fundamentals elements.}}{29}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {31}{\ignorespaces The depth-first search and the breath-first search.}}{30}{figure.caption.34}%
+\contentsline {figure}{\numberline {31}{\ignorespaces The depth-first search and the breath-first search.}}{29}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {32}{\ignorespaces Pre-order search.}}{30}{figure.caption.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {33}{\ignorespaces In-order search.}}{31}{figure.caption.38}%
+\contentsline {figure}{\numberline {33}{\ignorespaces In-order search.}}{30}{figure.caption.38}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {34}{\ignorespaces Post-order search.}}{31}{figure.caption.40}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {35}{\ignorespaces Example of tree search and traversal.}}{32}{figure.caption.41}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Example of tree search and traversal.}}{31}{figure.caption.41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {36}{\ignorespaces Delete an element of a tree.}}{33}{figure.caption.42}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Delete an element of a tree.}}{32}{figure.caption.42}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {37}{\ignorespaces Add an element of a tree.}}{33}{figure.caption.43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {38}{\ignorespaces Perfect binary tree results.}}{34}{figure.caption.44}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Perfect binary tree results.}}{33}{figure.caption.44}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {39}{\ignorespaces Search on an ordered binary tree.}}{35}{figure.caption.45}%
 \defcounter {refsection}{0}\relax 
@@ -105,13 +105,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {41}{\ignorespaces An unbalanced binary tree.}}{36}{figure.caption.47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {42}{\ignorespaces Max heap and min heap example.}}{37}{figure.caption.48}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Max heap (a) and min heap (b) example.}}{37}{figure.caption.48}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {43}{\ignorespaces Add a new node to a heap.}}{38}{figure.caption.49}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {44}{\ignorespaces Implementation example of a heap using an array.}}{38}{figure.caption.50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {45}{\ignorespaces Example of balancing an unbalanced tree.}}{39}{figure.caption.51}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Example of balanced (b) and unbalanced (a) tree.}}{39}{figure.caption.51}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {46}{\ignorespaces A red-black tree.}}{40}{figure.caption.52}%
 \defcounter {refsection}{0}\relax 
@@ -121,12 +121,16 @@
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {49}{\ignorespaces Undirected (a) and directed (b) graphs and its elements.}}{42}{figure.caption.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {50}{\ignorespaces A weakly connected graph.}}{43}{figure.caption.58}%
+\defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {49}{\ignorespaces Pre-order iterative implementation example.}}{46}{figure.caption.56}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Pre-order iterative implementation example.}}{47}{figure.caption.60}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {50}{\ignorespaces In-order iterative implementation example.}}{49}{figure.caption.57}%
+\contentsline {figure}{\numberline {52}{\ignorespaces In-order iterative implementation example.}}{50}{figure.caption.61}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {51}{\ignorespaces Post-order iterative implementation example.}}{52}{figure.caption.58}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Post-order iterative implementation example.}}{53}{figure.caption.62}%
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 

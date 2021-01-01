@@ -91,7 +91,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{{In-order search}}{30}{paragraph*.37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{{Post-order search}}{31}{paragraph*.39}%
+\contentsline {paragraph}{{Post-order search}}{30}{paragraph*.39}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}{Binary Trees}}{31}{section.4.3}%
 \defcounter {refsection}{0}\relax 
@@ -99,38 +99,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.2}{Delete}}{32}{subsection.4.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}{Insert}}{33}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}{Insert}}{32}{subsection.4.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.4}{Perfect binary tree}}{33}{subsection.4.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}{Binary Tree Implementation}}{34}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.5}{Binary Tree Implementation}}{33}{subsection.4.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}{Binary Search Trees (BST)}}{35}{section.4.4}%
+\contentsline {section}{\numberline {4.4}{Binary Search Trees (BST)}}{34}{section.4.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.4.1}{Binary Search Tree Implementation}}{36}{subsection.4.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}{Heaps}}{37}{section.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}{Heapify}}{38}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.1}{Heapify}}{37}{subsection.4.5.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.2}{Heap Implementation}}{38}{subsection.4.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}{Self-balancing Binary Search Trees}}{39}{section.4.6}%
+\contentsline {section}{\numberline {4.6}{Self-balancing Binary Search Trees}}{38}{section.4.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.7}{Red-Black Trees}}{39}{section.4.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}{Networks}}{42}{chapter.5}%
+\contentsline {chapter}{\numberline {5}{Graphs}}{42}{chapter.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}{General Definitions}}{42}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{{Appendix}}{43}{part*.55}%
+\contentsline {subsection}{\numberline {5.1.1}{Connectivity}}{42}{subsection.5.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{44}{appendix.A}%
+\contentsline {paragraph}{{Strongly Connected}}{43}{paragraph*.56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{44}{section.A.1}%
+\contentsline {paragraph}{{Weakly Connected}}{43}{paragraph*.57}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}{In-order Traversal}}{47}{section.A.2}%
+\contentsline {subsection}{\numberline {5.1.2}{Graph Representations}}{43}{subsection.5.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{49}{section.A.3}%
+\contentsline {part}{{Appendix}}{44}{part*.59}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{{Bibliography}}{53}{chapter*.59}%
+\contentsline {chapter}{\numberline {A}{Binary Search Complete Implementation}}{45}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}{Pre-order Traversal}}{45}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}{In-order Traversal}}{48}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}{Post-order Traversal}}{50}{section.A.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Bibliography}}{54}{chapter*.63}%

@@ -21,16 +21,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {3.4}Quicksort python implementation.}{26}{lstlisting.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {4.1}Class definition for a node and a tree.}{34}{lstlisting.4.1}%
+\contentsline {lstlisting}{\numberline {4.1}Class definition for a node and a tree.}{33}{lstlisting.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {4.2}Recursive pre-order traversal and search implementation.}{34}{lstlisting.4.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {4.3}implementation of insert and search operation for a binary search tree.}{36}{lstlisting.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree.}{44}{lstlisting.A.1}%
+\contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree.}{45}{lstlisting.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.2}Recursive and iterative implementation of pre-order traversal.}{45}{lstlisting.A.2}%
+\contentsline {lstlisting}{\numberline {A.2}Recursive and iterative implementation of pre-order traversal.}{46}{lstlisting.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.3}Recursive and iterative implementation of in-order traversal.}{47}{lstlisting.A.3}%
+\contentsline {lstlisting}{\numberline {A.3}Recursive and iterative implementation of in-order traversal.}{48}{lstlisting.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.4}Recursive and iterative implementation of post-order traversal.}{50}{lstlisting.A.4}%
+\contentsline {lstlisting}{\numberline {A.4}Recursive and iterative implementation of post-order traversal.}{51}{lstlisting.A.4}%
