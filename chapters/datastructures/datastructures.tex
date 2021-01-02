@@ -270,7 +270,7 @@ The following is the implementation of the string key map in Python.
 The hash function of this implementation is: \(Hash \ Function = (ASCII[0]*100) + ASCII[1]\). In this code \textit{ord()} and \textit{char()} functions are used. \textit{ord()} takes a char as an argument and return the respective ASCII code (\(ord('U')=85\)), and \textit{char()} takes a numeric value as ASCII code and return the respective char (\(char(85)='U'\)).
 \begin{lstlisting}[firstnumber=1, caption={String key implementation.}]
 class HashTable():
-	def __int__(self):
+	def __init__(self):
 		self.table = [None]*10000
 	
 	def store(self, string):

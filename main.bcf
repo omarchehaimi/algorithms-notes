@@ -2215,11 +2215,14 @@
     <bcf:citekey order="31">wikiblackred</bcf:citekey>
     <bcf:citekey order="32">wikigraphmath</bcf:citekey>
     <bcf:citekey order="33">wikiconnectivity</bcf:citekey>
-    <bcf:citekey order="34">wikigraphabstracttype</bcf:citekey>
-    <bcf:citekey order="35">wikitreestrav</bcf:citekey>
-    <bcf:citekey order="36">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="34">goodrich2013data</bcf:citekey>
+    <bcf:citekey order="35">goodrich2013data</bcf:citekey>
+    <bcf:citekey order="36">goodrich2013data</bcf:citekey>
     <bcf:citekey order="37">wikitreestrav</bcf:citekey>
     <bcf:citekey order="38">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="39">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="40">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="41">goodrich2013data</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

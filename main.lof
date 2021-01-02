@@ -83,7 +83,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {30}{\ignorespaces A tree and its fundamentals elements.}}{29}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {31}{\ignorespaces The depth-first search and the breath-first search.}}{29}{figure.caption.34}%
+\contentsline {figure}{\numberline {31}{\ignorespaces The depth-first search and the breadth-first search.}}{29}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {32}{\ignorespaces Pre-order search.}}{30}{figure.caption.36}%
 \defcounter {refsection}{0}\relax 
@@ -125,12 +125,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {50}{\ignorespaces A weakly connected graph.}}{43}{figure.caption.58}%
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {51}{\ignorespaces Edge list.}}{44}{figure.caption.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {52}{\ignorespaces Adjacency list.}}{44}{figure.caption.60}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {53}{\ignorespaces Adjacency matrix.}}{44}{figure.caption.61}%
+\defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {51}{\ignorespaces Pre-order iterative implementation example.}}{47}{figure.caption.60}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Pre-order iterative implementation example.}}{49}{figure.caption.63}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {52}{\ignorespaces In-order iterative implementation example.}}{50}{figure.caption.61}%
+\contentsline {figure}{\numberline {55}{\ignorespaces In-order iterative implementation example.}}{52}{figure.caption.64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {53}{\ignorespaces Post-order iterative implementation example.}}{53}{figure.caption.62}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Post-order iterative implementation example.}}{55}{figure.caption.65}%
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 

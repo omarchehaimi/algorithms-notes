@@ -35,12 +35,12 @@ All this definitions are defined in following figure (Figure \ref{trees_3}).
 \end{figure}
 
 \section{Tree Traversal}
-Which way is the most efficient for visiting all the nodes of a tree? Is it more efficient looking layer by layer or looking at subtrees? There are two different approach to traverse a tree: the \textbf{depth-first search} (\textbf{DFS}) and the \textbf{breath-first search} (\textbf{BFS}). In the first one the priority is to look at the children of a node, instead in the second one the priority is to look at the node of the same layer \ref{trees_4}.
+Which way is the most efficient for visiting all the nodes of a tree? Is it more efficient looking layer by layer or looking at subtrees? There are two different approach to traverse a tree: the \textbf{depth-first search} (\textbf{DFS}) and the \textbf{breadth-first search} (\textbf{BFS}). In the first one the priority is to look at the children of a node, instead in the second one the priority is to look at the node of the same layer \ref{trees_4}.
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/trees/images/trees_4.pdf}
-		\caption[The depth-first search and the breath-first search.]{The depth-first search and the breath-first search.}
+		\caption[The depth-first search and the breadth-first search.]{The depth-first search and the breadth-first search.}
 		\label{trees_4}
 	\end{center}
 \end{figure}
@@ -142,7 +142,7 @@ The following code is the recursive Python implementation of the pre-order searc
 \begin{lstlisting}[firstnumber=1, caption={Class definition for a node and a tree.}]
 class Node():
 
-	def __int__(self, value):
+	def __init__(self, value):
 		self.value = value
 		self.left = None
 		self.right = None
@@ -220,7 +220,7 @@ The following code is the python implementation of the search and addition opera
 \begin{lstlisting}[firstnumber=1, caption={implementation of insert and search operation for a binary search tree.}]
 class BST():
 
-	def __int__(self, root):
+	def __init__(self, root):
 		self.root = Node(root)
 
 	def insert(self, new_val):
