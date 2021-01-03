@@ -16,7 +16,7 @@ class BinaryTree():
 		self.root = Node(root)
 \end{lstlisting}
 
-In this appendix there is a detailed implementation, both recursive and iterative, of all possible ways to perform a tree traversal in the case of depth-first search: pre-order traversal \ref{preorderappendix}, in-order traversal \ref{inorderappendix}, and post-order traversal \ref{postorderappendix}. The convention followed here is to look up first at the left child always, and later look up the right one. The opposite approach is equivalent.
+In this appendix there is a detailed implementation, both recursive and iterative, of all possible ways to perform a tree traversal in the case of \textbf{depth-first search}: pre-order traversal \ref{preorderappendix}, in-order traversal \ref{inorderappendix}, and post-order traversal \ref{postorderappendix}. The convention followed here is to look up first at the left child always, and later look up the right one. The opposite approach is equivalent.
 
 The pseudocode of the iterative implementations is taken from \cite{wikitreestrav}(\href{https://en.wikipedia.org/wiki/Tree_traversal}{Tree traversal, Wikipedia}).
 
@@ -37,14 +37,11 @@ For implementing the pre-order traversal iteratively a stack (\ref{stack}) is us
 			\KwRet
 		}
 		visit(node)\;
-		Recursive-Preorder(node.left)\;
-		Recursive-Preorder(node.right)\;
+		\FRecursivePreorder{$node.left$}\;
+		\FRecursivePreorder{$node.right$}\;
   	}
   	\;
   	\Fn{\FIterativePreorder{$node$}}{
-  			\If{(\normalfont{node == \textbf{null}})}{
-  				\KwRet
-  			}
   			s $\leftarrow$ \textbf{empty stack}\;
   			s.push(node)\;
   			\While{(\normalfont{\textbf{not} s.isEmpty()})}{
@@ -60,7 +57,7 @@ For implementing the pre-order traversal iteratively a stack (\ref{stack}) is us
   				}
         	}
   	}
-\caption{Pre-order iterative implementation pseudocode.}
+\caption{Pre-order pseudocode.}
 \end{algorithm}
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of pre-order traversal.}]
@@ -86,10 +83,10 @@ class BinaryTree():
 		visited = []		
 		stack = []
 		stack.push(start)
-		while not stack: # Keep cycle until the stack is empty
+		while stack: # Keep cycle until the stack is empty
 			node = stack.pop()
 			visited.append(node)
-			if node == find_val:
+			if node.value == find_val:
 				return True
 			# Right child is pushed first so that the left one is processed first
 			if node.right:
@@ -109,7 +106,7 @@ class BinaryTree():
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_1.pdf}
-		\caption[Pre-order iterative implementation example.]{Pre-order iterative implementation example.}
+		\caption[Pre-order iterative example.]{Pre-order iterative example.}
 		\label{appendixtrees_1}
 	\end{center}
 \end{figure}
@@ -130,9 +127,9 @@ For implementing the in-order traversal iteratively a stack is used. The steps a
 		\If{(\normalfont{node == \textbf{null}})}{
 			\KwRet
 		}
-		Recursive-Inorder(node.left)\;
+		\FRecursiveInorder{$node.left$}\;
 		visit(node)\;
-		Recursive-Inorder(node.right)\;
+		\FRecursiveInorder{$node.right$}\;
   	}
   	\;
   	\Fn{\FIterativeInorder{$node$}}{
@@ -149,7 +146,7 @@ For implementing the in-order traversal iteratively a stack is used. The steps a
     	    	}
         	}
   	}
-\caption{In-order iterative implementation pseudocode.}
+\caption{In-order pseudocode.}
 \end{algorithm}
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of in-order traversal.}]
@@ -176,7 +173,7 @@ class BinaryTree():
 		stack.append(start)
 		current = start
 		visited = []
-		while (not stack) or (current != None):
+		while stack or current != None:
 			if current != None:
 				stack.append(current)
 				current = current.left
@@ -199,7 +196,7 @@ class BinaryTree():
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_2.pdf}
-		\caption[In-order iterative implementation example.]{In-order iterative implementation example.}
+		\caption[In-order iterative example.]{In-order iterative example.}
 		\label{appendixtrees_2}
 	\end{center}
 \end{figure}
@@ -220,8 +217,8 @@ Also in this case for implementing the post-order traversal iteratively a stack 
 		\If{(\normalfont{node == \textbf{null}})}{
 			\KwRet
 		}
-		Recursive-Postorder(node.left)\;
-		Recursive-Postorder(node.right)\;
+		\FRecursivePostorder{$node.left$}\;
+		\FRecursivePostorder{$node.right$}\;
 		visit(node)\;
   	}
   	\;
@@ -247,7 +244,7 @@ Also in this case for implementing the post-order traversal iteratively a stack 
     	    	}
         	}
   	}
-\caption{Post-order iterative implementation pseudocode.}
+\caption{Post-order pseudocode.}
 \end{algorithm}
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of post-order traversal.}]
@@ -275,7 +272,7 @@ class BinaryTree():
 		last_visited_node = None
 		visited = []
 		current = start
-		while (not stack) or (current != None):
+		while stack or current != None:
 			if current != None:
 				s.push(current)
 				current = current.left
@@ -286,7 +283,7 @@ class BinaryTree():
 				if (peeked_node.right != null and last_visited_node != peeked_node.right):
 					current = peeked_node.right
 				else:
-					if peeked_node == find_val:
+					if peeked_node.value == find_val:
 						return True
 					visited.append(peeked_node)
 					last_visited_node = stack.pop()
@@ -303,7 +300,67 @@ class BinaryTree():
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_3.pdf}
-		\caption[Post-order iterative implementation example.]{Post-order iterative implementation example.}
+		\caption[Post-order iterative example.]{Post-order iterative example.}
 		\label{appendixtrees_3}
 	\end{center}
 \end{figure}
+
+\section{Breadth-first search Implementation}
+In the case of the \textbf{breadth-first search} (Chapter \ref{chp:trees}) the implementation uses a queue (Section \ref{queue}) instead of a stack. Also here the convention is to check the left node first and later the right ones. The pesudocode is adapted from the general case of the breadth-first search taken from here \cite{wikibreadthfirst} (\href{https://en.wikipedia.org/wiki/Breadth-first_search}{Breadth-first search, Wikipedia}).
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\LinesNumbered
+  	\SetKwFunction{FBreadthFirstSearch}{Breadth-first-search}
+  	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FBreadthFirstSearch{$node$}}{
+  		q $\leftarrow$ \textbf{empty queue}\;
+  		visit(node)\;
+  		q.enqueue(node)\;
+  		\While{(\normalfont{\textbf{not} q.isEmpty()})}{
+  			node $\leftarrow$ q.dequeue()\;
+  			visit(node)\;
+			\CommentSty{$/*$ Left child is enqueue first so that left is processed first (FIFO) $*/$}\;
+			\If{\normalfont{node.left $\neq$ \textbf{null}}}{
+				q.enqueue(node.left)\;							
+			}
+			\If{\normalfont{node.right $\neq$ \textbf{null}}}{
+				q.enqueue(node.right)\;							
+			}
+        }
+  	}
+\caption{Breadth-first search pseudocode.}
+\end{algorithm}
+
+\begin{lstlisting}[firstnumber=1, caption={Breadth-first search implementation.}]
+class BinaryTree():
+	...
+
+	def breadth_first_search(self, start, find_val):
+		if start == None:
+			return None
+		visited = []
+		queue = []
+		queue.append(start)
+		while queue:
+			node = queue.pop(0)
+			visited.append(node)
+			if node.value == find_val:
+				return True
+			# Left node is added first so that the left side nodes are visited first
+			if node.left:
+				queue.append(node.left)
+			if node.right:
+				queue.append(node.right)
+		return visited
+\end{lstlisting}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixtree/treesappendix_4.pdf}
+		\caption[Breadth-first search example.]{Breadth-first search example.}
+		\label{appendixtrees_3}
+	\end{center}
+\end{figure}
+
+\section{Complexity Summary}

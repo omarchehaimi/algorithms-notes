@@ -866,7 +866,7 @@
       \endverb
       \keyw{graph,network,connectivity}
     \endentry
-    \entry{wikitreestrav}{online}{}
+    \entry{wikidepthfirst}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -883,6 +883,32 @@
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{title}{Depth-first search}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Depth-first_search
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Depth-first_search
+      \endverb
+      \keyw{graph,network,tree,depth-first search}
+    \endentry
+    \entry{wikitreestrav}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{33}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{title}{Trees traversal}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Tree_traversal
@@ -891,6 +917,32 @@
       \verb https://en.wikipedia.org/wiki/Tree_traversal
       \endverb
       \keyw{trees,traversal}
+    \endentry
+    \entry{wikibreadthfirst}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{34}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Breadth-first search}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Breadth-first_search
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Breadth-first_search
+      \endverb
+      \keyw{graph,network,tree,breadth-first search}
     \endentry
   \enddatalist
 \endrefsection

@@ -80,3 +80,79 @@ class Graph():
 					max_index = node.value
 		return max_index
 \end{lstlisting}
+
+\chapter{Implementation of Graph Traversal}
+\label{graphimplementationtraversalappendix}
+In the following chapter \textbf{depth-first search} and \textbf{breadth-first search} are implemented, with both recursive and iterative implementation.
+\section{Depth-first search}
+In the following there are the pesudocode, the python implementation, and an example of execution of the depth-first search on a graph.
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\LinesNumbered
+  	\SetKwFunction{FIterativeDepthFirstSearch}{Iterative-Depth-first-search}
+  	\SetKwFunction{FRecursiveDepthFirstSearch}{Recursive-Depth-first-search}
+  	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FRecursiveDepthFirstSearch{$graph$, $vertex$}}{
+  		visit(vertex)\;
+  		\For{\normalfont{all adjacent nodes adj\textunderscore vertices to vertex}}{
+			\FRecursiveDepthFirstSearch{$graph$, $adj_vertices$}\;		
+  		}
+  	}
+  	\;
+  	\Fn{\FIterativeDepthFirstSearch{$graph$, $vertex$}}{
+		s $\leftarrow$ \textbf{empty stack}\;
+		s.push(vertex)\;
+		\While{\normalfont{\textbf{not} s.isEmpty()}}{
+			vertex $\leftarrow$ s.pop()\;
+			\If{\normalfont{vertex \textbf{not} visited}}{
+				visit(vertex)\;
+				\For{\normalfont{all adjacent nodes adj\textunderscore vertices to vertex}}{
+					s.push(adj\textunderscore vertices)\;
+				}
+			}
+		}  	
+  	}
+\caption{Depth-first search pseudocode.}
+\end{algorithm}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixgraphs/graphsappendix_1.pdf}
+		\caption[Depth-first search example.]{Depth-first search example.}
+		\label{graphappendix_1}
+	\end{center}
+\end{figure}
+
+\section{Breadth-first search}
+In the following there are the pesudocode, the python implementation, and an example of execution of the depth-first search on a graph.
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\LinesNumbered
+  	\SetKwFunction{FBreadthFirstSearch}{Breadth-first-search}
+  	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\FBreadthFirstSearch{$graph$, $vertex$}}{
+		q $\leftarrow$ \textbf{empty queue}\;
+		visit(vertex)\;
+		q.enqueue(vertex)\;
+		\While{\normalfont{\textbf{not} q.isEmpty()}}{
+			vertex $\leftarrow$ s.dequeue()\;
+			\For{\normalfont{all adjacent nodes adj\textunderscore vertices to vertex}}{
+				\If{\normalfont{adj\textunderscore \textbf{not} visited}}{
+					visit(adj\textunderscore vertices)\;
+					q.enqueue(adj\textunderscore vertices)\;
+				}
+			}
+		}  	
+  	}
+\caption{Breadth-first search pseudocode.}
+\end{algorithm}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixgraphs/graphsappendix_1.pdf}
+		\caption[Depth-first search example.]{Depth-first search example.}
+		\label{graphappendix_1}
+	\end{center}
+\end{figure}

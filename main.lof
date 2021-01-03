@@ -131,16 +131,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {53}{\ignorespaces Adjacency matrix.}}{44}{figure.caption.61}%
 \defcounter {refsection}{0}\relax 
-\ttl@tocsep 
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {54}{\ignorespaces Pre-order iterative implementation example.}}{49}{figure.caption.63}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {55}{\ignorespaces In-order iterative implementation example.}}{52}{figure.caption.64}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {56}{\ignorespaces Post-order iterative implementation example.}}{55}{figure.caption.65}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Depth-first search example.}}{45}{figure.caption.62}%
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {55}{\ignorespaces Pre-order iterative example.}}{50}{figure.caption.64}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {56}{\ignorespaces In-order iterative example.}}{52}{figure.caption.65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {57}{\ignorespaces Post-order iterative example.}}{55}{figure.caption.66}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {58}{\ignorespaces Breadth-first search example.}}{57}{figure.caption.67}%
+\defcounter {refsection}{0}\relax 
 \ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {59}{\ignorespaces Depth-first search example.}}{62}{figure.caption.68}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {60}{\ignorespaces Depth-first search example.}}{63}{figure.caption.69}%
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 

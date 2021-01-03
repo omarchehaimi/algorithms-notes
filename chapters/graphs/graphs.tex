@@ -83,8 +83,35 @@ The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\
 In the appendix \ref{graphimplementationappendix} there is the full python implementation of the graph representation. There are defined the classes for nodes, edges, and graphs objects. Moreover, all the main operations on graphs like: insert a new node, a new edge, get the edge list, the adjacency list, the adjacency matrix, and find the max index are also implemented.
 
 \section{Graph Traversal}
-Like in the case of trees (Chapter \ref{chp:trees}), also for graphs there are two different way to traverse the structure: \textbf{depth-first search}, and \textbf{breadth-first search}. But for graphs, differently from trees, there is not a privileged way to traverse the structure. Then it is arbitrarily choose a node where to start the search.
+Like in the case of trees (Chapter \ref{chp:trees}), also for graphs there are two different ways of traverse: \textbf{depth-first search}, and \textbf{breadth-first search}. But for graphs, differently from trees, there is not a privileged way of traverse, and it is arbitrarily choose a node where to start the traverse.
 
 \subsection{Depth-first Search (DFS)}
+In the \textbf{depth-fist search} the search starts from some arbitrary node and traverse one of the connected node. This process is repeated until there are not any new nodes on that path and start again with new nodes, until the searched node is found, or all the nodes have been traversed \cite{wikidepthfirst} (\href{https://en.wikipedia.org/wiki/Depth-first_search}{Depth-first search, Wikipedia}). This traversal can be implemented both recursively, and iteratively by using a stack.
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_6.pdf}
+		\caption[Depth-first search example.]{Depth-first search example.}
+		\label{graphs_6}
+	\end{center}
+\end{figure}
+
+\begin{lstlisting}[firstnumber=1, caption={Recursive implementation of a depth-first search.}]
+class Graph():
+	...
+	
+	def depth_first_search_recursive(self, start_node):
+		ret_list = [start_node.value]
+		start_node.visited = True
+		edges_out = [e for e in start_node.edges
+					 if e.node_to.value != start_node.value]
+		for e in edges_out:
+			if not edge.node_to.visited:
+				ret_list.extend(depth_first_search_recursive(edge.node_to)
+		return ret_list
+\end{lstlisting}
+
+The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on complexities evaluation on graphs refer here \cite{goodrich2013data}.
+
+In appendix \ref{graphimplementationtraversalappendix} there is a detailed recursive and iterative implementation, with also an additional example.
 \subsection{Breadth-first Search (BFS)}
