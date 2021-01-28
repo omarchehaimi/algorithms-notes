@@ -918,7 +918,7 @@
       \endverb
       \keyw{graph,network,tree,breadth-first search}
     \endentry
-    \entry{eulerianpathcircuit}{online}{}
+    \entry{wikieulerianpathcircuit}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -971,7 +971,7 @@
       \endverb
       \keyw{graph,eulerian path,eulerian circuit}
     \endentry
-    \entry{hamiltoninanpathcircuit}{online}{}
+    \entry{wikihamiltoninanpathcircuit}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -997,7 +997,7 @@
       \endverb
       \keyw{graph,network,hamiltonian path}
     \endentry
-    \entry{wikitreestrav}{online}{}
+    \entry{wikishortestpath}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -1010,6 +1010,32 @@
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \field{extraname}{36}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Shortest path problem}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Hamiltonian_path
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Hamiltonian_path
+      \endverb
+      \keyw{graph,network,shortest path}
+    \endentry
+    \entry{wikitreestrav}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{37}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
