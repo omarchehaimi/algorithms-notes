@@ -133,24 +133,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {54}{\ignorespaces Depth-first search example.}}{45}{figure.caption.62}%
 \defcounter {refsection}{0}\relax 
-\ttl@tocsep 
+\contentsline {figure}{\numberline {55}{\ignorespaces Breadth-first search example.}}{46}{figure.caption.63}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {55}{\ignorespaces Pre-order iterative example.}}{50}{figure.caption.64}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Eulerian path (a) and not Eulerian path (b).}}{47}{figure.caption.64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {56}{\ignorespaces In-order iterative example.}}{52}{figure.caption.65}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Eulerian circuit.}}{47}{figure.caption.65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {57}{\ignorespaces Post-order iterative example.}}{55}{figure.caption.66}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {58}{\ignorespaces Breadth-first search example.}}{57}{figure.caption.67}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Hamiltonian path (a) and Hamiltonian circuit (b).}}{48}{figure.caption.67}%
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {59}{\ignorespaces Pre-order iterative example.}}{52}{figure.caption.69}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {60}{\ignorespaces In-order iterative example.}}{54}{figure.caption.70}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {61}{\ignorespaces Post-order iterative example.}}{57}{figure.caption.71}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {62}{\ignorespaces Breadth-first search example.}}{59}{figure.caption.72}%
+\defcounter {refsection}{0}\relax 
+\ttl@tocsep 
+\defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {59}{\ignorespaces Depth-first search example.}}{62}{figure.caption.68}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Depth-first search example.}}{64}{figure.caption.73}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {60}{\ignorespaces Depth-first search example.}}{63}{figure.caption.69}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Breadth-first search example.}}{65}{figure.caption.74}%
 \defcounter {refsection}{0}\relax 
 \ttl@tocsep 

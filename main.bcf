@@ -2220,12 +2220,17 @@
     <bcf:citekey order="36">goodrich2013data</bcf:citekey>
     <bcf:citekey order="37">wikidepthfirst</bcf:citekey>
     <bcf:citekey order="38">goodrich2013data</bcf:citekey>
-    <bcf:citekey order="39">wikitreestrav</bcf:citekey>
-    <bcf:citekey order="40">wikitreestrav</bcf:citekey>
-    <bcf:citekey order="41">wikitreestrav</bcf:citekey>
-    <bcf:citekey order="42">wikitreestrav</bcf:citekey>
-    <bcf:citekey order="43">wikibreadthfirst</bcf:citekey>
-    <bcf:citekey order="44">goodrich2013data</bcf:citekey>
+    <bcf:citekey order="39">wikibreadthfirst</bcf:citekey>
+    <bcf:citekey order="40">goodrich2013data</bcf:citekey>
+    <bcf:citekey order="41">eulerianpathcircuit</bcf:citekey>
+    <bcf:citekey order="42">eulerpathcircuit</bcf:citekey>
+    <bcf:citekey order="43">hamiltoninanpathcircuit</bcf:citekey>
+    <bcf:citekey order="44">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="45">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="46">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="47">wikitreestrav</bcf:citekey>
+    <bcf:citekey order="48">wikibreadthfirst</bcf:citekey>
+    <bcf:citekey order="49">goodrich2013data</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

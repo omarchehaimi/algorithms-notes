@@ -29,14 +29,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {5.1}Recursive implementation of a depth-first search.}{45}{lstlisting.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree.}{48}{lstlisting.A.1}%
+\contentsline {lstlisting}{\numberline {5.2}Recursive implementation of a depth-first search.}{46}{lstlisting.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.2}Recursive and iterative implementation of pre-order traversal.}{49}{lstlisting.A.2}%
+\contentsline {lstlisting}{\numberline {A.1}Class definition for a node and a tree.}{50}{lstlisting.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.3}Recursive and iterative implementation of in-order traversal.}{51}{lstlisting.A.3}%
+\contentsline {lstlisting}{\numberline {A.2}Recursive and iterative implementation of pre-order traversal.}{51}{lstlisting.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.4}Recursive and iterative implementation of post-order traversal.}{53}{lstlisting.A.4}%
+\contentsline {lstlisting}{\numberline {A.3}Recursive and iterative implementation of in-order traversal.}{53}{lstlisting.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {A.5}Breadth-first search implementation.}{56}{lstlisting.A.5}%
+\contentsline {lstlisting}{\numberline {A.4}Recursive and iterative implementation of post-order traversal.}{55}{lstlisting.A.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {C.1}Graph representation and fundamental operations.}{59}{lstlisting.C.1}%
+\contentsline {lstlisting}{\numberline {A.5}Breadth-first search implementation.}{58}{lstlisting.A.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {C.1}Graph representation and fundamental operations.}{61}{lstlisting.C.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {D.1}Recursive and iterative implementation of depth-first search on graphs.}{63}{lstlisting.D.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {D.2}Breadth-first search implementation on graphs.}{64}{lstlisting.D.2}%

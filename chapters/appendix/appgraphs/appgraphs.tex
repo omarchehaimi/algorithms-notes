@@ -116,16 +116,34 @@ In the following there are the pesudocode, the python implementation, and an exa
 \caption{Depth-first search pseudocode.}
 \end{algorithm}
 
+\begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of depth-first search on graphs.}]
+		
+class Graph():
+	...
+	
+	def depth_first_search_recursive(self, start_node):
+		ret_list = [start_node]
+		start_node.visited = True
+		edges_out = [e for e in start_node.edges
+					 if e.node_to.value != start_node.value]
+		for e in edges_out:
+			if not edge.node.visited:
+				ret_list.extend(
+					depth_first_search_recursive(
+						
+	
+\end{lstlisting}
+
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixgraphs/graphsappendix_1.pdf}
+		\includegraphics[scale=.6]{chapters/appendix/images/appendixgraphs/graphsappendix_1.pdf}
 		\caption[Depth-first search example.]{Depth-first search example.}
 		\label{graphappendix_1}
 	\end{center}
 \end{figure}
 
 \section{Breadth-first search}
-In the following there are the pesudocode, the python implementation, and an example of execution of the depth-first search on a graph.
+In the following there are the pesudocode, the python implementation, and an example of execution of the breadth-first search on a graph.
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
@@ -149,10 +167,28 @@ In the following there are the pesudocode, the python implementation, and an exa
 \caption{Breadth-first search pseudocode.}
 \end{algorithm}
 
+\begin{lstlisting}[firstnumber=1, caption={Breadth-first search implementation on graphs.}]
+		
+class Graph():
+	...
+	
+	def breadth_first_search(self, start_node):
+		ret_list = [start_node]
+		start_node.visited = True
+		edges_out = [e for e in start_node.edges
+					 if e.node_to.value != start_node.value]
+		for e in edges_out:
+			if not edge.node.visited:
+				ret_list.extend(
+					depth_first_search_recursive(
+						
+	
+\end{lstlisting}
+
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=.6]{/home/omar/Documenti/AlgorithmsNotes/algorithms-notes/chapters/appendix/images/appendixgraphs/graphsappendix_1.pdf}
-		\caption[Depth-first search example.]{Depth-first search example.}
-		\label{graphappendix_1}
+		\includegraphics[scale=.6]{chapters/appendix/images/appendixgraphs/graphsappendix_2.pdf}
+		\caption[Breadth-first search example.]{Breadth-first search example.}
+		\label{graphappendix_2}
 	\end{center}
 \end{figure}

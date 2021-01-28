@@ -86,7 +86,7 @@ In the appendix \ref{graphimplementationappendix} there is the full python imple
 Like in the case of trees (Chapter \ref{chp:trees}), also for graphs there are two different ways of traverse: \textbf{depth-first search}, and \textbf{breadth-first search}. But for graphs, differently from trees, there is not a privileged way of traverse, and it is arbitrarily choose a node where to start the traverse.
 
 \subsection{Depth-first Search (DFS)}
-In the \textbf{depth-fist search} the search starts from some arbitrary node and traverse one of the connected node. This process is repeated until there are not any new nodes on that path and start again with new nodes, until the searched node is found, or all the nodes have been traversed \cite{wikidepthfirst} (\href{https://en.wikipedia.org/wiki/Depth-first_search}{Depth-first search, Wikipedia}). This traversal can be implemented both recursively, and iteratively by using a stack.
+In the \textbf{depth-fist search} the search starts from an arbitrary node and traverse one of the connected node. This process is repeated until there are not any new nodes on that path and start again with new nodes, until the searched node is found, or all the nodes have been traversed \cite{wikidepthfirst} (\href{https://en.wikipedia.org/wiki/Depth-first_search}{Depth-first search, Wikipedia}). This traversal can be implemented both recursively, and iteratively by using a stack.
 
 \begin{figure}[H]
 	\begin{center}
@@ -115,3 +115,80 @@ The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\)
 
 In appendix \ref{graphimplementationtraversalappendix} there is a detailed recursive and iterative implementation, with also an additional example.
 \subsection{Breadth-first Search (BFS)}
+In \textbf{breadth-first search} the traversal is done starting from a node, and the firsy visited nodes are all its neighbors. Once visited all the neighbors the traversal keeps going in the same previous way \cite{wikibreadthfirst} (\href{https://en.wikipedia.org/wiki/Breadth-first_search}{Breadth-first search, Wikipedia}).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_7.pdf}
+		\caption[Breadth-first search example.]{Breadth-first search example.}
+		\label{graphs_7}
+	\end{center}
+\end{figure}
+
+The only possible implementation is the iterative one, and it is implemented by using a queue.
+
+\begin{lstlisting}[firstnumber=1, caption={Recursive implementation of a depth-first search.}]
+class Graph():
+	...
+	
+	def breadth_first_search(self, start_node):
+		
+		return ret_list
+\end{lstlisting}
+
+The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on complexities evaluation on graphs refer here \cite{goodrich2013data}.
+
+In appendix \ref{graphimplementationtraversalappendix} there is the detailed implementation, with also an additional example.
+\subsection{Eulerian Path and Circuit}
+An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit} (\href{https://en.wikipedia.org/wiki/Eulerian_path}{Eulerian path, Wikipedia}). Not every graph has an Eulerian path, and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_8.pdf}
+		\caption[Eulerian path (a) and not Eulerian path (b).]{Eulerian path (a) and not Eulerian path (b).}
+		\label{graphs_8}
+	\end{center}
+\end{figure}
+
+An \textbf{Eulerian circuit} (or \textbf{Eulerian cycle}) is an Eulerian path which starts and ends on the same node. As before not every graph has an Eulerian circuit.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_9.pdf}
+		\caption[Eulerian circuit.]{Eulerian circuit.}
+		\label{graphs_9}
+	\end{center}
+\end{figure}
+
+In the following table are summarized some rules for finding if a graph has Eulerian path and/or circuit \cite{eulerpathcircuit}.
+
+\begin{table}[H]
+	\caption[Eulerian path and circuit existence rules.]{Eulerian path and circuit existence rules.}
+	\label{eulerpathcircuit}
+	\centering
+	\begin{tabular}{| l | p{0.33\linewidth} | p{0.33\linewidth} |}
+		\hline
+ 			& \textbf{Eulerian Path} & \textbf{Eulerian Circuit} \\
+		\hline
+		\textbf{Undirected Graph} & Either every vertex has even degree or exactly two vertices have odd degree. &  Every vertex has an even degree. \\
+		\hline
+		\textbf{Directed Graph} & At most one vertex has \newline (outdegree)-(indegree)=1 and at most one vertex has \newline (indegree)-(outdegree)=1 and all other vertices have equal in and out degrees. & Every vertex has equal indegree and outdegree. \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Hamiltonian Path and Circuit}
+A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all nodes are visited exactly once. A \textbf{Hamiltonian circuit} (or \textbf{Hamiltonian Cycle}) is a Hamiltonian path that starts and ends in the same node \cite{wikihamiltoninanpathcircuit} (\href{https://en.wikipedia.org/wiki/Hamiltonian_path}{Hamiltonian path, Wikipedia}).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_10.pdf}
+		\caption[Hamiltonian path (a) and Hamiltonian circuit (b).]{Hamiltonian path (a) and Hamiltonian circuit (b).}
+		\label{graphs_10}
+	\end{center}
+\end{figure}
+
+\subsection{Shortest Path Problem}
+The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \citep{wikishortestpath} (\href{https://en.wikipedia.org/wiki/Hamiltonian_path}{Shortest path problem, Wikipedia}).  
+
+\subsection{Dijkstra's Algorithm}

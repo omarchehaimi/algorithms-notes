@@ -892,7 +892,7 @@
       \endverb
       \keyw{graph,network,tree,depth-first search}
     \endentry
-    \entry{wikitreestrav}{online}{}
+    \entry{wikibreadthfirst}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -909,16 +909,16 @@
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Trees traversal}
+      \field{title}{Breadth-first search}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Tree_traversal
+      \verb https://en.wikipedia.org/wiki/Breadth-first_search
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/Tree_traversal
+      \verb https://en.wikipedia.org/wiki/Breadth-first_search
       \endverb
-      \keyw{trees,traversal}
+      \keyw{graph,network,tree,breadth-first search}
     \endentry
-    \entry{wikibreadthfirst}{online}{}
+    \entry{eulerianpathcircuit}{online}{}
       \name{author}{1}{}{%
         {{hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -935,14 +935,93 @@
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Breadth-first search}
+      \field{title}{Eulerian path}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Breadth-first_search
+      \verb https://en.wikipedia.org/wiki/Eulerian_path
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/Breadth-first_search
+      \verb https://en.wikipedia.org/wiki/Eulerian_path
       \endverb
-      \keyw{graph,network,tree,breadth-first search}
+      \keyw{graph,network,eulerian path}
+    \endentry
+    \entry{eulerpathcircuit}{online}{}
+      \name{author}{1}{}{%
+        {{hash=111c189d41d84636b27c0fae7b266c49}{%
+           family={Fiset},
+           familyi={F\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{111c189d41d84636b27c0fae7b266c49}
+      \strng{fullhash}{111c189d41d84636b27c0fae7b266c49}
+      \strng{bibnamehash}{111c189d41d84636b27c0fae7b266c49}
+      \strng{authorbibnamehash}{111c189d41d84636b27c0fae7b266c49}
+      \strng{authornamehash}{111c189d41d84636b27c0fae7b266c49}
+      \strng{authorfullhash}{111c189d41d84636b27c0fae7b266c49}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Existence of Eulerian Paths and Circuits | Graph Theory}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=xR4sGgwtR2I
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=xR4sGgwtR2I
+      \endverb
+      \keyw{graph,eulerian path,eulerian circuit}
+    \endentry
+    \entry{hamiltoninanpathcircuit}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{35}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hamiltonian path}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Hamiltonian_path
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Hamiltonian_path
+      \endverb
+      \keyw{graph,network,hamiltonian path}
+    \endentry
+    \entry{wikitreestrav}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{36}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Trees traversal}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Tree_traversal
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Tree_traversal
+      \endverb
+      \keyw{trees,traversal}
     \endentry
   \enddatalist
 \endrefsection
