@@ -1,0 +1,224 @@
+% ****************************************************************************************************
+% classicthesis-config.tex 
+% formerly known as loadpackages.sty, classicthesis-ldpkg.sty, and classicthesis-preamble.sty 
+% Use it at the beginning of your ClassicThesis.tex, or as a LaTeX Preamble 
+% in your ClassicThesis.{tex,lyx} with \input{classicthesis-config}
+% ****************************************************************************************************  
+% If you like the classicthesis, then I would appreciate a postcard. 
+% My address can be found in the file ClassicThesis.pdf. A collection 
+% of the postcards I received so far is available online at 
+% http://postcards.miede.de
+% ****************************************************************************************************
+
+
+% ClassicThesis
+\PassOptionsToPackage{eulerchapternumbers, listings,
+					  pdfspacing, beramono, subfig,
+					  eulermath,parts}{classicthesis}
+\usepackage{classicthesis}                                       
+% ********************************************************************
+% Available options for classicthesis.sty 
+% (see ClassicThesis.pdf for more information):
+% drafting
+% parts nochapters linedheaders
+% eulerchapternumbers beramono eulermath pdfspacing minionprospacing
+% tocaligned dottedtoc manychapters
+% listings floatperchapter subfig
+% ********************************************************************
+
+
+% Personal data commands
+\newcommand{\myTitle}{Notes on Data Structures and Algorithms in Python\xspace}
+\newcommand{\myName}{Omar Chehaimi\xspace}
+\newcommand{\myLocation}{Modena\xspace}
+%\newcommand{\mySubtitle}{An Homage to The Elements of Typographic Style\xspace}
+%\newcommand{\myVersion}{version 4.2\xspace}
+%\newcommand{\myTime}{September 2015\xspace}
+%\newcommand{\myDegree}{Doktor-Ingenieur (Dr.-Ing.)\xspace}
+%\newcommand{\myProf}{Put name here\xspace}
+%\newcommand{\myOtherProf}{Put name here\xspace}
+%\newcommand{\mySupervisor}{Put name here\xspace}
+%\newcommand{\myFaculty}{Put data here\xspace}
+%\newcommand{\myDepartment}{Put data here\xspace}
+%\newcommand{\myUni}{Put data here\xspace}
+
+
+% Setup, finetuning, and useful commands
+\newcounter{dummy} % necessary for correct hyperlinks (to index, bib, etc.)
+\newlength{\abcd} % for ab..z string length calculation
+\providecommand{\mLyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+\newcommand{\ie}{i.\,e.}
+\newcommand{\Ie}{I.\,e.}
+\newcommand{\eg}{e.\,g.}
+\newcommand{\Eg}{E.\,g.} 
+
+
+% Some general useful packages
+\PassOptionsToPackage{utf8}{inputenc}
+	\usepackage{inputenc}
+\usepackage[english]{babel} % English                   
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage{subfig}
+\usepackage{amsmath,amssymb} % Math
+\usepackage{textcomp} % fix warning with missing font shapes
+\usepackage{scrhack} % fix warnings when using KOMA with listings package          
+\usepackage{xspace} % to get the spacing after macros right  
+\usepackage{mparhack} % get marginpar right
+\usepackage{fixltx2e} % fixes some LaTeX stuff --> since 2015 in the LaTeX kernel (see below)
+\PassOptionsToPackage{printonlyused,smaller}{acronym} 
+    \usepackage{acronym}
+    \renewcommand*{\aclabelfont}[1]{\acsfont{#1}}
+\usepackage{indentfirst}
+\usepackage{chngpage}
+\usepackage{calc}
+\PassOptionsToPackage{pdftex}{graphicx}
+    \usepackage{graphicx} 
+\usepackage{shapepar}
+\usepackage{pifont}
+\usepackage{ccicons}
+
+
+% Bibliography
+\PassOptionsToPackage{
+    %backend=biber,
+	backend=bibtex8, 
+	%bibencoding=ascii,
+	%language=auto,
+	%style=numeric-comp,
+    %style=authoryear-comp, % Author 1999, 2010
+    %bibstyle=authoryear,dashed=false, % dashed: substitute rep. author with ---
+    %sorting=nyt, % name, year, title
+    sorting=none
+    %maxbibnames=10, % default: 3, et al.
+    %backref=true,%
+    %natbib=true % natbib compatibility mode (\citep and \citet still work)
+}{biblatex}
+    \usepackage{biblatex}
+
+
+% Setup floats: tables, (sub)figures, and captions
+\usepackage{float} % For forcing the position of a picture
+\usepackage{wrapfig} % For wrapping the text to a picture
+\usepackage{color, colortbl} % Coloring boxes in a table
+    \definecolor{LightCyan}{rgb}{0.88,1,1}
+    \definecolor{Maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+
+
+% Code listings and pseudocode
+\usepackage{listings}
+\newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
+\definecolor{lightergray}{gray}{0.99}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\lstset{language=python,
+        keywordstyle=\color{RoyalBlue},
+        basicstyle=\small\ttfamily,
+        commentstyle=\color{Emerald}\ttfamily,
+		morekeywords={self},
+		keywordstyle=\color{deepblue},
+		emph={__init__},
+		emphstyle=\color{deepred},
+		stringstyle=\color{deepgreen},
+        numberstyle=\scriptsize,
+        showstringspaces=false,
+        breaklines=true,
+        %frame=lines, % No lines to limit the code
+        backgroundcolor=\color{lightergray},
+        flexiblecolumns=true,
+        escapeinside={£*}{*£},
+        firstnumber=last,
+        numberfirstline=true,
+		numbers=left,
+}
+\usepackage[ruled, vlined, linesnumbered]{algorithm2e} % Pseudocode
+\usepackage{chngcntr} % For counting the listing within the chapter.				% The command is right after begin document (\counterwithin{lstlisting}{chapter})  
+
+
+% PDFLaTeX, hyperreferences and citation backreferences
+% Using PDFLaTeX
+\PassOptionsToPackage{pdftex,hyperfootnotes=false,pdfpagelabels}{hyperref}
+    \usepackage{hyperref}  % backref linktocpage pagebackref
+\pdfcompresslevel=9
+\pdfadjustspacing=1 
+
+
+% Hyperreferences
+\hypersetup{
+    colorlinks=true, linktocpage=true, pdfstartpage=3, 
+    pdfstartview=FitV,
+    % Uncomment the following line if you want to have 
+    % black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfstartpage=3, 
+    %pdfstartview=FitV, pdfborder={0 0 0},%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, 
+    pdfpagemode=UseOutlines, plainpages=false, bookmarksnumbered, 
+    bookmarksopen=true, bookmarksopenlevel=1,hypertexnames=true, 
+    pdfhighlight=/O, %nesting=true, %frenchlinks,
+    urlcolor=RoyalBlue, linkcolor=RoyalBlue, citecolor=RoyalBlue,
+    hyperfootnotes=false, pdfpagelabels,
+    pdftitle={\myTitle},
+    pdfauthor={\copyright \myName},
+    pdfsubject={Data Structures and Algorithms},
+    pdfkeywords={computer science, algorithms, data structures},
+    pdfcreator={pdfLaTeX},
+    pdfproducer={LaTeX with hyperref and classicthesis}
+}
+
+
+% Write in log all the files present in this project
+\listfiles
+
+
+% Changing the text area
+\areaset[current]{370pt}{784pt}
+
+% Using different fonts
+%\usepackage[oldstylenums]{kpfonts} % oldstyle notextcomp
+%\usepackage[osf]{libertine}
+%\usepackage[light,condensed,math]{iwona}
+\renewcommand{\sfdefault}{iwona}
+%\usepackage{lmodern} % <-- no osf support :-(
+%\usepackage{cfr-lm} % 
+%\usepackage[urw-garamond]{mathdesign} <-- no osf support :-(
+%\usepackage[default,osfigures]{opensans} % scale=0.95 
+%\usepackage[sfdefault]{FiraSans}
+
+
+% Making bigger the font for parts, chapters, sections, and subsections
+% Part
+\titleformat{\part}[display]
+	{\normalfont\centering\Huge}% Huge
+    {\thispagestyle{empty}\partname~\MakeTextUppercase{\thepart}}{1em}%
+    {\color{Maroon}\spacedallcaps}
+
+% Chapter
+\RequirePackage{ifthen}
+% In this way a newfont \chapterNumber can be defined
+\let\chapterNumber\undefined
+\ifthenelse{\boolean{@eulerchapternumbers}}
+	{\newfont{\chapterNumber}{eurb10 scaled 6000}}
+
+\titleformat{\chapter}[block]
+	{\normalfont\Large\sffamily}{\mbox{}\oldmarginpar{\vspace*{-3\baselineskip}\color{halfgray}\chapterNumber\thechapter}}{0pt}%
+	{\raggedright\spacedallcaps}[\normalfont\Large\sffamily\vspace*{.8\baselineskip}]%
+
+% Sections
+\titleformat{\section}
+	{\normalfont\Large\sffamily\color{Maroon}}{\textsc{\MakeTextLowercase{\thesection}}}{1em}{\spacedlowsmallcaps}
+% Subsections
+\titleformat{\subsection}
+	{\normalfont\sffamily\bfseries\color{Maroon}}{\textsc{\MakeTextLowercase{\thesubsection}}}{1em}{\normalsize}
+% Subsubsections
+\titleformat{\subsubsection}
+	{\normalfont\sffamily\bfseries\itshape\color{Maroon}}{\textsc{\MakeTextLowercase{\thesubsubsection}}}{1em}{\normalsize}      
+% Paragraphs
+\titleformat{\paragraph}[runin]
+	{\normalfont\normalsize\sffamily\bfseries\color{Maroon}}{\theparagraph}{0pt}{\spacedlowsmallcaps} 
+
+
+% Caption in bold font and with the right position 
+% in case of too long text (hang format) 
+\captionsetup{format=hang, font=small, labelfont=bf}
+\captionsetup[table]{skip=\medskipamount}

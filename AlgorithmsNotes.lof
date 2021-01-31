@@ -1,0 +1,150 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\deactivateaddvspace 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Plots of the main functions and their evaluation for computational complexity.}}{4}{figure.caption.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2}{\ignorespaces Pseudocode of a recursive function and its internal execution.}}{4}{figure.caption.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Factorial recursive execution.}}{5}{figure.caption.9}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces An example of an array with elements and indexes.}}{7}{figure.caption.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Removing or adding an element from an array and the indexes update.}}{7}{figure.caption.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces An example of a linked list with the data and the reference to the next element.}}{8}{figure.caption.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Adding a new element to a linked list.}}{8}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Removing an element to a linked list.}}{9}{figure.caption.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Doubly linked list.}}{9}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces In a stack only the element at the top is modified.}}{11}{figure.caption.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {11}{\ignorespaces Allowed operations on queue elements.}}{12}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12}{\ignorespaces In a deque the operations can be done on both head and tail.}}{12}{figure.caption.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces A priority queue.}}{13}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces An example of a map.}}{14}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces An example of collision and a possible way to solve this issue by using the bucket method.}}{15}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {16}{\ignorespaces An array with numeric values ordered in an ascending order.}}{17}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {17}{\ignorespaces Binary search algorithms steps.}}{18}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces Array splitting in the implementation of the binary search algorithm.}}{19}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {19}{\ignorespaces Bubble sort algorithm.}}{20}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {20}{\ignorespaces The swapping process is repeated until the array is completely ordered.}}{20}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {21}{\ignorespaces Merge sort algorithm.}}{21}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {22}{\ignorespaces Merge sort algorithm implementation.}}{24}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {23}{\ignorespaces Quicksort algorithm part one.}}{24}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {24}{\ignorespaces Quicksort algorithm steps part two.}}{25}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {25}{\ignorespaces Quicksort algorithm worst case.}}{26}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {26}{\ignorespaces Quicksort algorithm best and average case.}}{26}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {27}{\ignorespaces Quicksort algorithm implementation.}}{28}{figure.caption.35}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {28}{\ignorespaces Elements of a tree and linked list.}}{29}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {29}{\ignorespaces Possible structures of a tree.}}{29}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {30}{\ignorespaces A tree and its fundamentals elements.}}{30}{figure.caption.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {31}{\ignorespaces The depth-first search and the breadth-first search.}}{30}{figure.caption.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {32}{\ignorespaces Pre-order search.}}{31}{figure.caption.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {33}{\ignorespaces In-order search.}}{31}{figure.caption.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {34}{\ignorespaces Post-order search.}}{32}{figure.caption.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {35}{\ignorespaces Example of tree search and traversal.}}{32}{figure.caption.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {36}{\ignorespaces Delete an element of a tree.}}{33}{figure.caption.44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {37}{\ignorespaces Add an element of a tree.}}{34}{figure.caption.45}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {38}{\ignorespaces Perfect binary tree results.}}{34}{figure.caption.46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {39}{\ignorespaces Search on an ordered binary tree.}}{36}{figure.caption.47}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {40}{\ignorespaces Addition on an ordered binary tree.}}{36}{figure.caption.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {41}{\ignorespaces An unbalanced binary tree.}}{37}{figure.caption.49}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {42}{\ignorespaces Max heap (a) and min heap (b) example.}}{38}{figure.caption.50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {43}{\ignorespaces Add a new node to a heap.}}{39}{figure.caption.51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {44}{\ignorespaces Implementation example of a heap using an array.}}{39}{figure.caption.52}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {45}{\ignorespaces Example of balanced (b) and unbalanced (a) tree.}}{40}{figure.caption.53}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {46}{\ignorespaces A red-black tree.}}{41}{figure.caption.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {47}{\ignorespaces Insertion of a new node and the following updating of the color nodes.}}{41}{figure.caption.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {48}{\ignorespaces Left and right rotation for balancing the tree after an insertion.}}{42}{figure.caption.56}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {49}{\ignorespaces Undirected (a) and directed (b) graphs and its elements.}}{43}{figure.caption.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {50}{\ignorespaces A weakly connected graph.}}{44}{figure.caption.58}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {51}{\ignorespaces Edge list.}}{45}{figure.caption.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {52}{\ignorespaces Adjacency list.}}{45}{figure.caption.60}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {53}{\ignorespaces Adjacency matrix.}}{45}{figure.caption.61}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {54}{\ignorespaces Depth-first search example.}}{46}{figure.caption.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {55}{\ignorespaces Breadth-first search example.}}{47}{figure.caption.63}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {56}{\ignorespaces Eulerian path (a) and not Eulerian path (b).}}{48}{figure.caption.64}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {57}{\ignorespaces Eulerian circuit.}}{48}{figure.caption.65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {58}{\ignorespaces Hamiltonian path (a) and Hamiltonian circuit (b).}}{49}{figure.caption.67}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {59}{\ignorespaces Pre-order iterative example.}}{53}{figure.caption.68}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {60}{\ignorespaces In-order iterative example.}}{56}{figure.caption.69}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {61}{\ignorespaces Post-order iterative example.}}{59}{figure.caption.70}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {62}{\ignorespaces Breadth-first search example.}}{61}{figure.caption.71}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {63}{\ignorespaces Depth-first search example.}}{66}{figure.caption.72}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {64}{\ignorespaces Breadth-first search example.}}{67}{figure.caption.73}%

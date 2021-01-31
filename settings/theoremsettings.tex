@@ -10,12 +10,12 @@
     bodyfont=\normalfont\itshape,
     headpunct={},
     postheadspace=\newline,
-    postheadhook={\textcolor{black}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    %postheadhook={\textcolor{black}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
     spacebelow=\parsep,
     spaceabove=\parsep,
     mdframed={
-        backgroundcolor=yellow!30, 
-        linecolor=yellow!90, 
+        backgroundcolor=yellow!20, 
+        linecolor=yellow!100, 
         innertopmargin=6pt,
         roundcorner=5pt, 
         innerbottommargin=6pt, 
@@ -71,3 +71,28 @@
 	name=Corollary,
 	numberwithin=chapter
 ]{corollary}
+
+% Normal font box
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={}{},
+    bodyfont=\normalfont,
+    headpunct={},
+    postheadspace=\newline,
+    %postheadhook={\textcolor{black}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\parsep,
+    spaceabove=\parsep,
+    mdframed={
+        backgroundcolor=yellow!20, 
+        linecolor=yellow!100, 
+        innertopmargin=6pt,
+        roundcorner=5pt, 
+        innerbottommargin=6pt, 
+        skipbelow=\parsep, 
+        skipbelow=\parsep} 
+]{normalfont_box}
+
+% Normal font box
+\declaretheorem[
+	style=normalfont_box
+]{empty_box}

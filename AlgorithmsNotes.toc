@@ -1,0 +1,180 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\vspace {-\cftbeforepartskip }
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Preface}{iv}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}\spacedlowsmallcaps {Preliminaries Concepts}}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Computational Complexity}{1}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Big O Notation}{1}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Properties}{1}{subsection.1.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Time complexity evaluation example}{2}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Recursion}{2}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4.1}Python Implementation Examples}{3}{subsection.1.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}\spacedlowsmallcaps {Data Structures}}{6}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Collection}{6}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}List}{6}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Array}{6}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Linked List}{7}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Linked List Implementation}{9}{subsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Stack}{10}{section.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Stack Implementation}{11}{subsection.2.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Queue}{12}{section.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.1}Queue Implementation}{13}{subsection.2.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.7}Set}{13}{section.2.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.8}Map}{13}{section.2.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.9}Hash Table}{14}{section.2.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.9.1}Hashing}{14}{subsection.2.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.10}String Keys}{15}{section.2.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.10.1}String Keys Implementation}{16}{subsection.2.10.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Searching and Sorting}}{17}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Binary Search}{17}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Efficiency of the Binary Search Algorithm}{18}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Binary Search Implementation}{19}{subsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Bubble Sort}{19}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Efficiency of the Bubble Sort Algorithm}{20}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Bubble Sort Implementation}{21}{subsection.3.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Merge Sort}{21}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Efficiency of the Merge Sort Algorithm}{22}{subsection.3.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Merge Sort Implementation}{23}{subsection.3.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Quicksort}{24}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Efficiency of the Quicksort Algorithm}{25}{subsection.3.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Quicksort and Merge Sort Comparison}{26}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Quicksort Implementation}{26}{subsection.3.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Trees}}{29}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}General Definitions}{29}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Tree Traversal}{30}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Depth-first search}{31}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pre-order search}{31}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{In-order search}{31}{figure.caption.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Post-order search}{31}{figure.caption.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Binary Trees}{32}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Search}{32}{subsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Delete}{33}{subsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Insert}{33}{subsection.4.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.4}Perfect binary tree}{34}{subsection.4.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.5}Binary Tree Implementation}{34}{subsection.4.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Binary Search Trees (BST)}{35}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Binary Search Tree Implementation}{37}{subsection.4.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Heaps}{38}{section.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}Heapify}{38}{subsection.4.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.2}Heap Implementation}{39}{subsection.4.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Self-balancing Binary Search Trees}{39}{section.4.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.7}Red-Black Trees}{40}{section.4.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Graphs}}{43}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}General Definitions}{43}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Connectivity}{43}{subsection.5.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Strongly Connected}{44}{subsection.5.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Weakly Connected}{44}{subsection.5.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Graph Representations}{44}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Edge List}{44}{subsection.5.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Adjacency List}{45}{subsection.5.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Adjacency Matrix}{45}{subsection.5.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Graph Traversal}{46}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Depth-first Search (DFS)}{46}{subsection.5.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Breadth-first Search (BFS)}{47}{subsection.5.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.3}Eulerian Path and Circuit}{47}{subsection.5.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.4}Hamiltonian Path and Circuit}{48}{subsection.5.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.5}Shortest Path Problem}{49}{subsection.5.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.6}Dijkstra's Algorithm}{49}{subsection.5.3.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Appendix}{50}{subsection.5.3.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Binary Search Complete Implementation}}{51}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Pre-order Traversal}{51}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}In-order Traversal}{53}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Post-order Traversal}{56}{section.A.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Breadth-first search Implementation}{60}{section.A.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Complexity Summary}{61}{section.A.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}\spacedlowsmallcaps {Complexity of Data Structures for Graphs}}{62}{appendix.B}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {C}\spacedlowsmallcaps {Implementation of Graph Representation}}{63}{appendix.C}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {D}\spacedlowsmallcaps {Implementation of Graph Traversal}}{65}{appendix.D}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D.1}Depth-first search}{65}{section.D.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D.2}Breadth-first search}{66}{section.D.2}%
+\defcounter {refsection}{0}\relax 
+\vspace {\beforebibskip }
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{68}{dummy.7}%
