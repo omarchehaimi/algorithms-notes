@@ -21,3 +21,6 @@
 *.mtc1
 *.out
 *.synctex.gz
+*.lol
+*.run.xml
+*-blx.bib
