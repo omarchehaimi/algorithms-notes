@@ -83,7 +83,7 @@ The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\
 In the appendix \ref{graphimplementationappendix} there is the full python implementation of the graph representation. There are defined the classes for nodes, edges, and graphs objects. Moreover, all the main operations on graphs like: insert a new node, a new edge, get the edge list, the adjacency list, the adjacency matrix, and find the max index are also implemented.
 
 \section{Graph Traversal}
-Like in the case of trees (Chapter \ref{chp:trees}), also for graphs there are two different ways of traverse: \textbf{depth-first search}, and \textbf{breadth-first search}. But for graphs, differently from trees, there is not a privileged way of traverse, and it is arbitrarily choose a node where to start the traverse.
+Like in the case of trees (Chapter \ref{chp:trees}), also for graphs there are two different ways of traverse: \textbf{depth-first search}, and \textbf{breadth-first search}. But for graphs, differently from trees, there is not a privileged way of traverse, and it is arbitrarily chosen a node where to start the traverse.
 
 \subsection{Depth-first Search (DFS)}
 In the \textbf{depth-fist search} the search starts from an arbitrary node and traverse one of the connected node. This process is repeated until there are not any new nodes on that path and start again with new nodes, until the searched node is found, or all the nodes have been traversed \cite{wikidepthfirst} (\href{https://en.wikipedia.org/wiki/Depth-first_search}{Depth-first search, Wikipedia}). This traversal can be implemented both recursively, and iteratively by using a stack.
@@ -189,6 +189,78 @@ A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all 
 \end{figure}
 
 \subsection{Shortest Path Problem}
-The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath} (\href{https://en.wikipedia.org/wiki/Hamiltonian_path}{Shortest path problem, Wikipedia}).  
+The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath} (\href{https://en.wikipedia.org/wiki/Shortest_path_problem}{Shortest path problem, Wikipedia}).The breadth-first search can be used for finding the shortest path from a node to all the others, but it expects that all the edges are of the same nature, and in several situation this approach is not useful. Let us image we would like to find the best path connecting two cities. In this case the links between the nodes are not the same, as some strees are faster or slower than others. Another interesting application of finding the shortest path in graphs is about routing packages from a computer to another in internet in order to be as fast as possible.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_11.pdf}
+		\caption[Shortest path.]{Shortest path.}
+		\label{graphs_11}
+	\end{center}
+\end{figure}
 
 \subsection{Dijkstra's Algorithm}
+The Dijkstra's algorithm single source shortest path for a non-negative weighted graphs, in which all the shortest paths from a given node to all the other nodes are found. The distance between two nodes is the sum of the weights of the edges of the path.
+
+This algorithm is part of a broader class of algorithms which is called \textbf{greedy algorithms} \cite{wikigreedy} (\href{https://en.wikipedia.org/wiki/Greedy_algorithm}{Greedy algorithms, Wikipedia}). In greedy algorithms the optimal solution is found by finding the optimal solution at every step without considering the previous ones. This approach does not always find the optimal solution of a problem. A more advanced technique to greedy algorithm is \textbf{dynamic programming}, which will be the topic of the next chapter.
+
+\paragraph{Relaxation}
+Before introducing the Dijkstra's algorithm it is important to introduce the \textbf{relaxation condition}. Let us consider the following weighted directed graph Figure \ref{graphs_12}. The cost for going from node 1 to node 2 is \(2\), and \(\infty\) from 1 to 3, as there is not any direct link. The relaxation condition is then:
+
+\begin{definition}[Relaxation condition]
+\enspace \enspace \textnormal{if (d[u] + w(u, v) < d[v])}
+
+\enspace \enspace \enspace     \textnormal{d[v] = d[u] + w(u, v)}
+
+Where \(d[u]\) is the distance of node u from the starting node (1 in this case), and \(w(u, v)\) is the weight from the node \(u\) to node \(v\).
+\end{definition}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_12.pdf}
+		\caption[Relaxation condition.]{Relaxation condition.}
+		\label{graphs_12}
+	\end{center}
+\end{figure}
+
+In other words the relaxation condition says that if there is a shorter path connecting two nodes, this distance should be used as the new distance.
+
+In the Dijkstra's algorithm at each step the new node is chosen based on the lowest value of the distance at that given step, and eventually the distances for all the adjacent nodes are updated accordingly the relaxation condition.
+
+Let us consider the following graph Figure \ref{graphs_13}, and let us start from the node 1 \cite{dijkstraexplaination}.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/graphs/images/graphs_13.pdf}
+		\caption[Dijkstra's algorithms example.]{Dijkstra's algorithm example.}
+		\label{graphs_13}
+	\end{center}
+\end{figure}
+
+For describing how the algorithm works we use the following table. At every step a new raw is added, and at the first one the table looks like the following:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ l | c | c | c | c | c }
+    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+    \hline
+    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{10} & \(\infty\) & \(\infty\)
+\end{tabular}
+\end{table}
+
+All the nodes are listed as columns, and all the distances from the node 1 to all the others are reported in the table. The nodes 5 and 6 do not have any directed link to the node 1, then their distance is infinity. Once listed all the distances the node with the lowest one is selected: at the first step it is the node 4.
+
+For second step all the distances of the adjacent nodes to 4 (in this case only for node 5) are updated except for the ones previously selected as the lowest. Once updated all the distances the process is repeated again, and the node with the lowest one is chosen (node 5 in this case).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ l | c | c | c | c | c }
+    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+    \hline
+    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
+    \hline
+    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{25} & \(\infty\)
+\end{tabular}
+\end{table}
+
+The process is repeated again: all the distances of the nodes adjacent to 5 are updated (in this case only the distance to node 2 (\(25+20\))).

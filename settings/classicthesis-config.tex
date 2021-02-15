@@ -104,6 +104,11 @@
     \definecolor{LightCyan}{rgb}{0.88,1,1}
     \definecolor{Maroon}{cmyk}{0, 0.87, 0.68, 0.32}
 
+% Box sourrounding numbers
+\usepackage{tikz}        
+\newcommand\mybox[3][]{%
+    \tikz[anchor=base,baseline]\node[inner sep=2pt,draw=#2,#1]{$	 \displaystyle#3\mathstrut$};}
+\colorlet{mycol}{black}
 
 % Code listings and pseudocode
 \usepackage{listings}
