@@ -263,4 +263,55 @@ For second step all the distances of the adjacent nodes to 4 (in this case only 
 \end{tabular}
 \end{table}
 
-The process is repeated again: all the distances of the nodes adjacent to 5 are updated (in this case only the distance to node 2 (\(25+20\))).
+The process is repeated again: all the distances of the nodes adjacent to 5 are updated (in this case only the distance to node 2 is updated as the relaxation condition is fulfilled (\(25+20=45 < 50\))). At this step we have two nodes a the same distance. In this case the choice is free and one of them can be chosen indifferently. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ l | c | c | c | c | c }
+    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+    \hline
+    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
+    \hline
+    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
+    \hline
+    2 & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
+\end{tabular}
+\end{table}
+
+The same process is repeated again. In this case there is also a connection from node 3 to node 5, but the node 5 has been already visited and then its weight will not be updated. Moreover, even if the weight is updated the weight would be higher and the relaxation condition would not be fulfilled.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ l | c | c | c | c | c }
+    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+    \hline
+    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
+    \hline
+    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
+    \hline
+    2 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
+    \hline
+    3 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
+\end{tabular}
+\end{table}
+
+The last step is to check the last node. The node 6 is not checked and it has an infinity distance. The node 6 can not be reached, and then the distance will be always infinity.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ l | c | c | c | c | c }
+    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+    \hline
+    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
+    \hline
+    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
+    \hline
+    2 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
+    \hline
+    3 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
+\end{tabular}
+\end{table}
+
+In the appendix \ref{dijkstraimplementation} the full implementation of the Dijkstra's algorithm is reported. 
+
+The complexity of this algorithm is \(O(\vert V^{2} \vert)\) where \(V\) is the number of nodes. This is because all the nodes are relaxed with respect all the others, and in the worst case all nodes must be checked. If the implementation of the algorithm is optimized the complexity in this case is \(O(\vert E \vert + \vert V \vert log(\vert V \vert))\), where \(E\) is the number of edges.
