@@ -139,6 +139,7 @@ class Graph():
 The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on complexities evaluation on graphs refer here \cite{goodrich2013data}.
 
 In appendix \ref{graphimplementationtraversalappendix} there is the detailed implementation, with also an additional example.
+AGGIUNGERE LO SPANNING TREE DELLA RICERCA.
 \subsection{Eulerian Path and Circuit}
 An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit} (\href{https://en.wikipedia.org/wiki/Eulerian_path}{Eulerian path, Wikipedia}). Not every graph has an Eulerian path, and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
 
@@ -200,6 +201,7 @@ The \textbf{shorted path problem} is the problem of finding a path between two n
 \end{figure}
 
 \subsection{Dijkstra's Algorithm}
+\label{sec:dijkstra}
 The Dijkstra's algorithm single source shortest path for a non-negative weighted graphs, in which all the shortest paths from a given node to all the other nodes are found. The distance between two nodes is the sum of the weights of the edges of the path.
 
 This algorithm is part of a broader class of algorithms which is called \textbf{greedy algorithms} \cite{wikigreedy} (\href{https://en.wikipedia.org/wiki/Greedy_algorithm}{Greedy algorithms, Wikipedia}). In greedy algorithms the optimal solution is found by finding the optimal solution at every step without considering the previous ones. This approach does not always find the optimal solution of a problem. A more advanced technique to greedy algorithm is \textbf{dynamic programming}, which will be the topic of the next chapter.
@@ -227,7 +229,7 @@ In other words the relaxation condition says that if there is a shorter path con
 
 In the Dijkstra's algorithm at each step the new node is chosen based on the lowest value of the distance at that given step, and eventually the distances for all the adjacent nodes are updated accordingly the relaxation condition.
 
-Let us consider the following graph Figure \ref{graphs_13}, and let us start from the node 1 \cite{dijkstraexplaination}.
+Let us consider the following graph Figure \ref{graphs_13}, and let us start from the node \(a\) \cite{dijkstraexplaination}.
 
 \begin{figure}[H]
 	\begin{center}
@@ -237,29 +239,29 @@ Let us consider the following graph Figure \ref{graphs_13}, and let us start fro
 	\end{center}
 \end{figure}
 
-For describing how the algorithm works we use the following table. At every step a new raw is added, and at the first one the table looks like the following:
+For describing how the algorithm works we use the following table, in which for each column there is a node, and at every step a new row is added for the node for which the shortest path has just been found. At the first step the table it looks like: 
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+\begin{tabular}{ c | c c c c c c}
+    explored vertex & a & b & c & d & e & f \\
     \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{10} & \(\infty\) & \(\infty\)
+    a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\)
 \end{tabular}
 \end{table}
 
-All the nodes are listed as columns, and all the distances from the node 1 to all the others are reported in the table. The nodes 5 and 6 do not have any directed link to the node 1, then their distance is infinity. Once listed all the distances the node with the lowest one is selected: at the first step it is the node 4.
+All the nodes are listed as columns, and all the distances from the node \(a\) to all the others are reported in the table. The nodes \(e\) and \(f\) do not have any directed link to the node \(a\), then their distance is infinity. Once listed all the distances the node with the lowest one is selected: at the first step it is the node \(a\).
 
-For second step all the distances of the adjacent nodes to 4 (in this case only for node 5) are updated except for the ones previously selected as the lowest. Once updated all the distances the process is repeated again, and the node with the lowest one is chosen (node 5 in this case).
+At the second step the lowest distance is chosen: in this case it is for the \(d\), then it added in the visited node. The shortest path from node \(a\) to node \(d\) is fund. The node \(e\) is now reachable and it has a distance of \(15\) from \(d\), then \(25\) from \(a\) (\(10_{a}+15_{b, e}\)).
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+\begin{tabular}{ c | c c c c c c}
+    visited node & a & b & c & d & e & f \\
     \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{25} & \(\infty\)
+    a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
+
+    d & | & \(50_{a}\) & \(45_{a}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}} & \(25_{d}\) & \(\infty\) \\
 \end{tabular}
 \end{table}
 
