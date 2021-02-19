@@ -110,6 +110,12 @@
     \tikz[anchor=base,baseline]\node[inner sep=2pt,draw=#2,#1]{$	 \displaystyle#3\mathstrut$};}
 \colorlet{mycol}{black}
 
+% Arrows in tables
+\usepackage{tikz}
+\usepackage{tabularx}
+\newcommand{\tm}[1]{\tikz[overlay, remember picture,
+   baseline=(#1.base), anchor=west] \node [inner sep=0pt] (#1) {#1};}
+
 % Code listings and pseudocode
 \usepackage{listings}
 \newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}

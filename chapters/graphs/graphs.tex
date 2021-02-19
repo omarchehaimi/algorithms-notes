@@ -252,7 +252,20 @@ For describing how the algorithm works we use the following table, in which for 
 
 All the nodes are listed as columns, and all the distances from the node \(a\) to all the others are reported in the table. The nodes \(e\) and \(f\) do not have any directed link to the node \(a\), then their distance is infinity. Once listed all the distances the node with the lowest one is selected: at the first step it is the node \(a\).
 
-At the second step the lowest distance is chosen: in this case it is for the \(d\), then it added in the visited node. The shortest path from node \(a\) to node \(d\) is fund. The node \(e\) is now reachable and it has a distance of \(15\) from \(d\), then \(25\) from \(a\) (\(10_{a}+15_{b, e}\)).
+At the second step the lowest distance is chosen: in this case it is for the node \(d\), then it is added in the visited node as the shortest path from \(a\) to \(d\) is fund. The node \(e\) is now reachable and it has a distance of \(15\) from \(d\), then \(25\) from \(a\) (\(10_{a}+15_{b, e}\)).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ c | c c c c c c}
+    visited node & a & b & c & d & e & f \\
+    \hline
+    a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
+
+    d & | & \(50_{a}\) & \(45_{a}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}} & \(25_{d}\) & \(\infty\)
+\end{tabular}
+\end{table}
+
+The process is repeated again: the lowest distance is chosen, in this case is the distance to reach the node \(e\). As for the previous step we check for all nodes if it is shorter to pass through the new shortest path found, and in case true the weight are updated (relaxation condition). At this step the weight to be updated is the one for the node \(b\) because for reaching it from \(a\) the weight is \(50\) (\(50_{a}\)), while for reaching it passing through \(e\) (which in turn for be reached with its shortest path we have to go through \(d\), which in turn again is reached with its shortest path from \(a\)) is \(45\) (\(25_{d} + 20_{e, b}=45_{e}< 50_{a}\)).
 
 \begin{table}[H]
 \centering
@@ -262,56 +275,78 @@ At the second step the lowest distance is chosen: in this case it is for the \(d
     a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
 
     d & | & \(50_{a}\) & \(45_{a}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}} & \(25_{d}\) & \(\infty\) \\
+    
+    e & | & \(45_{e}\) & \(45_{a}\) & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25_{d}} & \(\infty\)
 \end{tabular}
 \end{table}
 
-The process is repeated again: all the distances of the nodes adjacent to 5 are updated (in this case only the distance to node 2 is updated as the relaxation condition is fulfilled (\(25+20=45 < 50\))). At this step we have two nodes a the same distance. In this case the choice is free and one of them can be chosen indifferently. 
+
+The same process is repeated again, the new shortest path found is tor the node \(b\) passing through \(e\) with a weight of \(45\). In this case there are two shortest path and for this example is the same choosing one of them.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+\begin{tabular}{ c | c c c c c c}
+    visited node & a & b & c & d & e & f \\
     \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    2 & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
+    a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
+
+    d & | & \(50_{a}\) & \(45_{a}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}} & \(25_{d}\) & \(\infty\) \\
+    
+    e & | & \(45_{e}\) & \(45_{a}\) & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25_{d}} & \(\infty\) \\
+    
+    b & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}} & \(45_{a}\) & | & | & \(\infty\)
 \end{tabular}
 \end{table}
 
-The same process is repeated again. In this case there is also a connection from node 3 to node 5, but the node 5 has been already visited and then its weight will not be updated. Moreover, even if the weight is updated the weight would be higher and the relaxation condition would not be fulfilled.
+In the last step all the shortest paths are found. Only the node \(f\) has been left out as it can not be reached in any ways from \(a\).
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+\begin{tabular}{ c | c c c c c c}
+    visited node & a & b & c & d & e & f \\
     \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    2 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    3 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
+    a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
+
+    d & | & \(50_{a}\) & \(45_{a}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}} & \(25_{d}\) & \(\infty\) \\
+    
+    e & | & \(45_{e}\) & \(45_{a}\) & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25_{d}} & \(\infty\) \\
+    
+    b & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}} & \(45_{a}\) & | & | & \(\infty\) \\
+    
+    d & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}} & | & | & \(\infty\)
 \end{tabular}
 \end{table}
 
-The last step is to check the last node. The node 6 is not checked and it has an infinity distance. The node 6 can not be reached, and then the distance will be always infinity.
+All the shortest paths from \(a\) are:
+\begin{itemize}
+\item b: a \(\rightarrow\) d \(\rightarrow\) e \(\rightarrow\) b; W=45
+\item c: a \(\rightarrow\) c; W=45
+\item d: a \(\rightarrow\) d; W=10
+\item e: a \(\rightarrow\) d \(\rightarrow\) e; W=25
+\item f: \(\infty\)
+\end{itemize}
+
+For example for finding the shortest path for reaching the node \(b\) the steps to follow are:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
+\begin{tabular}{ c | c c c c c c}
+visited node & a & b & c & d & e & f \\
     \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    2 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    3 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
+    a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
+
+    d & | & \(50_{a}\) & \(45_{a}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}} & \(25_{d}\) & \(\infty\) \\
+    
+    e & | & \(45_{e}\) & \(45_{a}\) & | & \tm{A} & \(\infty\) \\
+    
+    b & | & \tm{B} & \(45_{a}\) & | & | & \(\infty\) \\
+    
+    d & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}} & | & | & \(\infty\)
 \end{tabular}
+
+\begin{tikzpicture}[overlay, remember picture]
+   \draw[->] (A) edge (B);
+\end{tikzpicture}
 \end{table}
 
 In the appendix \ref{dijkstraimplementation} the full implementation of the Dijkstra's algorithm is reported. 
