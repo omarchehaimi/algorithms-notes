@@ -197,77 +197,31 @@ class Graph():
 \label{dijkstraimplementation}
 As described in the section \ref{sec:dijkstra} the Dijkstra's algorithm is a greedy algorithm that find the optimal solution by finding the optimal solution at each step. The implementation of the Dijkstra's algorithm is based on priority queue.
 
-For describing how the algorithm works we use the following table. At every step a new raw is added, and at the first one the table looks like the following:
+Let us consider the following graph (Figure \ref{graphappendix_3}).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=.6]{chapters/appendix/images/appendixgraphs/graphsappendix_3.pdf}
+		\caption[Dijkstra's algorithms example.]{Dijkstra's algorithms example.}
+		\label{graphappendix_3}
+	\end{center}
+\end{figure}
+
+Solving the shortest problem for this graph starting from the node \(a\) leads to the following table.
+
 
 \begin{table}[H]
-\centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
-    \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{10} & \(\infty\) & \(\infty\)
-\end{tabular}
-\end{table}
+	\centering
+	\begin{tabular}{c | c c c c c c}
+		visited node & a & b & c & d & e & f & g & h \\
+		\hline
+		a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}}\tikzmark{a} & \(8_{a}\) & \(2_{a}\) & \(5_{a}\) & \(\infty\) & \(\infty\) & \(\infty\) & \(\infty\) \\
 
-All the nodes are listed as columns, and all the distances from the node 1 to all the others are reported in the table. The nodes 5 and 6 do not have any directed link to the node 1, then their distance is infinity. Once listed all the distances the node with the lowest one is selected: at the first step it is the node 4.
+	\end{tabular}
 
-For second step all the distances of the adjacent nodes to 4 (in this case only for node 5) are updated except for the ones previously selected as the lowest. Once updated all the distances the process is repeated again, and the node with the lowest one is chosen (node 5 in this case).
-
-\begin{table}[H]
-\centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
-    \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{25} & \(\infty\)
-\end{tabular}
-\end{table}
-
-The process is repeated again: all the distances of the nodes adjacent to 5 are updated (in this case only the distance to node 2 is updated as the relaxation condition is fulfilled (\(25+20=45 < 50\))). At this step we have two nodes a the same distance. In this case the choice is free and one of them can be chosen indifferently. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
-    \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    2 & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
-\end{tabular}
-\end{table}
-
-The same process is repeated again. In this case there is also a connection from node 3 to node 5, but the node 5 has been already visited and then its weight will not be updated. Moreover, even if the weight is updated the weight would be higher and the relaxation condition would not be fulfilled.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
-    \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    2 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    3 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=red, fill=yellow!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
-\end{tabular}
-\end{table}
-
-The last step is to check the last node. The node 6 is not checked and it has an infinity distance. The node 6 can not be reached, and then the distance will be always infinity.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{ l | c | c | c | c | c }
-    selected vertex & 2 & 3 & 4 & 5 & 6 \\
-    \hline
-    4 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \(\infty\) & \(\infty\) \\
-    \hline
-    5 & 50 & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    2 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & 45 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\) \\
-    \hline
-    3 & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25} & \(\infty\)
-\end{tabular}
+	\begin{tikzpicture}[overlay, remember picture]
+		\draw [->, line width=0.3mm] ({pic cs:a}) -- ({pic cs:b});
+		\draw [->, line width=0.3mm] ({pic cs:bb}) -- ({pic cs:cc});
+		\draw [->, line width=0.3mm] ({pic cs:c}) -- ({pic cs:d});
+	\end{tikzpicture}
 \end{table}

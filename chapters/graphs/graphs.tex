@@ -329,24 +329,26 @@ All the shortest paths from \(a\) are:
 For example for finding the shortest path for reaching the node \(b\) the steps to follow are:
 
 \begin{table}[H]
-\centering
-\begin{tabular}{ c | c c c c c c}
-visited node & a & b & c & d & e & f \\
-    \hline
-    a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
+	\centering
+	\begin{tabular}{c | c c c c c c}
+		visited node & a & b & c & d & e & f \\
+		\hline
+		a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}}\tikzmark{a} & \(50_{a}\) & \(45_{a}\) & \(10_{a}\) & \(\infty\) & \(\infty\) \\
 
-    d & | & \(50_{a}\) & \(45_{a}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}} & \(25_{d}\) & \(\infty\) \\
-    
-    e & | & \(45_{e}\) & \(45_{a}\) & | & \tm{A} & \(\infty\) \\
-    
-    b & | & \tm{B} & \(45_{a}\) & | & | & \(\infty\) \\
-    
-    d & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}} & | & | & \(\infty\)
-\end{tabular}
+		d & | & \(50_{a}\) & \(45_{a}\) & \tikzmark{b}\mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10_{a}}\tikzmark{bb} & \(25_{d}\) & \(\infty\) \\
 
-\begin{tikzpicture}[overlay, remember picture]
-   \draw[->] (A) edge (B);
-\end{tikzpicture}
+		e & | & \(45_{e}\) & \(45_{a}\) & | & \({}^{\tikzmark{cc}}\tikzmark{c}\mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{25_{d}}\) & \(\infty\) \\
+		
+		b & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}}\tikzmark{d} & \(45_{a}\) & | & | & \(\infty\) \\
+		
+		d & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}} & | & | & \(\infty\)
+	\end{tabular}
+
+	\begin{tikzpicture}[overlay, remember picture]
+		\draw [->, line width=0.3mm] ({pic cs:a}) -- ({pic cs:b});
+		\draw [->, line width=0.3mm] ({pic cs:bb}) -- ({pic cs:cc});
+		\draw [->, line width=0.3mm] ({pic cs:c}) -- ({pic cs:d});
+	\end{tikzpicture}
 \end{table}
 
 In the appendix \ref{dijkstraimplementation} the full implementation of the Dijkstra's algorithm is reported. 

@@ -112,9 +112,7 @@
 
 % Arrows in tables
 \usepackage{tikz}
-\usepackage{tabularx}
-\newcommand{\tm}[1]{\tikz[overlay, remember picture,
-   baseline=(#1.base), anchor=west] \node [inner sep=0pt] (#1) {#1};}
+\usetikzlibrary{tikzmark}
 
 % Code listings and pseudocode
 \usepackage{listings}
