@@ -6,3 +6,50 @@ In this chapter are introduced the fundamentals concepts of \textbf{dynamic prog
 Dynamic programming is a mathematical optimization method and a computer programming method \cite{wikidynamicprogramming} (\href{https://en.wikipedia.org/wiki/Dynamic_programming}{Dynamic Programming, Wikipedia}).
 
 In computer science a problem can be solved with a dynamic programming method must have an optimal substructure (the problem can be broken down in smaller parts) and an overlapping sub-problems (the broken down problems share some results). If a problem can be solved with an optimal substructure but with non-overlapping sub-problems then the strategy is called \textbf{divide and conquer}.
+
+When a problem is solved with dynamic programming, the starting point is to find the base case, which is the sub-problem with the lowest computational cost. Once solved this problem its result is saved in a table called \textbf{lookup table}, and the same general formula is called recursively. At each step the result is saved in the lookup table, as in the following steps it might be used. Instead of calculating the same value again, we look at the lookup table and retrieve it. This aspect of dynamic programming makes this technique extremely powerful, as a lot of calculations must not be repeated several times.
+
+For example, in the calculation of the Fibonacci number we have to use the same function several time in different sub-problems. Let us suppose we want to calculate the fifth number of the Fibonacci sequence:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[thick, level/.style={sibling distance=60mm/#1}]
+\node{$F(5)$}
+    child { node {$F(4)$} 
+    	child { node {$F(3)$} 
+    		child { node {$F(2)$}
+    			child { node {$F(1)$} }
+    			child { node {$F(0)$} }
+    		}  
+    		child { node {$F(1)$} }
+    	}
+    	child { node {$F(2)$} 
+			child { node {$F(1)$} }
+			child { node {$F(0)$} }    	
+    	}
+    }
+    child { node {$F(3)$} 
+		child { node {$F(2)$} 
+			child { node {$F(1)$} }
+			child { node {$F(0)$} }		
+		}
+    	child { node {$F(1)$} }    
+    };
+\end{tikzpicture}
+\caption[Calculation of the fifth number of the Fibonacci sequence.]{Calculation of the fifth number of the Fibonacci sequence.}
+\end{figure}
+
+Some values are used several times in different sub-problem as shown in the following table:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c c c c c}
+	function & $F(0)$ & $F(1)$ & $F(2)$ & $F(3)$ & $F(4)$ & $F(5)$ \\
+	number of computation & 3 & 4 & 3 & 2 & 1 & 1
+	\end{tabular}
+	\caption[Number of computation for each value of the Fibonacci sequence.]{Number of computation for each value of the Fibonacci sequence.}
+\end{table}
+If the values of the functions which are repeated are stored in a lookup table, instead of calculating them again are retrieved from the table and used.
+
+\section{Knapsack Problem}
+
+\section{Travelling Salesman Problem}
