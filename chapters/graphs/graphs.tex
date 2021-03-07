@@ -202,7 +202,7 @@ The \textbf{shorted path problem} is the problem of finding a path between two n
 
 \subsection{Dijkstra's Algorithm}
 \label{sec:dijkstra}
-The Dijkstra's algorithm single source shortest path for a non-negative weighted graphs, in which all the shortest paths from a given node to all the other nodes are found. The distance between two nodes is the sum of the weights of the edges of the path.
+The Dijkstra's algorithm single source shortest path for a non-negative weighted graphs, in which all the shortest paths from a given node to all the other nodes are found. The distance between two nodes is the sum of the weights of the edges of the path \cite{wikidijkstra}.
 
 This algorithm is part of a broader class of algorithms which is called \textbf{greedy algorithms} \cite{wikigreedy} (\href{https://en.wikipedia.org/wiki/Greedy_algorithm}{Greedy algorithms, Wikipedia}). In greedy algorithms the optimal solution is found by finding the optimal solution at every step without considering the previous ones. This approach does not always find the optimal solution of a problem. A more advanced technique to greedy algorithm is \textbf{dynamic programming}, which will be the topic of the next chapter.
 
@@ -319,11 +319,11 @@ In the last step all the shortest paths are found. Only the node \(f\) has been 
 
 All the shortest paths from \(a\) are:
 \begin{itemize}
-\item b: a \(\rightarrow\) d \(\rightarrow\) e \(\rightarrow\) b; W=45
-\item c: a \(\rightarrow\) c; W=45
-\item d: a \(\rightarrow\) d; W=10
-\item e: a \(\rightarrow\) d \(\rightarrow\) e; W=25
-\item f: \(\infty\)
+\item b: a \(\rightarrow\) d \(\rightarrow\) e \(\rightarrow\) b, W=45;
+\item c: a \(\rightarrow\) c, W=45;
+\item d: a \(\rightarrow\) d, W=10;
+\item e: a \(\rightarrow\) d \(\rightarrow\) e, W=25;
+\item f: \(\infty\).
 \end{itemize}
 
 For example for finding the shortest path for reaching the node \(b\) the steps to follow are:
@@ -343,11 +343,11 @@ For example for finding the shortest path for reaching the node \(b\) the steps 
 		
 		d & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{45_{e}} & | & | & \(\infty\)
 	\end{tabular}
-
+	
 	\begin{tikzpicture}[overlay, remember picture]
-		\draw [->, line width=0.3mm] ({pic cs:a}) -- ({pic cs:b});
-		\draw [->, line width=0.3mm] ({pic cs:bb}) -- ({pic cs:cc});
-		\draw [->, line width=0.3mm] ({pic cs:c}) -- ({pic cs:d});
+		\draw [->, line width=0.3mm] ({pic cs:b}) -- ({pic cs:a});
+		\draw [->, line width=0.3mm] ({pic cs:cc}) -- ({pic cs:bb});
+		\draw [->, line width=0.3mm] ({pic cs:d}) -- ({pic cs:c});
 	\end{tikzpicture}
 \end{table}
 

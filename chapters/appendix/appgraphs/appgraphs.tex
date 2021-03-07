@@ -1,7 +1,3 @@
-\chapter{Complexity of Data Structures for Graphs}
-\label{graphsappendix}
-In the following table are summarized the complexities of the most common operations on graphs for the different data structures \cite{goodrich2013data}.
-
 \chapter{Implementation of Graph Representation}
 \label{graphimplementationappendix}
 In the following python code there is the implementation for the all the different graph representation, and the operation of insertion of nodes and edges.
@@ -193,6 +189,10 @@ class Graph():
 	\end{center}
 \end{figure}
 
+\chapter{Complexity of Data Structures for Graphs}
+\label{graphsappendix}
+In the following table are summarized the complexities of the most common operations on graphs for the different data structures \cite{goodrich2013data}.
+
 \chapter{Dijkstra's Algorithm Implementation}
 \label{dijkstraimplementation}
 As described in the section \ref{sec:dijkstra} the Dijkstra's algorithm is a greedy algorithm that find the optimal solution by finding the optimal solution at each step. The implementation of the Dijkstra's algorithm is based on priority queue.
@@ -207,21 +207,113 @@ Let us consider the following graph (Figure \ref{graphappendix_3}).
 	\end{center}
 \end{figure}
 
-Solving the shortest problem for this graph starting from the node \(a\) leads to the following table.
-
+Solving the shortest problem for this graph starting from the node \(a\) leads to the following table:
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{c | c c c c c c}
+	\begin{tabular}{c | c c c c c c c c}
 		visited node & a & b & c & d & e & f & g & h \\
 		\hline
-		a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}}\tikzmark{a} & \(8_{a}\) & \(2_{a}\) & \(5_{a}\) & \(\infty\) & \(\infty\) & \(\infty\) & \(\infty\) \\
-
+		a & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{0_{a}}\tikzmark{ara} & \(8_{a}\) & \(2_{a}\) & \(5_{a}\) & \(\infty\) & \(\infty\) & \(\infty\) & \(\infty\) \\
+		
+		c & | & \(8_{a}\) & \tikzmark{bla}\mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{2_{a}}\tikzmark{bra} & \(4_{c}\) & \(7_{c}\) & \(\infty\) & \(\infty\) & \(\infty\) \\
+		
+		d & | & \(6_{d}\) & | & \tikzmark{cla}\mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{4_{c}}\tikzmark{cra} & \(5_{d}\) & \(10_{d}\) & \(7_{d}\) & \(\infty\) \\
+		
+		e & | & \(6_{d}\) & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{5_{d}} & \(10_{d}\) & \(6_{e}\) & \(\infty\) \\
+		
+		b & | & \tikzmark{ela}\mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{6_{d}}\tikzmark{era} & | & | & | & \(10_{d}\) & \(6_{e}\) & \(\infty\) \\
+		
+		g & | & | & | & | & | & \(8_{g}\) & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{6_{e}} & \(12_{g}\) \\
+		
+		f & | & | & | & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{8_{g}} & | & \(11_{f}\) \\
+		
+		h & | & | & | & | & | & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{11_{f}} \\
+		
 	\end{tabular}
-
+	\caption[Dijkstra's algorithms example for the graph in figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.]{Dijkstra's algorithms example for the graph in figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.}
+	
 	\begin{tikzpicture}[overlay, remember picture]
-		\draw [->, line width=0.3mm] ({pic cs:a}) -- ({pic cs:b});
-		\draw [->, line width=0.3mm] ({pic cs:bb}) -- ({pic cs:cc});
-		\draw [->, line width=0.3mm] ({pic cs:c}) -- ({pic cs:d});
+		\draw [->, line width=0.3mm] ({pic cs:era}) -- ({pic cs:cla});
+		\draw [->, line width=0.3mm] ({pic cs:cla}) -- ({pic cs:bra});
+		\draw [->, line width=0.3mm] ({pic cs:bla}) -- ({pic cs:ara});
 	\end{tikzpicture}
 \end{table}
+
+All the shortest paths from \(a\) are:
+\begin{itemize}
+\item b: a \(\rightarrow\) c \(\rightarrow\) d \(\rightarrow\) b, W=6;
+\item c: a \(\rightarrow\) c, W=2;
+\item d: a \(\rightarrow\) c \(\rightarrow\) d, W=4;
+\item e: a \(\rightarrow\) c \(\rightarrow\) d \(\rightarrow\) e, W=5;
+\item f: a \(\rightarrow\) c \(\rightarrow\) d \(\rightarrow\) e \(\rightarrow\) g \(\rightarrow\) f, W=8 ;
+\item g: a \(\rightarrow\) c \(\rightarrow\) d \(\rightarrow\) e \(\rightarrow\) g, W=6;
+\item h: a \(\rightarrow\) c \(\rightarrow\) d \(\rightarrow\) e \(\rightarrow\) g \(\rightarrow\) f \(\rightarrow\) h, W=11.
+\end{itemize}
+
+For implementing this algorithm there are several ways. The one presented here uses the priority queues. In fact each line of the table where are reported the updated distances with the shortest path can be see as a priority queue in which at every step the shortest value (then the shortest path for the current visited node) is selected.
+
+In the following the pseudocode \cite{wikidijkstra} and the Python implementation \cite{stackdijkstra} (\href{https://stackoverflow.com/a/57234618}{stackoverflow}) are reported.
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon
+	\LinesNumbered
+  	\SetKwFunction{Dijkstra}{Dijkstra}
+  	\SetKwProg{Fn}{Function}{:}{}
+  	\Fn{\Dijkstra{$graph$, $source$}}{
+		dist[source] $\leftarrow$ 0        // Initialization\;
+		create vertex priority queue q\;
+		
+		\For{\normalfont{all vertex v in graph}}{
+			\If{\normalfont{v $\neq$ source}}{
+				dist[v] $\leftarrow$ infinity // Unknown distance from source to v\;
+                prev[v] $\leftarrow$ undefined // Predecessor of v\;
+			}
+			q.add$\_$with$\_$priority(v, dist[v])\;
+		}
+		
+		\While{\normalfont{\textbf{not} q.isEmpty()}}{
+			 u $\leftarrow$ q.extract$\_$min() // Remove and return best vertex\;
+			 \For{\normalfont{all neighbor v of u}}{
+			     // Only v that are still in q\;
+			     alt $\leftarrow$ dist[u] + length(u, v)\;
+			     \If{\normalfont{alt < dist[v]}}{
+			     	dist[v] $\leftarrow$ alt\;
+             		prev[v] $\leftarrow$ u\;
+             		q.decrease$\_$priority(v, alt)\;
+			     }
+			 }
+		}
+		
+		\KwRet dist, prev\;
+	} 	
+\caption{Dijkstra's algorithm pseudocode.}
+\end{algorithm}
+
+\begin{lstlisting}[firstnumber=1, caption={Dijkstra's algorithm.}]
+import heapq
+
+def dijkstra(graph, start):
+    """Visit all nodes and calculate the shortest paths to each from start"""
+    queue = [(0, start)]
+    distances = {start: 0}
+    visited = set()
+
+    while queue:
+        _, node = heapq.heappop(queue)  # (distance, node), ignore distance
+        if node in visited:
+            continue
+        visited.add(node)
+        dist = distances[node]
+
+        for neighbour, neighbour_dist in graph[node].items():
+            if neighbour in visited:
+                continue
+            neighbour_dist += dist
+            if neighbour_dist < distances.get(neighbour, float('inf')):
+                heapq.heappush(queue, (neighbour_dist, neighbour))
+                distances[neighbour] = neighbour_dist
+
+    return distances
+	
+\end{lstlisting}
