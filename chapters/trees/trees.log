@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  3 JAN 2021 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.17)  9 MAR 2021 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2863,8 +2863,353 @@ Overfull \hbox (145.40068pt too wide) in paragraph at lines 58--63
 \OML/cmm/m/it/10 ordersearch:\/cmr/m/n/10 ][][]$
  []
 
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \begin{figure}
+                   [H]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 \begin{tikzpicture}
+                        [nodes={draw, circle}, thick, node distance={2cm}, l...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 64--67
+ [] 
+ []
+
 ! Undefined control sequence.
-l.64 \paragraph
+l.68 	\node
+           (n0){$a$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (5.28589pt too wide) in paragraph at lines 68--77
+ []$\OML/cmm/m/it/10 a$ 
+ []
+
+
+Overfull \hbox (4.29166pt too wide) in paragraph at lines 68--77
+ \OML/cmm/m/it/10 b$ 
+ []
+
+
+Overfull \hbox (5.20486pt too wide) in paragraph at lines 68--77
+ \OML/cmm/m/it/10 d$ 
+ []
+
+
+Overfull \hbox (4.65627pt too wide) in paragraph at lines 68--77
+ \OML/cmm/m/it/10 e$ 
+ []
+
+
+Overfull \hbox (4.32756pt too wide) in paragraph at lines 68--77
+ \OML/cmm/m/it/10 c$ 
+ []
+
+
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 68--77
+ \OML/cmm/m/it/10 f$ 
+ []
+
+! Undefined control sequence.
+l.83 		\draw
+            [bend right,->]  (n0) to node [auto] (n1);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{tikzpicture}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 \caption
+             [Pre-order search.]{Pre-order search.}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no . in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.89 \paragraph
                {In-order search}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3099,22 +3444,22 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 64--67
+Overfull \hbox (20.0pt too wide) in paragraph at lines 89--92
 []
  []
 
 
-Overfull \hbox (13.4166pt too wide) in paragraph at lines 64--67
+Overfull \hbox (13.4166pt too wide) in paragraph at lines 89--92
 \OT1/cmr/bx/n/10 in-
  []
 
 
-Overfull \hbox (26.88184pt too wide) in paragraph at lines 64--67
+Overfull \hbox (26.88184pt too wide) in paragraph at lines 89--92
 \OT1/cmr/bx/n/10 order
  []
 
 
-Overfull \hbox (31.3137pt too wide) in paragraph at lines 64--67
+Overfull \hbox (31.3137pt too wide) in paragraph at lines 89--92
 \OT1/cmr/bx/n/10 search
  []
 
@@ -3125,7 +3470,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 \begin{figure}
+l.93 \begin{figure}
                    [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3135,12 +3480,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 68--69
+Overfull \hbox (20.0pt too wide) in paragraph at lines 93--94
 [] 
  []
 
 ! Undefined control sequence.
-l.70 		\includegraphics
+l.95 		\includegraphics
                        [scale=.6]{chapters/trees/images/trees_6.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3188,13 +3533,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.70 ...ics[scale=.6]{chapters/trees/images/trees_
+l.95 ...ics[scale=.6]{chapters/trees/images/trees_
                                                   6.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.70 ...ale=.6]{chapters/trees/images/trees_6.pdf}
+l.95 ...ale=.6]{chapters/trees/images/trees_6.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3209,7 +3554,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.71 		\caption
+l.96 		\caption
                [In-order search.]{In-order search.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3221,7 +3566,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 	\end{center}
+l.98 	\end{center}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3233,7 +3578,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 	\end{center}
+l.98 	\end{center}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3245,7 +3590,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 	\end{center}
+l.98 	\end{center}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3253,7 +3598,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.73 	\end{center}
+l.98 	\end{center}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3264,7 +3609,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.73 	\end{center}
+l.98 	\end{center}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3279,25 +3624,25 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 \end{figure}
+l.99 \end{figure}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (43.5441pt too wide) in paragraph at lines 70--75
+Overfull \hbox (43.5441pt too wide) in paragraph at lines 95--100
 []\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 In \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (139.3289pt too wide) in paragraph at lines 70--75
+Overfull \hbox (139.3289pt too wide) in paragraph at lines 95--100
 \OML/cmm/m/it/10 ordersearch:\/cmr/m/n/10 ][][]$
  []
 
 ! Undefined control sequence.
-l.76 \paragraph
-               {Post-order search}
+l.101 \paragraph
+                {Post-order search}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3631,22 +3976,22 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 76--79
+Overfull \hbox (20.0pt too wide) in paragraph at lines 101--104
 []
  []
 
 
-Overfull \hbox (25.29985pt too wide) in paragraph at lines 76--79
+Overfull \hbox (25.29985pt too wide) in paragraph at lines 101--104
 \OT1/cmr/bx/n/10 post-
  []
 
 
-Overfull \hbox (26.88184pt too wide) in paragraph at lines 76--79
+Overfull \hbox (26.88184pt too wide) in paragraph at lines 101--104
 \OT1/cmr/bx/n/10 order
  []
 
 
-Overfull \hbox (31.3137pt too wide) in paragraph at lines 76--79
+Overfull \hbox (31.3137pt too wide) in paragraph at lines 101--104
 \OT1/cmr/bx/n/10 search
  []
 
@@ -3657,8 +4002,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 \begin{figure}
-                   [H]
+l.105 \begin{figure}
+                    [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -3667,13 +4012,13 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 80--81
+Overfull \hbox (20.0pt too wide) in paragraph at lines 105--106
 [] 
  []
 
 ! Undefined control sequence.
-l.82 		\includegraphics
-                       [scale=.6]{chapters/trees/images/trees_7.pdf}
+l.107 		\includegraphics
+                        [scale=.6]{chapters/trees/images/trees_7.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3720,13 +4065,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.82 ...ics[scale=.6]{chapters/trees/images/trees_
+l.107 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   7.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.82 ...ale=.6]{chapters/trees/images/trees_7.pdf}
+l.107 ...le=.6]{chapters/trees/images/trees_7.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3741,8 +4086,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 		\caption
-               [Post-order search.]{Post-order search.}
+l.108 		\caption
+                [Post-order search.]{Post-order search.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3753,8 +4098,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 	\end{center}
-                  
+l.110 	\end{center}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3765,8 +4110,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 	\end{center}
-                  
+l.110 	\end{center}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3777,16 +4122,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 	\end{center}
-                  
+l.110 	\end{center}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.85 	\end{center}
-                  
+l.110 	\end{center}
+                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3796,8 +4141,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.85 	\end{center}
-                  
+l.110 	\end{center}
+                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -3811,26 +4156,26 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.86 \end{figure}
-                 
+l.111 \end{figure}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (53.31609pt too wide) in paragraph at lines 82--87
+Overfull \hbox (53.31609pt too wide) in paragraph at lines 107--112
 []\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Post \OMS/cmsy/m/n/10 ^^@
 
  []
 
 
-Overfull \hbox (149.10089pt too wide) in paragraph at lines 82--87
+Overfull \hbox (149.10089pt too wide) in paragraph at lines 107--112
 \OML/cmm/m/it/10 ordersearch:\/cmr/m/n/10 ][][]$
  []
 
 ! Undefined control sequence.
-l.88 \section
-             {Binary Trees}
+l.113 \section
+              {Binary Trees}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4027,8 +4372,8 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.90 \subsection
-                {Search}
+l.115 \subsection
+                 {Search}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4226,27 +4571,27 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 88--92
+Overfull \hbox (20.0pt too wide) in paragraph at lines 113--117
 []
  []
 
 
-Overfull \hbox (15.20825pt too wide) in paragraph at lines 88--92
+Overfull \hbox (15.20825pt too wide) in paragraph at lines 113--117
 \OT1/cmr/bx/n/10 Bi-
  []
 
 
-Overfull \hbox (22.78459pt too wide) in paragraph at lines 88--92
+Overfull \hbox (22.78459pt too wide) in paragraph at lines 113--117
 \OT1/cmr/bx/n/10 nary
  []
 
 
-Overfull \hbox (24.286pt too wide) in paragraph at lines 88--92
+Overfull \hbox (24.286pt too wide) in paragraph at lines 113--117
 \OT1/cmr/bx/n/10 trees
  []
 
 
-Overfull \hbox (21.6857pt too wide) in paragraph at lines 88--92
+Overfull \hbox (21.6857pt too wide) in paragraph at lines 113--117
 \OML/cmm/m/it/10 O\/cmr/m/n/10 (\OML/cmm/m/it/10 n\/cmr/m/n/10 )$ 
  []
 
@@ -4257,8 +4602,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 \begin{figure}
-                   [H]
+l.118 \begin{figure}
+                    [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -4267,13 +4612,13 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 93--94
+Overfull \hbox (20.0pt too wide) in paragraph at lines 118--119
 [] 
  []
 
 ! Undefined control sequence.
-l.95 		\includegraphics
-                       [scale=.6]{chapters/trees/images/trees_12.pdf}
+l.120 		\includegraphics
+                        [scale=.6]{chapters/trees/images/trees_12.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4320,13 +4665,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.95 ...ics[scale=.6]{chapters/trees/images/trees_
+l.120 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   12.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.95 ...le=.6]{chapters/trees/images/trees_12.pdf}
+l.120 ...e=.6]{chapters/trees/images/trees_12.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -4341,8 +4686,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96 		\caption
-               [Example of tree search and traversal.]{Example of tree searc...
+l.121 		\caption
+                [Example of tree search and traversal.]{Example of tree sear...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4354,8 +4699,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98 	\end{center}
-                  
+l.123 	\end{center}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4366,8 +4711,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98 	\end{center}
-                  
+l.123 	\end{center}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4378,16 +4723,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98 	\end{center}
-                  
+l.123 	\end{center}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.98 	\end{center}
-                  
+l.123 	\end{center}
+                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -4397,8 +4742,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.98 	\end{center}
-                  
+l.123 	\end{center}
+                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -4412,20 +4757,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.99 \end{figure}
-                 
+l.124 \end{figure}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (351.18365pt too wide) in paragraph at lines 95--100
+Overfull \hbox (351.18365pt too wide) in paragraph at lines 120--125
 []\/cmr/m/n/10 2\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Exampleoftr
 eesearchandtraversal:\/cmr/m/n/10 ][][]$
  []
 
 ! Undefined control sequence.
-l.101 \subsection
+l.126 \subsection
                  {Delete}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4837,7 +5182,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...: Reference `trees_9' on page \thepage 
                                                   \space undefined\on@line .
-l.102 ...consider the following tree \ref{trees_9}
+l.127 ...consider the following tree \ref{trees_9}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4846,16 +5191,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_9' on page  undefined on input line 102.
+LaTeX Warning: Reference `trees_9' on page  undefined on input line 127.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 101--103
+Overfull \hbox (20.0pt too wide) in paragraph at lines 126--128
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 101--103
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 126--128
 [] 
  []
 
@@ -4938,7 +5283,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...: Reference `trees_9' on page \thepage 
                                                   \space undefined\on@line .
-l.104 ...e child node (case 1 Figure \ref{trees_9}
+l.129 ...e child node (case 1 Figure \ref{trees_9}
                                                   ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4947,12 +5292,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_9' on page  undefined on input line 104.
+LaTeX Warning: Reference `trees_9' on page  undefined on input line 129.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 104--105
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 129--130
 [] 
  []
 
@@ -5058,7 +5403,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...: Reference `trees_9' on page \thepage 
                                                   \space undefined\on@line .
-l.105 ...hildren node (case 2 Figure \ref{trees_9}
+l.130 ...hildren node (case 2 Figure \ref{trees_9}
                                                   ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5067,12 +5412,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_9' on page  undefined on input line 105.
+LaTeX Warning: Reference `trees_9' on page  undefined on input line 130.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 105--106
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 130--131
 [] 
  []
 
@@ -5264,7 +5609,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...: Reference `trees_9' on page \thepage 
                                                   \space undefined\on@line .
-l.106 ...o be removed (case 3 Figure \ref{trees_9}
+l.131 ...o be removed (case 3 Figure \ref{trees_9}
                                                   ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5273,12 +5618,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_9' on page  undefined on input line 106.
+LaTeX Warning: Reference `trees_9' on page  undefined on input line 131.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 106--107
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 131--132
 [] 
  []
 
@@ -5289,7 +5634,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.109 \begin{figure}
+l.134 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5299,12 +5644,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 109--110
+Overfull \hbox (20.0pt too wide) in paragraph at lines 134--135
 [] 
  []
 
 ! Undefined control sequence.
-l.111 		\includegraphics
+l.136 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_9.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5352,13 +5697,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.111 ...cs[scale=.6]{chapters/trees/images/trees_
+l.136 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   9.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.111 ...le=.6]{chapters/trees/images/trees_9.pdf}
+l.136 ...le=.6]{chapters/trees/images/trees_9.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -5373,7 +5718,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 		\caption
+l.137 		\caption
                 [Delete an element of a tree.]{Delete an element of a tree.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5385,7 +5730,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 	\end{center}
+l.139 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5397,7 +5742,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 	\end{center}
+l.139 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5409,7 +5754,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 	\end{center}
+l.139 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5417,7 +5762,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.114 	\end{center}
+l.139 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5428,7 +5773,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.114 	\end{center}
+l.139 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5443,7 +5788,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115 \end{figure}
+l.140 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5533,7 +5878,7 @@ Missing character: There is no L in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.117 \subsection
+l.142 \subsection
                  {Insert}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5745,7 +6090,7 @@ Missing character: There is no 1 in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_10' on page \thepage 
                                                   \space undefined\on@line .
-l.118 ...af must be reached (case 1 \ref{trees_10}
+l.143 ...af must be reached (case 1 \ref{trees_10}
                                                   ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5754,18 +6099,18 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_10' on page  undefined on input line 118.
+LaTeX Warning: Reference `trees_10' on page  undefined on input line 143.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (252.85081pt too wide) in paragraph at lines 111--119
+Overfull \hbox (252.85081pt too wide) in paragraph at lines 136--144
 []\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Deleteanelementofatree:\/
 cmr/m/n/10 ][][]$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 111--119
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 136--144
 [] 
  []
 
@@ -5776,7 +6121,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.120 \begin{figure}
+l.145 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5786,12 +6131,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 120--121
+Overfull \hbox (20.0pt too wide) in paragraph at lines 145--146
 [] 
  []
 
 ! Undefined control sequence.
-l.122 		\includegraphics
+l.147 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_10.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5839,13 +6184,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.122 ...cs[scale=.6]{chapters/trees/images/trees_
+l.147 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   10.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.122 ...e=.6]{chapters/trees/images/trees_10.pdf}
+l.147 ...e=.6]{chapters/trees/images/trees_10.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -5860,7 +6205,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123 		\caption
+l.148 		\caption
                 [Add an element of a tree.]{Add an element of a tree.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5872,7 +6217,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.125 	\end{center}
+l.150 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5884,7 +6229,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.125 	\end{center}
+l.150 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5896,7 +6241,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.125 	\end{center}
+l.150 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5904,7 +6249,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.125 	\end{center}
+l.150 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5915,7 +6260,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.125 	\end{center}
+l.150 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5930,7 +6275,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 \end{figure}
+l.151 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6020,7 +6365,7 @@ Missing character: There is no L in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.128 \subsection
+l.153 \subsection
                  {Perfect binary tree}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6186,7 +6531,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no d in font nullfont!
 
-Overfull \hbox (235.03546pt too wide) in paragraph at lines 122--130
+Overfull \hbox (235.03546pt too wide) in paragraph at lines 147--155
 []\/cmr/m/n/10 0\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Addanelemen
 tofatree:\/cmr/m/n/10 ][][]$
  []
@@ -6198,7 +6543,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 \begin{figure}
+l.156 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6208,12 +6553,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 131--132
+Overfull \hbox (20.0pt too wide) in paragraph at lines 156--157
 [] 
  []
 
 ! Undefined control sequence.
-l.133 		\includegraphics
+l.158 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_11.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6261,13 +6606,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.133 ...cs[scale=.6]{chapters/trees/images/trees_
+l.158 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   11.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.133 ...e=.6]{chapters/trees/images/trees_11.pdf}
+l.158 ...e=.6]{chapters/trees/images/trees_11.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -6282,7 +6627,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134 		\caption
+l.159 		\caption
                 [Perfect binary tree results.]{Perfect binary tree results.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6294,7 +6639,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136 	\end{center}
+l.161 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6306,7 +6651,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136 	\end{center}
+l.161 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6318,7 +6663,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136 	\end{center}
+l.161 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6326,7 +6671,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.136 	\end{center}
+l.161 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6337,7 +6682,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.136 	\end{center}
+l.161 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6352,14 +6697,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 \end{figure}
+l.162 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (265.81232pt too wide) in paragraph at lines 133--138
+Overfull \hbox (265.81232pt too wide) in paragraph at lines 158--163
 []\/cmr/m/n/10 1\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Perfectbina
 rytreeresults:\/cmr/m/n/10 ][][]$
  []
@@ -6442,27 +6787,27 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 139--140
+Overfull \hbox (20.0pt too wide) in paragraph at lines 164--165
 []
  []
 
 
-Overfull \hbox (6.00235pt too wide) in paragraph at lines 139--140
+Overfull \hbox (6.00235pt too wide) in paragraph at lines 164--165
 \OML/cmm/m/it/10 n$
  []
 
 
-Overfull \hbox (18.78017pt too wide) in paragraph at lines 139--140
+Overfull \hbox (18.78017pt too wide) in paragraph at lines 164--165
 \/cmr/m/n/10 2\OML/cmm/m/it/10 n \/cmr/m/n/10 +
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 139--140
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 164--165
 \/cmr/m/n/10 1$ 
  []
 
 ! Undefined control sequence.
-l.141 \subsection
+l.166 \subsection
                  {Binary Tree Implementation}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6586,7 +6931,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...: Reference `trees_5' on page \thepage 
                                                   \space undefined\on@line .
-l.142 ...earch and traversal (Figure \ref{trees_5}
+l.167 ...earch and traversal (Figure \ref{trees_5}
                                                   ). The recursive and itera...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6595,7 +6940,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_5' on page  undefined on input line 142.
+LaTeX Warning: Reference `trees_5' on page  undefined on input line 167.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -6692,7 +7037,7 @@ Missing character: There is no x in font nullfont!
 ! Undefined control sequence.
 <write> ...ference `binappendix' on page \thepage 
                                                   \space undefined\on@line .
-l.142 ... a tree are in appendix \ref{binappendix}
+l.167 ... a tree are in appendix \ref{binappendix}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6701,21 +7046,21 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `binappendix' on page  undefined on input line 142.
+LaTeX Warning: Reference `binappendix' on page  undefined on input line 167.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 141--143
+Overfull \hbox (20.0pt too wide) in paragraph at lines 166--168
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 141--143
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 166--168
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 141--143
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 166--168
 [] 
  []
 
@@ -6726,7 +7071,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.144 \begin{lstlisting}
+l.169 \begin{lstlisting}
                         [firstnumber=1, caption={Class definition for a node...
 
 Your command was ignored.
@@ -6802,7 +7147,7 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 144--146
+Overfull \hbox (20.0pt too wide) in paragraph at lines 169--171
 []
  []
 
@@ -6812,7 +7157,7 @@ Missing character: There is no f in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.147 	def _
+l.172 	def _
             _init__(self, value):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -6820,7 +7165,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.147 	def __
+l.172 	def __
              init__(self, value):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -6830,7 +7175,7 @@ so that I will find a matching right brace soon.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.147 	def __init__
+l.172 	def __init__
                    (self, value):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -6840,7 +7185,7 @@ so that I will find a matching right brace soon.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151 
+l.176 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -6848,7 +7193,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.151 
+l.176 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6859,7 +7204,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.151 
+l.176 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6868,12 +7213,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 147--151
+Overfull \hbox (20.0pt too wide) in paragraph at lines 172--176
 []
  []
 
 
-Overfull \hbox (215.6229pt too wide) in paragraph at lines 147--151
+Overfull \hbox (215.6229pt too wide) in paragraph at lines 172--176
 []$ 
  []
 
@@ -6896,7 +7241,7 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 152--153
+Overfull \hbox (20.0pt too wide) in paragraph at lines 177--178
 []
  []
 
@@ -6906,7 +7251,7 @@ Missing character: There is no f in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.154 	def _
+l.179 	def _
             _init__(self, root):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -6914,7 +7259,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.154 	def __
+l.179 	def __
              init__(self, root):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -6924,7 +7269,7 @@ so that I will find a matching right brace soon.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.154 	def __init__
+l.179 	def __init__
                    (self, root):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -6938,7 +7283,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.156 \end{lstlisting}
+l.181 \end{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -6947,7 +7292,7 @@ or  <return>  to continue without it.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.156 \end{lstlisting}
+l.181 \end{lstlisting}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6958,7 +7303,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.156 \end{lstlisting}
+l.181 \end{lstlisting}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6969,7 +7314,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.156 \end{lstlisting}
+l.181 \end{lstlisting}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -6978,12 +7323,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 154--157
+Overfull \hbox (20.0pt too wide) in paragraph at lines 179--182
 []
  []
 
 
-Overfull \hbox (120.28238pt too wide) in paragraph at lines 154--157
+Overfull \hbox (120.28238pt too wide) in paragraph at lines 179--182
 []$ 
  []
 
@@ -6994,7 +7339,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.158 \begin{lstlisting}
+l.183 \begin{lstlisting}
                         [firstnumber=1, caption={Recursive pre-order travers...
 
 Your command was ignored.
@@ -7092,7 +7437,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 158--161
+Overfull \hbox (20.0pt too wide) in paragraph at lines 183--186
 []
  []
 
@@ -7118,7 +7463,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 162--164
+Overfull \hbox (20.0pt too wide) in paragraph at lines 187--189
 []
  []
 
@@ -7133,7 +7478,7 @@ Missing character: There is no t in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.165 	def print_
+l.190 	def print_
                  tree(self):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -7141,29 +7486,29 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.167 
+l.192 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 165--167
+Overfull \hbox (20.0pt too wide) in paragraph at lines 190--192
 []
  []
 
 
-Overfull \hbox (49.45264pt too wide) in paragraph at lines 165--167
+Overfull \hbox (49.45264pt too wide) in paragraph at lines 190--192
 []\OML/cmm/m/it/10 ree\/cmr/m/n/10 (\OML/cmm/m/it/10 self\/cmr/m/n/10 ) :
  []
 
 
-Overfull \hbox (177.61192pt too wide) in paragraph at lines 165--167
+Overfull \hbox (177.61192pt too wide) in paragraph at lines 190--192
 \OML/cmm/m/it/10 returnself:preorder[]rint\/cmr/m/n/10 (\OML/cmm/m/it/10 tree:r
 oot; \/cmr/m/n/10 "")[:
  []
 
 
-Overfull \hbox (15.5556pt too wide) in paragraph at lines 165--167
+Overfull \hbox (15.5556pt too wide) in paragraph at lines 190--192
 \OMS/cmsy/m/n/10 ^^@\/cmr/m/n/10 1]$ 
  []
 
@@ -7181,7 +7526,7 @@ Missing character: There is no r in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.168 	def preorder_
+l.193 	def preorder_
                     search_recursive(self, start, find_val):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -7189,39 +7534,39 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.174 	
+l.199 	
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 168--174
+Overfull \hbox (20.0pt too wide) in paragraph at lines 193--199
 []
  []
 
 
-Overfull \hbox (167.00632pt too wide) in paragraph at lines 168--174
+Overfull \hbox (167.00632pt too wide) in paragraph at lines 193--199
 []\OML/cmm/m/it/10 earch[]ecursive\/cmr/m/n/10 (\OML/cmm/m/it/10 self; start; f
 ind[]al\/cmr/m/n/10 ) :
  []
 
 
-Overfull \hbox (36.95787pt too wide) in paragraph at lines 168--174
+Overfull \hbox (36.95787pt too wide) in paragraph at lines 193--199
 \OML/cmm/m/it/10 ifstart \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (76.56679pt too wide) in paragraph at lines 168--174
+Overfull \hbox (76.56679pt too wide) in paragraph at lines 193--199
 \OML/cmm/m/it/10 ifstart:value \/cmr/m/n/10 ==
  []
 
 
-Overfull \hbox (39.39775pt too wide) in paragraph at lines 168--174
+Overfull \hbox (39.39775pt too wide) in paragraph at lines 193--199
 \OML/cmm/m/it/10 find[]al \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (494.22812pt too wide) in paragraph at lines 168--174
+Overfull \hbox (494.22812pt too wide) in paragraph at lines 193--199
 \OML/cmm/m/it/10 returnTrueself:preorder[]earch[]ecursive\/cmr/m/n/10 (\OML/cmm
 /m/it/10 start:left; find[]al\/cmr/m/n/10 )\OML/cmm/m/it/10 self:preorder[]earc
 h[]ecursive\/cmr/m/n/10 (\OML/cmm/m/it/10 start:right; find[]al\/cmr/m/n/10 )$ 
@@ -7242,7 +7587,7 @@ Missing character: There is no r in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.175 	def preorder_
+l.200 	def preorder_
                     print(self, start, traversal):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -7254,7 +7599,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \end{lstlisting}
+l.206 \end{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7263,7 +7608,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.181 \end{lstlisting}
+l.206 \end{lstlisting}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7272,56 +7617,56 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 175--182
+Overfull \hbox (20.0pt too wide) in paragraph at lines 200--207
 []
  []
 
 
-Overfull \hbox (126.11043pt too wide) in paragraph at lines 175--182
+Overfull \hbox (126.11043pt too wide) in paragraph at lines 200--207
 []\OML/cmm/m/it/10 rint\/cmr/m/n/10 (\OML/cmm/m/it/10 self; start; traversal\/c
 mr/m/n/10 ) :
  []
 
 
-Overfull \hbox (36.95787pt too wide) in paragraph at lines 175--182
+Overfull \hbox (36.95787pt too wide) in paragraph at lines 200--207
 \OML/cmm/m/it/10 ifstart \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (59.82529pt too wide) in paragraph at lines 175--182
+Overfull \hbox (59.82529pt too wide) in paragraph at lines 200--207
 \OML/cmm/m/it/10 traversal\/cmr/m/n/10 + =
  []
 
 
-Overfull \hbox (81.34857pt too wide) in paragraph at lines 175--182
+Overfull \hbox (81.34857pt too wide) in paragraph at lines 200--207
 \/cmr/m/n/10 (\OML/cmm/m/it/10 str\/cmr/m/n/10 (\OML/cmm/m/it/10 start:value\/c
 mr/m/n/10 ) +
  []
 
 
-Overfull \hbox (12.77782pt too wide) in paragraph at lines 175--182
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 200--207
 \/cmr/m/n/10 " \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (60.9364pt too wide) in paragraph at lines 175--182
+Overfull \hbox (60.9364pt too wide) in paragraph at lines 200--207
 \/cmr/m/n/10 ")\OML/cmm/m/it/10 traversal \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (229.61998pt too wide) in paragraph at lines 175--182
+Overfull \hbox (229.61998pt too wide) in paragraph at lines 200--207
 \OML/cmm/m/it/10 self:preorder[]rint\/cmr/m/n/10 (\OML/cmm/m/it/10 start:left; 
 traversal\/cmr/m/n/10 )\OML/cmm/m/it/10 traversal \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (253.95296pt too wide) in paragraph at lines 175--182
+Overfull \hbox (253.95296pt too wide) in paragraph at lines 200--207
 \OML/cmm/m/it/10 self:preorder[]rint\/cmr/m/n/10 (\OML/cmm/m/it/10 start:right;
  traversal\/cmr/m/n/10 )\OML/cmm/m/it/10 returntraversal$ 
  []
 
 ! Undefined control sequence.
-l.183 \section
+l.208 \section
               {Binary Search Trees (BST)}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7581,7 +7926,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.184 ... considered node \cite{wikibinsearchtree}
+l.209 ... considered node \cite{wikibinsearchtree}
                                                   (\href{https://en.wikipedi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7590,13 +7935,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `wikibinsearchtree' on page  undefined on input line 18
-4.
+LaTeX Warning: Citation `wikibinsearchtree' on page  undefined on input line 20
+9.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.184 ...dered node \cite{wikibinsearchtree}(\href
+l.209 ...dered node \cite{wikibinsearchtree}(\href
                                                   {https://en.wikipedia.org/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7643,13 +7988,13 @@ Missing character: There is no y in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.184 ...ref{https://en.wikipedia.org/wiki/Binary_
+l.209 ...ref{https://en.wikipedia.org/wiki/Binary_
                                                   search_tree}{Binary search...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.184 ...en.wikipedia.org/wiki/Binary_search_tree}
+l.209 ...en.wikipedia.org/wiki/Binary_search_tree}
                                                   {Binary search tree, Wikip...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7660,18 +8005,18 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.185 
+l.210 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 183--185
+Overfull \hbox (20.0pt too wide) in paragraph at lines 208--210
 []
  []
 
 
-Overfull \hbox (190.21951pt too wide) in paragraph at lines 183--185
+Overfull \hbox (190.21951pt too wide) in paragraph at lines 208--210
 []$[]\OML/cmm/m/it/10 earch[]ree[]\/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
  []
 
@@ -7682,7 +8027,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.186 \begin{figure}
+l.211 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -7692,12 +8037,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 186--187
+Overfull \hbox (20.0pt too wide) in paragraph at lines 211--212
 [] 
  []
 
 ! Undefined control sequence.
-l.188 		\includegraphics
+l.213 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_13.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7745,13 +8090,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.188 ...cs[scale=.6]{chapters/trees/images/trees_
+l.213 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   13.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.188 ...e=.6]{chapters/trees/images/trees_13.pdf}
+l.213 ...e=.6]{chapters/trees/images/trees_13.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -7766,7 +8111,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.189 		\caption
+l.214 		\caption
                 [Search on an ordered binary tree.]{Search on an ordered bin...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -7779,7 +8124,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 	\end{center}
+l.216 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7791,7 +8136,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 	\end{center}
+l.216 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7803,7 +8148,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 	\end{center}
+l.216 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7811,7 +8156,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.191 	\end{center}
+l.216 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7822,7 +8167,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.191 	\end{center}
+l.216 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7837,14 +8182,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.192 \end{figure}
+l.217 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (307.12482pt too wide) in paragraph at lines 188--193
+Overfull \hbox (307.12482pt too wide) in paragraph at lines 213--218
 []\/cmr/m/n/10 3\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Searchonano
 rderedbinarytree:\/cmr/m/n/10 ][][]$
  []
@@ -7870,7 +8215,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_13' on page \thepage 
                                                   \space undefined\on@line .
-l.194 For example in Figure \ref{trees_13}
+l.219 For example in Figure \ref{trees_13}
                                            is an ordered tree. Let us consid...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7879,7 +8224,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_13' on page  undefined on input line 194.
+LaTeX Warning: Reference `trees_13' on page  undefined on input line 219.
 
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -8177,17 +8522,17 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 194--195
+Overfull \hbox (20.0pt too wide) in paragraph at lines 219--220
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 194--195
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 219--220
 []
  []
 
 
-Overfull \hbox (26.93642pt too wide) in paragraph at lines 194--195
+Overfull \hbox (26.93642pt too wide) in paragraph at lines 219--220
 \OML/cmm/m/it/10 log\/cmr/m/n/10 (\OML/cmm/m/it/10 n\/cmr/m/n/10 )$ 
  []
 
@@ -8263,7 +8608,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_13' on page \thepage 
                                                   \space undefined\on@line .
-l.196 ...ue 4 to the tree of Figure \ref{trees_13}
+l.221 ...ue 4 to the tree of Figure \ref{trees_13}
                                                   . Because the tree is orde...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8272,7 +8617,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_13' on page  undefined on input line 196.
+LaTeX Warning: Reference `trees_13' on page  undefined on input line 221.
 
 Missing character: There is no . in font nullfont!
 Missing character: There is no B in font nullfont!
@@ -8372,7 +8717,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_13' on page \thepage 
                                                   \space undefined\on@line .
-l.196 ...case of the tree in Figure \ref{trees_13}
+l.221 ...case of the tree in Figure \ref{trees_13}
                                                    the node can be easily ad...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8381,7 +8726,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_13' on page  undefined on input line 196.
+LaTeX Warning: Reference `trees_13' on page  undefined on input line 221.
 
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -8464,7 +8809,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_14' on page \thepage 
                                                   \space undefined\on@line .
-l.196 ... correctly take it (Figure \ref{trees_14}
+l.221 ... correctly take it (Figure \ref{trees_14}
                                                   ). In this case the comple...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8473,7 +8818,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_14' on page  undefined on input line 196.
+LaTeX Warning: Reference `trees_14' on page  undefined on input line 221.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -8525,27 +8870,27 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 196--197
+Overfull \hbox (20.0pt too wide) in paragraph at lines 221--222
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 196--197
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 221--222
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 196--197
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 221--222
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 196--197
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 221--222
 []
  []
 
 
-Overfull \hbox (26.93642pt too wide) in paragraph at lines 196--197
+Overfull \hbox (26.93642pt too wide) in paragraph at lines 221--222
 \OML/cmm/m/it/10 log\/cmr/m/n/10 (\OML/cmm/m/it/10 n\/cmr/m/n/10 )$ 
  []
 
@@ -8556,7 +8901,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.198 \begin{figure}
+l.223 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -8566,12 +8911,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 198--199
+Overfull \hbox (20.0pt too wide) in paragraph at lines 223--224
 [] 
  []
 
 ! Undefined control sequence.
-l.200 		\includegraphics
+l.225 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_14.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8619,13 +8964,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.200 ...cs[scale=.6]{chapters/trees/images/trees_
+l.225 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   14.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.200 ...e=.6]{chapters/trees/images/trees_14.pdf}
+l.225 ...e=.6]{chapters/trees/images/trees_14.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -8640,7 +8985,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.201 		\caption
+l.226 		\caption
                 [Addition on an ordered binary tree.]{Addition on an ordered...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -8653,7 +8998,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.203 	\end{center}
+l.228 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8665,7 +9010,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.203 	\end{center}
+l.228 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8677,7 +9022,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.203 	\end{center}
+l.228 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8685,7 +9030,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.203 	\end{center}
+l.228 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8696,7 +9041,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.203 	\end{center}
+l.228 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8711,14 +9056,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.204 \end{figure}
+l.229 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (322.58826pt too wide) in paragraph at lines 200--205
+Overfull \hbox (322.58826pt too wide) in paragraph at lines 225--230
 []\/cmr/m/n/10 4\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Additionona
 norderedbinarytree:\/cmr/m/n/10 ][][]$
  []
@@ -8865,7 +9210,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.206 ...is topic refer to \cite{goodrich2013data}
+l.231 ...is topic refer to \cite{goodrich2013data}
                                                    in the chapter about trees.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8874,7 +9219,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `goodrich2013data' on page  undefined on input line 206
+LaTeX Warning: Citation `goodrich2013data' on page  undefined on input line 231
 .
 
 Missing character: There is no ] in font nullfont!
@@ -8902,12 +9247,12 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 206--207
+Overfull \hbox (20.0pt too wide) in paragraph at lines 231--232
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 206--207
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 231--232
 []
  []
 
@@ -8980,7 +9325,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_14' on page \thepage 
                                                   \space undefined\on@line .
-l.208 ...extbf{balanced}. In Figure \ref{trees_14}
+l.233 ...extbf{balanced}. In Figure \ref{trees_14}
                                                    there is an example of a ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8989,7 +9334,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_14' on page  undefined on input line 208.
+LaTeX Warning: Reference `trees_14' on page  undefined on input line 233.
 
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -9188,42 +9533,42 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 208--210
+Overfull \hbox (20.0pt too wide) in paragraph at lines 233--235
 []
  []
 
 
-Overfull \hbox (19.00682pt too wide) in paragraph at lines 208--210
+Overfull \hbox (19.00682pt too wide) in paragraph at lines 233--235
 \OT1/cmr/bx/n/10 bal-
  []
 
 
-Overfull \hbox (28.74983pt too wide) in paragraph at lines 208--210
+Overfull \hbox (28.74983pt too wide) in paragraph at lines 233--235
 \OT1/cmr/bx/n/10 anced
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 208--210
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 233--235
 []
  []
 
 
-Overfull \hbox (16.61102pt too wide) in paragraph at lines 208--210
+Overfull \hbox (16.61102pt too wide) in paragraph at lines 233--235
 \OT1/cmr/bx/n/10 un-
  []
 
 
-Overfull \hbox (19.00682pt too wide) in paragraph at lines 208--210
+Overfull \hbox (19.00682pt too wide) in paragraph at lines 233--235
 \OT1/cmr/bx/n/10 bal-
  []
 
 
-Overfull \hbox (28.74983pt too wide) in paragraph at lines 208--210
+Overfull \hbox (28.74983pt too wide) in paragraph at lines 233--235
 \OT1/cmr/bx/n/10 anced
  []
 
 
-Overfull \hbox (21.6857pt too wide) in paragraph at lines 208--210
+Overfull \hbox (21.6857pt too wide) in paragraph at lines 233--235
 \OML/cmm/m/it/10 O\/cmr/m/n/10 (\OML/cmm/m/it/10 n\/cmr/m/n/10 )$
  []
 
@@ -9234,7 +9579,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 \begin{figure}
+l.236 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -9244,12 +9589,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 211--212
+Overfull \hbox (20.0pt too wide) in paragraph at lines 236--237
 [] 
  []
 
 ! Undefined control sequence.
-l.213 		\includegraphics
+l.238 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_15.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9297,13 +9642,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.213 ...cs[scale=.6]{chapters/trees/images/trees_
+l.238 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   15.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.213 ...e=.6]{chapters/trees/images/trees_15.pdf}
+l.238 ...e=.6]{chapters/trees/images/trees_15.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -9318,7 +9663,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 		\caption
+l.239 		\caption
                 [An unbalanced binary tree.]{An unbalanced binary tree.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -9330,7 +9675,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 	\end{center}
+l.241 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -9342,7 +9687,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 	\end{center}
+l.241 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -9354,7 +9699,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.216 	\end{center}
+l.241 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -9362,7 +9707,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.216 	\end{center}
+l.241 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9373,7 +9718,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.216 	\end{center}
+l.241 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9388,20 +9733,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 \end{figure}
+l.242 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (258.42346pt too wide) in paragraph at lines 213--218
+Overfull \hbox (258.42346pt too wide) in paragraph at lines 238--243
 []\/cmr/m/n/10 5\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Anunbalance
 dbinarytree:\/cmr/m/n/10 ][][]$
  []
 
 ! Undefined control sequence.
-l.219 \subsection
+l.244 \subsection
                  {Binary Search Tree Implementation}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9543,7 +9888,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 219--221
+Overfull \hbox (20.0pt too wide) in paragraph at lines 244--246
 []
  []
 
@@ -9554,7 +9899,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.222 \begin{lstlisting}
+l.247 \begin{lstlisting}
                         [firstnumber=1, caption={implementation of insert an...
 
 Your command was ignored.
@@ -9658,7 +10003,7 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 222--224
+Overfull \hbox (20.0pt too wide) in paragraph at lines 247--249
 []
  []
 
@@ -9668,7 +10013,7 @@ Missing character: There is no f in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.225 	def _
+l.250 	def _
             _init__(self, root):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -9676,7 +10021,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.225 	def __
+l.250 	def __
              init__(self, root):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -9686,7 +10031,7 @@ so that I will find a matching right brace soon.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.225 	def __init__
+l.250 	def __init__
                    (self, root):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -9696,7 +10041,7 @@ so that I will find a matching right brace soon.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.227 
+l.252 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -9704,7 +10049,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.227 
+l.252 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9715,7 +10060,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.227 
+l.252 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9724,12 +10069,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 225--227
+Overfull \hbox (20.0pt too wide) in paragraph at lines 250--252
 []
  []
 
 
-Overfull \hbox (120.28238pt too wide) in paragraph at lines 225--227
+Overfull \hbox (120.28238pt too wide) in paragraph at lines 250--252
 []$ 
  []
 
@@ -9754,7 +10099,7 @@ Missing character: There is no w in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.228 	def insert(self, new_
+l.253 	def insert(self, new_
                             val):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -9762,23 +10107,23 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.230 	
+l.255 	
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 228--230
+Overfull \hbox (20.0pt too wide) in paragraph at lines 253--255
 []
  []
 
 
-Overfull \hbox (22.66205pt too wide) in paragraph at lines 228--230
+Overfull \hbox (22.66205pt too wide) in paragraph at lines 253--255
 []\OML/cmm/m/it/10 al\/cmr/m/n/10 ) :
  []
 
 
-Overfull \hbox (157.47743pt too wide) in paragraph at lines 228--230
+Overfull \hbox (157.47743pt too wide) in paragraph at lines 253--255
 \OML/cmm/m/it/10 self:insert[]elper\/cmr/m/n/10 (\OML/cmm/m/it/10 self:root; ne
 w[]al\/cmr/m/n/10 )$ 
  []
@@ -9795,7 +10140,7 @@ Missing character: There is no t in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.231 	def insert_
+l.256 	def insert_
                   helper(self, current, new_val):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -9803,72 +10148,72 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.242 	
+l.267 	
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 231--242
+Overfull \hbox (20.0pt too wide) in paragraph at lines 256--267
 []
  []
 
 
-Overfull \hbox (132.59467pt too wide) in paragraph at lines 231--242
+Overfull \hbox (132.59467pt too wide) in paragraph at lines 256--267
 []\OML/cmm/m/it/10 elper\/cmr/m/n/10 (\OML/cmm/m/it/10 self; current; new[]al\/
 cmr/m/n/10 ) :
  []
 
 
-Overfull \hbox (80.7046pt too wide) in paragraph at lines 231--242
+Overfull \hbox (80.7046pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 ifcurrent:value <
  []
 
 
-Overfull \hbox (36.59093pt too wide) in paragraph at lines 231--242
+Overfull \hbox (36.59093pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 new[]al \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (74.38693pt too wide) in paragraph at lines 231--242
+Overfull \hbox (74.38693pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 ifcurrent:right \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (200.81381pt too wide) in paragraph at lines 231--242
+Overfull \hbox (200.81381pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 self:insert[]elper\/cmr/m/n/10 (\OML/cmm/m/it/10 current:right
 ; new[]al\/cmr/m/n/10 )\OML/cmm/m/it/10 else \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (90.68839pt too wide) in paragraph at lines 231--242
+Overfull \hbox (90.68839pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 self:current:right \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (85.38266pt too wide) in paragraph at lines 231--242
+Overfull \hbox (85.38266pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 Node\/cmr/m/n/10 (\OML/cmm/m/it/10 new[]al\/cmr/m/n/10 )\OML/c
 mm/m/it/10 else \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (69.07149pt too wide) in paragraph at lines 231--242
+Overfull \hbox (69.07149pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 ifcurrent:left \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (195.49837pt too wide) in paragraph at lines 231--242
+Overfull \hbox (195.49837pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 self:insert[]elper\/cmr/m/n/10 (\OML/cmm/m/it/10 current:left;
  new[]al\/cmr/m/n/10 )\OML/cmm/m/it/10 else \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (64.65411pt too wide) in paragraph at lines 231--242
+Overfull \hbox (64.65411pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 current:left \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (62.64656pt too wide) in paragraph at lines 231--242
+Overfull \hbox (62.64656pt too wide) in paragraph at lines 256--267
 \OML/cmm/m/it/10 Node\/cmr/m/n/10 (\OML/cmm/m/it/10 new[]al\/cmr/m/n/10 )$ 
  []
 
@@ -9894,7 +10239,7 @@ Missing character: There is no d in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.243 	def search(self, find_
+l.268 	def search(self, find_
                              val):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -9902,23 +10247,23 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.245 	
+l.270 	
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 243--245
+Overfull \hbox (20.0pt too wide) in paragraph at lines 268--270
 []
  []
 
 
-Overfull \hbox (22.66205pt too wide) in paragraph at lines 243--245
+Overfull \hbox (22.66205pt too wide) in paragraph at lines 268--270
 []\OML/cmm/m/it/10 al\/cmr/m/n/10 ) :
  []
 
 
-Overfull \hbox (192.17374pt too wide) in paragraph at lines 243--245
+Overfull \hbox (192.17374pt too wide) in paragraph at lines 268--270
 \OML/cmm/m/it/10 returnself:search[]elper\/cmr/m/n/10 (\OML/cmm/m/it/10 self:ro
 ot; find[]al\/cmr/m/n/10 )$ 
  []
@@ -9935,7 +10280,7 @@ Missing character: There is no h in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.246 	def search_
+l.271 	def search_
                   helper(self, current, find_val):
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -9947,7 +10292,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.255 \end{lstlisting}
+l.280 \end{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -9956,7 +10301,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.255 \end{lstlisting}
+l.280 \end{lstlisting}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9965,49 +10310,49 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 246--256
+Overfull \hbox (20.0pt too wide) in paragraph at lines 271--281
 []
  []
 
 
-Overfull \hbox (135.40149pt too wide) in paragraph at lines 246--256
+Overfull \hbox (135.40149pt too wide) in paragraph at lines 271--281
 []\OML/cmm/m/it/10 elper\/cmr/m/n/10 (\OML/cmm/m/it/10 self; current; find[]al\
 /cmr/m/n/10 ) :
  []
 
 
-Overfull \hbox (48.87349pt too wide) in paragraph at lines 246--256
+Overfull \hbox (48.87349pt too wide) in paragraph at lines 271--281
 \OML/cmm/m/it/10 ifcurrent \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (88.4824pt too wide) in paragraph at lines 246--256
+Overfull \hbox (88.4824pt too wide) in paragraph at lines 271--281
 \OML/cmm/m/it/10 ifcurrent:value \/cmr/m/n/10 ==
  []
 
 
-Overfull \hbox (39.39775pt too wide) in paragraph at lines 246--256
+Overfull \hbox (39.39775pt too wide) in paragraph at lines 271--281
 \OML/cmm/m/it/10 find[]al \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (140.51735pt too wide) in paragraph at lines 246--256
+Overfull \hbox (140.51735pt too wide) in paragraph at lines 271--281
 \OML/cmm/m/it/10 returnTrueelifcurrent:value <
  []
 
 
-Overfull \hbox (39.39775pt too wide) in paragraph at lines 246--256
+Overfull \hbox (39.39775pt too wide) in paragraph at lines 271--281
 \OML/cmm/m/it/10 find[]al \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (235.51012pt too wide) in paragraph at lines 246--256
+Overfull \hbox (235.51012pt too wide) in paragraph at lines 271--281
 \OML/cmm/m/it/10 returnself:search[]elper\/cmr/m/n/10 (\OML/cmm/m/it/10 current
 :right; find[]al\/cmr/m/n/10 )\OML/cmm/m/it/10 else \/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (262.6613pt too wide) in paragraph at lines 246--256
+Overfull \hbox (262.6613pt too wide) in paragraph at lines 271--281
 \OML/cmm/m/it/10 returnself:search[]elper\/cmr/m/n/10 (\OML/cmm/m/it/10 current
 :left; find[]al\/cmr/m/n/10 )\OML/cmm/m/it/10 returnFalse$ 
  []
@@ -10020,7 +10365,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.256 
+l.281 
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10030,7 +10375,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <write> \newlabel{chp:trees}{{}{\thepage 
                                          }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10043,7 +10388,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_1}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10055,7 +10400,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_2}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10067,7 +10412,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_3}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10079,7 +10424,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_4}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10091,7 +10436,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{preorder}{{}{\thepage 
                                         }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10103,7 +10448,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_5}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10115,7 +10460,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{inorder}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10127,7 +10472,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_6}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10139,7 +10484,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{postorder}{{}{\thepage 
                                          }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10151,7 +10496,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_7}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10163,7 +10508,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_12}{{}{\thepage 
                                         }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10175,7 +10520,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_9}{{}{\thepage 
                                        }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10187,7 +10532,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_10}{{}{\thepage 
                                         }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10199,7 +10544,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_11}{{}{\thepage 
                                         }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10211,7 +10556,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_13}{{}{\thepage 
                                         }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10223,7 +10568,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_14}{{}{\thepage 
                                         }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10235,7 +10580,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> \newlabel{trees_15}{{}{\thepage 
                                         }}
-l.256 
+l.281 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10246,7 +10591,7 @@ and I'll forget about whatever was undefined.
 \newlabel{trees_15}{{}{}}
 ]
 ! Undefined control sequence.
-l.257 \section
+l.282 \section
               {Heaps}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10357,7 +10702,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.258 ...asing or decreasing order \cite{wikiheap}
+l.283 ...asing or decreasing order \cite{wikiheap}
                                                    (\href{https://en.wikiped...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10366,12 +10711,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `wikiheap' on page  undefined on input line 258.
+LaTeX Warning: Citation `wikiheap' on page  undefined on input line 283.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.258 ...r decreasing order \cite{wikiheap} (\href
+l.283 ...r decreasing order \cite{wikiheap} (\href
                                                   {https://en.wikipedia.org/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10416,13 +10761,13 @@ Missing character: There is no p in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.258 ...\href{https://en.wikipedia.org/wiki/Heap_
+l.283 ...\href{https://en.wikipedia.org/wiki/Heap_
                                                   (data_structure)}{Heap, Wi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.258 ...wikipedia.org/wiki/Heap_(data_structure)}
+l.283 ...wikipedia.org/wiki/Heap_(data_structure)}
                                                   {Heap, Wikipedia}). Heaps ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -10433,7 +10778,7 @@ deleted material, e.g., by typing `I$}'.
 ! Undefined control sequence.
 <write> ... `chp:datastrucutres' on page \thepage 
                                                   \space undefined\on@line .
-l.258 ...ta type (Chapter \ref{chp:datastrucutres}
+l.283 ...ta type (Chapter \ref{chp:datastrucutres}
                                                   ) priority queue (Section ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10443,12 +10788,12 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `chp:datastrucutres' on page  undefined on input line 
-258.
+283.
 
 ! Undefined control sequence.
 <write> ...ng: Reference `queue' on page \thepage 
                                                   \space undefined\on@line .
-l.258 ...res}) priority queue (Section \ref{queue}
+l.283 ...res}) priority queue (Section \ref{queue}
                                                   ). The value with the high...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10457,33 +10802,33 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `queue' on page  undefined on input line 258.
+LaTeX Warning: Reference `queue' on page  undefined on input line 283.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.259 
+l.284 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 257--259
+Overfull \hbox (20.0pt too wide) in paragraph at lines 282--284
 []
  []
 
 
-Overfull \hbox (30.78592pt too wide) in paragraph at lines 257--259
+Overfull \hbox (30.78592pt too wide) in paragraph at lines 282--284
 \OT1/cmr/bx/n/10 Heaps
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 257--259
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 282--284
 []
  []
 
 
-Overfull \hbox (1689.26157pt too wide) in paragraph at lines 257--259
+Overfull \hbox (1689.26157pt too wide) in paragraph at lines 282--284
 []\OML/cmm/m/it/10 data[]tructure\/cmr/m/n/10 )[])\OML/cmm/m/it/10 :Heapsareave
 ryefficientimplementationoftheabstractdatatype\/cmr/m/n/10 (\OML/cmm/m/it/10 Ch
 apter[]\/cmr/m/n/10 )\OML/cmm/m/it/10 priorityqueue\/cmr/m/n/10 (\OML/cmm/m/it/
@@ -10512,7 +10857,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_16' on page \thepage 
                                                   \space undefined\on@line .
-l.260 ... \textit{max heap} (Figure \ref{trees_16}
+l.285 ... \textit{max heap} (Figure \ref{trees_16}
                                                    (a)) if for every node it...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10521,7 +10866,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_16' on page  undefined on input line 260.
+LaTeX Warning: Reference `trees_16' on page  undefined on input line 285.
 
 Missing character: There is no ( in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -10653,7 +10998,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_16' on page \thepage 
                                                   \space undefined\on@line .
-l.260 ... \textit{min heap} (Figure \ref{trees_16}
+l.285 ... \textit{min heap} (Figure \ref{trees_16}
                                                    (b)) if for every node it...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10662,7 +11007,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_16' on page  undefined on input line 260.
+LaTeX Warning: Reference `trees_16' on page  undefined on input line 285.
 
 Missing character: There is no ( in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -10767,37 +11112,37 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 260--261
+Overfull \hbox (20.0pt too wide) in paragraph at lines 285--286
 []
  []
 
 
-Overfull \hbox (17.92769pt too wide) in paragraph at lines 260--261
+Overfull \hbox (17.92769pt too wide) in paragraph at lines 285--286
 \OT1/cmr/m/it/10 max
  []
 
 
-Overfull \hbox (19.42209pt too wide) in paragraph at lines 260--261
+Overfull \hbox (19.42209pt too wide) in paragraph at lines 285--286
 \OT1/cmr/m/it/10 heap
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 260--261
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 285--286
 []
  []
 
 
-Overfull \hbox (16.86658pt too wide) in paragraph at lines 260--261
+Overfull \hbox (16.86658pt too wide) in paragraph at lines 285--286
 \OT1/cmr/m/it/10 min
  []
 
 
-Overfull \hbox (19.42209pt too wide) in paragraph at lines 260--261
+Overfull \hbox (19.42209pt too wide) in paragraph at lines 285--286
 \OT1/cmr/m/it/10 heap
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 260--261
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 285--286
 []
  []
 
@@ -10808,7 +11153,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.262 \begin{figure}
+l.287 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10818,12 +11163,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 262--263
+Overfull \hbox (20.0pt too wide) in paragraph at lines 287--288
 [] 
  []
 
 ! Undefined control sequence.
-l.264 		\includegraphics
+l.289 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_16.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10871,13 +11216,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.264 ...cs[scale=.6]{chapters/trees/images/trees_
+l.289 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   16.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.264 ...e=.6]{chapters/trees/images/trees_16.pdf}
+l.289 ...e=.6]{chapters/trees/images/trees_16.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -10892,7 +11237,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.265 		\caption
+l.290 		\caption
                 [Max heap (a) and min heap (b) example.]{Max heap (a) and mi...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -10905,7 +11250,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.267 	\end{center}
+l.292 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -10917,7 +11262,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.267 	\end{center}
+l.292 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -10929,7 +11274,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.267 	\end{center}
+l.292 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -10937,7 +11282,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 	\end{center}
+l.292 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10948,7 +11293,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.267 	\end{center}
+l.292 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10963,14 +11308,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.268 \end{figure}
+l.293 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (358.76138pt too wide) in paragraph at lines 264--269
+Overfull \hbox (358.76138pt too wide) in paragraph at lines 289--294
 []\/cmr/m/n/10 6\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Maxheap\/cm
 r/m/n/10 (\OML/cmm/m/it/10 a\/cmr/m/n/10 )\OML/cmm/m/it/10 andminheap\/cmr/m/n/
 10 (\OML/cmm/m/it/10 b\/cmr/m/n/10 )\OML/cmm/m/it/10 example:\/cmr/m/n/10 ][][]
@@ -11039,7 +11384,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 270--271
+Overfull \hbox (20.0pt too wide) in paragraph at lines 295--296
 []
  []
 
@@ -11241,7 +11586,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.273 \subsection
+l.298 \subsection
                  {Heapify}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11474,27 +11819,27 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 272--275
+Overfull \hbox (20.0pt too wide) in paragraph at lines 297--300
 []
  []
 
 
-Overfull \hbox (23.31934pt too wide) in paragraph at lines 272--275
+Overfull \hbox (23.31934pt too wide) in paragraph at lines 297--300
 \OT1/cmr/bx/n/10 peek
  []
 
 
-Overfull \hbox (20.68336pt too wide) in paragraph at lines 272--275
+Overfull \hbox (20.68336pt too wide) in paragraph at lines 297--300
 \OML/cmm/m/it/10 O\/cmr/m/n/10 (1)$
  []
 
 
-Overfull \hbox (33.58218pt too wide) in paragraph at lines 272--275
+Overfull \hbox (33.58218pt too wide) in paragraph at lines 297--300
 \OML/cmm/m/it/10 O\/cmr/m/n/10 ([])  =
  []
 
 
-Overfull \hbox (21.6857pt too wide) in paragraph at lines 272--275
+Overfull \hbox (21.6857pt too wide) in paragraph at lines 297--300
 \OML/cmm/m/it/10 O\/cmr/m/n/10 (\OML/cmm/m/it/10 n\/cmr/m/n/10 )$
  []
 
@@ -11505,7 +11850,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.276 \begin{figure}
+l.301 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -11515,12 +11860,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 276--277
+Overfull \hbox (20.0pt too wide) in paragraph at lines 301--302
 [] 
  []
 
 ! Undefined control sequence.
-l.278 		\includegraphics
+l.303 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_17.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11568,13 +11913,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.278 ...cs[scale=.6]{chapters/trees/images/trees_
+l.303 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   17.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.278 ...e=.6]{chapters/trees/images/trees_17.pdf}
+l.303 ...e=.6]{chapters/trees/images/trees_17.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -11589,7 +11934,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.279 		\caption
+l.304 		\caption
                 [Add a new node to a heap.]{Add a new node to a heap.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11601,7 +11946,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.281 	\end{center}
+l.306 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11613,7 +11958,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.281 	\end{center}
+l.306 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11625,7 +11970,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.281 	\end{center}
+l.306 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11633,7 +11978,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.281 	\end{center}
+l.306 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -11644,7 +11989,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.281 	\end{center}
+l.306 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -11659,14 +12004,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.282 \end{figure}
+l.307 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (230.86163pt too wide) in paragraph at lines 278--283
+Overfull \hbox (230.86163pt too wide) in paragraph at lines 303--308
 []\/cmr/m/n/10 7\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Addanewnode
 toaheap:\/cmr/m/n/10 ][][]$
  []
@@ -11694,7 +12039,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_17' on page \thepage 
                                                   \space undefined\on@line .
-l.284 In the example of Figure \ref{trees_17}
+l.309 In the example of Figure \ref{trees_17}
                                               only one swap is necessary. Th...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11703,7 +12048,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_17' on page  undefined on input line 284.
+LaTeX Warning: Reference `trees_17' on page  undefined on input line 309.
 
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -11893,22 +12238,22 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 284--285
+Overfull \hbox (20.0pt too wide) in paragraph at lines 309--310
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 284--285
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 309--310
 []
  []
 
 
-Overfull \hbox (26.93642pt too wide) in paragraph at lines 284--285
+Overfull \hbox (26.93642pt too wide) in paragraph at lines 309--310
 \OML/cmm/m/it/10 log\/cmr/m/n/10 (\OML/cmm/m/it/10 n\/cmr/m/n/10 )$
  []
 
 ! Undefined control sequence.
-l.286 \subsection
+l.311 \subsection
                  {Heap Implementation}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12029,7 +12374,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_18' on page \thepage 
                                                   \space undefined\on@line .
-l.287 ...e following figure (Figure \ref{trees_18}
+l.312 ...e following figure (Figure \ref{trees_18}
                                                   ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12038,17 +12383,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_18' on page  undefined on input line 287.
+LaTeX Warning: Reference `trees_18' on page  undefined on input line 312.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 286--288
+Overfull \hbox (20.0pt too wide) in paragraph at lines 311--313
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 286--288
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 311--313
 [] 
  []
 
@@ -12059,7 +12404,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.289 \begin{figure}
+l.314 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12069,12 +12414,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 289--290
+Overfull \hbox (20.0pt too wide) in paragraph at lines 314--315
 [] 
  []
 
 ! Undefined control sequence.
-l.291 		\includegraphics
+l.316 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_18.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12122,13 +12467,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.291 ...cs[scale=.6]{chapters/trees/images/trees_
+l.316 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   18.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.291 ...e=.6]{chapters/trees/images/trees_18.pdf}
+l.316 ...e=.6]{chapters/trees/images/trees_18.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -12143,7 +12488,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.292 		\caption
+l.317 		\caption
                 [Implementation example of a heap using an array.]{Implement...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -12156,7 +12501,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 	\end{center}
+l.319 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -12168,7 +12513,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 	\end{center}
+l.319 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -12180,7 +12525,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 	\end{center}
+l.319 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -12188,7 +12533,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.294 	\end{center}
+l.319 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -12199,7 +12544,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.294 	\end{center}
+l.319 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -12214,20 +12559,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.295 \end{figure}
+l.320 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (455.72623pt too wide) in paragraph at lines 291--296
+Overfull \hbox (455.72623pt too wide) in paragraph at lines 316--321
 []\/cmr/m/n/10 8\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Implementat
 ionexampleofaheapusinganarray:\/cmr/m/n/10 ][][]$
  []
 
 ! Undefined control sequence.
-l.297 \section
+l.322 \section
               {Self-balancing Binary Search Trees}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12398,7 +12743,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.298 ...deletion is done \cite{wikiselfbalancing}
+l.323 ...deletion is done \cite{wikiselfbalancing}
                                                    (\href{https://en.wikiped...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12407,13 +12752,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `wikiselfbalancing' on page  undefined on input line 29
-8.
+LaTeX Warning: Citation `wikiselfbalancing' on page  undefined on input line 32
+3.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.298 ...n is done \cite{wikiselfbalancing} (\href
+l.323 ...n is done \cite{wikiselfbalancing} (\href
                                                   {https://en.wikipedia.org/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12468,13 +12813,13 @@ Missing character: There is no g in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.298 ...s://en.wikipedia.org/wiki/Self-balancing_
+l.323 ...s://en.wikipedia.org/wiki/Self-balancing_
                                                   binary_search_tree}{Self-b...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.298 ...g/wiki/Self-balancing_binary_search_tree}
+l.323 ...g/wiki/Self-balancing_binary_search_tree}
                                                   {Self-balancing binary sea...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -12485,48 +12830,48 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.299 
+l.324 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 297--299
+Overfull \hbox (20.0pt too wide) in paragraph at lines 322--324
 []
  []
 
 
-Overfull \hbox (22.20128pt too wide) in paragraph at lines 297--299
+Overfull \hbox (22.20128pt too wide) in paragraph at lines 322--324
 \OT1/cmr/bx/n/10 Self-
  []
 
 
-Overfull \hbox (47.59692pt too wide) in paragraph at lines 297--299
+Overfull \hbox (47.59692pt too wide) in paragraph at lines 322--324
 \OT1/cmr/bx/n/10 balancing
  []
 
 
-Overfull \hbox (13.4166pt too wide) in paragraph at lines 297--299
+Overfull \hbox (13.4166pt too wide) in paragraph at lines 322--324
 \OT1/cmr/bx/n/10 bi-
  []
 
 
-Overfull \hbox (22.78459pt too wide) in paragraph at lines 297--299
+Overfull \hbox (22.78459pt too wide) in paragraph at lines 322--324
 \OT1/cmr/bx/n/10 nary
  []
 
 
-Overfull \hbox (24.286pt too wide) in paragraph at lines 297--299
+Overfull \hbox (24.286pt too wide) in paragraph at lines 322--324
 \OT1/cmr/bx/n/10 trees
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 297--299
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 322--324
 []
  []
 
 
-Overfull \hbox (701.11984pt too wide) in paragraph at lines 297--299
+Overfull \hbox (701.11984pt too wide) in paragraph at lines 322--324
 []\OML/cmm/m/it/10 inary[]earch[]ree[]\/cmr/m/n/10 )\OML/cmm/m/it/10 :Thisstruc
 tureisanefficientwaytoimplementabstractdatatypelikelists; priorityqueue; andset
 s:$ 
@@ -12539,7 +12884,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.300 \begin{figure}
+l.325 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12549,12 +12894,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 300--301
+Overfull \hbox (20.0pt too wide) in paragraph at lines 325--326
 [] 
  []
 
 ! Undefined control sequence.
-l.302 		\includegraphics
+l.327 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_19.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12602,13 +12947,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.302 ...cs[scale=.6]{chapters/trees/images/trees_
+l.327 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   19.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.302 ...e=.6]{chapters/trees/images/trees_19.pdf}
+l.327 ...e=.6]{chapters/trees/images/trees_19.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -12623,14 +12968,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.303 		\caption
+l.328 		\caption
                 [Example of balanced (b) and unbalanced (a) tree.]{Example o...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.303 ...) and unbalanced (a) tree. Credits: \href
+l.328 ...) and unbalanced (a) tree. Credits: \href
                                                   {https://en.wikipedia.org/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12645,7 +12990,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305 	\end{center}
+l.330 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -12657,7 +13002,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305 	\end{center}
+l.330 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -12669,7 +13014,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305 	\end{center}
+l.330 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -12677,7 +13022,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.305 	\end{center}
+l.330 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -12688,7 +13033,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.305 	\end{center}
+l.330 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -12703,14 +13048,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306 \end{figure}
+l.331 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (977.54024pt too wide) in paragraph at lines 302--307
+Overfull \hbox (977.54024pt too wide) in paragraph at lines 327--332
 []\/cmr/m/n/10 9\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Exampleofba
 lanced\/cmr/m/n/10 (\OML/cmm/m/it/10 b\/cmr/m/n/10 )\OML/cmm/m/it/10 andunbalan
 ced\/cmr/m/n/10 (\OML/cmm/m/it/10 a\/cmr/m/n/10 )\OML/cmm/m/it/10 tree:\/cmr/m/
@@ -12728,7 +13073,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ... Reference `trees_19' on page \thepage 
                                                   \space undefined\on@line .
-l.308 In Figure \ref{trees_19}
+l.333 In Figure \ref{trees_19}
                                is show an unbalanced tree (case a) in which ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12737,7 +13082,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `trees_19' on page  undefined on input line 308.
+LaTeX Warning: Reference `trees_19' on page  undefined on input line 333.
 
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -12898,17 +13243,17 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no 3 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 308--309
+Overfull \hbox (20.0pt too wide) in paragraph at lines 333--334
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 308--309
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 333--334
 []
  []
 
 ! Undefined control sequence.
-l.310 \section
+l.335 \section
               {Red-Black Trees}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13125,7 +13470,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.311 ...d deletion operations \cite{wikiblackred}
+l.336 ...d deletion operations \cite{wikiblackred}
                                                    (\href{https://en.wikiped...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13134,12 +13479,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `wikiblackred' on page  undefined on input line 311.
+LaTeX Warning: Citation `wikiblackred' on page  undefined on input line 336.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.311 ...ion operations \cite{wikiblackred} (\href
+l.336 ...ion operations \cite{wikiblackred} (\href
                                                   {https://en.wikipedia.org/...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13181,37 +13526,37 @@ Missing character: There is no R in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 310--312
+Overfull \hbox (20.0pt too wide) in paragraph at lines 335--337
 []
  []
 
 
-Overfull \hbox (20.22908pt too wide) in paragraph at lines 310--312
+Overfull \hbox (20.22908pt too wide) in paragraph at lines 335--337
 \OT1/cmr/bx/n/10 red-
  []
 
 
-Overfull \hbox (26.03456pt too wide) in paragraph at lines 310--312
+Overfull \hbox (26.03456pt too wide) in paragraph at lines 335--337
 \OT1/cmr/bx/n/10 black
  []
 
 
-Overfull \hbox (24.286pt too wide) in paragraph at lines 310--312
+Overfull \hbox (24.286pt too wide) in paragraph at lines 335--337
 \OT1/cmr/bx/n/10 trees
  []
 
 
-Overfull \hbox (16.39577pt too wide) in paragraph at lines 310--312
+Overfull \hbox (16.39577pt too wide) in paragraph at lines 335--337
 \OT1/cmr/bx/n/10 red
  []
 
 
-Overfull \hbox (26.03456pt too wide) in paragraph at lines 310--312
+Overfull \hbox (26.03456pt too wide) in paragraph at lines 335--337
 \OT1/cmr/bx/n/10 black
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 310--312
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 335--337
 [] 
  []
 
@@ -13257,7 +13602,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 313--314
+Overfull \hbox (20.0pt too wide) in paragraph at lines 338--339
 []
  []
 
@@ -13291,12 +13636,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (16.39577pt too wide) in paragraph at lines 315--316
+Overfull \hbox (16.39577pt too wide) in paragraph at lines 340--341
 \OT1/cmr/bx/n/10 red
  []
 
 
-Overfull \hbox (26.03456pt too wide) in paragraph at lines 315--316
+Overfull \hbox (26.03456pt too wide) in paragraph at lines 340--341
 \OT1/cmr/bx/n/10 black 
  []
 
@@ -13372,22 +13717,22 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (18.84712pt too wide) in paragraph at lines 316--317
+Overfull \hbox (18.84712pt too wide) in paragraph at lines 341--342
 \OT1/cmr/bx/n/10 null
  []
 
 
-Overfull \hbox (17.56934pt too wide) in paragraph at lines 316--317
+Overfull \hbox (17.56934pt too wide) in paragraph at lines 341--342
 \OT1/cmr/bx/n/10 leaf
  []
 
 
-Overfull \hbox (28.654pt too wide) in paragraph at lines 316--317
+Overfull \hbox (28.654pt too wide) in paragraph at lines 341--342
 \OT1/cmr/bx/n/10 nodes
  []
 
 
-Overfull \hbox (18.84712pt too wide) in paragraph at lines 316--317
+Overfull \hbox (18.84712pt too wide) in paragraph at lines 341--342
 \OT1/cmr/bx/n/10 null 
  []
 
@@ -13423,12 +13768,12 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (16.39577pt too wide) in paragraph at lines 317--318
+Overfull \hbox (16.39577pt too wide) in paragraph at lines 342--343
 \OT1/cmr/bx/n/10 red
  []
 
 
-Overfull \hbox (26.03456pt too wide) in paragraph at lines 317--318
+Overfull \hbox (26.03456pt too wide) in paragraph at lines 342--343
 \OT1/cmr/bx/n/10 black 
  []
 
@@ -13473,7 +13818,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (26.03456pt too wide) in paragraph at lines 318--319
+Overfull \hbox (26.03456pt too wide) in paragraph at lines 343--344
 \OT1/cmr/bx/n/10 black
  []
 
@@ -13601,7 +13946,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (26.03456pt too wide) in paragraph at lines 319--320
+Overfull \hbox (26.03456pt too wide) in paragraph at lines 344--345
 \OT1/cmr/bx/n/10 black
  []
 
@@ -13612,7 +13957,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.322 \begin{figure}
+l.347 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -13622,12 +13967,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 322--323
+Overfull \hbox (20.0pt too wide) in paragraph at lines 347--348
 [] 
  []
 
 ! Undefined control sequence.
-l.324 		\includegraphics
+l.349 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_20.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13675,13 +14020,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.324 ...cs[scale=.6]{chapters/trees/images/trees_
+l.349 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   20.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.324 ...e=.6]{chapters/trees/images/trees_20.pdf}
+l.349 ...e=.6]{chapters/trees/images/trees_20.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -13696,7 +14041,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.325 		\caption
+l.350 		\caption
                 [A red-black tree.]{A red-black tree.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -13708,7 +14053,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.327 	\end{center}
+l.352 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -13720,7 +14065,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.327 	\end{center}
+l.352 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -13732,7 +14077,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.327 	\end{center}
+l.352 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -13740,7 +14085,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.327 	\end{center}
+l.352 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -13751,7 +14096,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.327 	\end{center}
+l.352 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -13766,20 +14111,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.328 \end{figure}
+l.353 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (59.51173pt too wide) in paragraph at lines 324--329
+Overfull \hbox (59.51173pt too wide) in paragraph at lines 349--354
 []\/cmr/m/n/10 0\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Ared \OMS/c
 msy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (123.34508pt too wide) in paragraph at lines 324--329
+Overfull \hbox (123.34508pt too wide) in paragraph at lines 349--354
 \OML/cmm/m/it/10 blacktree:\/cmr/m/n/10 ][][]$
  []
 
@@ -13899,7 +14244,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 330--331
+Overfull \hbox (20.0pt too wide) in paragraph at lines 355--356
 []
  []
 
@@ -13910,7 +14255,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.332 \begin{figure}
+l.357 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -13920,12 +14265,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 332--333
+Overfull \hbox (20.0pt too wide) in paragraph at lines 357--358
 [] 
  []
 
 ! Undefined control sequence.
-l.334 		\includegraphics
+l.359 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_21.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -13973,13 +14318,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.334 ...cs[scale=.6]{chapters/trees/images/trees_
+l.359 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   21.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.334 ...e=.6]{chapters/trees/images/trees_21.pdf}
+l.359 ...e=.6]{chapters/trees/images/trees_21.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -13994,7 +14339,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.335 		\caption
+l.360 		\caption
                 [Insertion of a new node and the following updating of the c...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -14007,7 +14352,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.337 	\end{center}
+l.362 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14019,7 +14364,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.337 	\end{center}
+l.362 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14031,7 +14376,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.337 	\end{center}
+l.362 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14039,7 +14384,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.337 	\end{center}
+l.362 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14050,7 +14395,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.337 	\end{center}
+l.362 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14065,14 +14410,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.338 \end{figure}
+l.363 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (606.61914pt too wide) in paragraph at lines 334--339
+Overfull \hbox (606.61914pt too wide) in paragraph at lines 359--364
 []\/cmr/m/n/10 1\OML/cmm/m/it/10 :pdf\/cmr/m/n/10 [\OML/cmm/m/it/10 Insertionof
 anewnodeandthefollowingupdatingofthecolornodes:\/cmr/m/n/10 ][][]$
  []
@@ -14212,7 +14557,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 340--341
+Overfull \hbox (20.0pt too wide) in paragraph at lines 365--366
 []
  []
 
@@ -14223,7 +14568,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.342 \begin{figure}
+l.367 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14233,12 +14578,12 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 342--343
+Overfull \hbox (20.0pt too wide) in paragraph at lines 367--368
 [] 
  []
 
 ! Undefined control sequence.
-l.344 		\includegraphics
+l.369 		\includegraphics
                         [scale=.6]{chapters/trees/images/trees_22.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -14286,13 +14631,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.344 ...cs[scale=.6]{chapters/trees/images/trees_
+l.369 ...cs[scale=.6]{chapters/trees/images/trees_
                                                   22.pdf}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.344 ...e=.6]{chapters/trees/images/trees_22.pdf}
+l.369 ...e=.6]{chapters/trees/images/trees_22.pdf}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -14307,7 +14652,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.345 		\caption
+l.370 		\caption
                 [Left and right rotation for balancing the tree after an ins...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -14320,7 +14665,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.347 	\end{center}
+l.372 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14332,7 +14677,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.347 	\end{center}
+l.372 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14344,7 +14689,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.347 	\end{center}
+l.372 	\end{center}
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -14352,7 +14697,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.347 	\end{center}
+l.372 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14363,7 +14708,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.347 	\end{center}
+l.372 	\end{center}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -14378,7 +14723,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.348 \end{figure}
+l.373 \end{figure}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -14392,10 +14737,10 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 53 strings out of 481239
- 731 string characters out of 5920377
+ 54 strings out of 481239
+ 745 string characters out of 5920377
  248564 words of memory out of 5000000
- 15416 multiletter control sequences out of 15000+600000
+ 15417 multiletter control sequences out of 15000+600000
  532992 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  18i,4n,23p,661b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
