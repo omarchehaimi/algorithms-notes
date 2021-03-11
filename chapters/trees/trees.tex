@@ -940,7 +940,7 @@ Let us consider we would like to add a new node to a heap. In this case the node
    	 		child{node (n5) {$5$} edge from parent[->, >=stealth']} 
 			child{node (n20) {$20$} edge from parent[->, >=stealth']} 
    	 	};
-\draw ($(n30) + (2, -0.3)$) node[draw=none, rectangle] {\textcolor{red}{30>21 no swap}};
+\draw ($(n30) + (2, 0)$) node[draw=none, rectangle] {\textcolor{red}{30>21 no swap}};
 \draw ($(n21) + (2, 0)$) node[draw=none, rectangle] {\textcolor{red}{20<21 swap}};
 
 \path[->, red] (n20.east) edge [bend right=60] node[draw=none, xshift=24pt] {} (n21.east);
@@ -961,6 +961,40 @@ To implement a heap we can use an array. An example of this application is shown
 		\caption[Implementation example of a heap using an array.]{Implementation example of a heap using an array.}
 		\label{trees_18}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[thick, every node/.style={circle,draw}, minimum size=8mm]
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=15mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
+
+	\node (n19) {$19$}
+   		child{node (n17) {$17$} edge from parent[->, >=stealth']
+			child{node (n11) {$11$} edge from parent[->, >=stealth']
+				child{node (n2) {$2$} edge from parent[->, >=stealth']}
+				child{node (n1) {$1$} edge from parent[->, >=stealth']}} 
+			child{node (n7) {$7$} edge from parent[->, >=stealth']}   			
+   		}
+   	 	child{node (n21) {$13$} edge from parent[->, >=stealth']
+   	 		child{node (n5) {$5$} edge from parent[->, >=stealth']} 
+			child{node (n3) {$3$} edge from parent[->, >=stealth']} 
+   	 	};
+\draw ($(n19) + (-4, 1)$) node[draw=none, rectangle, align=center] {Level};
+\draw ($(n19) + (-4, 0.1)$) node[draw=none, rectangle, align=center] {1};
+\draw ($(n19) + (-4, -0.9)$) node[draw=none, rectangle, align=center] {2};
+\draw ($(n19) + (-4, -1.9)$) node[draw=none, rectangle, align=center] {3};
+\draw ($(n19) + (-4, -3.5)$) node[draw=none, rectangle, align=center] {4};
+
+\matrix (m1) at ($(n2) + (0, -1)$) [matrix of nodes, nodes={draw, minimum size=8mm},
+    column sep=-\pgflinewidth] { \node[rectangle, align=center]{a}; \\ \node[rectangle, align=center]{b}; \\};
+
+\end{tikzpicture}
+\caption[Implementation example of a heap using an array.]{Implementation example of a heap using an array.}
+\label{trees_18}
 \end{figure}
 
 \section{Self-balancing Binary Search Trees}
