@@ -75,8 +75,8 @@ Trees must be completed connected structures, this means that there are not any 
    			child{node {$b$}}
    		 	child{node {$c$} edge from parent[draw=none]};
    		
-   		\draw[red, style={-}] (-1,0.2) -- (1,-1.6);
-		\draw[red, style={-}] (1,0.2) -- (-1,-1.6);
+   		\draw[BrickRed, style={-}] (-1,0.2) -- (1,-1.6);
+		\draw[BrickRed, style={-}] (1,0.2) -- (-1,-1.6);
 	\end{tikzpicture}
 	\caption{}
 	\label{trees_2_nccc}
@@ -90,8 +90,8 @@ Trees must be completed connected structures, this means that there are not any 
    		 	child{node (ct2) {$c$}};
    		 \draw[->, >=stealth'] (ct1) -- (ct2);  
    		 
-   		 \draw[red, style={-}] (-1,0.2) -- (1,-1.6);
-		 \draw[red, style={-}] (1,0.2) -- (-1,-1.6);
+   		 \draw[BrickRed, style={-}] (-1,0.2) -- (1,-1.6);
+		 \draw[BrickRed, style={-}] (1,0.2) -- (-1,-1.6);
 	\end{tikzpicture}
 	\caption{}
 	\label{trees_2_c}
@@ -519,12 +519,12 @@ Before the delete process there is always a search one for finding the element t
 \node (na){$a$}
    child{node (nb) {$b$}
              child {node (nd) {$d$}
-				child{node[red] (ng) {$g$} edge from parent[red]}
-				child{node[red] (nh) {$h$} edge from parent[red]}             
+				child{node[BrickRed] (ng) {$g$} edge from parent[BrickRed]}
+				child{node[BrickRed] (nh) {$h$} edge from parent[BrickRed]}             
              }
              child {node (ne) {$e$}
-             	child{node[red] (ni) {$i$} edge from parent[red]}
-				child{node[red] (nj) {$j$} edge from parent[red]}
+             	child{node[BrickRed] (ni) {$i$} edge from parent[BrickRed]}
+				child{node[BrickRed] (nj) {$j$} edge from parent[BrickRed]}
              }
         }
    child{node (nc) {$c$}
@@ -532,15 +532,15 @@ Before the delete process there is always a search one for finding the element t
 			child{node (nf) {$f$}}
 		};
 
-\draw[red, style={-}] ($(nb) + (0.5,0.5)$) -- ($(nb) + (-0.5,-0.5)$);
-\draw[red, style={-}] ($(nb) + (-0.5,0.5)$) -- ($(nb) + (0.5,-0.5)$);
+\draw[BrickRed, style={-}] ($(nb) + (0.5,0.5)$) -- ($(nb) + (-0.5,-0.5)$);
+\draw[BrickRed, style={-}] ($(nb) + (-0.5,0.5)$) -- ($(nb) + (0.5,-0.5)$);
 
-\draw[red, style={-}] ($(nc) + (0.5,0.5)$) -- ($(nc) + (-0.5,-0.5)$);
-\draw[red, style={-}] ($(nc) + (-0.5,0.5)$) -- ($(nc) + (0.5,-0.5)$);
+\draw[BrickRed, style={-}] ($(nc) + (0.5,0.5)$) -- ($(nc) + (-0.5,-0.5)$);
+\draw[BrickRed, style={-}] ($(nc) + (-0.5,0.5)$) -- ($(nc) + (0.5,-0.5)$);
 
-\path[->, red] (nf.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 1} (nc.east);
-\path[->, red] (ne.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 2} (nb.east);
-\path[->, red] (ng.north west) edge [bend left=100] node[draw=none, xshift=-22pt] {Case 3} (nb.west);
+\path[->, BrickRed] (nf.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 1} (nc.east);
+\path[->, BrickRed] (ne.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 2} (nb.east);
+\path[->, BrickRed] (ng.north west) edge [bend left=100] node[draw=none, xshift=-22pt] {Case 3} (nb.west);
 
 \end{tikzpicture}
 \caption[Delete an element of a tree.]{Delete an element of a tree.}
@@ -577,41 +577,41 @@ Insert a new element to a binary tree is not a hard operation, because it is eno
              child {node (ne) {$e$} edge from parent[->, >=stealth']}
         }
    child{node (nc) {$c$} edge from parent[->, >=stealth']
-			child{node[red] (ng) {$g$} edge from parent[red, ->, >=stealth']}
+			child{node[BrickRed] (ng) {$g$} edge from parent[BrickRed, ->, >=stealth']}
 			child{node (nf) {$f$} edge from parent[->, >=stealth']}
 		};
 
-\draw[red, style={-}, dashed] 
+\draw[BrickRed, style={-}, dashed] 
 	($(na) + (0.5,0.5)$) -- 
 	($(na) + (-0.5,0.5)$) --
 	($(na) + (-0.5,-0.5)$) --
 	($(na) + (0.5,-0.5)$) --
 	($(na) + (0.5,0.5)$);
 
-\draw[red, style={-}, dashed] 
+\draw[BrickRed, style={-}, dashed] 
 	($(nb) + (0.5,0.5)$) -- 
 	($(nb) + (-0.5,0.5)$) --
 	($(nb) + (-0.5,-0.5)$) --
 	($(nb) + (0.5,-0.5)$) --
 	($(nb) + (0.5,0.5)$);
 
-\draw[red, style={-}, dashed] 
+\draw[BrickRed, style={-}, dashed] 
 	($(nd) + (0.5,0.5)$) -- 
 	($(nd) + (-0.5,0.5)$) --
 	($(nd) + (-0.5,-0.5)$) --
 	($(nd) + (0.5,-0.5)$) --
 	($(nd) + (0.5,0.5)$);
 
-\draw[red, style={-}, dashed] 
+\draw[BrickRed, style={-}, dashed] 
 	($(nh) + (0.5,0.5)$) -- 
 	($(nh) + (-0.5,0.5)$) --
 	($(nh) + (-0.5,-0.5)$) --
 	($(nh) + (0.5,-0.5)$) --
 	($(nh) + (0.5,0.5)$);
 	
-\draw ($(nh) + (1,0)$) node[draw=none, red, minimum size=2mm, style={-}] {$1$};
+\draw ($(nh) + (1,0)$) node[draw=none, BrickRed, minimum size=2mm, style={-}] {$1$};
 
-\draw[red, style={-}, dashed] 
+\draw[BrickRed, style={-}, dashed] 
 	($(nc) + (0.5,0.5)$) -- 
 	($(nc) + (-0.5,0.5)$) --
 	($(nc) + (-0.5,-0.5)$) --
@@ -737,19 +737,19 @@ Performing operations such as search, addition, or removal of an element it is a
 \tikzstyle{level 3}=[level distance=15mm, sibling distance=1cm]
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
-\node[red] (n5){$5$}
+\node[BrickRed] (n5){$5$}
    child{node (n3) {$3$} edge from parent[->, >=stealth']
              child {node (n1) {$1$} edge from parent[->, >=stealth']}
 			 child[missing]
         }
-   child{node[red] (n8) {$8$} edge from parent[->, >=stealth']
-			child{node[red] (n7) {$7$} edge from parent[->, >=stealth']}
+   child{node[BrickRed] (n8) {$8$} edge from parent[->, >=stealth']
+			child{node[BrickRed] (n7) {$7$} edge from parent[->, >=stealth']}
 			child{node (n10) {$10$} edge from parent[->, >=stealth']}
 		};
 
-\draw ($(n5) + (0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{red}{5<7}};
-\draw ($(n8) + (0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{red}{8>7}};
-\draw ($(n7) + (-0.5, 0.6)$) node[draw=none, rectangle] {\textcolor{red}{7=7}};
+\draw ($(n5) + (0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{BrickRed}{5<7}};
+\draw ($(n8) + (0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{BrickRed}{8>7}};
+\draw ($(n7) + (-0.5, 0.6)$) node[draw=none, rectangle] {\textcolor{BrickRed}{7=7}};
 
 \end{tikzpicture}
 \caption[Search on an ordered binary tree.]{Search on an ordered binary tree.}
@@ -777,18 +777,18 @@ Let us consider instead we would like to add a new node of value 4 to the tree o
 \tikzstyle{level 3}=[level distance=15mm, sibling distance=1cm]
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
-\node[red] (n5){$5$}
-   child{node[red] (n3) {$3$} edge from parent[->, >=stealth']
+\node[BrickRed] (n5){$5$}
+   child{node[BrickRed] (n3) {$3$} edge from parent[->, >=stealth']
              child {node (n1) {$1$} edge from parent[->, >=stealth']}
-			 child {node[red] (n4) {$4$} edge from parent[->, >=stealth']}
+			 child {node[BrickRed] (n4) {$4$} edge from parent[->, >=stealth']}
         }
    child{node(n8) {$8$} edge from parent[->, >=stealth']
 			child{node (n7) {$7$} edge from parent[->, >=stealth']}
 			child{node (n10) {$10$} edge from parent[->, >=stealth']}
 		};
 
-\draw ($(n5) + (-0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{red}{5<7}};
-\draw ($(n3) + (-0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{red}{8>7}};
+\draw ($(n5) + (-0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{BrickRed}{5<7}};
+\draw ($(n3) + (-0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{BrickRed}{8>7}};
 
 \end{tikzpicture}
 \caption[Addition on an ordered binary tree.]{Addition on an ordered binary tree.}
@@ -1210,4 +1210,62 @@ In case the insertion or the removal does nor respect the rules of the red-black
 		\caption[Left and right rotation for balancing the tree after an insertion.]{Left and right rotation for balancing the tree after an insertion.}
 		\label{trees_22}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.4\linewidth}
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=10mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=10mm, sibling distance=1cm]
+
+\node {$9$}
+   	child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$4$}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+   	}
+    child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] (n16) {$16$}
+    	child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] (n13) {$13$}
+			child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] (n18) {$18$}}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+		}
+   	 	child{node[shape=circle, fill=black, minimum size=1mm] (ne) {}}
+   	 };
+\path[->, BrickRed] (n13.north west) edge [bend left=20] node[draw=none, xshift=24pt] {} (n16.west);
+\path[->, BrickRed] (n18.west) edge [bend left=20] node[draw=none, xshift=24pt] {} (n13.west);
+\path[->, BrickRed] (n16.east) edge [bend left=20] node[draw=none, xshift=24pt] {} (ne.north east);
+\end{tikzpicture}
+\end{subfigure}
+\hspace{1em}
+\begin{subfigure}[b]{0.4\linewidth}
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=10mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=10mm, sibling distance=1cm]
+
+\node {$9$}
+   	child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$4$}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+   	}
+    child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] (n16) {$16$}
+    	child{node (n13) {$13$}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}    	
+    	}
+		child{node (n18) {$18$}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+		}
+   	 };
+\end{tikzpicture}
+\end{subfigure}
+\caption[An example of right rotation.]{An example of right rotation.}
+\label{trees_22}
 \end{figure}

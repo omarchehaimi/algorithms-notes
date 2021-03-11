@@ -17,7 +17,7 @@ A graph is a discrete mathematical structure in which the connections between it
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}]
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}, >=stealth']
 
 		\node[main] (1) {$a$};
 		\node[main] (2) [below left of=1] {$b$}; 
@@ -37,7 +37,7 @@ A graph is a discrete mathematical structure in which the connections between it
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}]
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}, >=stealth']
 		\node[main] (11) {$a$};
 		\node[main] (22) [below left of=11] {$b$}; 
 		\node[main] (33) [below right of=11] {$c$};
@@ -72,7 +72,7 @@ A graph is said to be \textbf{connected} if every pairs of nodes are connected. 
 A directed graph is said to be \textbf{strongly connected} if every pairs of nodes can be reached by one or more path.
 
 \paragraph{Weakly Connected}
-A directed graph is said to be \textbf{weakly connected} if by replacing all the direct edges with undirectd ones, the new graph is connected. in a directed graph some nodes can not be reached if all the edges exit or enter from them. The graph in Figure \ref{graphs_2} is weakly connected because the node \(U\) has only entering edges.
+A directed graph is said to be \textbf{weakly connected} if by replacing all the direct edges with undirectd ones, the new graph is connected. in a directed graph some nodes can not be reached if all the edges exit or enter from them. The graph in Figure \ref{graphs_2} is weakly connected because the node \(g\) has only entering edges.
 
 \begin{figure}[H]
 	\begin{center}
@@ -80,6 +80,35 @@ A directed graph is said to be \textbf{weakly connected} if by replacing all the
 		\caption[A weakly connected graph.]{A weakly connected graph.}
 		\label{graphs_2}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+  
+  \node[main] (na) at (-1.8,0.6) {$a$};  
+  \node[main] (nb) at (2,1) {$b$};  
+  \node[main] (nc) at (0,-2.2) {$c$};  
+  \node[main] (nd) at (0,1.4) {$d$};  
+  \node[main] (ne) at (-1.8,-1.4) {$e$};  
+  \node[main] (nf) at (2,-1) {$f$};
+  \node[main] (ng) at (0.8,0.3) {$g$};
+  
+  \draw[->] (na) -- (ng);
+  \draw[->] (na) -- (nf);
+  \draw[->] (nb) -- (nc);
+  \draw[->] (nc) -- (na);
+  \draw[->] (nc) -- (nf);
+  \draw[->] (nc) -- (nd);
+  \draw[->] (nd) -- (nb);
+  \draw[->] (nd) -- (ng);
+  \draw[->] (ne) -- (ng);
+  \draw[->] (ne) -- (nd);
+  \draw[->] (nf) -- (ne);
+  
+\end{tikzpicture}  
+\caption[A weakly connected graph.]{A weakly connected graph.}
+\label{graphs_2}
 \end{figure}
 
 \section{Graph Representations}
@@ -100,6 +129,29 @@ The \textbf{edge list} is an unordered list of all pairs of nodes that form an e
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+  
+  \node[main] (na) at (-2,0) {$a$};
+  \node[main] (nb) at (0,0) {$b$};
+  \node[main] (nc) at (-1,-1) {$c$};
+  \node[main] (nd) at (-2.2,-2.2) {$d$};
+  \node[main] (ne) at (-3,-1) {$e$};
+  
+  \draw (na) -- (nb);
+  \draw (na) -- (nc);
+  \draw (na) -- (ne);
+  \draw (nb) -- (nc);
+  \draw (nc) -- (nd);
+  
+  \draw ($(nc) + (4,-0.2)$) node[align=left] (l) {$[[a, b], [a, c], [a, e], [b, c], [c, d]]$};
+    
+\end{tikzpicture}  
+\caption[Edge list.]{Edge list.}
+\label{graphs_3}
+\end{figure}
+
 \subsection{Adjacency List}
 The \textbf{adjacency list} is a list containing a separate list for each node containing all the incident edges of that node. In this representation identify all the edges incident to a node is easy \cite{goodrich2013data}. In case of directed graphs for each node there are two different lists: one for entering edges, and another one for the edges that go out.
 
@@ -111,6 +163,34 @@ The \textbf{adjacency list} is a list containing a separate list for each node c
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+  
+  \node[main] (na) at (-2,0) {$a$};
+  \node[main] (nb) at (0,0) {$b$};
+  \node[main] (nc) at (-1,-1) {$c$};
+  \node[main] (nd) at (-2.2,-2.2) {$d$};
+  \node[main] (ne) at (-3,-1) {$e$};
+  
+  \draw (na) -- (nb);
+  \draw (na) -- (nc);
+  \draw (na) -- (ne);
+  \draw (nb) -- (nc);
+  \draw (nc) -- (nd);
+  
+  \draw ($(nc) + (4,-0.2)$) node[align=left] (l) {
+  	$[\textcolor{BrickRed}{\overbrace{\textcolor{black}{[b, c, e]}}^{a}}, 
+  	  \textcolor{BrickRed}{\overbrace{\textcolor{black}{[a, c]}}^{b}}, 
+  	  \textcolor{BrickRed}{\overbrace{\textcolor{black}{[a, b, d]}}^{c}}, 
+  	  \textcolor{BrickRed}{\overbrace{\textcolor{black}{[c]}}^{d}}, 
+  	  \textcolor{BrickRed}{\overbrace{\textcolor{black}{[a]}}^{e}}]$};
+    
+\end{tikzpicture}  
+\caption[Adjacency list.]{Adjacency list.}
+\label{graphs_4}
+\end{figure}
+
 \subsection{Adjacency Matrix}
 The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\) represent the relationship between the edge \(i\) with the edge \(j\). If between \(i\) and \(j\) there is an edge \(A[i, j] = 1\), otherwise \(0\). In case the an ed go out and enter in the same edge \(A[i, i] = 1\). For undirected graphs this matrix is symmetric, and in case there are not edges going in and out the same node the principal diagonal is all of \(0\).
 
@@ -120,6 +200,36 @@ The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\
 		\caption[Adjacency matrix.]{Adjacency matrix.}
 		\label{graphs_5}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+  
+  \node[main] (na) at (-2,0) {$a$};
+  \node[main] (nb) at (0,0) {$b$};
+  \node[main] (nc) at (-1,-1) {$c$};
+  \node[main] (nd) at (-2.2,-2.2) {$d$};
+  \node[main] (ne) at (-3,-1) {$e$};
+  
+  \draw (na) -- (nb);
+  \draw (na) -- (nc);
+  \draw (na) -- (ne);
+  \draw (nb) -- (nc);
+  \draw (nc) -- (nd);
+  
+  \draw ($(nc) + (3,-0.2)$) node[align=left] (l) {
+  	  $\: \: \: \: \: \textcolor{BrickRed}{a} \: \: \textcolor{BrickRed}{b} \: \: \textcolor{BrickRed}{c} \: \: \textcolor{BrickRed}{d} \: \: \textcolor{BrickRed}{e} $ \\
+      $\textcolor{BrickRed}{a}[[0, 1, 1, 0, 1],$ \\
+      $\textcolor{BrickRed}{b}\: \: [1, 0, 1, 0, 0],$ \\
+      $\textcolor{BrickRed}{c}\: \: [1, 1, 0, 1, 0],$ \\
+      $\textcolor{BrickRed}{d}\: \: [0, 0, 1, 0, 0],$ \\
+      $\textcolor{BrickRed}{e}\: \: [1, 0, 0, 0, 0]]$
+   };
+    
+\end{tikzpicture}  
+\caption[Adjacency matrix.]{Adjacency matrix.}
+\label{graphs_5}
 \end{figure}
 
 In the appendix \ref{graphimplementationappendix} there is the full python implementation of the graph representation. There are defined the classes for nodes, edges, and graphs objects. Moreover, all the main operations on graphs like: insert a new node, a new edge, get the edge list, the adjacency list, the adjacency matrix, and find the max index are also implemented.
@@ -136,6 +246,37 @@ In the \textbf{depth-fist search} the search starts from an arbitrary node and t
 		\caption[Depth-first search example.]{Depth-first search example.}
 		\label{graphs_6}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
+  
+  \node[main] (na) at (0,0) {$a$};
+  \node[main] (nb) at (2,0) {$b$};
+  \node[main] (nc) at (2,-2) {$c$};
+  \node[main] (nd) at (0,-2) {$d$};
+  \node[main] (ne) at (-2,-1.8) {$e$};
+  
+  \draw (na) -- (nb);
+  \draw (na) -- (nc);
+  \draw (na) -- (nd);
+  \draw (nd) -- (nc);
+  \draw (nd) -- (ne);
+  
+  \draw[->, >=stealth', BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
+  \path[->, BrickRed, >=stealth'] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
+  \path[->, BrickRed, >=stealth'] (nd.north west) edge [bend right=20] node[draw=none, yshift=4pt] {2} (ne.north east);
+  \path[->, BrickRed, >=stealth'] (ne.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {} (nd.south west);
+  \path[->, BrickRed, >=stealth'] (nd.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {3} (nc.south west);
+  \path[BrickRed] (nc.north) edge [bend right=20] node[draw=none, xshift=4pt, yshift=4pt] {4} (na.south east);
+  \path[->, BrickRed, >=stealth'] (na.south east) edge [bend right=20] node[draw=none, yshift=4pt] {} (nb.south west);
+  
+  \draw ($(nd) + (-0.5,-1)$) node[align=left] {a, d, e, c, b};
+      
+\end{tikzpicture}  
+\caption[Depth-first search example.]{Depth-first search example.}
+\label{graphs_6}
 \end{figure}
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive implementation of a depth-first search.}]
@@ -167,6 +308,35 @@ In \textbf{breadth-first search} the traversal is done starting from a node, and
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
+  
+  \node[main] (na) at (0,0) {$a$};
+  \node[main] (nb) at (2,0) {$b$};
+  \node[main] (nc) at (2,-2) {$c$};
+  \node[main] (nd) at (0,-2) {$d$};
+  \node[main] (ne) at (-2,-1.8) {$e$};
+  
+  \draw (na) -- (nb);
+  \draw (na) -- (nc);
+  \draw (na) -- (nd);
+  \draw (nd) -- (nc);
+  \draw (nd) -- (ne);
+  
+  \draw[->, >=stealth', BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
+  \path[->, BrickRed, >=stealth'] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
+  \path[->, BrickRed, >=stealth'] (na.south) edge [bend right=30] node[draw=none, xshift=-4pt, yshift=-4pt] {2} (nc.north west);
+  \path[->, BrickRed, >=stealth'] (na.north east) edge [bend left=20] node[draw=none, yshift=5pt] {3} (nb.north west);
+  \path[->, BrickRed, >=stealth'] (nd.south west) edge [bend left=20] node[draw=none, yshift=-5pt] {4} (ne.south east);
+  
+  \draw ($(nd) + (-0.5,-1)$) node[align=left] {a, d, c, b, e};
+      
+\end{tikzpicture}  
+\caption[Breadth-first search example.]{Breadth-first search example.}
+\label{graphs_7}
+\end{figure}
+
 The only possible implementation is the iterative one, and it is implemented by using a queue.
 
 \begin{lstlisting}[firstnumber=1, caption={Recursive implementation of a depth-first search.}]
@@ -193,6 +363,51 @@ An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that v
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.4\linewidth}
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+
+		\node[main, ForestGreen] (na) at (0,0) {};
+  		\node[main] (nb) at (-2,0) {};
+  		\node[main] (nc) at (-2,-1.5) {};
+  		\node[main] (nd) at ((1,-1) {};
+  		\node[main] (ne) at (1,-2.5) {};
+  
+  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=4pt] {\textcolor{ForestGreen}{1}} (nb);
+  		\draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=-4pt] {\textcolor{ForestGreen}{2}} (nc);
+  		\draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=4pt, yshift=-6pt] {\textcolor{ForestGreen}{3}} (na);
+  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, xshift=-4pt, yshift=-4pt] {\textcolor{ForestGreen}{4}} (nd);
+  		\draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none,xshift=-6pt] {\textcolor{ForestGreen}{5}} (ne);
+   
+	\end{tikzpicture}
+	\caption{}
+	\label{euler}
+\end{subfigure}
+\hspace{1em}
+\begin{subfigure}[b]{0.4\linewidth}
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+		\node[main] (na) at (0,0) {};
+  		\node[main] (nb) at (-2,0) {};
+  		\node[main] (nc) at (-2,-1.5) {};
+  		\node[main, ForestGreen] (nd) at (1,-1) {};
+  		\node[main] (ne) at (1,-2.5) {};
+  
+  		\draw[BrickRed] (na) -- (nb);
+  		\draw[BrickRed] (na) -- (nc);
+  		\draw[BrickRed] (nb) -- (nc);
+  		\draw[BrickRed] (na) -- (nd);
+  		\draw[->, >=stealth', ForestGreen] (nd) -- (ne);
+	\end{tikzpicture}
+	\caption{}
+	\label{noneuler}
+\end{subfigure}
+\caption[Eulerian path (\ref{euler}) and not Eulerian path (\ref{noneuler}).]{Eulerian path (\ref{euler}) and not Eulerian path (\ref{noneuler}).}
+\label{graphs_8}
+\end{figure}
+
 An \textbf{Eulerian circuit} (or \textbf{Eulerian cycle}) is an Eulerian path which starts and ends on the same node. As before not every graph has an Eulerian circuit.
 
 \begin{figure}[H]
@@ -201,6 +416,26 @@ An \textbf{Eulerian circuit} (or \textbf{Eulerian cycle}) is an Eulerian path wh
 		\caption[Eulerian circuit.]{Eulerian circuit.}
 		\label{graphs_9}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
+  
+  \node[main] (na) at (0,0) {};
+  \node[main] (nb) at (2,0) {};
+  \node[main] (nc) at (2,-2) {};
+  \node[main] (nd) at (0,-2) {};
+  \node[main] (ne) at (-2,-1) {};
+  \node[main] (nf) at (3,-1) {};
+  
+  \draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=6pt, yshift=10pt] {\textcolor{ForestGreen}{1}} (nd);
+  \draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none, xshift=4pt] {\textcolor{ForestGreen}{2}} (na);
+  \draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, xshift=-6pt, yshift=10pt] {\textcolor{ForestGreen}{3}} (nc);
+      
+\end{tikzpicture}  
+\caption[Eulerian circuit.]{Eulerian circuit.}
+\label{graphs_9}
 \end{figure}
 
 In the following table are summarized some rules for finding if a graph has Eulerian path and/or circuit \cite{eulerpathcircuit}.
