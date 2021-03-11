@@ -940,11 +940,11 @@ Let us consider we would like to add a new node to a heap. In this case the node
    	 		child{node (n5) {$5$} edge from parent[->, >=stealth']} 
 			child{node (n20) {$20$} edge from parent[->, >=stealth']} 
    	 	};
-\draw ($(n30) + (2, 0)$) node[draw=none, rectangle] {\textcolor{red}{30>21 no swap}};
-\draw ($(n21) + (2, 0)$) node[draw=none, rectangle] {\textcolor{red}{20<21 swap}};
+\draw ($(n30) + (2, 0)$) node[draw=none, rectangle] {\textcolor{BrickRed}{30>21 no swap}};
+\draw ($(n21) + (2, 0)$) node[draw=none, rectangle] {\textcolor{BrickRed}{20<21 swap}};
 
-\path[->, red] (n20.east) edge [bend right=60] node[draw=none, xshift=24pt] {} (n21.east);
-\path[->, red] (n21.south) edge [bend right=60] node[draw=none, xshift=24pt] {} (n20.west);
+\path[->, BrickRed] (n20.east) edge [bend right=60] node[draw=none, xshift=24pt] {} (n21.east);
+\path[->, BrickRed] (n21.south) edge [bend right=60] node[draw=none, xshift=24pt] {} (n20.west);
 \end{tikzpicture}
 \caption[Add a new node to a heap.]{Add a new node to a heap.}
 \label{trees_17}
@@ -966,6 +966,8 @@ To implement a heap we can use an array. An example of this application is shown
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[thick, every node/.style={circle,draw}, minimum size=8mm]
+
+\clip (-5,1.2) rectangle (4, -5.6);
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
@@ -989,8 +991,17 @@ To implement a heap we can use an array. An example of this application is shown
 \draw ($(n19) + (-4, -1.9)$) node[draw=none, rectangle, align=center] {3};
 \draw ($(n19) + (-4, -3.5)$) node[draw=none, rectangle, align=center] {4};
 
-\matrix (m1) at ($(n2) + (0, -1)$) [matrix of nodes, nodes={draw, minimum size=8mm},
-    column sep=-\pgflinewidth] { \node[rectangle, align=center]{a}; \\ \node[rectangle, align=center]{b}; \\};
+\matrix (m1) at ($(n2) + (2.4, -1.3)$) [draw=none, matrix of nodes,
+             nodes={draw, rectangle, minimum size=7mm,anchor=center},
+             nodes in empty cells, minimum height=7mm,
+             column sep=-\pgflinewidth,
+             row 2/.style={nodes={draw=none, fill=none, minimum size=5mm}},
+             row 2 every column/.style={nodes={draw}}]
+{
+  $19$ & $17$ & $13$ & $11$ & $7$ & $5$ & $3$ & $2$ & $1$ \\
+  \textcolor{BrickRed}{$1$} & \textcolor{BrickRed}{$2$} & \textcolor{BrickRed}{$2$} &\textcolor{BrickRed}{$3$} & \textcolor{BrickRed}{$3$} & \textcolor{BrickRed}{$3$} & \textcolor{BrickRed}{$3$} & \textcolor{BrickRed}{$4$} & \textcolor{BrickRed}{$4$} \\
+};
+\draw ($(m1) + (-4,-0.3)$) node[draw=none, rectangle, align=center] {\textcolor{BrickRed}{Level}};
 
 \end{tikzpicture}
 \caption[Implementation example of a heap using an array.]{Implementation example of a heap using an array.}
@@ -1008,7 +1019,74 @@ To implement a heap we can use an array. An example of this application is shown
 	\end{center}
 \end{figure}
 
-In Figure \ref{trees_19} is show an unbalanced tree (case a) in which the average path to reach the leaf is 3.27 nodes. If the same tree is balanced (case b) the average path to reach any leaf from the root decreased to 3.
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.4\linewidth}
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=13mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=15mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
+
+\node {$50$}
+   child{node {$17$}
+             child{node {$9$}
+				child{node {$14$}
+					child{node {$12$}}				
+				}             
+             }
+             child{node {$23$}
+				child{node {$19$}}             
+             }
+        }
+   child{node {$76$}
+			child{node {$54$}
+				child{node {$72$}
+					child{node {$67$}}				
+				}
+			}
+		};
+\end{tikzpicture}
+\caption{}
+\label{unbalanced}
+\end{subfigure}
+\hspace{1em}
+\begin{subfigure}[b]{0.4\linewidth}
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=15mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
+
+
+\node {$50$}
+   child{node {$17$}
+             child{node {$12$}
+				child{node {$9$}}
+				child{node {$14$}}
+			 }
+             child{node {$23$}
+				child{node {$19$}}             
+             }
+        }
+   child{node {$60$}
+			child{node {$54$}
+				child{node {$67$}}
+			}
+			child{node {$76$}}
+		};
+\end{tikzpicture}
+\caption{}
+\label{balanced}
+\end{subfigure}
+\caption[Example of unbalanced (\ref{unbalanced}) and balanced (\ref{balanced}) tree.]{Example of unbalanced (\ref{unbalanced}) and balanced (\ref{balanced}) tree. Credits: \href{https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree}{Self-balancing binary search tree, Wikipedia}}
+\label{trees_19}
+\end{figure}
+
+In Figure \ref{trees_19} is show an unbalanced tree (\ref{unbalanced}) in which the average path to reach the leaf is 3.27 nodes. If the same tree is balanced (\ref{balanced}) the average path to reach any leaf from the root decreased to 3.
 
 \section{Red-Black Trees}
 The \textbf{red-black trees} are particular kind of self balancing trees. An extra bit is used to store the color of the node, which can be only \textbf{red} or \textbf{black}. Using a color for each node assures that the tree remains balanced during insertion and deletion operations \cite{wikiblackred} (\href{https://en.wikipedia.org/wiki/Red%E2%80%93black_tree}{Red-black tree, Wikipedia}).
@@ -1030,6 +1108,38 @@ The rules that a red-black tree must respect are:
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[thick, every node/.style={circle,draw}, minimum size=8mm, ->, >=stealth']
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=10mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=10mm, sibling distance=1cm]
+
+
+
+\node {$9$}
+   	child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$4$}
+		child{node {$1$}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}
+		} 
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}	 			
+   	}
+    child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$16$}
+   	 	child{node[shape=circle, fill=black, minimum size=1mm] {}}
+		child{node {$7$}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+		}
+   	 };
+
+\end{tikzpicture}
+\caption[A red-black tree.]{A red-black tree.}
+\label{trees_20}
+\end{figure}
+
 Usual only red nodes are added and the color of the other nodes are changed accordingly in order to respect the rule for the red-black tree.
 
 \begin{figure}[H]
@@ -1038,6 +1148,58 @@ Usual only red nodes are added and the color of the other nodes are changed acco
 		\caption[Insertion of a new node and the following updating of the color nodes.]{Insertion of a new node and the following updating of the color nodes.}
 		\label{trees_21}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.4\linewidth}
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=10mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=10mm, sibling distance=1cm]
+
+\node {$9$}
+   	child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$4$}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+   	}
+    child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$16$}
+    	child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$13$}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+		}
+   	 	child{node[shape=circle, fill=black, minimum size=1mm] {}}
+   	 };
+\end{tikzpicture}
+\end{subfigure}
+\hspace{1em}
+\begin{subfigure}[b]{0.4\linewidth}
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+
+\tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
+\tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=10mm, sibling distance=1cm]
+\tikzstyle{level 4}=[level distance=10mm, sibling distance=1cm]
+
+\node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$9$}
+   	child{node {$4$}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}
+		child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+   	}
+    child{node {$16$}
+    	child{node[shape=circle, text=BrickRed, fill=white, draw=BrickRed] {$13$}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}
+			child{node[shape=circle, fill=black, minimum size=1mm] {}}		
+		}
+   	 	child{node[shape=circle, fill=black, minimum size=1mm] {}}
+   	 };
+\end{tikzpicture}
+\end{subfigure}
+\caption[Insertion of a new node and the following updating of the color nodes.]{Insertion of a new node and the following updating of the color nodes.}
+\label{trees_21}
 \end{figure}
 
 In case the insertion or the removal does nor respect the rules of the red-black tree and BST some more complex operations must be done as in the following figure.
