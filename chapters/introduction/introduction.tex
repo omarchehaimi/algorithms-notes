@@ -88,6 +88,15 @@ In recursion a function calls itself again on a smaller size input, until the ex
 	\end{center}
 \end{figure}
 
+\begin{lstlisting}[numbers=none, caption={Pseudocode of a recursive function and its internal execution.}]
+function recursive(input):
+	if exit condition: # Element 2
+		return input
+	else:
+		output = recursive(input-1) # Element 1
+		return output # Element 3
+\end{lstlisting}
+
 In recursion the exit condition is fundamental, because if it contains some errors the recursion will never end, resulting in an infinite process.
 
 \subsection{Python Implementation Examples}
@@ -122,10 +131,38 @@ def factorial(n):
 		return n*factorial(n - 1) # Calling the function on a smaller input
 \end{lstlisting}
 
-\begin{figure}[hb]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/introduction/images/factorial.pdf}
 		\caption[Factorial recursive execution.]{Factorial recursive execution.}
 		\label{fig:factorial_1}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[every node/.style={rectangle,draw}, node distance=15mm, thick]
+
+	\node (n1) at (0,0) {factorial($5$)};
+	\node (n2) at (0.5,-1.5) {$5$*factorial($4$)}; 
+	\node (n3) at (1,-3) {$4$*factorial($3$)};
+	\node (n4) at (1.5,-4.5) {$3$*factorial($2$)}; 
+	\node (n5) at (2,-6) {$2$*factorial($1$)};
+	\node[draw=none] (n6) at (2.5,-7.5) {$1$};
+
+	\draw[->, >=stealth'] (n1) -- (n2);
+	\draw[->, >=stealth'] (n2) -- (n3);
+	\draw[->, >=stealth'] (n3) -- (n4);
+	\draw[->, >=stealth'] (n4) -- (n5);
+	\draw[->, >=stealth'] (n5) -- (n6);
+	
+	\path[->, >=stealth', BrickRed] (n6.east) edge [bend right=50] node[draw=none, xshift=6pt] {$1$} (n5.east);
+	\path[->, >=stealth', BrickRed] (n5.east) edge [bend right=50] node[draw=none, xshift=23pt] {$2=2*1$} (n4.east);
+	\path[->, >=stealth', BrickRed] (n4.east) edge [bend right=50] node[draw=none, xshift=23pt] {$6=3*2$} (n3.east);
+	\path[->, >=stealth', BrickRed] (n3.east) edge [bend right=50] node[draw=none, xshift=26pt] {$24=6*4$} (n2.east);
+	\path[->, >=stealth', BrickRed] (n2.east) edge [bend right=50] node[draw=none, xshift=30pt] {$120=24*5$} (n1.east);
+
+\end{tikzpicture}
+\caption[Factorial recursive execution.]{Factorial recursive execution.}
+\label{fig:factorial_1}
 \end{figure}

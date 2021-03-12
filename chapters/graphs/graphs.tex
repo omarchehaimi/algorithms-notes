@@ -423,15 +423,22 @@ An \textbf{Eulerian circuit} (or \textbf{Eulerian cycle}) is an Eulerian path wh
 \begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
   
   \node[main] (na) at (0,0) {};
-  \node[main] (nb) at (2,0) {};
+  \node[main, ForestGreen] (nb) at (2,0) {};
   \node[main] (nc) at (2,-2) {};
   \node[main] (nd) at (0,-2) {};
-  \node[main] (ne) at (-2,-1) {};
-  \node[main] (nf) at (3,-1) {};
+  \node[main] (ne) at (-1.5,-1) {};
+  \node[main] (nf) at (3.5,-1) {};
   
-  \draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=6pt, yshift=10pt] {\textcolor{ForestGreen}{1}} (nd);
+  \draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=6pt, yshift=12pt] {\textcolor{ForestGreen}{1}} (nd);
   \draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none, xshift=4pt] {\textcolor{ForestGreen}{2}} (na);
-  \draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, xshift=-6pt, yshift=10pt] {\textcolor{ForestGreen}{3}} (nc);
+  \draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, xshift=14pt, yshift=-7pt] {\textcolor{ForestGreen}{3}} (nc);
+  \draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, yshift=-5pt] {\textcolor{ForestGreen}{4}} (nd);
+  \draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none, xshift=-3, yshift=-6pt] {\textcolor{ForestGreen}{5}} (ne);
+  \draw[->, >=stealth', ForestGreen] (ne) edge node[draw=none, xshift=-2, yshift=5pt] {\textcolor{ForestGreen}{6}} (na);
+  \draw[->, >=stealth', ForestGreen] (na) edge node[draw=none,yshift=6pt] {\textcolor{ForestGreen}{7}} (nb);
+  \draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=5, yshift=5pt] {\textcolor{ForestGreen}{8}} (nf);
+  \draw[->, >=stealth', ForestGreen] (nf) edge node[draw=none, xshift=3, yshift=-5pt] {\textcolor{ForestGreen}{9}} (nc);
+  \draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=7] {\textcolor{ForestGreen}{10}} (nb);
       
 \end{tikzpicture}  
 \caption[Eulerian circuit.]{Eulerian circuit.}
@@ -466,6 +473,52 @@ A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all 
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.4\linewidth}
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+
+		\node[main] (na) at (0,0) {};
+  		\node[main] (nb) at (-2,0) {};
+  		\node[main] (nc) at (-2,-1.5) {};
+  		\node[main] (nd) at ((1,-1) {};
+  		\node[main, ForestGreen] (ne) at (1,-2.5) {};
+  
+  		\draw[->, >=stealth', ForestGreen] (ne) edge node[draw=none, xshift=-5pt] {\textcolor{ForestGreen}{1}} (nd);
+  		\draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none, xshift=-4pt, yshift=-4pt] {\textcolor{ForestGreen}{2}} (na);
+  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=6pt] {\textcolor{ForestGreen}{3}} (nb);
+  		\draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=-4pt, yshift=4pt] {\textcolor{ForestGreen}{4}} (na);
+  		\draw (nc) -- (nb);
+   
+	\end{tikzpicture}
+	\caption{}
+	\label{hampath}
+\end{subfigure}
+\hspace{1em}
+\begin{subfigure}[b]{0.4\linewidth}
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+		\node[main, ForestGreen] (na) at (0,0) {};
+  		\node[main] (nb) at (-2,0) {};
+  		\node[main] (nc) at (-2,-1.5) {};
+  		\node[main] (nd) at (1,-1) {};
+  		\node[main] (ne) at (1,-2.5) {};
+  
+  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=-6pt] {\textcolor{ForestGreen}{1}} (nc);
+  		\draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=-5pt] {\textcolor{ForestGreen}{2}} (nb);
+  		\draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, yshift=6pt] {\textcolor{ForestGreen}{3}} (na);
+  		\draw(na) -- (nd);
+  		\draw(nd) -- (ne);
+  		
+	\end{tikzpicture}
+	\caption{}
+	\label{hamcir}
+\end{subfigure}
+\caption[Hamiltonian path (\ref{hampath}) and Hamiltonian circuit (\ref{hamcir}).]{Hamiltonian path (\ref{hampath}) and Hamiltonian circuit (\ref{hamcir}).}
+\label{graphs_10}
+\end{figure}
+
 \subsection{Shortest Path Problem}
 The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath} (\href{https://en.wikipedia.org/wiki/Shortest_path_problem}{Shortest path problem, Wikipedia}).The breadth-first search can be used for finding the shortest path from a node to all the others, but it expects that all the edges are of the same nature, and in several situation this approach is not useful. Let us image we would like to find the best path connecting two cities. In this case the links between the nodes are not the same, as some strees are faster or slower than others. Another interesting application of finding the shortest path in graphs is about routing packages from a computer to another in internet in order to be as fast as possible.
 
@@ -475,6 +528,35 @@ The \textbf{shorted path problem} is the problem of finding a path between two n
 		\caption[Shortest path.]{Shortest path.}
 		\label{graphs_11}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+		\node[main] (ns) at (0,0) {s};
+  		\node[main] (na) at (1,1.2) {};
+  		\node[main] (nb) at (3,1.2) {};
+  		\node[main] (ne) at (4,0) {e};
+  		\node[main] (nc) at (2,-1.2) {};
+  		
+  		\draw[->, >=stealth', ForestGreen] (ns) edge node[draw=none, xshift=-2pt, yshift=6pt] {$3$} (na);
+  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=6pt] {$8$} (nb);
+  		\draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, yshift=6pt] {$1$} (ne);
+
+		\draw[->, >=stealth', RoyalPurple] (ns) edge node[draw=none, yshift=6pt] {$20$} (ne);  		
+  		
+  		\draw[->, >=stealth', BrickRed] (ns) edge node[draw=none, xshift=-2pt, yshift=-6pt] {5} (nc);
+  		\draw[->, >=stealth', BrickRed] (nc) edge node[draw=none, xshift=2pt, yshift=-6pt] {9} (ne);
+  		
+  		\draw ($(ne) + (1.4, 7mm)$) node[draw=none, rectangle] {\textcolor{ForestGreen}{$13$ Shortest path}};
+  		\draw ($(ne) + (0.8, 0)$) node[draw=none, rectangle] {\textcolor{RoyalPurple}{$20$}};
+  		\draw ($(ne) + (0.4, -7mm)$) node[draw=none, rectangle] {\textcolor{BrickRed}{$14$}};
+  
+\end{tikzpicture}
+
+\caption[Shortest path.]{Shortest path.}
+\label{graphs_11}
 \end{figure}
 
 \subsection{Dijkstra's Algorithm}
@@ -502,6 +584,33 @@ Where \(d[u]\) is the distance of node u from the starting node (1 in this case)
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+
+		\node[main] (na) at (0,0) {a};
+  		\node[main] (nu) at (2,0) {u};
+  		\node[main] (nv) at (4,0) {v};
+  		
+  		\draw[->, >=stealth'] (na) edge node[draw=none, yshift=6pt] {$2$} (nu);
+  		\draw[->, >=stealth'] (nu) edge node[draw=none, yshift=6pt] {$4$} (nv);
+  		
+  		\draw ($(nu) + (0, -7mm)$) node[draw, rectangle] {$2$};
+  		\draw ($(nv) + (0, -7mm)$) node[draw, rectangle] (inf) {$\infty$};
+  		
+  		\draw ($(nu) + (1, -1.2)$) node[draw=none, rectangle] {$2+4<\infty$};
+  		
+  		\draw ($(nv) + (0, -1.8)$) node[draw, rectangle] (nup) {$6$};
+  		
+  		\path[->, >=stealth'] (inf.east) edge [bend left=20] node[draw=none, xshift=-4pt] {} (nup.east);
+
+\end{tikzpicture}
+
+\caption[Relaxation condition.]{Relaxation condition.}
+\label{graphs_12}
+\end{figure}
+
 In other words the relaxation condition says that if there is a shorter path connecting two nodes, this distance should be used as the new distance.
 
 In the Dijkstra's algorithm at each step the new node is chosen based on the lowest value of the distance at that given step, and eventually the distances for all the adjacent nodes are updated accordingly the relaxation condition.
@@ -514,6 +623,39 @@ Let us consider the following graph Figure \ref{graphs_13}, and let us start fro
 		\caption[Dijkstra's algorithms example.]{Dijkstra's algorithm example.}
 		\label{graphs_13}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+
+		\node[main] (na) at (0,0) {a};
+		\node[main] (nb) at (3,0) {b};
+		\node[main] (nc) at (5,0) {c};
+		\node[main] (nd) at (0,-3) {d};
+		\node[main] (ne) at (3,-3) {e};
+		\node[main] (nf) at (5,-3) {f};
+		
+		\node[draw=none] (start) at ($(na) + (-1,1)$) {Start};
+  		
+  		\draw[->, >=stealth'] (start) -- (na);
+  		
+  		\draw[->, >=stealth'] (na) edge node[draw=none, yshift=6pt] {50} (nb);
+  		\draw[->, >=stealth'] (nb) edge node[draw=none, yshift=6pt] {10} (nc);
+  		\path[->, >=stealth'] (na.north) edge [bend left=20] node[draw=none, yshift=6pt] {45} (nc.north);
+  		\path[->, >=stealth'] (na.south west) edge node[draw=none, xshift=-7pt] {10} (nd.north west);
+  		\path[->, >=stealth'] (nd.north east) edge node[draw=none, xshift=-7pt] {} (na.south east);
+  		\draw[->, >=stealth'] (nd) edge node[draw=none, yshift=-6pt] {15} (ne);
+  		\draw[->, >=stealth'] (ne) edge node[draw=none, xshift=-7pt] {20} (nb);
+  		\draw[->, >=stealth'] (nf) edge node[draw=none, yshift=-6pt] {3} (ne);
+  		\path[->, >=stealth'] (nc.south) edge [bend left=50] node[draw=none, xshift=12pt, yshift=8pt] {35} (ne.north east);
+  		\path[->, >=stealth'] (ne.north east) edge [bend left=50] node[draw=none, yshift=10pt] {30} (nc.south west);
+
+\end{tikzpicture}
+
+\caption[Dijkstra's algorithms example.]{Dijkstra's algorithm example.}
+\label{graphs_13}
 \end{figure}
 
 For describing how the algorithm works we use the following table, in which for each column there is a node, and at every step a new row is added for the node for which the shortest path has just been found. At the first step the table it looks like: 

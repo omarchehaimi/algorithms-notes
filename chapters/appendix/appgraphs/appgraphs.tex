@@ -207,6 +207,45 @@ Let us consider the following graph (Figure \ref{graphappendix_3}).
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+
+\centering
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
+
+		\node[main] (nd) at (0,0) {d};
+		\node[main] (na) at (-2.5,0) {a};
+		\node[main] (nb) at (-1.5,1.5) {b};
+		\node[main] (nc) at (-1.5,-1.5) {c};
+		\node[main] (nf) at (1.5,1.5) {f};
+		\node[main] (ne) at (1.5,-1.5) {e};
+		\node[main] (ng) at (2.5,0) {g};
+		\node[main] (nh) at (3.2,1.1) {h};
+		
+		\node[draw=none] (start) at ($(na) + (-1,1)$) {Start};
+		
+		\draw[->, >=stealth'] (start) -- (na);
+		
+		\draw (na) edge node[draw=none, xshift=-6pt] {$8$} (nb);
+		\draw (na) edge node[draw=none, xshift=-6pt] {$2$} (nc);
+		\draw (na) edge node[draw=none, yshift=6pt] {$5$} (nd);
+		\draw (nb) edge node[draw=none, xshift=6pt] {$2$} (nd);
+		\draw (nb) edge node[draw=none, yshift=6pt] {$13$} (nf);
+		\draw (nc) edge node[draw=none, xshift=-6pt] {$2$} (nd);
+		\draw (nc) edge node[draw=none, yshift=-6pt] {$5$} (ne);
+		\draw (nd) edge node[draw=none, xshift=-6pt] {$6$} (nf);
+		\draw (nd) edge node[draw=none, yshift=7pt] {$3$} (ng);
+		\draw (nd) edge node[draw=none, xshift=6pt] {$1$} (ne);
+		\draw (ne) edge node[draw=none, xshift=-6pt] {$1$} (ng);
+		\draw (nf) edge node[draw=none, xshift=6pt] {$2$} (ng);
+		\draw (nf) edge node[draw=none, xshift=6pt, yshift=4pt] {$3$} (nh);
+		\draw (ng) edge node[draw=none, xshift=5pt, yshift=-3pt] {$6$} (nh);
+
+\end{tikzpicture}
+
+\caption[Dijkstra's algorithms example.]{Dijkstra's algorithms example.}
+\label{graphappendix_3}
+\end{figure}
+
 Solving the shortest problem for this graph starting from the node \(a\) leads to the following table:
 
 \begin{table}[H]
