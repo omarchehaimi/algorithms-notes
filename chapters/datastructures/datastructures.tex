@@ -17,6 +17,47 @@ An \textbf{array} is a collection of elements of the same or also different type
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\tikzset{
+mymat/.style={
+  matrix of math nodes,
+  text height=2.5ex,
+  text depth=0.75ex,
+  text width=3.25ex,
+  align=center,
+  column sep=-\pgflinewidth
+  },
+mymats/.style={
+  mymat,
+  nodes={draw,fill=#1}
+  }  
+}
+\begin{tikzpicture}[node distance = 5mm and 0mm,
+start chain = A going right,
+box/.style = {rectangle, draw, inner sep=1mm, outer sep=0mm,
+              minimum size=7mm,
+                 on chain=A},
+LA/.style = {-{Straight Barb[flex=0]},
+               thick, shorten >=1mm, shorten <=1mm,
+               looseness=1.6}, >=latex, nodes in empty cells, thick]
+
+\matrix[mymat, anchor=east, row 2/.style={nodes=draw}]
+at (0.5,0)
+(mat1)
+{
+0 & 1 & 2 & 3 & 4 \\
+8 & 2 & 4 & 1 & 7 \\
+};
+
+\draw (mat1-1-5.east)--++(0:3mm) node [right]{Indices};
+\draw (mat1-2-5.east)--++(0:3mm) node [right]{Elements};
+
+\end{tikzpicture}
+\caption[An example of an array with elements and indexes.]{An example of an array with elements and indexes.}
+\label{array_1}
+\end{figure}
+
 For doing any allowed operation to an element of an array it is enough to know its index. 
 
 Adding or removing an element of an array could be a very expensive operation. This is because when a change take place to an element all the following indexes must be updated (Figure \ref{array_2}). The worst case complexity is \(O(n)\), where \(n\) is the size of the array.
@@ -26,6 +67,97 @@ Adding or removing an element of an array could be a very expensive operation. T
 		\caption[Removing or adding an element from an array and the indexes update.]{Removing or adding an element from an array and the indexes update.}
 		\label{array_2}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\tikzset{
+mymat/.style={
+  matrix of math nodes,
+  text height=2.5ex,
+  text depth=0.75ex,
+  text width=3.25ex,
+  align=center,
+  column sep=-\pgflinewidth
+  },
+mymats/.style={
+  mymat,
+  nodes={draw,fill=#1}
+  }  
+}
+\begin{subfigure}[b]{\linewidth}
+\centering
+\begin{tikzpicture}[node distance = 5mm and 0mm,
+start chain = A going right,
+box/.style = {rectangle, draw, inner sep=1mm, outer sep=0mm,
+              minimum size=7mm,
+                 on chain=A},
+LA/.style = {-{Straight Barb[flex=0]},
+               thick, shorten >=1mm, shorten <=1mm,
+               looseness=1.6}, >=latex, nodes in empty cells, thick]
+
+\matrix[mymat, anchor=east, row 2/.style={nodes=draw}, 
+        column 5/.style={nodes=densely dashed}]
+at (0.5,0)
+(mat1)
+{
+0 & 1 & 2 & 3 & \\
+8 & 2 & 4 & 1 & \\
+};
+\matrix[mymat, anchor=west, row 2/.style={nodes=draw}, column 5/.style={nodes=densely dashed}] at (0.5,0)
+(mat2)
+{
+0 & 1 & 2 & 3 & 4 \\
+8 & 2 & 9 & 4 & 1 \\
+};
+
+\draw ($(mat1-2-3.north) + (-1mm, 10mm)$) node[draw=none, rectangle, align=left] (r1) {add 9};
+
+\draw[->, >=stealth', BrickRed] (r1.south) -- (mat1-2-2.north east);
+
+\path[->, >=stealth', BrickRed] (mat1-2-3.south) edge [bend right=60] node[draw=none] {} (mat1-2-4.south);
+\path[->, >=stealth', BrickRed] (mat1-2-4.south) edge [bend right=60] node[draw=none] {} (mat1-2-5.south);
+
+\end{tikzpicture}
+\caption{Adding an element to an array.}
+\label{adding_arr}
+\end{subfigure}
+%\hspace{1em}
+\begin{subfigure}[b]{\linewidth}
+\centering
+\begin{tikzpicture}[node distance = 5mm and 0mm,
+start chain = A going right,
+box/.style = {rectangle, draw, inner sep=1mm, outer sep=0mm,
+              minimum size=7mm,
+                 on chain=A},
+LA/.style = {-{Straight Barb[flex=0]},
+               thick, shorten >=1mm, shorten <=1mm,
+               looseness=1.6}, >=latex, nodes in empty cells, thick]
+
+\matrix[mymat, anchor=east, row 2/.style={nodes=draw}] at (-1.4,0) (mat1)
+{
+0 & 1 & 2 & 3 \\
+8 & 2 & 4 & 1 \\
+};
+\matrix[mymat, anchor=west, row 2/.style={nodes=draw}] at (-1.4,0)
+(mat2)
+{
+0 & 1 & 2 \\
+8 & 4 & 1 \\
+};
+
+\draw[BrickRed, style={-}] ($(mat1-2-2) + (-0.5,0.5)$) -- ($(mat1-2-2) + (0.5,-0.5)$);
+\draw[BrickRed, style={-}] ($(mat1-2-2) + (0.5,0.5)$) -- ($(mat1-2-2) + (-0.5,-0.5)$);
+
+\path[->, >=stealth', BrickRed] (mat1-2-4.south) edge [bend left=60] node[draw=none] {} (mat1-2-3.south);
+\path[->, >=stealth', BrickRed] (mat1-2-3.south) edge [bend left=60] node[draw=none] {} (mat1-2-2.south);
+
+\end{tikzpicture}
+\caption{Removing an element to an array.}
+\label{removing_arr}
+\end{subfigure}
+\caption[Adding \ref{adding_arr} or removing \ref{removing_arr} an element from an array and the indexes update.]{Adding \ref{adding_arr} or removing \ref{removing_arr} an element from an array and the indexes update.}
+\label{array_2}
 \end{figure}
 
 \section{Linked List}

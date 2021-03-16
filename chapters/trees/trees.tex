@@ -538,9 +538,9 @@ Before the delete process there is always a search one for finding the element t
 \draw[BrickRed, style={-}] ($(nc) + (0.5,0.5)$) -- ($(nc) + (-0.5,-0.5)$);
 \draw[BrickRed, style={-}] ($(nc) + (-0.5,0.5)$) -- ($(nc) + (0.5,-0.5)$);
 
-\path[->, BrickRed] (nf.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 1} (nc.east);
-\path[->, BrickRed] (ne.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 2} (nb.east);
-\path[->, BrickRed] (ng.north west) edge [bend left=100] node[draw=none, xshift=-22pt] {Case 3} (nb.west);
+\path[->, >=stealth', BrickRed] (nf.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 1} (nc.east);
+\path[->, >=stealth', BrickRed] (ne.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 2} (nb.east);
+\path[->, >=stealth', BrickRed] (ng.north west) edge [bend left=100] node[draw=none, xshift=-22pt] {Case 3} (nb.west);
 
 \end{tikzpicture}
 \caption[Delete an element of a tree.]{Delete an element of a tree.}
