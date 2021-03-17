@@ -17,7 +17,7 @@ A graph is a discrete mathematical structure in which the connections between it
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}, >=stealth']
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}, >=stealth]
 
 		\node[main] (1) {$a$};
 		\node[main] (2) [below left of=1] {$b$}; 
@@ -37,7 +37,7 @@ A graph is a discrete mathematical structure in which the connections between it
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}, >=stealth']
+\begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}, >=stealth]
 		\node[main] (11) {$a$};
 		\node[main] (22) [below left of=11] {$b$}; 
 		\node[main] (33) [below right of=11] {$c$};
@@ -84,7 +84,7 @@ A directed graph is said to be \textbf{weakly connected} if by replacing all the
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth]  
   
   \node[main] (na) at (-1.8,0.6) {$a$};  
   \node[main] (nb) at (2,1) {$b$};  
@@ -131,7 +131,7 @@ The \textbf{edge list} is an unordered list of all pairs of nodes that form an e
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth]  
   
   \node[main] (na) at (-2,0) {$a$};
   \node[main] (nb) at (0,0) {$b$};
@@ -165,7 +165,7 @@ The \textbf{adjacency list} is a list containing a separate list for each node c
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth]  
   
   \node[main] (na) at (-2,0) {$a$};
   \node[main] (nb) at (0,0) {$b$};
@@ -204,7 +204,7 @@ The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth']  
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth]  
   
   \node[main] (na) at (-2,0) {$a$};
   \node[main] (nb) at (0,0) {$b$};
@@ -264,13 +264,13 @@ In the \textbf{depth-fist search} the search starts from an arbitrary node and t
   \draw (nd) -- (nc);
   \draw (nd) -- (ne);
   
-  \draw[->, >=stealth', BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
-  \path[->, BrickRed, >=stealth'] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
-  \path[->, BrickRed, >=stealth'] (nd.north west) edge [bend right=20] node[draw=none, yshift=4pt] {2} (ne.north east);
-  \path[->, BrickRed, >=stealth'] (ne.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {} (nd.south west);
-  \path[->, BrickRed, >=stealth'] (nd.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {3} (nc.south west);
+  \draw[->, >=stealth, BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
+  \path[->, BrickRed, >=stealth] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
+  \path[->, BrickRed, >=stealth] (nd.north west) edge [bend right=20] node[draw=none, yshift=4pt] {2} (ne.north east);
+  \path[->, BrickRed, >=stealth] (ne.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {} (nd.south west);
+  \path[->, BrickRed, >=stealth] (nd.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {3} (nc.south west);
   \path[BrickRed] (nc.north) edge [bend right=20] node[draw=none, xshift=4pt, yshift=4pt] {4} (na.south east);
-  \path[->, BrickRed, >=stealth'] (na.south east) edge [bend right=20] node[draw=none, yshift=4pt] {} (nb.south west);
+  \path[->, BrickRed, >=stealth] (na.south east) edge [bend right=20] node[draw=none, yshift=4pt] {} (nb.south west);
   
   \draw ($(nd) + (-0.5,-1)$) node[align=left] {a, d, e, c, b};
       
@@ -324,11 +324,11 @@ In \textbf{breadth-first search} the traversal is done starting from a node, and
   \draw (nd) -- (nc);
   \draw (nd) -- (ne);
   
-  \draw[->, >=stealth', BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
-  \path[->, BrickRed, >=stealth'] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
-  \path[->, BrickRed, >=stealth'] (na.south) edge [bend right=30] node[draw=none, xshift=-4pt, yshift=-4pt] {2} (nc.north west);
-  \path[->, BrickRed, >=stealth'] (na.north east) edge [bend left=20] node[draw=none, yshift=5pt] {3} (nb.north west);
-  \path[->, BrickRed, >=stealth'] (nd.south west) edge [bend left=20] node[draw=none, yshift=-5pt] {4} (ne.south east);
+  \draw[->, >=stealth, BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
+  \path[->, BrickRed, >=stealth] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
+  \path[->, BrickRed, >=stealth] (na.south) edge [bend right=30] node[draw=none, xshift=-4pt, yshift=-4pt] {2} (nc.north west);
+  \path[->, BrickRed, >=stealth] (na.north east) edge [bend left=20] node[draw=none, yshift=5pt] {3} (nb.north west);
+  \path[->, BrickRed, >=stealth] (nd.south west) edge [bend left=20] node[draw=none, yshift=-5pt] {4} (ne.south east);
   
   \draw ($(nd) + (-0.5,-1)$) node[align=left] {a, d, c, b, e};
       
@@ -375,11 +375,11 @@ An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that v
   		\node[main] (nd) at ((1,-1) {};
   		\node[main] (ne) at (1,-2.5) {};
   
-  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=4pt] {\textcolor{ForestGreen}{1}} (nb);
-  		\draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=-4pt] {\textcolor{ForestGreen}{2}} (nc);
-  		\draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=4pt, yshift=-6pt] {\textcolor{ForestGreen}{3}} (na);
-  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, xshift=-4pt, yshift=-4pt] {\textcolor{ForestGreen}{4}} (nd);
-  		\draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none,xshift=-6pt] {\textcolor{ForestGreen}{5}} (ne);
+  		\draw[->, >=stealth, ForestGreen] (na) edge node[draw=none, yshift=4pt] {\textcolor{ForestGreen}{1}} (nb);
+  		\draw[->, >=stealth, ForestGreen] (nb) edge node[draw=none, xshift=-4pt] {\textcolor{ForestGreen}{2}} (nc);
+  		\draw[->, >=stealth, ForestGreen] (nc) edge node[draw=none, xshift=4pt, yshift=-6pt] {\textcolor{ForestGreen}{3}} (na);
+  		\draw[->, >=stealth, ForestGreen] (na) edge node[draw=none, xshift=-4pt, yshift=-4pt] {\textcolor{ForestGreen}{4}} (nd);
+  		\draw[->, >=stealth, ForestGreen] (nd) edge node[draw=none,xshift=-6pt] {\textcolor{ForestGreen}{5}} (ne);
    
 	\end{tikzpicture}
 	\caption{}
@@ -399,7 +399,7 @@ An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that v
   		\draw[BrickRed] (na) -- (nc);
   		\draw[BrickRed] (nb) -- (nc);
   		\draw[BrickRed] (na) -- (nd);
-  		\draw[->, >=stealth', ForestGreen] (nd) -- (ne);
+  		\draw[->, >=stealth, ForestGreen] (nd) -- (ne);
 	\end{tikzpicture}
 	\caption{}
 	\label{noneuler}
@@ -429,16 +429,16 @@ An \textbf{Eulerian circuit} (or \textbf{Eulerian cycle}) is an Eulerian path wh
   \node[main] (ne) at (-1.5,-1) {};
   \node[main] (nf) at (3.5,-1) {};
   
-  \draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=6pt, yshift=12pt] {\textcolor{ForestGreen}{1}} (nd);
-  \draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none, xshift=4pt] {\textcolor{ForestGreen}{2}} (na);
-  \draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, xshift=14pt, yshift=-7pt] {\textcolor{ForestGreen}{3}} (nc);
-  \draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, yshift=-5pt] {\textcolor{ForestGreen}{4}} (nd);
-  \draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none, xshift=-3, yshift=-6pt] {\textcolor{ForestGreen}{5}} (ne);
-  \draw[->, >=stealth', ForestGreen] (ne) edge node[draw=none, xshift=-2, yshift=5pt] {\textcolor{ForestGreen}{6}} (na);
-  \draw[->, >=stealth', ForestGreen] (na) edge node[draw=none,yshift=6pt] {\textcolor{ForestGreen}{7}} (nb);
-  \draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, xshift=5, yshift=5pt] {\textcolor{ForestGreen}{8}} (nf);
-  \draw[->, >=stealth', ForestGreen] (nf) edge node[draw=none, xshift=3, yshift=-5pt] {\textcolor{ForestGreen}{9}} (nc);
-  \draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=7] {\textcolor{ForestGreen}{10}} (nb);
+  \draw[->, >=stealth, ForestGreen] (nb) edge node[draw=none, xshift=6pt, yshift=12pt] {\textcolor{ForestGreen}{1}} (nd);
+  \draw[->, >=stealth, ForestGreen] (nd) edge node[draw=none, xshift=4pt] {\textcolor{ForestGreen}{2}} (na);
+  \draw[->, >=stealth, ForestGreen] (na) edge node[draw=none, xshift=14pt, yshift=-7pt] {\textcolor{ForestGreen}{3}} (nc);
+  \draw[->, >=stealth, ForestGreen] (nc) edge node[draw=none, yshift=-5pt] {\textcolor{ForestGreen}{4}} (nd);
+  \draw[->, >=stealth, ForestGreen] (nd) edge node[draw=none, xshift=-3, yshift=-6pt] {\textcolor{ForestGreen}{5}} (ne);
+  \draw[->, >=stealth, ForestGreen] (ne) edge node[draw=none, xshift=-2, yshift=5pt] {\textcolor{ForestGreen}{6}} (na);
+  \draw[->, >=stealth, ForestGreen] (na) edge node[draw=none,yshift=6pt] {\textcolor{ForestGreen}{7}} (nb);
+  \draw[->, >=stealth, ForestGreen] (nb) edge node[draw=none, xshift=5, yshift=5pt] {\textcolor{ForestGreen}{8}} (nf);
+  \draw[->, >=stealth, ForestGreen] (nf) edge node[draw=none, xshift=3, yshift=-5pt] {\textcolor{ForestGreen}{9}} (nc);
+  \draw[->, >=stealth, ForestGreen] (nc) edge node[draw=none, xshift=7] {\textcolor{ForestGreen}{10}} (nb);
       
 \end{tikzpicture}  
 \caption[Eulerian circuit.]{Eulerian circuit.}
@@ -485,10 +485,10 @@ A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all 
   		\node[main] (nd) at ((1,-1) {};
   		\node[main, ForestGreen] (ne) at (1,-2.5) {};
   
-  		\draw[->, >=stealth', ForestGreen] (ne) edge node[draw=none, xshift=-5pt] {\textcolor{ForestGreen}{1}} (nd);
-  		\draw[->, >=stealth', ForestGreen] (nd) edge node[draw=none, xshift=-4pt, yshift=-4pt] {\textcolor{ForestGreen}{2}} (na);
-  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=6pt] {\textcolor{ForestGreen}{3}} (nb);
-  		\draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=-4pt, yshift=4pt] {\textcolor{ForestGreen}{4}} (na);
+  		\draw[->, >=stealth, ForestGreen] (ne) edge node[draw=none, xshift=-5pt] {\textcolor{ForestGreen}{1}} (nd);
+  		\draw[->, >=stealth, ForestGreen] (nd) edge node[draw=none, xshift=-4pt, yshift=-4pt] {\textcolor{ForestGreen}{2}} (na);
+  		\draw[->, >=stealth, ForestGreen] (na) edge node[draw=none, yshift=6pt] {\textcolor{ForestGreen}{3}} (nb);
+  		\draw[->, >=stealth, ForestGreen] (nc) edge node[draw=none, xshift=-4pt, yshift=4pt] {\textcolor{ForestGreen}{4}} (na);
   		\draw (nc) -- (nb);
    
 	\end{tikzpicture}
@@ -505,9 +505,9 @@ A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all 
   		\node[main] (nd) at (1,-1) {};
   		\node[main] (ne) at (1,-2.5) {};
   
-  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=-6pt] {\textcolor{ForestGreen}{1}} (nc);
-  		\draw[->, >=stealth', ForestGreen] (nc) edge node[draw=none, xshift=-5pt] {\textcolor{ForestGreen}{2}} (nb);
-  		\draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, yshift=6pt] {\textcolor{ForestGreen}{3}} (na);
+  		\draw[->, >=stealth, ForestGreen] (na) edge node[draw=none, yshift=-6pt] {\textcolor{ForestGreen}{1}} (nc);
+  		\draw[->, >=stealth, ForestGreen] (nc) edge node[draw=none, xshift=-5pt] {\textcolor{ForestGreen}{2}} (nb);
+  		\draw[->, >=stealth, ForestGreen] (nb) edge node[draw=none, yshift=6pt] {\textcolor{ForestGreen}{3}} (na);
   		\draw(na) -- (nd);
   		\draw(nd) -- (ne);
   		
@@ -540,14 +540,14 @@ The \textbf{shorted path problem} is the problem of finding a path between two n
   		\node[main] (ne) at (4,0) {e};
   		\node[main] (nc) at (2,-1.2) {};
   		
-  		\draw[->, >=stealth', ForestGreen] (ns) edge node[draw=none, xshift=-2pt, yshift=6pt] {$3$} (na);
-  		\draw[->, >=stealth', ForestGreen] (na) edge node[draw=none, yshift=6pt] {$8$} (nb);
-  		\draw[->, >=stealth', ForestGreen] (nb) edge node[draw=none, yshift=6pt] {$1$} (ne);
+  		\draw[->, >=stealth, ForestGreen] (ns) edge node[draw=none, xshift=-2pt, yshift=6pt] {$3$} (na);
+  		\draw[->, >=stealth, ForestGreen] (na) edge node[draw=none, yshift=6pt] {$8$} (nb);
+  		\draw[->, >=stealth, ForestGreen] (nb) edge node[draw=none, yshift=6pt] {$1$} (ne);
 
-		\draw[->, >=stealth', RoyalPurple] (ns) edge node[draw=none, yshift=6pt] {$20$} (ne);  		
+		\draw[->, >=stealth, RoyalPurple] (ns) edge node[draw=none, yshift=6pt] {$20$} (ne);  		
   		
-  		\draw[->, >=stealth', BrickRed] (ns) edge node[draw=none, xshift=-2pt, yshift=-6pt] {5} (nc);
-  		\draw[->, >=stealth', BrickRed] (nc) edge node[draw=none, xshift=2pt, yshift=-6pt] {9} (ne);
+  		\draw[->, >=stealth, BrickRed] (ns) edge node[draw=none, xshift=-2pt, yshift=-6pt] {5} (nc);
+  		\draw[->, >=stealth, BrickRed] (nc) edge node[draw=none, xshift=2pt, yshift=-6pt] {9} (ne);
   		
   		\draw ($(ne) + (1.4, 7mm)$) node[draw=none, rectangle] {\textcolor{ForestGreen}{$13$ Shortest path}};
   		\draw ($(ne) + (0.8, 0)$) node[draw=none, rectangle] {\textcolor{RoyalPurple}{$20$}};
@@ -593,8 +593,8 @@ Where \(d[u]\) is the distance of node u from the starting node (1 in this case)
   		\node[main] (nu) at (2,0) {u};
   		\node[main] (nv) at (4,0) {v};
   		
-  		\draw[->, >=stealth'] (na) edge node[draw=none, yshift=6pt] {$2$} (nu);
-  		\draw[->, >=stealth'] (nu) edge node[draw=none, yshift=6pt] {$4$} (nv);
+  		\draw[->, >=stealth] (na) edge node[draw=none, yshift=6pt] {$2$} (nu);
+  		\draw[->, >=stealth] (nu) edge node[draw=none, yshift=6pt] {$4$} (nv);
   		
   		\draw ($(nu) + (0, -7mm)$) node[draw, rectangle] {$2$};
   		\draw ($(nv) + (0, -7mm)$) node[draw, rectangle] (inf) {$\infty$};
@@ -603,7 +603,7 @@ Where \(d[u]\) is the distance of node u from the starting node (1 in this case)
   		
   		\draw ($(nv) + (0, -1.8)$) node[draw, rectangle] (nup) {$6$};
   		
-  		\path[->, >=stealth'] (inf.east) edge [bend left=20] node[draw=none, xshift=-4pt] {} (nup.east);
+  		\path[->, >=stealth] (inf.east) edge [bend left=20] node[draw=none, xshift=-4pt] {} (nup.east);
 
 \end{tikzpicture}
 
@@ -639,18 +639,18 @@ Let us consider the following graph Figure \ref{graphs_13}, and let us start fro
 		
 		\node[draw=none] (start) at ($(na) + (-1,1)$) {Start};
   		
-  		\draw[->, >=stealth'] (start) -- (na);
+  		\draw[->, >=stealth] (start) -- (na);
   		
-  		\draw[->, >=stealth'] (na) edge node[draw=none, yshift=6pt] {50} (nb);
-  		\draw[->, >=stealth'] (nb) edge node[draw=none, yshift=6pt] {10} (nc);
-  		\path[->, >=stealth'] (na.north) edge [bend left=20] node[draw=none, yshift=6pt] {45} (nc.north);
-  		\path[->, >=stealth'] (na.south west) edge node[draw=none, xshift=-7pt] {10} (nd.north west);
-  		\path[->, >=stealth'] (nd.north east) edge node[draw=none, xshift=-7pt] {} (na.south east);
-  		\draw[->, >=stealth'] (nd) edge node[draw=none, yshift=-6pt] {15} (ne);
-  		\draw[->, >=stealth'] (ne) edge node[draw=none, xshift=-7pt] {20} (nb);
-  		\draw[->, >=stealth'] (nf) edge node[draw=none, yshift=-6pt] {3} (ne);
-  		\path[->, >=stealth'] (nc.south) edge [bend left=50] node[draw=none, xshift=12pt, yshift=8pt] {35} (ne.north east);
-  		\path[->, >=stealth'] (ne.north east) edge [bend left=50] node[draw=none, yshift=10pt] {30} (nc.south west);
+  		\draw[->, >=stealth] (na) edge node[draw=none, yshift=6pt] {50} (nb);
+  		\draw[->, >=stealth] (nb) edge node[draw=none, yshift=6pt] {10} (nc);
+  		\path[->, >=stealth] (na.north) edge [bend left=20] node[draw=none, yshift=6pt] {45} (nc.north);
+  		\path[->, >=stealth] (na.south west) edge node[draw=none, xshift=-7pt] {10} (nd.north west);
+  		\path[->, >=stealth] (nd.north east) edge node[draw=none, xshift=-7pt] {} (na.south east);
+  		\draw[->, >=stealth] (nd) edge node[draw=none, yshift=-6pt] {15} (ne);
+  		\draw[->, >=stealth] (ne) edge node[draw=none, xshift=-7pt] {20} (nb);
+  		\draw[->, >=stealth] (nf) edge node[draw=none, yshift=-6pt] {3} (ne);
+  		\path[->, >=stealth] (nc.south) edge [bend left=50] node[draw=none, xshift=12pt, yshift=8pt] {35} (ne.north east);
+  		\path[->, >=stealth] (ne.north east) edge [bend left=50] node[draw=none, yshift=10pt] {30} (nc.south west);
 
 \end{tikzpicture}
 

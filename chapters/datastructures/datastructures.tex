@@ -113,10 +113,10 @@ at (0.5,0)
 
 \draw ($(mat1-2-3.north) + (-1mm, 10mm)$) node[draw=none, rectangle, align=left] (r1) {add 9};
 
-\draw[->, >=stealth', BrickRed] (r1.south) -- (mat1-2-2.north east);
+\draw[->, >=stealth, BrickRed] (r1.south) -- (mat1-2-2.north east);
 
-\path[->, >=stealth', BrickRed] (mat1-2-3.south) edge [bend right=60] node[draw=none] {} (mat1-2-4.south);
-\path[->, >=stealth', BrickRed] (mat1-2-4.south) edge [bend right=60] node[draw=none] {} (mat1-2-5.south);
+\path[->, >=stealth, BrickRed] (mat1-2-3.south) edge [bend right=60] node[draw=none] {} (mat1-2-4.south);
+\path[->, >=stealth, BrickRed] (mat1-2-4.south) edge [bend right=60] node[draw=none] {} (mat1-2-5.south);
 
 \end{tikzpicture}
 \caption{Adding an element to an array.}
@@ -149,8 +149,8 @@ LA/.style = {-{Straight Barb[flex=0]},
 \draw[BrickRed, style={-}] ($(mat1-2-2) + (-0.5,0.5)$) -- ($(mat1-2-2) + (0.5,-0.5)$);
 \draw[BrickRed, style={-}] ($(mat1-2-2) + (0.5,0.5)$) -- ($(mat1-2-2) + (-0.5,-0.5)$);
 
-\path[->, >=stealth', BrickRed] (mat1-2-4.south) edge [bend left=60] node[draw=none] {} (mat1-2-3.south);
-\path[->, >=stealth', BrickRed] (mat1-2-3.south) edge [bend left=60] node[draw=none] {} (mat1-2-2.south);
+\path[->, >=stealth, BrickRed] (mat1-2-4.south) edge [bend left=60] node[draw=none] {} (mat1-2-3.south);
+\path[->, >=stealth, BrickRed] (mat1-2-3.south) edge [bend left=60] node[draw=none] {} (mat1-2-2.south);
 
 \end{tikzpicture}
 \caption{Removing an element to an array.}
@@ -170,8 +170,35 @@ A \textbf{linked list} is a linear collection in which each element has the data
 		\label{linked_list_1}
 	\end{center}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[double link/.style n args=2{on chain, rectangle split, rectangle split horizontal, rectangle split parts=2, draw, anchor=center, text height=1.5ex, node contents={#1\nodepart{two}#2},}, start chain=going right, >=stealth, thick, node distance=15mm]
+
+\node[double link={$Head$}{\textcolor{BrickRed}{$0x00$}}, alias={h}];
+\node[join={by ->}, double link={$7$}{\textcolor{BrickRed}{$0x01$}}, alias={a}];
+\node[join={by ->}, double link={$1$}{\textcolor{BrickRed}{$0x02$}}, alias={b}];
+\node[join={by ->}, double link={$13$}{\textcolor{BrickRed}{$null$}}, alias={c}];
+
+\draw ($(a) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r1) {\textcolor{BrickRed}{$0x00$}};
+\draw ($(b) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r2) {\textcolor{BrickRed}{$0x01$}};
+\draw ($(c) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r3) {\textcolor{BrickRed}{$0x02$}};
+
+\draw ($(a) + (0,1)$) node[draw=none, rectangle, align=left] (r3) {Content};
+\draw ($(a) + (4,1)$) node[draw=none, rectangle, align=left] (r4) {Address (pointer) of the next node};
+\draw ($(c) + (2.4,0)$) node[draw=none, rectangle, align=left] (r5) {Last node \\ points to null};
+
+\draw[->, >=stealth] (r3.south) -- (a.one north);
+\draw[->, >=stealth] (r4.south) -- (a.two north);
+\draw[->, >=stealth] (r5.west) -- (c.two east); 
+\end{tikzpicture}
+
+\caption[An example of a linked list with the data and the reference to the next element.]{An example of a linked list with the data and the reference to the next element.}
+\label{linked_list_1}
+\end{figure}
+
 In a linked list the order of the elements is not assured. 
-\\
+
 Operations like adding or removing an element in a linked list are very efficient, because it is enough to change the references of the elements involved in the operation. For example for adding a new element is enough to change the previous element reference to the just added element, and change the reference of the new element to the next element (Figure \ref{linked_list_2}). In case of removing an element it is enough to update the previous element's reference to the next element of the removed one (Figure \ref{linked_list_3}). 
 \begin{figure}[H]
 	\begin{center}
@@ -182,12 +209,78 @@ Operations like adding or removing an element in a linked list are very efficien
 \end{figure}
 
 \begin{figure}[H]
+\centering
+\begin{tikzpicture}[double link/.style n args=2{on chain, rectangle split, rectangle split horizontal, rectangle split parts=2, draw, anchor=center, text height=1.5ex, node contents={#1\nodepart{two}#2},}, start chain=going right, >=stealth, thick, node distance=15mm]
+
+\node[double link={$Head$}{\textcolor{BrickRed}{$0x00$}}, alias={h}];
+\node[join={by ->}, double link={$7$}{\textcolor{BrickRed}{$0x01$}}, alias={a}];
+\node[join={by ->}, double link={$1$}{\textcolor{BrickRed}{$0x02$}}, alias={b}];
+\node[join={by ->}, double link={$13$}{\textcolor{BrickRed}{$null$}}, alias={c}];
+
+\draw ($(a) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r1) {\textcolor{BrickRed}{$0x00$}};
+\draw ($(b) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r2) {\textcolor{BrickRed}{$0x01$}};
+\draw ($(c) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r3) {\textcolor{BrickRed}{$0x02$}};
+\draw ($(a) + (-5mm,10mm)$) node[draw=none, rectangle, align=left] (r4) {Add a new element};
+\draw[->, >=stealth] (r4.south) -- (1.5,0);
+\end{tikzpicture}
+
+\begin{tikzpicture}[double link/.style n args=2{on chain, rectangle split, rectangle split horizontal, rectangle split parts=2, draw, anchor=center, text height=1.5ex, node contents={#1\nodepart{two}#2},}, start chain=going right, >=stealth, thick, node distance=15mm]
+
+\node[double link={$Head$}{\textcolor{BrickRed}{$0x04$}}, alias={h}];
+\node[join={by ->}, double link={$3$}{\textcolor{BrickRed}{$0x00$}}, alias={aa}, BrickRed];
+\node[join={by ->}, double link={$7$}{\textcolor{BrickRed}{$0x01$}}, alias={a}];
+\node[join={by ->}, double link={$1$}{\textcolor{BrickRed}{$0x02$}}, alias={b}];
+\node[join={by ->}, double link={$13$}{\textcolor{BrickRed}{$null$}}, alias={c}];
+
+\draw ($(aa) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r11) {\textcolor{BrickRed}{$0x04$}};
+\draw ($(a) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r1) {\textcolor{BrickRed}{$0x00$}};
+\draw ($(b) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r2) {\textcolor{BrickRed}{$0x01$}};
+\draw ($(c) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r3) {\textcolor{BrickRed}{$0x02$}};
+\end{tikzpicture}
+
+\caption[Adding a new element to a linked list.]{Adding a new element to the linked list. As explained before this operation is very efficient because it is enough to change the references of the new element and the previous element to the one just added.}
+\label{linked_list_2}
+\end{figure}
+
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.6]{chapters/datastructures/images/linked_list_3.pdf}
 		\caption[Removing an element to a linked list.]{Removing an element to a linked list.}
 		\label{linked_list_3}
 	\end{center}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[double link/.style n args=2{on chain, rectangle split, rectangle split horizontal, rectangle split parts=2, draw, anchor=center, text height=1.5ex, node contents={#1\nodepart{two}#2},}, start chain=going right, >=stealth, thick, node distance=15mm]
+
+\node[double link={$Head$}{\textcolor{BrickRed}{$0x00$}}, alias={h}];
+\node[join={by ->}, double link={$7$}{\textcolor{BrickRed}{$0x01$}}, alias={a}];
+\node[join={by ->}, double link={$1$}{\textcolor{BrickRed}{$0x02$}}, alias={b}];
+\node[join={by ->}, double link={$13$}{\textcolor{BrickRed}{$null$}}, alias={c}];
+
+\draw ($(a) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r1) {\textcolor{BrickRed}{$0x00$}};
+\draw ($(b) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r2) {\textcolor{BrickRed}{$0x01$}};
+\draw ($(c) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r3) {\textcolor{BrickRed}{$0x02$}};
+
+\draw[BrickRed, style={-}] ($(a) + (-0.5,0.5)$) -- ($(a) + (0.5,-0.5)$);
+\draw[BrickRed, style={-}] ($(a) + (0.5,0.5)$) -- ($(a) + (-0.5,-0.5)$);
+\end{tikzpicture}
+
+\begin{tikzpicture}[double link/.style n args=2{on chain, rectangle split, rectangle split horizontal, rectangle split parts=2, draw, anchor=center, text height=1.5ex, node contents={#1\nodepart{two}#2},}, start chain=going right, >=stealth, thick, node distance=15mm]
+
+\node[double link={$Head$}{\textcolor{BrickRed}{$0x01$}}, alias={h}];
+\node[join={by ->}, double link={$1$}{\textcolor{BrickRed}{$0x02$}}, alias={b}];
+\node[join={by ->}, double link={$13$}{\textcolor{BrickRed}{$null$}}, alias={c}];
+
+\draw ($(b) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r2) {\textcolor{BrickRed}{$0x01$}};
+\draw ($(c) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r3) {\textcolor{BrickRed}{$0x02$}};
+\end{tikzpicture}
+
+\caption[Removing an element to a linked list.]{Removing an element to a linked list.}
+\label{linked_list_3}
+\end{figure}
+
 The complexity for adding or removing an element is constant \(O(1)\).
 Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}), which evry element has the reference to the previous and next element of the collection \cite{wikidoublylinkedlist} (\href{https://en.wikipedia.org/wiki/Doubly_linked_list}{Doubly linked list, Wikipedia}).
 \begin{figure}[H]
@@ -196,7 +289,31 @@ Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}
 		\caption[Doubly linked list.]{Doubly linked list.}
 		\label{linked_list_4}
 	\end{center}
-\end{figure} 
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[list/.style={thick, rectangle split, rectangle split parts=3, draw, rectangle split horizontal, minimum size=18pt, inner sep=5pt, text=black}, ->, start chain, thick]
+
+  \node[list, on chain] (a) {\nodepart{second} $7$};
+  \node[list, on chain] (b) {\nodepart{second} $1$};
+  \node[list, on chain] (c) {\nodepart{second} $13$};
+
+  \node[draw, rectangle, minimum size=18pt] (d) [right=of c] {\textcolor{BrickRed}{$null$}};
+  \node[draw, rectangle, minimum size=18pt] (e) [left= of a] {\textcolor{BrickRed}{$null$}};
+  
+  \draw[*->, >=stealth] ($(a.one) + (0.2, 0.1)$) -- (e.east);
+   
+  \path[*->] let \p1 = (a.three), \p2 = (a.center) in (\x1,\y2) edge [bend left] ($(b.one)+(0,0.2)$);
+  \path[*->] ($(b.one)+(0.1,0.1)$) edge [bend left] ($(a.three)+(0,-0.05)$);
+  \path[*->] let \p1 = (b.three), \p2 = (b.center) in (\x1,\y2) edge [bend left] ($(c.one)+(0,0.2)$);
+  
+  \draw[*->] let \p1 = (c.three), \p2 = (c.center) in (\x1,\y2) -- (d);
+  \path[*->] ($(c.one)+(0.1,0.1)$) edge [bend left] ($(b.three)+(0,-0.05)$);
+\end{tikzpicture}
+\caption[Doubly linked list.]{Doubly linked list.}
+\label{linked_list_4}
+\end{figure}
 
 Linked list are used for implementing other data structures such as lists, stacks, queues, and associative array.
 
@@ -265,6 +382,27 @@ In the stacks only the element at the top of the stack can be modified. The comp
 		\label{stack_1}
 	\end{center}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[draw, minimum width=1.5cm, minimum height=0.5cm, thick]
+    \node[draw] (push) at (-1,2) {};
+    \node[draw=none] at ($(push) + (0, 5mm)$) {Push $O(1)$};
+    \node[draw] (pop) at (1,2) {};
+    \node[draw=none] at ($(pop) + (0, 5mm)$) {Pop $O(1)$};
+    
+    \matrix (queue)[matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth]
+    {
+       \\ \\ \\ \\
+    };
+
+    \draw[->, >=stealth] (0.25,1) .. controls (0.25,1.5) and (1,1.5) .. (pop.south);
+    \draw[->, >=stealth] (push.south) .. controls (-1, 1.5) and (-0.25,1.5) .. (-0.25,1);
+\end{tikzpicture}
+\caption[In a stack only the element at the top is modified.]{In a stack only the element at the top is modified.}
+\label{stack_1}
+\end{figure}
+
 \subsection{Stack Implementation}
 The following is the implementation in Python of a stack using the linked list.
 \begin{lstlisting}[firstnumber=1, caption={Stack implementation.}]
@@ -319,6 +457,29 @@ The most efficient way to implement a queue is using linked lists.
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[draw, minimum width=1.5cm, minimum height=0.5cm, thick]  
+    \node[draw] (enqueue) at (-1,2) {};
+    \node[draw=none] at ($(enqueue) + (0, 5mm)$) {Enqueue $O(1)$};
+    \node[draw] (dequeue) at (1,-2) {};
+    \node[draw=none] at ($(dequeue) + (0, -5mm)$) {Dequeue $O(1)$};
+    
+    \matrix (queue)[matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth]
+    {
+      Head \\ 
+       \\ 
+       \\ 
+       Tail \\
+    };
+
+    \draw[->, >=stealth] (0.25,-1.05) .. controls (0.25,-1.25) and (1,-1.25) .. (dequeue.north);
+    \draw[->, >=stealth] (enqueue.south) .. controls (-1, 1.5) and (-0.25,1.5) .. (-0.25,1);
+\end{tikzpicture}
+\caption[Allowed operations on queue elements.]{In a queue only the first element to be added can be removed or where a new element can be added.}
+\label{queue_1}
+\end{figure}
+
 A generalization of queues and linked lists are \textbf{deques}, in which is possible to perform deque and enque operations on both the \textbf{head} and \textbf{tail}.
 
 \begin{figure}[H]
@@ -327,6 +488,37 @@ A generalization of queues and linked lists are \textbf{deques}, in which is pos
 		\caption[In a deque the operations can be done on both head and tail.]{In a deque the operations can be done on both head and tail.}
 		\label{queue_2}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[draw, minimum width=1.5cm, minimum height=0.5cm, thick]  
+    \node[draw] (enqueue) at (-1.5,2) {};
+    \node[draw=none] at ($(enqueue) + (0, 5mm)$) {Enqueue $O(1)$};
+    \node[draw] (dequeue1) at (1.5,2) {};
+    \node[draw=none] at ($(dequeue1) + (0, 5mm)$) {Dequeue $O(1)$};
+    
+    \node[draw] (dequeue) at (1.5,-2) {};
+    \node[draw=none] at ($(dequeue) + (0, -5mm)$) {Dequeue $O(1)$};
+    \node[draw] (enqueue1) at (-1.5,-2) {};
+    \node[draw=none] at ($(enqueue1) + (0, -5mm)$) {Enqueue $O(1)$};
+    
+    \matrix (queue)[matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth]
+    {
+      Head \\ 
+       \\ 
+       \\ 
+       Tail \\
+    };
+
+    \draw[->, >=stealth] (0.25,-1.05) .. controls (0.25,-1.25) and (1,-1.25) .. (dequeue.north);
+    \draw[->, >=stealth] (enqueue.south) .. controls (-1, 1.5) and (-0.25,1.5) .. (-0.25,1);
+    
+    \draw[->, >=stealth] (enqueue1.north) .. controls (-0.25,-1.25) and (1,-1.25) .. (-0.25,-1.05);
+    \draw[->, >=stealth] (0.25,1) .. controls (-1, 1.5) and (0.25,1.5) .. (dequeue1.south);
+\end{tikzpicture}
+\caption[In a deque the operations can be done on both head and tail.]{In a deque the operations can be done on both head and tail.}
+\label{queue_2}
 \end{figure}
 
 Another modification of queue are \textbf{priority queue}, in which each element has a priority (a numeric value that indicates its importance). When an element of the queue is removed (deque), the element to be removed is the one which has the highest priority. In case two or more elements have the same priority the oldest element is removed.

@@ -21,7 +21,7 @@ A \textbf{tree} is an abstract datatype that simulate a hierarchical structure \
 \draw ($(r1) + (-1.5mm, -1)$) node[rectangle, align=left] (r2) {Data: A \\ Next:};
 \draw ($(r1) + (2, -1)$) node[rectangle, align=left] (r3) {Data: B \\ Next:};
 
-\draw[->, >=stealth'] ($(r2) + (3mm, -3mm)$) -- ($(r3) + (-6.3mm, -3mm)$);
+\draw[->, >=stealth] ($(r2) + (3mm, -3mm)$) -- ($(r3) + (-6.3mm, -3mm)$);
 
 \draw (6,0) node[draw=none, rectangle, align=left] (r4) {Tree};
 \draw ($(r4) + (0, -1.2)$) node[align=left] (n1) {Data: C \\ Next:};
@@ -32,12 +32,12 @@ A \textbf{tree} is an abstract datatype that simulate a hierarchical structure \
 \draw ($(r4) + (-2.2, -0.5)$) node[draw=none, rectangle, align=left] (r5) {\textcolor{ForestGreen}{Root}};
 \draw ($(r4) + (2.2, -0.5)$) node[draw=none, rectangle, align=left] (r6) {\textcolor{ForestGreen}{Node}};
 
-\draw[->, >=stealth', ForestGreen] (r5) -- (n1);
-\draw[->, >=stealth', ForestGreen] (r6) -- (n1);
+\draw[->, >=stealth, ForestGreen] (r5) -- (n1);
+\draw[->, >=stealth, ForestGreen] (r6) -- (n1);
 
-\draw[->, >=stealth'] (n1) -- (n2);
-\draw[->, >=stealth'] (n1) -- (n3);
-\draw[->, >=stealth'] (n1) -- (n4);
+\draw[->, >=stealth] (n1) -- (n2);
+\draw[->, >=stealth] (n1) -- (n3);
+\draw[->, >=stealth] (n1) -- (n4);
 
 \end{tikzpicture}
 
@@ -59,7 +59,7 @@ Trees must be completed connected structures, this means that there are not any 
 \centering
 \begin{subfigure}[b]{0.2\linewidth}
 \centering
-	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth']
+	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth]
     	\node {$a$}
    			child{node {$b$}}
    		 	child{node {$c$}};
@@ -70,7 +70,7 @@ Trees must be completed connected structures, this means that there are not any 
 \hspace{1em}
 \begin{subfigure}[b]{0.2\linewidth}
 \centering
-	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth']
+	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth]
 		\node {$a$}
    			child{node {$b$}}
    		 	child{node {$c$} edge from parent[draw=none]};
@@ -84,11 +84,11 @@ Trees must be completed connected structures, this means that there are not any 
 \hspace{1em}
 \begin{subfigure}[b]{0.2\linewidth}
 \centering
-	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth']
+	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth]
 		\node {$a$}
    			child{node (ct1) {$b$}}
    		 	child{node (ct2) {$c$}};
-   		 \draw[->, >=stealth'] (ct1) -- (ct2);  
+   		 \draw[->, >=stealth] (ct1) -- (ct2);  
    		 
    		 \draw[BrickRed, style={-}] (-1,0.2) -- (1,-1.6);
 		 \draw[BrickRed, style={-}] (1,0.2) -- (-1,-1.6);
@@ -115,14 +115,14 @@ All this definitions are defined in following figure (Figure \ref{trees_3}).
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
 
-\node[->, >=stealth'] (na){$a$}
-   child{node (nb) {$b$} edge from parent[->, >=stealth']
-             child {node (nd) {$d$} edge from parent[->, >=stealth']}
-             child {node (ne) {$e$} edge from parent[->, >=stealth']}
+\node[->, >=stealth] (na){$a$}
+   child{node (nb) {$b$} edge from parent[->, >=stealth]
+             child {node (nd) {$d$} edge from parent[->, >=stealth]}
+             child {node (ne) {$e$} edge from parent[->, >=stealth]}
         }
-   child{node (nc) {$c$} edge from parent[->, >=stealth']
+   child{node (nc) {$c$} edge from parent[->, >=stealth]
 			child[missing]
-			child{node (nf) {$f$}} edge from parent[->, >=stealth']
+			child{node (nf) {$f$}} edge from parent[->, >=stealth]
 		};
 \draw ($(na) + (0, 1)$) node[draw=none, rectangle, align=left] (r5) {Root};
 \draw ($(na) + (-1.5, 0)$) node[draw=none, rectangle, align=left] (r6) {Node};
@@ -133,15 +133,15 @@ All this definitions are defined in following figure (Figure \ref{trees_3}).
 \draw ($(nf) + (1,1)$) node[draw=none, rectangle, align=left] (r11) {Leaf node};
 \draw ($(nc) + (4,0)$) node[draw=none, rectangle, align=left] (r12) {Height \\ of the \\ tree};
 
-\draw[->, >=stealth'] (r5) -- (na);
-\draw[->, >=stealth'] (r6) -- ($(na) + (-1mm, 0)$);
-\draw[->, >=stealth'] (r7) -- ($(na) + (0.4, -0.6)$);
-\draw[->, >=stealth'] (r8) -- (nb);
-\draw[->, >=stealth', ForestGreen] (r9) -- ($(nd) + (-0.9,-0.3)$);
-\draw[->, >=stealth'] (nd) -- (r10);
-\draw[->, >=stealth'] (ne) -- (r10);
-\draw[->, >=stealth'] (nf) -- (r11);
-\draw[<->, >=stealth'] ($(nf) + (2.5,3.2)$) -- ($(nf) + (2.5,-0.3)$);
+\draw[->, >=stealth] (r5) -- (na);
+\draw[->, >=stealth] (r6) -- ($(na) + (-1mm, 0)$);
+\draw[->, >=stealth] (r7) -- ($(na) + (0.4, -0.6)$);
+\draw[->, >=stealth] (r8) -- (nb);
+\draw[->, >=stealth, ForestGreen] (r9) -- ($(nd) + (-0.9,-0.3)$);
+\draw[->, >=stealth] (nd) -- (r10);
+\draw[->, >=stealth] (ne) -- (r10);
+\draw[->, >=stealth] (nf) -- (r11);
+\draw[<->, >=stealth] ($(nf) + (2.5,3.2)$) -- ($(nf) + (2.5,-0.3)$);
 
 \draw[ForestGreen, rounded corners, dashed, line width=1pt]
     ($(nb) + (0,0.8)$) --
@@ -171,14 +171,14 @@ Which way is the most efficient for visiting all the nodes of a tree? Is it more
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
 
-\node[->, >=stealth'] (na){$a$}
-   child{node (nb) {$b$} edge from parent[->, >=stealth']
-             child {node (nd) {$d$} edge from parent[->, >=stealth']}
-             child {node (ne) {$e$} edge from parent[->, >=stealth']}
+\node[->, >=stealth] (na){$a$}
+   child{node (nb) {$b$} edge from parent[->, >=stealth]
+             child {node (nd) {$d$} edge from parent[->, >=stealth]}
+             child {node (ne) {$e$} edge from parent[->, >=stealth]}
         }
-   child{node (nc) {$c$} edge from parent[->, >=stealth']
+   child{node (nc) {$c$} edge from parent[->, >=stealth]
 			child[missing]
-			child{node (nf) {$f$}} edge from parent[->, >=stealth']
+			child{node (nf) {$f$}} edge from parent[->, >=stealth]
 		};
 
 \draw[ForestGreen, line width=1pt]
@@ -196,14 +196,14 @@ Which way is the most efficient for visiting all the nodes of a tree? Is it more
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
 
-\node[->, >=stealth'] (na){$a$}
-   child{node (nb) {$b$} edge from parent[->, >=stealth']
-             child {node (nd) {$d$} edge from parent[->, >=stealth']}
-             child {node (ne) {$e$} edge from parent[->, >=stealth']}
+\node[->, >=stealth] (na){$a$}
+   child{node (nb) {$b$} edge from parent[->, >=stealth]
+             child {node (nd) {$d$} edge from parent[->, >=stealth]}
+             child {node (ne) {$e$} edge from parent[->, >=stealth]}
         }
-   child{node (nc) {$c$} edge from parent[->, >=stealth']
+   child{node (nc) {$c$} edge from parent[->, >=stealth]
 			child[missing]
-			child{node (nf) {$f$}} edge from parent[->, >=stealth']
+			child{node (nf) {$f$}} edge from parent[->, >=stealth]
 		};
 
 \draw[ForestGreen, line width=1pt]
@@ -261,7 +261,7 @@ In the \textbf{pre-order search} the first node to be checked as visited is the 
   \fill[color=black] ($(nc) + (-0.5,0.15)$) circle (0.1);
   \fill[color=black] ($(nf) + (-0.48,0.0)$) circle (0.1);
   
-  \draw[->, >=stealth', blue, rounded corners, dashed, line width=0.7pt]
+  \draw[->, >=stealth, blue, rounded corners, dashed, line width=0.7pt]
     ($(na) + (-0.4,0.2)$) --
     ($(nb) + (-0.4,0.2)$) --
     %($(nb) + (-0.44,0.0)$) --
@@ -329,7 +329,7 @@ In the \textbf{in-order search} the first node to be checked is the first node w
   \fill[color=black] ($(nf) + (-0.48,0.0)$) circle (0.1);
   \fill[color=black] ($(nc) + (0.44,0.0)$) circle (0.1);
   
-  \draw[->, >=stealth', blue, rounded corners, dashed, line width=0.7pt]
+  \draw[->, >=stealth, blue, rounded corners, dashed, line width=0.7pt]
     ($(na) + (-0.4,0.2)$) --
     ($(nb) + (-0.4,0.2)$) --
     %($(nb) + (-0.44,0.0)$) --
@@ -396,7 +396,7 @@ In the \textbf{post-order search} the first node to be checked off is the first 
   \fill[color=black] ($(nc) + (0.44,0.0)$) circle (0.1);
   \fill[color=black] ($(na) + (0.5,0.0)$) circle (0.1);
   
-  \draw[->, >=stealth', blue, rounded corners, dashed, line width=0.7pt]
+  \draw[->, >=stealth, blue, rounded corners, dashed, line width=0.7pt]
     ($(na) + (-0.4,0.2)$) --
     ($(nb) + (-0.4,0.2)$) --
     %($(nb) + (-0.44,0.0)$) --
@@ -442,7 +442,7 @@ To search an element in the tree one of the previous methods can be used. Becaus
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[every node/.style={circle,draw,minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw,minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=4.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=2.5cm]
@@ -509,7 +509,7 @@ Before the delete process there is always a search one for finding the element t
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=4.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=2.5cm]
@@ -538,9 +538,9 @@ Before the delete process there is always a search one for finding the element t
 \draw[BrickRed, style={-}] ($(nc) + (0.5,0.5)$) -- ($(nc) + (-0.5,-0.5)$);
 \draw[BrickRed, style={-}] ($(nc) + (-0.5,0.5)$) -- ($(nc) + (0.5,-0.5)$);
 
-\path[->, >=stealth', BrickRed] (nf.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 1} (nc.east);
-\path[->, >=stealth', BrickRed] (ne.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 2} (nb.east);
-\path[->, >=stealth', BrickRed] (ng.north west) edge [bend left=100] node[draw=none, xshift=-22pt] {Case 3} (nb.west);
+\path[->, >=stealth, BrickRed] (nf.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 1} (nc.east);
+\path[->, >=stealth, BrickRed] (ne.north east) edge [bend right=60] node[draw=none, xshift=24pt] {Case 2} (nb.east);
+\path[->, >=stealth, BrickRed] (ng.north west) edge [bend left=100] node[draw=none, xshift=-22pt] {Case 3} (nb.west);
 
 \end{tikzpicture}
 \caption[Delete an element of a tree.]{Delete an element of a tree.}
@@ -569,16 +569,16 @@ Insert a new element to a binary tree is not a hard operation, because it is eno
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
 \node (na){$a$}
-   child{node (nb) {$b$} edge from parent[->, >=stealth']
-             child {node (nd) {$d$} edge from parent[->, >=stealth']
-				child {node (nh) {$h$} edge from parent[->, >=stealth']}
+   child{node (nb) {$b$} edge from parent[->, >=stealth]
+             child {node (nd) {$d$} edge from parent[->, >=stealth]
+				child {node (nh) {$h$} edge from parent[->, >=stealth]}
 				child[missing]             
              }
-             child {node (ne) {$e$} edge from parent[->, >=stealth']}
+             child {node (ne) {$e$} edge from parent[->, >=stealth]}
         }
-   child{node (nc) {$c$} edge from parent[->, >=stealth']
-			child{node[BrickRed] (ng) {$g$} edge from parent[BrickRed, ->, >=stealth']}
-			child{node (nf) {$f$} edge from parent[->, >=stealth']}
+   child{node (nc) {$c$} edge from parent[->, >=stealth]
+			child{node[BrickRed] (ng) {$g$} edge from parent[BrickRed, ->, >=stealth]}
+			child{node (nf) {$f$} edge from parent[->, >=stealth]}
 		};
 
 \draw[BrickRed, style={-}, dashed] 
@@ -648,13 +648,13 @@ A perfect binary tree is a binary tree in which all the nodes have two children 
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
 \node (na){$a$}
-   child{node (nb) {$b$} edge from parent[->, >=stealth']
-             child {node (nd) {$d$} edge from parent[->, >=stealth']}
-             child {node (ne) {$e$} edge from parent[->, >=stealth']}
+   child{node (nb) {$b$} edge from parent[->, >=stealth]
+             child {node (nd) {$d$} edge from parent[->, >=stealth]}
+             child {node (ne) {$e$} edge from parent[->, >=stealth]}
         }
-   child{node (nc) {$c$} edge from parent[->, >=stealth']
-			child{node (nf) {$f$} edge from parent[->, >=stealth']}
-			child{node (ng) {$g$} edge from parent[->, >=stealth']}
+   child{node (nc) {$c$} edge from parent[->, >=stealth]
+			child{node (nf) {$f$} edge from parent[->, >=stealth]}
+			child{node (ng) {$g$} edge from parent[->, >=stealth]}
 		};
 \end{tikzpicture}
 \end{subfigure}
@@ -738,13 +738,13 @@ Performing operations such as search, addition, or removal of an element it is a
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
 \node[BrickRed] (n5){$5$}
-   child{node (n3) {$3$} edge from parent[->, >=stealth']
-             child {node (n1) {$1$} edge from parent[->, >=stealth']}
+   child{node (n3) {$3$} edge from parent[->, >=stealth]
+             child {node (n1) {$1$} edge from parent[->, >=stealth]}
 			 child[missing]
         }
-   child{node[BrickRed] (n8) {$8$} edge from parent[->, >=stealth']
-			child{node[BrickRed] (n7) {$7$} edge from parent[->, >=stealth']}
-			child{node (n10) {$10$} edge from parent[->, >=stealth']}
+   child{node[BrickRed] (n8) {$8$} edge from parent[->, >=stealth]
+			child{node[BrickRed] (n7) {$7$} edge from parent[->, >=stealth]}
+			child{node (n10) {$10$} edge from parent[->, >=stealth]}
 		};
 
 \draw ($(n5) + (0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{BrickRed}{5<7}};
@@ -778,13 +778,13 @@ Let us consider instead we would like to add a new node of value 4 to the tree o
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
 \node[BrickRed] (n5){$5$}
-   child{node[BrickRed] (n3) {$3$} edge from parent[->, >=stealth']
-             child {node (n1) {$1$} edge from parent[->, >=stealth']}
-			 child {node[BrickRed] (n4) {$4$} edge from parent[->, >=stealth']}
+   child{node[BrickRed] (n3) {$3$} edge from parent[->, >=stealth]
+             child {node (n1) {$1$} edge from parent[->, >=stealth]}
+			 child {node[BrickRed] (n4) {$4$} edge from parent[->, >=stealth]}
         }
-   child{node(n8) {$8$} edge from parent[->, >=stealth']
-			child{node (n7) {$7$} edge from parent[->, >=stealth']}
-			child{node (n10) {$10$} edge from parent[->, >=stealth']}
+   child{node(n8) {$8$} edge from parent[->, >=stealth]
+			child{node (n7) {$7$} edge from parent[->, >=stealth]}
+			child{node (n10) {$10$} edge from parent[->, >=stealth]}
 		};
 
 \draw ($(n5) + (-0.6, 0.6)$) node[draw=none, rectangle] {\textcolor{BrickRed}{5<7}};
@@ -813,9 +813,9 @@ When instead a tree has all its children nodes which have always a bigger value,
 \begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick]
 
 \node(n5){$5$}
-   child{node(n10) {$10$} edge from parent[->, >=stealth']
-         child {node (n15) {$15$} edge from parent[->, >=stealth']
-		 child{node (n20) {$20$} edge from parent[->, >=stealth']}             
+   child{node(n10) {$10$} edge from parent[->, >=stealth]
+         child {node (n15) {$15$} edge from parent[->, >=stealth]
+		 child{node (n20) {$20$} edge from parent[->, >=stealth]}             
              }
         };
 
@@ -879,7 +879,7 @@ We say the \textit{max heap} (Figure \ref{max_heap}) if for every node its child
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth']
+	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth]
 		\node {$7$}
    			child{node {$5$}
 				child{node {$2$}}
@@ -893,7 +893,7 @@ We say the \textit{max heap} (Figure \ref{max_heap}) if for every node its child
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth']
+	\begin{tikzpicture}[thick, every node/.style={circle,draw}, ->, >=stealth]
 		\node {$1$}
    			child{node {$2$}
 				child{node {$5$}} 
@@ -932,13 +932,13 @@ Let us consider we would like to add a new node to a heap. In this case the node
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
 	\node (n30) {$30$}
-   		child{node (n25) {$2$} edge from parent[->, >=stealth']
-			child{node (n15) {$15$} edge from parent[->, >=stealth']} 
-			child{node (n10) {$10$} edge from parent[->, >=stealth']}   			
+   		child{node (n25) {$2$} edge from parent[->, >=stealth]
+			child{node (n15) {$15$} edge from parent[->, >=stealth]} 
+			child{node (n10) {$10$} edge from parent[->, >=stealth]}   			
    		}
-   	 	child{node (n21) {$21$} edge from parent[->, >=stealth']
-   	 		child{node (n5) {$5$} edge from parent[->, >=stealth']} 
-			child{node (n20) {$20$} edge from parent[->, >=stealth']} 
+   	 	child{node (n21) {$21$} edge from parent[->, >=stealth]
+   	 		child{node (n5) {$5$} edge from parent[->, >=stealth]} 
+			child{node (n20) {$20$} edge from parent[->, >=stealth]} 
    	 	};
 \draw ($(n30) + (2, 0)$) node[draw=none, rectangle] {\textcolor{BrickRed}{30>21 no swap}};
 \draw ($(n21) + (2, 0)$) node[draw=none, rectangle] {\textcolor{BrickRed}{20<21 swap}};
@@ -975,15 +975,15 @@ To implement a heap we can use an array. An example of this application is shown
 \tikzstyle{level 4}=[level distance=15mm, sibling distance=1cm]
 
 	\node (n19) {$19$}
-   		child{node (n17) {$17$} edge from parent[->, >=stealth']
-			child{node (n11) {$11$} edge from parent[->, >=stealth']
-				child{node (n2) {$2$} edge from parent[->, >=stealth']}
-				child{node (n1) {$1$} edge from parent[->, >=stealth']}} 
-			child{node (n7) {$7$} edge from parent[->, >=stealth']}   			
+   		child{node (n17) {$17$} edge from parent[->, >=stealth]
+			child{node (n11) {$11$} edge from parent[->, >=stealth]
+				child{node (n2) {$2$} edge from parent[->, >=stealth]}
+				child{node (n1) {$1$} edge from parent[->, >=stealth]}} 
+			child{node (n7) {$7$} edge from parent[->, >=stealth]}   			
    		}
-   	 	child{node (n21) {$13$} edge from parent[->, >=stealth']
-   	 		child{node (n5) {$5$} edge from parent[->, >=stealth']} 
-			child{node (n3) {$3$} edge from parent[->, >=stealth']} 
+   	 	child{node (n21) {$13$} edge from parent[->, >=stealth]
+   	 		child{node (n5) {$5$} edge from parent[->, >=stealth]} 
+			child{node (n3) {$3$} edge from parent[->, >=stealth]} 
    	 	};
 \draw ($(n19) + (-4, 1)$) node[draw=none, rectangle, align=center] {Level};
 \draw ($(n19) + (-4, 0.1)$) node[draw=none, rectangle, align=center] {1};
@@ -1023,7 +1023,7 @@ To implement a heap we can use an array. An example of this application is shown
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=13mm, sibling distance=1.5cm]
@@ -1054,7 +1054,7 @@ To implement a heap we can use an array. An example of this application is shown
 \end{subfigure}
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
@@ -1110,7 +1110,7 @@ The rules that a red-black tree must respect are:
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[thick, every node/.style={circle,draw}, minimum size=8mm, ->, >=stealth']
+\begin{tikzpicture}[thick, every node/.style={circle,draw}, minimum size=8mm, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
@@ -1154,7 +1154,7 @@ Usual only red nodes are added and the color of the other nodes are changed acco
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
@@ -1177,7 +1177,7 @@ Usual only red nodes are added and the color of the other nodes are changed acco
 \end{subfigure}
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
@@ -1216,7 +1216,7 @@ In case the insertion or the removal does nor respect the rules of the red-black
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
@@ -1242,7 +1242,7 @@ In case the insertion or the removal does nor respect the rules of the red-black
 \end{subfigure}
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth']
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]

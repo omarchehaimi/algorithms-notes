@@ -150,17 +150,17 @@ def factorial(n):
 	\node (n5) at (2,-6) {$2$*factorial($1$)};
 	\node[draw=none] (n6) at (2.5,-7.5) {$1$};
 
-	\draw[->, >=stealth'] (n1) -- (n2);
-	\draw[->, >=stealth'] (n2) -- (n3);
-	\draw[->, >=stealth'] (n3) -- (n4);
-	\draw[->, >=stealth'] (n4) -- (n5);
-	\draw[->, >=stealth'] (n5) -- (n6);
+	\draw[->, >=stealth] (n1) -- (n2);
+	\draw[->, >=stealth] (n2) -- (n3);
+	\draw[->, >=stealth] (n3) -- (n4);
+	\draw[->, >=stealth] (n4) -- (n5);
+	\draw[->, >=stealth] (n5) -- (n6);
 	
-	\path[->, >=stealth', BrickRed] (n6.east) edge [bend right=50] node[draw=none, xshift=6pt] {$1$} (n5.east);
-	\path[->, >=stealth', BrickRed] (n5.east) edge [bend right=50] node[draw=none, xshift=23pt] {$2=2*1$} (n4.east);
-	\path[->, >=stealth', BrickRed] (n4.east) edge [bend right=50] node[draw=none, xshift=23pt] {$6=3*2$} (n3.east);
-	\path[->, >=stealth', BrickRed] (n3.east) edge [bend right=50] node[draw=none, xshift=26pt] {$24=6*4$} (n2.east);
-	\path[->, >=stealth', BrickRed] (n2.east) edge [bend right=50] node[draw=none, xshift=30pt] {$120=24*5$} (n1.east);
+	\path[->, >=stealth, BrickRed] (n6.east) edge [bend right=50] node[draw=none, xshift=6pt] {$1$} (n5.east);
+	\path[->, >=stealth, BrickRed] (n5.east) edge [bend right=50] node[draw=none, xshift=23pt] {$2=2*1$} (n4.east);
+	\path[->, >=stealth, BrickRed] (n4.east) edge [bend right=50] node[draw=none, xshift=23pt] {$6=3*2$} (n3.east);
+	\path[->, >=stealth, BrickRed] (n3.east) edge [bend right=50] node[draw=none, xshift=26pt] {$24=6*4$} (n2.east);
+	\path[->, >=stealth, BrickRed] (n2.east) edge [bend right=50] node[draw=none, xshift=30pt] {$120=24*5$} (n1.east);
 
 \end{tikzpicture}
 \caption[Factorial recursive execution.]{Factorial recursive execution.}
