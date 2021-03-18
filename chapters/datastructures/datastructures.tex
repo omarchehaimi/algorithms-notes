@@ -396,8 +396,8 @@ In the stacks only the element at the top of the stack can be modified. The comp
        \\ \\ \\ \\
     };
 
-    \draw[->, >=stealth] (0.25,1) .. controls (0.25,1.5) and (1,1.5) .. (pop.south);
-    \draw[->, >=stealth] (push.south) .. controls (-1, 1.5) and (-0.25,1.5) .. (-0.25,1);
+    \draw[->, >=stealth] (0.25,1) -- (pop.south);
+    \draw[->, >=stealth] (push.south) -- (-0.25,1);
 \end{tikzpicture}
 \caption[In a stack only the element at the top is modified.]{In a stack only the element at the top is modified.}
 \label{stack_1}
@@ -473,8 +473,8 @@ The most efficient way to implement a queue is using linked lists.
        Tail \\
     };
 
-    \draw[->, >=stealth] (0.25,-1.05) .. controls (0.25,-1.25) and (1,-1.25) .. (dequeue.north);
-    \draw[->, >=stealth] (enqueue.south) .. controls (-1, 1.5) and (-0.25,1.5) .. (-0.25,1);
+    \draw[->, >=stealth] (0.25,-1.05) -- (dequeue.north);
+    \draw[->, >=stealth] (enqueue.south) -- (-0.25,1.05);
 \end{tikzpicture}
 \caption[Allowed operations on queue elements.]{In a queue only the first element to be added can be removed or where a new element can be added.}
 \label{queue_1}
@@ -511,11 +511,11 @@ A generalization of queues and linked lists are \textbf{deques}, in which is pos
        Tail \\
     };
 
-    \draw[->, >=stealth] (0.25,-1.05) .. controls (0.25,-1.25) and (1,-1.25) .. (dequeue.north);
-    \draw[->, >=stealth] (enqueue.south) .. controls (-1, 1.5) and (-0.25,1.5) .. (-0.25,1);
+    \draw[->, >=stealth] (0.25,-1.052) -- (dequeue.north);
+    \draw[->, >=stealth] (enqueue.south) -- (-0.25,1.05);
     
-    \draw[->, >=stealth] (enqueue1.north) .. controls (-0.25,-1.25) and (1,-1.25) .. (-0.25,-1.05);
-    \draw[->, >=stealth] (0.25,1) .. controls (-1, 1.5) and (0.25,1.5) .. (dequeue1.south);
+    \draw[->, >=stealth] (enqueue1.north) -- (-0.25,-1.05);
+    \draw[->, >=stealth] (0.25,1.05) -- (dequeue1.south);
 \end{tikzpicture}
 \caption[In a deque the operations can be done on both head and tail.]{In a deque the operations can be done on both head and tail.}
 \label{queue_2}
@@ -529,6 +529,29 @@ Another modification of queue are \textbf{priority queue}, in which each element
 		\caption[A priority queue.]{A priority queue.}
 		\label{queue_3}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[every fit/.style={inner sep=0pt, outer sep=0pt, draw}]
+
+\begin{scope}[y=0.5cm]
+\node [fit={(0,0) (7,1)}, label=center:{(1,1)}] {};
+\end{scope}
+
+\begin{scope}[yshift=0.5cm,y=0.5cm]
+\node [fit={(0,0) (4,1)}, label=center:{Tail}] {};
+\node [fit={(4,0) (7,1)}, label=center:{Priority}] {};
+\end{scope}
+
+\begin{scope}[yshift=1.5cm,y=0.5cm]
+\node [fit={(0,0) (2,1)}, label=center:{(3,1)}] {};
+\node [fit={(2,0) (5,1)}, label=center:{(3,2)}] {};
+\node [fit={(5,0) (7,1)}, label=center:{(3,3)}] {};
+\end{scope}
+\end{tikzpicture}
+\caption[A priority queue.]{A priority queue.}
+\label{queue_3}
 \end{figure}
 
 \subsection{Queue Implementation}
