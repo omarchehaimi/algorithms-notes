@@ -533,22 +533,17 @@ Another modification of queue are \textbf{priority queue}, in which each element
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[every fit/.style={inner sep=0pt, outer sep=0pt, draw}]
+\begin{tikzpicture}[draw, minimum width=2.7cm, minimum height=0.5cm, thick]  
 
-\begin{scope}[y=0.5cm]
-\node [fit={(0,0) (7,1)}, label=center:{(1,1)}] {};
-\end{scope}
+    \matrix (queue)[matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth]
+    {
+      Head, Priority \\ 
+       \\
+       \\
+       \\
+      Tail, Priority \\
+    };
 
-\begin{scope}[yshift=0.5cm,y=0.5cm]
-\node [fit={(0,0) (4,1)}, label=center:{Tail}] {};
-\node [fit={(4,0) (7,1)}, label=center:{Priority}] {};
-\end{scope}
-
-\begin{scope}[yshift=1.5cm,y=0.5cm]
-\node [fit={(0,0) (2,1)}, label=center:{(3,1)}] {};
-\node [fit={(2,0) (5,1)}, label=center:{(3,2)}] {};
-\node [fit={(5,0) (7,1)}, label=center:{(3,3)}] {};
-\end{scope}
 \end{tikzpicture}
 \caption[A priority queue.]{A priority queue.}
 \label{queue_3}
@@ -583,6 +578,31 @@ A \textbf{map}, \textbf{associative array}, \textbf{symbol table}, or \textbf{di
 		\caption[An example of a map.]{An example of a map.}
 		\label{map_1}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[draw, minimum width=2.4cm, minimum height=0.5cm, thick]  
+
+    \matrix [matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth] (queue)
+    {
+      Definition 1 \\ 
+      Definition 2 \\
+      Definition 3 \\
+    };
+    
+    \node[rectangle, draw, minimum width=1cm, minimum height=0.5cm] (word) at ($(queue) + (-3.6,0)$) {Word};
+    
+    \node[draw=none] (key) at ($(word) + (0,-8mm)$) {\textcolor{ForestGreen}{Key}};
+    \node[draw=none] (key) at ($(queue) + (0,-14mm)$) {\textcolor{ForestGreen}{Value}};
+    
+    \draw[->, >=stealth] (word.east) -- (queue-1-1.west);
+    \draw[->, >=stealth] (word.east) -- (queue-2-1.west);
+	\draw[->, >=stealth] (word.east) -- (queue-3-1.west);    
+    
+\end{tikzpicture}
+\caption[An example of a map.]{An example of a map.}
+\label{map_1}
 \end{figure}
 
 \section{Hash Table}
