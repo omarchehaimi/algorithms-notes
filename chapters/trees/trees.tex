@@ -261,7 +261,7 @@ In the \textbf{pre-order search} the first node to be checked as visited is the 
   \fill[color=black] ($(nc) + (-0.5,0.15)$) circle (0.1);
   \fill[color=black] ($(nf) + (-0.48,0.0)$) circle (0.1);
   
-  \draw[->, >=stealth, blue, rounded corners, dashed, line width=0.7pt]
+  \draw[->, >=stealth, BrickRed, rounded corners, dashed, line width=0.7pt]
     ($(na) + (-0.4,0.2)$) --
     ($(nb) + (-0.4,0.2)$) --
     %($(nb) + (-0.44,0.0)$) --
@@ -329,7 +329,7 @@ In the \textbf{in-order search} the first node to be checked is the first node w
   \fill[color=black] ($(nf) + (-0.48,0.0)$) circle (0.1);
   \fill[color=black] ($(nc) + (0.44,0.0)$) circle (0.1);
   
-  \draw[->, >=stealth, blue, rounded corners, dashed, line width=0.7pt]
+  \draw[->, >=stealth, BrickRed, rounded corners, dashed, line width=0.7pt]
     ($(na) + (-0.4,0.2)$) --
     ($(nb) + (-0.4,0.2)$) --
     %($(nb) + (-0.44,0.0)$) --
@@ -396,7 +396,7 @@ In the \textbf{post-order search} the first node to be checked off is the first 
   \fill[color=black] ($(nc) + (0.44,0.0)$) circle (0.1);
   \fill[color=black] ($(na) + (0.5,0.0)$) circle (0.1);
   
-  \draw[->, >=stealth, blue, rounded corners, dashed, line width=0.7pt]
+  \draw[->, >=stealth, BrickRed, rounded corners, dashed, line width=0.7pt]
     ($(na) + (-0.4,0.2)$) --
     ($(nb) + (-0.4,0.2)$) --
     %($(nb) + (-0.44,0.0)$) --
@@ -1054,7 +1054,7 @@ To implement a heap we can use an array. An example of this application is shown
 \end{subfigure}
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
-\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
+\begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth, BrickRed]
 
 \tikzstyle{level 1}=[level distance=10mm, sibling distance=2.5cm]
 \tikzstyle{level 2}=[level distance=10mm, sibling distance=1.5cm]
@@ -1082,7 +1082,7 @@ To implement a heap we can use an array. An example of this application is shown
 \caption{}
 \label{balanced}
 \end{subfigure}
-\caption[Example of unbalanced (\ref{unbalanced}) and balanced (\ref{balanced}) tree.]{Example of unbalanced (\ref{unbalanced}) and balanced (\ref{balanced}) tree. Credits: \href{https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree}{Self-balancing binary search tree, Wikipedia}}
+\caption[Example of unbalanced (\ref{unbalanced}) and balanced (\ref{balanced}) tree.]{Example of unbalanced (\ref{unbalanced}) and balanced tree (\ref{balanced}). Credits: \href{https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree}{Self-balancing binary search tree, Wikipedia}}
 \label{trees_19}
 \end{figure}
 
