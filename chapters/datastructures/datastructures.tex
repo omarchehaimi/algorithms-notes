@@ -623,6 +623,56 @@ What happen when the hash function transforms two different number in the same? 
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[draw, minimum width=4cm, minimum height=0.5cm, thick]  
+
+    \matrix [matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth] (tab1)
+    {
+      01234\textcolor{BrickRed}{56} \qquad 56\%6=6 \\ 
+      65432\textcolor{BrickRed}{17} \qquad 17\%6=7 \\
+      ... \qquad ... \\
+      ... \qquad ... \\
+    };
+    
+    \matrix [matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth] (tab2) at ($(tab1) + (7.6,0)$)
+    {
+      6 -> 0123456 \\ 
+      7 -> 6543217 \\
+      ... \qquad ... \\
+      ... \qquad ... \\
+    };
+    
+    \draw[->, >=stealth] (tab1) -- (tab2);
+    
+    
+    \draw (3.6,-2) node[draw=none, rectangle, align=left] (collision) {Collision};
+    
+    \matrix [matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth] (tab3) at ($(tab1) + (0,-3)$)
+    {
+      01234\textcolor{BrickRed}{56} \qquad 56\%6=6 \\ 
+      65432\textcolor{BrickRed}{16} \qquad 16\%6=6 \\
+    };
+    
+    \matrix [matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth] (tab4) at ($(tab3) + (7.6,0)$)
+    {
+      6 -> 0123456 \\ 
+      6 -> 6543216 \\
+    };
+    \draw ($(tab4.north) + (0,2mm)$) node[draw, rectangle, align=left, BrickRed, minimum width=0.5cm, minimum height=0.5cm] {?};
+    
+    \draw[->, >=stealth] (tab3) -- (tab4);
+    
+    \draw (3.6,-4) node[draw=none, rectangle, align=left] {Bucket};
+    \matrix [matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth, minimum width=0.5cm, minimum height=0.5cm] (tab5) at ($(tab3) + (2.6,-2)$)
+    {
+      6 & 0123456 & 6543216 & & \\
+    };
+\end{tikzpicture}
+\caption[An example of a map.]{An example of a map.}
+\label{map_1}
+\end{figure}
+
 It does not exist a perfect hash function and a trade off must always be reached. A way to analyze a hash function is by using the \textbf{load factor} defined as follow: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save 10 values using 1000 buckets the Load Factor is equal to 0.01, and most of the buckets is empty. In this case is convenient to change the hash function by using less buckets. More the Load Factor is closed to 0 more the hash table will be empty (\textbf{sparse}), and more the Load Factor is closed to 1 more the has table will be full and efficient. In case the Load Factor is bigger than 1 there is the certainty there will happen some collisions.
 Another example: let us consider a hash function that divide the numbers by 100. If we consider 100 values all multiple of 5, the Load Factor will be: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets = 100/100 = 1\). But this way is very slow and a different configuration should be used to make this more efficient. For example if we use more bucket, for example 107, we still avoid collisions and we do not have the hash map too much sparse.
 
