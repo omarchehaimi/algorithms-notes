@@ -323,12 +323,82 @@ array/.style={matrix of nodes,nodes={draw, minimum size=7mm},column sep=-\pgflin
 \matrix[array] (array11) {
 8 & 3 & 1 & 7 & 0 & 10 & 2 \\};
 
-\matrix[array] (array21) at ($(array11) + (-15mm, -14mm)$) {
+\matrix[array] (array21) at ($(array11) + (-25mm, -14mm)$) {
 8 & 3 & 1 & 7 \\};
-\matrix[array] (array22) at ($(array11) + (15mm, -14mm)$){
+\matrix[array] (array22) at ($(array11) + (25mm, -14mm)$){
 0 & 10 & 2 \\};
 \draw[->, >=stealth] (array11.south) -- (array21.north);
 \draw[->, >=stealth] (array11.south) -- (array22.north);
+
+\matrix[array] (array31) at ($(array21) + (-10mm, -14mm)$) {
+8 & 3 \\};
+\matrix[array] (array32) at ($(array21) + (10mm, -14mm)$){
+1 & 7 \\};
+\draw[->, >=stealth] (array21.south) -- (array31.north);
+\draw[->, >=stealth] (array21.south) -- (array32.north);
+\matrix[array] (array33) at ($(array22) + (-10mm, -14mm)$){
+0 & 10 \\};
+\matrix[array] (array34) at ($(array22) + (10mm, -14mm)$){
+2 \\};
+\draw[->, >=stealth] (array22.south) -- (array33.north);
+\draw[->, >=stealth] (array22.south) -- (array34.north);
+
+\matrix[array] (array41) at ($(array31) + (-5mm, -14mm)$) {
+8 \\};
+\matrix[array] (array42) at ($(array31) + (5mm, -14mm)$) {
+3 \\};
+\path[<->, >=stealth, BrickRed] ($(array41.south) + (0, 1.4mm)$) edge [bend right=40] ($(array42.south) + (0, 1.4mm)$);
+\draw[->, >=stealth] (array31.south) -- (array41.north);
+\draw[->, >=stealth] (array31.south) -- (array42.north);
+\matrix[array] (array43) at ($(array32) + (-5mm, -14mm)$) {
+1 \\};
+\matrix[array] (array44) at ($(array32) + (5mm, -14mm)$) {
+7 \\};
+\draw[->, >=stealth] (array32.south) -- (array43.north);
+\draw[->, >=stealth] (array32.south) -- (array44.north);
+\matrix[array] (array45) at ($(array33) + (-5mm, -14mm)$) {
+0 \\};
+\matrix[array] (array46) at ($(array33) + (5mm, -14mm)$) {
+10 \\};
+\draw[->, >=stealth] (array33.south) -- (array45.north);
+\draw[->, >=stealth] (array33.south) -- (array46.north);
+\matrix[array] (array47) at ($(array34) + (0, -14mm)$) {
+2 \\};
+\draw[->, >=stealth] (array34.south) -- (array47.north);
+
+\matrix[array] (array51) at ($(array31) + (0, -28mm)$) {
+3 & 8 \\};
+\matrix[array] (array52) at ($(array32) + (0, -28mm)$){
+1 & 7 \\};
+\path[->, >=stealth, BrickRed] ($(array51-1-1.south) + (0, 0)$) edge [bend right=40] ($(array52-1-1.south) + (0, 0)$);
+\path[->, >=stealth, BrickRed] ($(array51-1-1.south) + (0, 0)$) edge [bend right=40] ($(array52-1-2.south) + (0, 0)$);
+\path[->, >=stealth, BrickRed] ($(array51-1-2.north) + (0, 0)$) edge [bend left=40] ($(array52-1-1.north) + (0, 0)$);
+\path[->, >=stealth, BrickRed] ($(array51-1-2.north) + (0, 0)$) edge [bend left=40] ($(array52-1-2.north) + (0, 0)$);
+\draw[->, >=stealth] (array41.south) -- (array51.north);
+\draw[->, >=stealth] (array42.south) -- (array51.north);
+\draw[->, >=stealth] (array43.south) -- (array52.north);
+\draw[->, >=stealth] (array44.south) -- (array52.north);
+\matrix[array] (array53) at ($(array33) + (0, -28mm)$){
+0 & 10 \\};
+\matrix[array] (array54) at ($(array34) + (0, -28mm)$){
+2 \\};
+\draw[->, >=stealth] (array45.south) -- (array53.north);
+\draw[->, >=stealth] (array46.south) -- (array53.north);
+\draw[->, >=stealth] (array47.south) -- (array54.north);
+
+\matrix[array] (array61) at ($(array21) + (0, -56mm)$) {
+1 & 3 & 7 & 8 \\};
+\matrix[array] (array62) at ($(array22) + (0, -56mm)$){
+0 & 2 & 10 \\};
+\draw[->, >=stealth] (array51.south) -- (array61.north);
+\draw[->, >=stealth] (array52.south) -- (array61.north);
+\draw[->, >=stealth] (array53.south) -- (array62.north);
+\draw[->, >=stealth] (array54.south) -- (array62.north);
+
+\matrix[array] (array71) at ($(array11) + (0, -84mm)$){
+0 & 1 & 2 & 3 & 7 & 8 & 10 \\};
+\draw[->, >=stealth] (array61.south) -- (array71.north);
+\draw[->, >=stealth] (array62.south) -- (array71.north);
 
 \end{tikzpicture}
 
