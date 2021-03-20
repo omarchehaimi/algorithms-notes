@@ -78,7 +78,7 @@ array/.style={matrix of nodes,nodes={draw, minimum size=7mm},column sep=-\pgflin
 
 \matrix[array, fill=none, row 1 column 7/.style={nodes={fill=BrickRed!30}}] (array3) at ($(array2) + (0, -14mm)$){
 1 & 3 & 9 & 11 & 15 & 19 & 29 \\};
-\draw ($(array3.east) + (10mm,0)$) node[draw, rectangle, align=left, minimum size=7mm] {$25\neq19$ \\ 25 is not in the array};
+\draw ($(array3.east) + (25.2mm,0)$) node[draw, rectangle, align=left, minimum size=7mm] {$25\neq19$ \\ 25 is not in the array};
 \draw[->, >=stealth, BrickRed] (array2-1-6) -- (array3-1-6);
 
 \end{tikzpicture}
@@ -140,6 +140,34 @@ def binary_search(array_input, value):
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[font=\ttfamily,
+array/.style={matrix of nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick]
+
+\matrix[array, fill=none, row 2 column 1/.style={nodes={fill=ForestGreen!30}}, row 2 column 7/.style={nodes={fill=ForestGreen!30}}, row 2 column 4/.style={nodes={fill=BrickRed!30}},
+row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] (array1) {
+L &   &   & M  &    &    & H  \\ 
+1 & 3 & 9 & 11 & 15 & 19 & 29 \\};
+
+\matrix[array, fill=none, row 2 column 5/.style={nodes={fill=ForestGreen!30}}, row 2 column 6/.style={nodes={fill=BrickRed!30}}, row 2 column 7/.style={nodes={fill=ForestGreen!30}},
+row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] (array2) at ($(array1) + (0, -16mm)$){
+  &   &   &    & L' & M  & H  \\
+1 & 3 & 9 & 11 & 15 & 19 & 29 \\};
+\draw ($(array2-2-7.east) + (12mm,0)$) node[draw, rectangle, align=left, minimum size=7mm] {L'=M+1};
+
+\matrix[array, fill=none, row 2 column 1/.style={nodes={fill=ForestGreen!30}}, row 2 column 3/.style={nodes={fill=ForestGreen!30}}, row 2 column 2/.style={nodes={fill=BrickRed!30}},
+row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] (array3) at ($(array2) + (0, -16mm)$){
+L & M & H' &    &    &    &   \\
+1 & 3 & 9 & 11 & 15 & 19 & 29 \\};
+\draw ($(array3-2-7.east) + (12mm,0)$) node[draw, rectangle, align=left, minimum size=7mm] {H'=M+-1};
+
+\end{tikzpicture}
+
+\caption[Array splitting in the implementation of the binary search algorithm.]{Array splitting in the implementation of the binary search algorithm.}
+\label{sorting_3}
+\end{figure}
+
 \section{Bubble Sort}
 \textbf{bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two element at each step if they are in the wrong order, repeating this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this algorithm the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
 
@@ -157,6 +185,98 @@ def binary_search(array_input, value):
 		\caption[The swapping process is repeated until the array is completely ordered.]{The swapping process is repeated until the array is completely ordered.}
 		\label{sorting_5}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[font=\ttfamily,
+array/.style={matrix of nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick]
+
+\matrix[array] (array1) {
+8 & 3 & 1 & 7 & 0 \\};
+\draw ($(array1.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Start};
+
+\matrix[array, row 1 column 1/.style={nodes={fill=BrickRed!30}}] (array2) at ($(array1) + (0,-12mm)$) {
+8 & 3 & 1 & 7 & 0 \\};
+\draw ($(array2.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 1};
+\draw ($(array2.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array2-1-1.north) edge [bend left=40] (array2-1-2.north);
+
+\matrix[array, row 1 column 2/.style={nodes={fill=BrickRed!30}}] (array3) at ($(array2) + (0,-12mm)$) {
+3 & 8 & 1 & 7 & 0 \\};
+\draw ($(array3.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 2};
+\draw ($(array3.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array3-1-2.north) edge [bend left=40] (array3-1-3.north);
+
+\matrix[array, row 1 column 3/.style={nodes={fill=BrickRed!30}}] (array4) at ($(array3) + (0,-12mm)$) {
+3 & 1 & 8 & 7 & 0 \\};
+\draw ($(array4.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 3};
+\draw ($(array4.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array4-1-3.north) edge [bend left=40] (array4-1-4.north);
+
+\matrix[array, row 1 column 4/.style={nodes={fill=BrickRed!30}}] (array5) at ($(array4) + (0,-12mm)$) {
+3 & 1 & 7 & 8 & 0 \\};
+\draw ($(array5.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 4};
+\draw ($(array5.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array5-1-4.north) edge [bend left=40] (array5-1-5.north);
+
+\matrix[array, row 1 column 1/.style={nodes={fill=BrickRed!30}}] (array6) at ($(array5) + (0,-12mm)$) {
+3 & 1 & 7 & 0 & 8 \\};
+\draw ($(array6.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 5};
+\draw ($(array6.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array6-1-1.north) edge [bend left=40] (array6-1-2.north);
+
+\matrix[array, row 1 column 2/.style={nodes={fill=BrickRed!30}}] (array7) at ($(array6) + (0,-12mm)$) {
+1 & 3 & 7 & 0 & 8 \\};
+\draw ($(array7.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 6};
+\draw ($(array7.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ no swap};
+\path[<->, >=stealth, BrickRed] (array7-1-2.north) edge [bend left=40] (array7-1-3.north);
+
+\matrix[array, row 1 column 3/.style={nodes={fill=BrickRed!30}}] (array8) at ($(array7) + (0,-12mm)$) {
+1 & 3 & 7 & 0 & 8 \\};
+\draw ($(array8.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 7};
+\draw ($(array8.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array8-1-3.north) edge [bend left=40] (array8-1-4.north);
+
+\matrix[array, row 1 column 4/.style={nodes={fill=BrickRed!30}}] (array9) at ($(array8) + (0,-12mm)$) {
+1 & 3 & 0 & 7 & 8 \\};
+\draw ($(array9.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 8};
+\draw ($(array9.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ no swap};
+\path[<->, >=stealth, BrickRed] (array9-1-4.north) edge [bend left=40] (array9-1-5.north);
+
+\matrix[array, row 1 column 1/.style={nodes={fill=BrickRed!30}}] (array10) at ($(array9) + (0,-12mm)$) {
+1 & 3 & 0 & 7 & 8 \\};
+\draw ($(array10.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 9};
+\draw ($(array10.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ no swap};
+\path[<->, >=stealth, BrickRed] (array10-1-1.north) edge [bend left=40] (array10-1-2.north);
+
+\matrix[array, row 1 column 2/.style={nodes={fill=BrickRed!30}}] (array11) at ($(array10) + (0,-12mm)$) {
+1 & 3 & 0 & 7 & 8 \\};
+\draw ($(array11.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 10};
+\draw ($(array11.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array11-1-2.north) edge [bend left=40] (array11-1-3.north);
+
+\matrix[array, row 1 column 3/.style={nodes={fill=BrickRed!30}}] (array12) at ($(array11) + (0,-12mm)$) {
+1 & 0 & 3 & 7 & 8 \\};
+\draw ($(array12.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 11};
+\draw ($(array12.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ no swap};
+\path[<->, >=stealth, BrickRed] (array12-1-3.north) edge [bend left=40] (array12-1-4.north);
+
+\matrix[array, row 1 column 1/.style={nodes={fill=BrickRed!30}}] (array13) at ($(array12) + (0,-12mm)$) {
+1 & 0 & 3 & 7 & 8 \\};
+\draw ($(array13.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 12};
+\draw ($(array13.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Compare: \\ swap};
+\path[<->, >=stealth, BrickRed] (array13-1-1.north) edge [bend left=40] (array13-1-2.north);
+
+\matrix[array] (array14) at ($(array13) + (0,-12mm)$) {
+0 & 1 & 3 & 7 & 8 \\};
+\draw ($(array14.west) + (-14mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, anchor=west] {Step 13};
+\draw ($(array14.east) + (20mm,0)$) node[draw=none, rectangle, align=center, minimum size=7mm, anchor=east] {Sorted};
+
+\end{tikzpicture}
+
+\caption[The swapping process is repeated until the array is completely ordered.]{The swapping process is repeated until the array is completely ordered.}
+\label{sorting_4}
 \end{figure}
 
 \subsection{Efficiency of the Bubble Sort Algorithm}
@@ -193,6 +313,27 @@ The \textbf{merge sort} algorithm works by dividing the array in single elements
 		\caption[Merge sort algorithm.]{In merge sort merging and sorting process is repeated until the array is again unified with all the elements sorted.}
 		\label{sorting_6}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[font=\ttfamily,
+array/.style={matrix of nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick]
+
+\matrix[array] (array11) {
+8 & 3 & 1 & 7 & 0 & 10 & 2 \\};
+
+\matrix[array] (array21) at ($(array11) + (-15mm, -14mm)$) {
+8 & 3 & 1 & 7 \\};
+\matrix[array] (array22) at ($(array11) + (15mm, -14mm)$){
+0 & 10 & 2 \\};
+\draw[->, >=stealth] (array11.south) -- (array21.north);
+\draw[->, >=stealth] (array11.south) -- (array22.north);
+
+\end{tikzpicture}
+
+\caption[Merge sort algorithm.]{In merge sort merging and sorting process is repeated until the array is again unified with all the elements sorted.}
+\label{sorting_6}
 \end{figure}
 
 The steps are (Figure \ref{sorting_6}): 
