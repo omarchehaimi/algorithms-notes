@@ -19,30 +19,9 @@ An \textbf{array} is a collection of elements of the same or also different type
 
 \begin{figure}[H]
 \centering
-\tikzset{
-mymat/.style={
-  matrix of math nodes,
-  text height=2.5ex,
-  text depth=0.75ex,
-  text width=3.25ex,
-  align=center,
-  column sep=-\pgflinewidth
-  },
-mymats/.style={
-  mymat,
-  nodes={draw,fill=#1}
-  }  
-}
-\begin{tikzpicture}[node distance = 5mm and 0mm,
-start chain = A going right,
-box/.style = {rectangle, draw, inner sep=1mm, outer sep=0mm,
-              minimum size=7mm,
-                 on chain=A},
-LA/.style = {-{Straight Barb[flex=0]},
-               thick, shorten >=1mm, shorten <=1mm,
-               looseness=1.6}, >=latex, nodes in empty cells, thick]
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
-\matrix[mymat, anchor=east, row 2/.style={nodes=draw}]
+\matrix[array, anchor=east, row 2/.style={nodes=draw}, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}]
 at (0.5,0)
 (mat1)
 {
@@ -71,49 +50,28 @@ Adding or removing an element of an array could be a very expensive operation. T
 
 \begin{figure}[H]
 \centering
-\tikzset{
-mymat/.style={
-  matrix of math nodes,
-  text height=2.5ex,
-  text depth=0.75ex,
-  text width=3.25ex,
-  align=center,
-  column sep=-\pgflinewidth
-  },
-mymats/.style={
-  mymat,
-  nodes={draw,fill=#1}
-  }  
-}
 \begin{subfigure}[b]{\linewidth}
 \centering
-\begin{tikzpicture}[node distance = 5mm and 0mm,
-start chain = A going right,
-box/.style = {rectangle, draw, inner sep=1mm, outer sep=0mm,
-              minimum size=7mm,
-                 on chain=A},
-LA/.style = {-{Straight Barb[flex=0]},
-               thick, shorten >=1mm, shorten <=1mm,
-               looseness=1.6}, >=latex, nodes in empty cells, thick]
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
-\matrix[mymat, anchor=east, row 2/.style={nodes=draw}, 
-        column 5/.style={nodes=densely dashed}]
+\matrix[array, anchor=east, row 2/.style={nodes=draw}, 
+        column 5/.style={nodes=densely dashed}, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}]
 at (0.5,0)
 (mat1)
 {
 0 & 1 & 2 & 3 & \\
 8 & 2 & 4 & 1 & \\
 };
-\matrix[mymat, anchor=west, row 2/.style={nodes=draw}, column 5/.style={nodes=densely dashed}] at (0.5,0)
+\matrix[array, anchor=west, row 2/.style={nodes=draw}, column 5/.style={nodes=densely dashed}, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] at (0.5,0)
 (mat2)
 {
 0 & 1 & 2 & 3 & 4 \\
 8 & 2 & 9 & 4 & 1 \\
 };
 
-\draw ($(mat1-2-3.north) + (-1mm, 10mm)$) node[draw=none, rectangle, align=left] (r1) {add 9};
+\draw ($(mat1-2-3.north) + (-2mm, 13mm)$) node[draw=none, rectangle, align=left, text width=6ex] (r1) {add 9};
 
-\draw[->, >=stealth, BrickRed] (r1.south) -- (mat1-2-2.north east);
+\draw[->, >=stealth, BrickRed] ($(r1.south) + (0,1mm)$) -- (mat1-2-2.north east);
 
 \path[->, >=stealth, BrickRed] (mat1-2-3.south) edge [bend right=60] node[draw=none] {} (mat1-2-4.south);
 \path[->, >=stealth, BrickRed] (mat1-2-4.south) edge [bend right=60] node[draw=none] {} (mat1-2-5.south);
@@ -125,21 +83,14 @@ at (0.5,0)
 %\hspace{1em}
 \begin{subfigure}[b]{\linewidth}
 \centering
-\begin{tikzpicture}[node distance = 5mm and 0mm,
-start chain = A going right,
-box/.style = {rectangle, draw, inner sep=1mm, outer sep=0mm,
-              minimum size=7mm,
-                 on chain=A},
-LA/.style = {-{Straight Barb[flex=0]},
-               thick, shorten >=1mm, shorten <=1mm,
-               looseness=1.6}, >=latex, nodes in empty cells, thick]
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
-\matrix[mymat, anchor=east, row 2/.style={nodes=draw}] at (-1.4,0) (mat1)
+\matrix[array, anchor=east, row 2/.style={nodes=draw}, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] at (-1.4,0) (mat1)
 {
 0 & 1 & 2 & 3 \\
 8 & 2 & 4 & 1 \\
 };
-\matrix[mymat, anchor=west, row 2/.style={nodes=draw}] at (-1.4,0)
+\matrix[array, anchor=west, row 2/.style={nodes=draw}, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] at (-1.4,0)
 (mat2)
 {
 0 & 1 & 2 \\
