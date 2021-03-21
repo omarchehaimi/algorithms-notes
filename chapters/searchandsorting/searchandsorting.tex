@@ -293,7 +293,7 @@ The \textbf{merge sort} algorithm works by dividing the array in single elements
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[array/.style={matrix of nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick]
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
 \matrix[array] (array11) {
 8 & 3 & 1 & 7 & 0 & 10 & 2 \\};
@@ -499,20 +499,20 @@ def mergesort(list):
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[array/.style={matrix of nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick]
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
 \matrix[array, fill=none, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}, row 2 column 4/.style={nodes={fill=ForestGreen!30}}, row 2 column 5/.style={nodes={fill=BrickRed!30}}] (array1) {
 L &   &   & M  & M' &    & H \\ 
   &   &   &    &    &    &   \\};
   
-\draw ($(array1-2-7.east) + (12mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm] {M'=M+-1};
+\draw ($(array1-2-7.east) + (12mm,0)$) node[draw=none, rectangle, align=left, minimum size=7mm, text width=12ex] {$M'=M+1$};
 
 \draw[decorate, decoration={brace, amplitude=3pt, mirror}] 
-    ($(array1-2-1.west) + (0, -4mm)$) coordinate (array1-2-1.west) -- ($(array1-2-4.east) + (0, -4mm)$) coordinate (array1-2-4.east);
+    ($(array1-2-1.west) + (0, -5mm)$) coordinate (array1-2-1.west) -- ($(array1-2-4.east) + (0, -5mm)$) coordinate (array1-2-4.east);
 \draw[decorate, decoration={brace, amplitude=3pt, mirror}] 
-    ($(array1-2-5.west) + (0, -4mm)$) coordinate (array1-2-1.west) -- ($(array1-2-7.east) + (0, -4mm)$) coordinate (array1-2-4.east);
-\draw ($(array1-2-4.south) + (-11.5mm,-3mm)$) node[draw=none, rectangle, align=left, minimum size=7mm] (left) {left};
-\draw ($(array1-2-4.south) + (14mm,-3.5mm)$) node[draw=none, rectangle, align=left, minimum size=7mm] (right) {right};
+    ($(array1-2-5.west) + (0, -5mm)$) coordinate (array1-2-1.west) -- ($(array1-2-7.east) + (0, -5mm)$) coordinate (array1-2-4.east);
+\draw ($(array1-2-4.south) + (-12mm,-3mm)$) node[draw=none, rectangle, align=left, minimum size=7mm] (left) {left};
+\draw ($(array1-2-4.south) + (15mm,-3.5mm)$) node[draw=none, rectangle, align=left, minimum size=7mm] (right) {right};
 
 \matrix[array, fill=none, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] (array21) at ($(array1-2-4.south) + (-18mm,-14mm)$) {
 L &   &   & M  \\ 
@@ -525,12 +525,26 @@ M' &   & H  \\
 \draw[->,  >=stealth] (left.south) -- (array21-2-2.north east);
 \draw[->,  >=stealth] (right.south) -- (array22-2-2.north);
 
-\draw ($(array21-2-2.south east) + (-7mm,-3.5mm)$) node[draw=none, rectangle, align=left, minimum size=7mm] {i};
-\draw ($(array22-2-2.south) + (-6mm,-3.5mm)$) node[draw=none, rectangle, align=left, minimum size=7mm] {j};
-\draw[->,  >=stealth] ($(array21-2-1.west) + (0, -7mm)$) -- ($(array21-2-1.east) + (0, -7mm)$);
-\draw[->,  >=stealth] ($(array22-2-1.west) + (0, -7mm)$) -- ($(array22-2-1.east) + (0, -7mm)$);
+\draw ($(array21-2-2.south east) + (0,-2mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (comp11) {left[i]};
+\draw ($(array22-2-2.south) + (-1mm,-2mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (comp12) {right[j]};
 
-\draw ($(array1-2-4.south) + (0,-30mm)$) node[draw=none, rectangle, align=left, minimum size=7mm] (comp) {left[i]<right[j]};
+\draw ($(array1-2-4.south) + (-7mm,-34mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (comp1) {left[i]<right[j]};
+
+\draw ($(array1-2-4.south) + (-7mm,-47mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (comp21) {left[i]};
+\draw ($(array1-2-4.south) + (7mm,-47mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (comp22) {right[j]};
+
+\draw[->,  >=stealth] (comp11.south) -- ($(comp1.north) + (7mm,-2mm)$);
+\draw[->,  >=stealth] (comp12.south) -- ($(comp1.north) + (7mm,-2mm)$);
+
+\draw[->,  >=stealth, ForestGreen] ($(comp1.south) + (7mm,2mm)$) -- ($(comp21.north) + (0,-2mm)$);
+\draw[->,  >=stealth, BrickRed] ($(comp1.south) + (7mm,2mm)$) -- ($(comp22.north) + (0,-2mm)$);
+\draw ($(array1-2-4.south) + (-9mm,-40mm)$) node[draw=none, rectangle, align=center, minimum size=7mm, ForestGreen] {yes};
+\draw ($(array1-2-4.south) + (9mm,-40mm)$) node[draw=none, rectangle, align=center, minimum size=7mm, BrickRed] {no};
+
+\matrix[array, fill=none, row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}] (array1) at ($(array1-2-4.south) + (0,-50mm)$) {
+L &   &   &   &   &   & H \\
+  &   &   & k &   &   &   \\};
+
 \end{tikzpicture}
 
 \caption[Merge sort algorithm implementation.]{Merge sort algorithm implementation.}
@@ -555,6 +569,56 @@ The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It w
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
+
+\matrix[array, fill=none, row 1 column 7/.style={nodes={fill=BrickRed!30}}] (array1) { 
+8 & 3 & 1 & 7 & 0 & 10 & 2 \\};
+
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=ForestGreen!30}}] (array12) at ($(array1.south) + (0,-14mm)$) {
+2 \\};
+\draw ($(array12.north) + (-2mm,2mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (pivot1) {pivot};
+\matrix[array, fill=none, row 1 column 2/.style={nodes={fill=BrickRed!30}}] (array11) at ($(array1.south) + (-18mm,-14mm)$) {
+1 & 0 \\};
+\matrix[array, fill=none, row 1 column 4/.style={nodes={fill=BrickRed!30}}] (array13) at ($(array1.south) + (26mm,-14mm)$) {
+8 & 3 & 7 & 10 \\};
+\draw[->,  >=stealth] (array1.south) -- (array11.north);
+\draw[->,  >=stealth] (array1.south) -- (array13.north);
+
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=ForestGreen!30}}] (array21) at ($(array11.south) + (-5mm,-14mm)$) {
+0 \\};
+\draw ($(array21.north) + (-2mm,2mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (pivot21) {pivot};
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=ForestGreen!30}}] (array22) at ($(array11.south) + (5mm,-14mm)$) {
+1 \\};
+\draw[->,  >=stealth] (array11.south) -- (array22.north);
+
+\matrix[array, fill=none, row 1 column 3/.style={nodes={fill=BrickRed!30}}] (array23) at ($(array13.south) + (-10mm,-14mm)$) {
+8 & 3 & 7 \\};
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=ForestGreen!30}}] (array24) at ($(array13.south) + (10mm,-14mm)$) {
+10 \\};
+\draw ($(array24.north) + (-2mm,2mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (pivot24) {pivot};
+\draw[->,  >=stealth] (array13.south) -- (array23.north);
+
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=ForestGreen!30}}] (array31) at ($(array23.south) + (-10mm,-14mm)$) {
+3 \\};
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=ForestGreen!30}}] (array32) at ($(array23.south) + (0,-14mm)$) {
+7 \\};
+\draw ($(array32.north) + (-2mm,2mm)$) node[draw=none, rectangle, align=center, minimum size=7mm] (pivot32) {pivot};
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=ForestGreen!30}}] (array33) at ($(array23.south) + (10mm,-14mm)$) {
+8 \\};
+\draw[->,  >=stealth] (array23.south) -- (array31.north);
+\draw[->,  >=stealth] (array23.south) -- (array33.north);
+
+\matrix[array, fill=none, row 1/.style={nodes={fill=ForestGreen!30}}] (array4) at ($(array1.south) + (0,-70mm)$) { 
+0 & 1 & 2 & 3 & 7 & 8 & 10\\};
+
+\end{tikzpicture}
+
+\caption[Quicksort algorithm.]{Quicksort algorithm.}
+\label{sorting_8}
+\end{figure}
+
 Here are the steps of quicksort algorithm based on the example of Figure \ref{sorting_8} and Figure \ref{sorting_9}:
 \begin{itemize}
 \item[1] Let us consider the last element as pivot, two in this case, and let us compare it with all the elements to its left. Let us start from the first element of the array, and let us compare their values. In this case \(8 > 2\), so \(8\) is moved on the position of the pivot (\(2\)) which is moved of one position to the left. The number to be removed, \(10\) in this case, is moved in the first position.
@@ -576,7 +640,22 @@ Let us consider first the worst case. In this situation the last elements of the
 	\end{center}
 \end{figure}
 
-In the best and in the average case the complexity is \(O(n log(n)\). The reason is because the first pivot tends to move at the center of the array, having in this way two subarrays. The pivots of these two subarrays will tend to move at their center and the process is repeated until all the elements have been a pivot, having in this way an ordered array.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
+
+\matrix[array, fill=none, row 1 column 6/.style={nodes={fill=BrickRed!30}}, row 1 column 7/.style={nodes={fill=BrickRed!30}}, row 2/.style={nodes={draw=none, fill=none, minimum size=5mm}}, row 3/.style={nodes={draw=none, fill=none, minimum size=5mm}}] (array1) { 
+1 & 8 & 2 & 5 & 3 & 9 & 13 \\
+1<13 & 8<13 & 2<13 & 5<13 & 3<13 & 9<13 \\
+1<9 & 8<9 & 2<9 & 5<9 & 3<9 \\};
+
+\end{tikzpicture}
+
+\caption[Quicksort algorithm worst case.]{Quicksort algorithm worst case.}
+\label{sorting_10}
+\end{figure}
+
+In the best and in the average case the complexity is \(O(n log(n))\). The reason is because the first pivot tends to move at the center of the array, having in this way two subarrays. The pivots of these two subarrays will tend to move at their center and the process is repeated until all the elements have been a pivot, having in this way an ordered array.
 
 \begin{figure}[H]
 	\begin{center}
