@@ -146,7 +146,7 @@ L & M & H' &    &    &    &   \\
 \end{figure}
 
 \section{Bubble Sort}
-\textbf{bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two element at each step if they are in the wrong order, repeating this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this algorithm the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
+\textbf{Bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two element at each step if they are in the wrong order, repeating this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this algorithm the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
 
 \begin{figure}[H]
 	\begin{center}
@@ -644,7 +644,9 @@ Let us consider first the worst case. In this situation the last elements of the
 \centering
 \begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
-\matrix[array, fill=none, row 1 column 6/.style={nodes={fill=BrickRed!30}}, row 1 column 7/.style={nodes={fill=BrickRed!30}}, row 2/.style={nodes={draw=none, fill=none, minimum size=5mm}}, row 3/.style={nodes={draw=none, fill=none, minimum size=5mm}}] (array1) { 
+\matrix[array, fill=none, row 1 column 6/.style={nodes={fill=BrickRed!30}}, row 1 column 7/.style={nodes={fill=BrickRed!30}},
+row 2/.style={nodes={font=\tiny, draw=none, fill=none, minimum size=5mm}},
+row 3/.style={nodes={font=\tiny, draw=none, fill=none, minimum size=5mm}}] (array1) { 
 1 & 8 & 2 & 5 & 3 & 9 & 13 \\
 1<13 & 8<13 & 2<13 & 5<13 & 3<13 & 9<13 \\
 1<9 & 8<9 & 2<9 & 5<9 & 3<9 \\};
@@ -665,6 +667,29 @@ In the best and in the average case the complexity is \(O(n log(n))\). The reaso
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
+
+\matrix[array, fill=none] (array1) { 
+\checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \color{BrickRed}{\checkmark} & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\};
+
+\path[->, >=stealth, BrickRed] (array1-1-11.north) edge [bend right=50] (array1-1-10.north);
+\path[->, >=stealth, BrickRed] (array1-1-9.north) edge [bend right=50] (array1-1-8.north);
+\path[->, >=stealth, BrickRed] (array1-1-7.north) edge [bend right=50] (array1-1-6.north);
+
+\path[->, >=stealth] (array1-1-11.south) edge [bend left=50] (array1-1-10.south);
+\path[->, >=stealth] (array1-1-9.south) edge [bend left=50] (array1-1-8.south);
+
+\path[->, >=stealth] (array1-1-4.south) edge [bend left=50] (array1-1-3.south);
+\path[->, >=stealth] (array1-1-2.south) edge [bend left=50] (array1-1-1.south);
+
+\end{tikzpicture}
+
+\caption[Quicksort algorithm best and average case.]{Quicksort algorithm best and average case.}
+\label{sorting_11}
+\end{figure}
+
 The space complexity of quicksort is constant, \(O(1)\).
 
 This algorithm can be optimized in several ways. For example it is possible to order at the same time two half of the array, or considering as pivot always the last elements.
@@ -683,41 +708,40 @@ On the other hand merge sort is a better solution than quicksort and heapsort \c
 \end{itemize}
 
 \subsection{Quicksort Implementation}
-The following code is the python implementation of the quicksort algorithm \cite{quicksortcode} (\href{https://www.educative.io/edpresso/how-to-implement-quicksort-in-python}{Quicksort Python Implementation}).
+The following code is the python implementation of the quicksort algorithm \cite{quicksortcode} (\href{https://www.geeksforgeeks.org/python-program-for-quicksort/}{Quicksort Python Implementation}).
 \begin{lstlisting}[firstnumber=1, caption={Quicksort python implementation.}]
-def merge_sort(array_input):
-	
-	elements = len(array_input)
-        
-    # Base case
-    if elements < 2:
-    	return array_input
-        
-    # Position of the partitioning element
-    current_position = 0
-
-	# Partitioning loop
-	for i in range(1, elements):
-    	if array_input[i] <= array_input[0]:
-        	current_position += 1
-            temp = array_input[i]
-            array_input[i] = array_input[current_position]
-            array_input[current_position] = temp
-
-    # Brings pivot to its appropriate position
-    temp = array_input[0]
-    array_input[0] = array_input[current_position]
-    array_input[current_position] = temp
-        
-    # Sorts the elements to the left of pivot
-    left = SortingAlgorithms.quicksort(array_input[0:current_position])
-    # Sorts the elements to the right of pivot
-    right = SortingAlgorithms.quicksort(array_input[current_position+1:elements])
-
-    # Merging everything together
-    array_input = left + [array_input[current_position]] + right
-
-	return array_input
+def partition(arr, low, high): 
+    i = (low-1)         # Index of smaller element 
+    pivot = arr[high]     # pivot 
+  
+    for j in range(low, high): 
+  
+        # If current element is smaller than or 
+        # equal to pivot 
+        if arr[j] <= pivot: 
+  
+            # Increment index of smaller element 
+            i = i+1
+            arr[i], arr[j] = arr[j], arr[i] 
+  
+    arr[i+1], arr[high] = arr[high], arr[i+1] 
+    return (i+1) 
+    
+# Function to do Quick sort   
+def quick_sort(arr, low, high): 
+    if len(arr) == 1: 
+        return arr 
+    if low < high: 
+  
+        # pi is partitioning index, arr[p] is now 
+        # at right place 
+        pi = partition(arr, low, high) 
+  
+        # Separately sort elements before 
+        # partition and after partition 
+        quick_sort(arr, low, pi-1) 
+        quick_sort(arr, pi+1, high)
+    
 \end{lstlisting}
 
 \begin{figure}[H]

@@ -111,6 +111,70 @@ class BinaryTree():
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
+
+\node (na){$a$}
+   child{node (nb) {$b$}
+             child {node (nd) {$d$}}
+             child {node (ne) {$e$}}
+        }
+   child{node (nc) {$c$}
+			child[missing]
+			child{node (nf) {$f$}}
+		};
+\draw ($(na) + (-2, 0.4)$) node[rectangle] {Pre-order};
+\draw node[draw=none, rectangle, below=1mm of nd] {a, b, d, e, c, f};
+  
+  %\fill circle (3pt) node ($(na) + (-0.4,0.2)$) {Here!};
+  \fill[color=black] ($(na) + (-0.42,0.2)$) circle (0.1);
+  \fill[color=black] ($(nb) + (-0.42,0.2)$) circle (0.1);
+  \fill[color=black] ($(nd) + (-0.48,0.0)$) circle (0.1);
+  \fill[color=black] ($(ne) + (-0.45,0.0)$) circle (0.1);
+  \fill[color=black] ($(nc) + (-0.5,0.15)$) circle (0.1);
+  \fill[color=black] ($(nf) + (-0.48,0.0)$) circle (0.1);
+  
+  \draw[->, >=stealth, BrickRed, rounded corners, dashed, line width=0.7pt]
+    ($(na) + (-0.4,0.2)$) --
+    ($(nb) + (-0.4,0.2)$) --
+    %($(nb) + (-0.44,0.0)$) --
+    ($(nd) + (-0.50,0.0)$) --
+    ($(nd) + (-0.35,-0.35)$) --
+    ($(nd) + (0.0,-0.45)$) --
+    ($(nd) + (0.35,-0.35)$) --
+    ($(nd) + (0.42,0.0)$) --
+    ($(nb) + (0.0,-0.4)$) --
+    ($(ne) + (-0.45,0.0)$) --
+    ($(ne) + (-0.35,-0.35)$) --
+    ($(ne) + (0.0,-0.45)$) --
+    ($(ne) + (0.35,-0.35)$) --
+    ($(ne) + (0.45,0.0)$) --
+    ($(nb) + (0.4,0.0)$) --
+    ($(na) + (0.0,-0.4)$) --
+    ($(nc) + (-0.5,0.15)$) --
+    ($(nf) + (-0.45,0.0)$) --
+    ($(nf) + (-0.35,-0.35)$);
+    %($(nf) + (0.0,-0.45)$) --
+    %($(nf) + (0.35,-0.35)$);
+    %($(nf) + (0.48,0.0)$) --
+    %($(nc) + (0.42,-0.4)$);
+    %($(nc) + (0.36,0.4)$) --
+    %($(na) + (0.4,0.2)$);
+
+\draw ($(na) + (3.5, 0.4)$) node[draw=none, rectangle, align=left] (stack) {Stack};
+\draw ($(stack) + (3.5, 0)$) node[draw=none, rectangle, align=left] (visited) {Visited};
+
+\draw ($(stack.west) + (-3mm, -8mm)$) node[draw=none, rectangle, align=left] (stack1) {1)};
+\draw[-] ($(stack.west) + (0,-4mm)$) -- ($(stack.west) + (10mm,-4mm)$);
+\draw[-] ($(stack.west) + (0,-12mm)$) -- ($(stack.west) + (10mm,-12mm)$);
+    
+\end{tikzpicture}
+
+\caption[Pre-order iterative example.]{Pre-order iterative example.}
+\label{appendixtrees_1}
+\end{figure}
+
 \section{In-order Traversal}
 \label{inorderappendix}
 In the in-order traversal the first node to be checked is the first leaf of the left subtree. The second one is the parent of the first checked node, and then the right subtree is checked repeating the previous process. All this process is repeated until all the nodes are visited or the value is found \ref{inorder}. 
