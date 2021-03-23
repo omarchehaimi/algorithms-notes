@@ -162,13 +162,72 @@ class BinaryTree():
     %($(nc) + (0.36,0.4)$) --
     %($(na) + (0.4,0.2)$);
 
-\draw ($(na) + (3.5, 0.4)$) node[draw=none, rectangle, align=left] (stack) {Stack};
-\draw ($(stack) + (3.5, 0)$) node[draw=none, rectangle, align=left] (visited) {Visited};
+% Stack 1
+\draw ($(na) + (3, 0.4)$) node[draw=none, rectangle, align=left] (stack) {Stack};
 
-\draw ($(stack.west) + (-3mm, -8mm)$) node[draw=none, rectangle, align=left] (stack1) {1)};
-\draw[-] ($(stack.west) + (0,-4mm)$) -- ($(stack.west) + (10mm,-4mm)$);
-\draw[-] ($(stack.west) + (0,-12mm)$) -- ($(stack.west) + (10mm,-12mm)$);
-    
+\draw[-] ($(stack.west) + (0,-4mm)$) -- ($(stack.west) + (0,-20mm)$);
+\draw[-] ($(stack.west) + (10mm,-4mm)$) -- ($(stack.west) + (10mm,-20mm)$);
+\draw[-] ($(stack.west) + (0,-20mm)$) -- ($(stack.west) + (10mm,-20mm)$);
+\draw ($(stack.south) + (-1mm,-13.5mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (a1) {a};
+\draw ($(stack.south) + (0,-22mm)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] (visited) {\textcolor{ForestGreen}{a}};
+\path[->, >=stealth] ($(a1.north west) + (-10mm,3mm)$) edge [bend left=20] node[draw=none, xshift=-6pt, yshift=-7pt] {push} (a1.north west);
+\path[->, >=stealth] (a1.north) edge [bend left=20] node[draw=none, xshift=-4pt, yshift=7pt] {pop} ($(a1.north east) + (1mm, 5mm)$);
+
+% Stack 2
+\draw ($(stack) + (1, 0)$) node[draw=none, rectangle, align=left] (stack1) {};
+\draw[-] ($(stack1.west) + (0,-4mm)$) -- ($(stack1.west) + (0,-20mm)$);
+\draw[-] ($(stack1.west) + (10mm,-4mm)$) -- ($(stack1.west) + (10mm,-20mm)$);
+\draw[-] ($(stack1.west) + (0,-20mm)$) -- ($(stack1.west) + (10mm,-20mm)$);
+\draw ($(stack1.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c2) {c};
+\draw ($(stack1.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b2) {b};
+\draw[->, >=stealth] (a1.east) -- (c2.west);
+\draw[->, >=stealth] (a1.east) -- (b2.west);
+\draw ($(visited.east) + (10mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, b}};
+
+% Stack 3
+\draw ($(stack1) + (1.5, 0)$) node[draw=none, rectangle, align=left] (stack2) {};
+\draw[-] ($(stack2.west) + (0,-4mm)$) -- ($(stack2.west) + (0,-20mm)$);
+\draw[-] ($(stack2.west) + (10mm,-4mm)$) -- ($(stack2.west) + (10mm,-20mm)$);
+\draw[-] ($(stack2.west) + (0,-20mm)$) -- ($(stack2.west) + (10mm,-20mm)$);
+\draw ($(stack2.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c3) {c};
+\draw ($(stack2.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (e3) {e};
+\draw ($(stack2.south) + (3.5mm,-3mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (d3) {d};
+\draw[->, >=stealth] (b2.east) -- (d3.west);
+\draw[->, >=stealth] (b2.east) -- (e3.west);
+\draw ($(visited.east) + (25mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, b, d}};
+
+% Stack 4
+\draw ($(stack2) + (1.5, 0)$) node[draw=none, rectangle, align=left] (stack3) {};
+\draw[-] ($(stack3.west) + (0,-4mm)$) -- ($(stack3.west) + (0,-20mm)$);
+\draw[-] ($(stack3.west) + (10mm,-4mm)$) -- ($(stack3.west) + (10mm,-20mm)$);
+\draw[-] ($(stack3.west) + (0,-20mm)$) -- ($(stack3.west) + (10mm,-20mm)$);
+\draw ($(stack3.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c4) {c};
+\draw ($(stack3.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (e4) {e};
+\draw ($(visited.east) + (44mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, b, d, e}};
+
+% Stack 5
+\draw ($(stack) + (-0.45, -2.5)$) node[draw=none, rectangle, align=left] (stack4) {};
+\draw[-] ($(stack4.west) + (0,-4mm)$) -- ($(stack4.west) + (0,-20mm)$);
+\draw[-] ($(stack4.west) + (10mm,-4mm)$) -- ($(stack4.west) + (10mm,-20mm)$);
+\draw[-] ($(stack4.west) + (0,-20mm)$) -- ($(stack4.west) + (10mm,-20mm)$);
+\draw ($(stack4.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c4) {c};
+\draw ($(stack4.south) + (1mm,-23mm)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, b, d, e, c}};
+
+% Stack 6
+\draw ($(stack4) + (1.45, 0)$) node[draw=none, rectangle, align=left] (stack5) {};
+\draw[-] ($(stack5.west) + (0,-4mm)$) -- ($(stack5.west) + (0,-20mm)$);
+\draw[-] ($(stack5.west) + (10mm,-4mm)$) -- ($(stack5.west) + (10mm,-20mm)$);
+\draw[-] ($(stack5.west) + (0,-20mm)$) -- ($(stack5.west) + (10mm,-20mm)$);
+\draw ($(stack5.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (f5) {f};
+\draw ($(stack5.south) + (10mm,-23mm)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, b, d, e, c, f}};
+
+% Stack 7
+\draw ($(stack5) + (1.5, 0)$) node[draw=none, rectangle, align=left] (stack6) {};
+\draw[-] ($(stack6.west) + (0,-4mm)$) -- ($(stack6.west) + (0,-20mm)$);
+\draw[-] ($(stack6.west) + (10mm,-4mm)$) -- ($(stack6.west) + (10mm,-20mm)$);
+\draw[-] ($(stack6.west) + (0,-20mm)$) -- ($(stack6.west) + (10mm,-20mm)$);
+\draw ($(stack6.east) + (20mm,-10mm)$) node[draw=none, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{BrickRed}{Stack empty}};
+
 \end{tikzpicture}
 
 \caption[Pre-order iterative example.]{Pre-order iterative example.}
@@ -264,6 +323,94 @@ class BinaryTree():
 		\label{appendixtrees_2}
 	\end{center}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
+
+\node (na){$a$}
+   child{node (nb) {$b$}
+             child {node (nd) {$d$}}
+             child {node (ne) {$e$}}
+        }
+   child{node (nc) {$c$}
+			child[missing]
+			child{node (nf) {$f$}}
+		};
+\draw ($(na) + (-2, 0.4)$) node[rectangle] {In-order};
+\draw node[draw=none, rectangle, below=1mm of nd] {d, b, e, a, f, c};
+  
+  %\fill circle (3pt) node ($(na) + (-0.4,0.2)$) {Here!};
+  \fill[color=black] ($(nd) + (-0.48,0.0)$) circle (0.1);
+  \fill[color=black] ($(nb) + (0.0,-0.5)$) circle (0.1);
+  \fill[color=black] ($(ne) + (-0.45,0.0)$) circle (0.1);
+  \fill[color=black] ($(na) + (0.0,-0.5)$) circle (0.1);
+  \fill[color=black] ($(nf) + (-0.48,0.0)$) circle (0.1);
+  \fill[color=black] ($(nc) + (-0.5,0.15)$) circle (0.1);
+  
+  \draw[->, >=stealth, BrickRed, rounded corners, dashed, line width=0.7pt]
+    ($(na) + (-0.4,0.2)$) --
+    ($(nb) + (-0.4,0.2)$) --
+    %($(nb) + (-0.44,0.0)$) --
+    ($(nd) + (-0.50,0.0)$) --
+    ($(nd) + (-0.35,-0.35)$) --
+    ($(nd) + (0.0,-0.45)$) --
+    ($(nd) + (0.35,-0.35)$) --
+    ($(nd) + (0.42,0.0)$) --
+    ($(nb) + (0.0,-0.4)$) --
+    ($(ne) + (-0.45,0.0)$) --
+    ($(ne) + (-0.35,-0.35)$) --
+    ($(ne) + (0.0,-0.45)$) --
+    ($(ne) + (0.35,-0.35)$) --
+    ($(ne) + (0.45,0.0)$) --
+    ($(nb) + (0.4,0.0)$) --
+    ($(na) + (0.0,-0.4)$) --
+    ($(nc) + (-0.5,0.15)$) --
+    ($(nf) + (-0.45,0.0)$) --
+    ($(nf) + (-0.35,-0.35)$);
+    %($(nf) + (0.0,-0.45)$);
+    %($(nf) + (0.35,-0.35)$);
+    %($(nf) + (0.48,0.0)$);
+    %($(nc) + (0.64,-0.4)$) --
+    %($(nc) + (0.30,0.4)$);
+    %($(na) + (0.4,0.2)$);
+
+\end{tikzpicture}
+\caption[In-order iterative example.]{In-order iterative example.}
+\label{appendixtrees_2}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{ l|c|c|c|c|c|c|c } 
+ Step & Node & push & pop & Stack & New Node & Visit & Visited \\
+ \hline
+ 1  & a & a & & a & a.left(\textcolor{BrickRed}{b}) & & \\
+ 
+ 2  & b & b & & b,a & b.left(\textcolor{BrickRed}{d}) & & \\
+ 
+ 3  & d & d & & d,b,a & d.left(\textcolor{BrickRed}{null}) & & \\
+ 
+ 4  & null & & d & b,a & d.right(\textcolor{BrickRed}{null}) & \textcolor{ForestGreen}{d} & \textcolor{ForestGreen}{d} \\
+ 
+ 5  & null & & b & a & b.right(\textcolor{BrickRed}{e}) & \textcolor{ForestGreen}{b} & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b} \\
+ 
+ 6  & e & e &  & e,a & e.left(\textcolor{BrickRed}{null}) & & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b} \\
+ 
+ 7  & null & & e & a & e.right(\textcolor{BrickRed}{null}) & \textcolor{ForestGreen}{e} & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b}, \textcolor{ForestGreen}{e} \\
+ 
+ 8  & null & & a & & a.right(\textcolor{BrickRed}{c}) & \textcolor{ForestGreen}{a} & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b}, \textcolor{ForestGreen}{e}, \textcolor{ForestGreen}{a} \\
+ 
+ 9  & c & c &  & c & c.left(\textcolor{BrickRed}{null}) & & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b}, \textcolor{ForestGreen}{e}, \textcolor{ForestGreen}{a} \\
+ 
+ 10 & null & & c &  & c.right(\textcolor{BrickRed}{f}) & \textcolor{ForestGreen}{c} & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b}, \textcolor{ForestGreen}{e}, \textcolor{ForestGreen}{a}, \textcolor{ForestGreen}{c} \\
+ 
+ 11 & f & f &  & f & f.left(\textcolor{BrickRed}{null}) & & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b}, \textcolor{ForestGreen}{e}, \textcolor{ForestGreen}{a}, \textcolor{ForestGreen}{c} \\
+ 
+ 12 & null & & f & & f.right(\textcolor{BrickRed}{null}) & \textcolor{ForestGreen}{f} & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b}, \textcolor{ForestGreen}{e}, \textcolor{ForestGreen}{a}, \textcolor{ForestGreen}{c}, \textcolor{ForestGreen}{f} \\
+
+\textcolor{BrickRed}{stop} & \textcolor{BrickRed}{null} &  & & \textcolor{BrickRed}{empty} & & & \textcolor{ForestGreen}{d}, \textcolor{ForestGreen}{b}, \textcolor{ForestGreen}{e}, \textcolor{ForestGreen}{a}, \textcolor{ForestGreen}{c}, \textcolor{ForestGreen}{f} \\
+\end{tabular}
+\end{center}
 
 \section{Post-order Traversal}
 \label{postorderappendix}

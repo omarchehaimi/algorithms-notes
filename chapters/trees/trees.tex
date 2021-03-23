@@ -224,7 +224,7 @@ Which way is the most efficient for visiting all the nodes of a tree? Is it more
 AGGIUNGERE LA COMPLESSITÀ COMPUTAZIONALE DEI DUE APPROCCI.
 
 \subsection{Depth-first search}
-In the depth-first search there are several different ways to perform a search on a tree.
+In the depth-first search there are several different ways to perform a search on a tree. AGGIUNGERE LO SPANNING TREE E IL METODO DI RICERCA: VISIT, LEFT, RIGHT...
 \paragraph{Pre-order search}
 \label{preorder}
 In the \textbf{pre-order search} the first node to be checked as visited is the root. The following node is the left child by convention. Once checked the left child the process is repeated until the first node without any children is reached. At that point the same process is applied to the right side: all the nodes on the right are checked until all the nodes are checked as visited \ref{trees_5}.
@@ -327,7 +327,7 @@ In the \textbf{in-order search} the first node to be checked is the first node w
   \fill[color=black] ($(ne) + (-0.45,0.0)$) circle (0.1);
   \fill[color=black] ($(na) + (0.0,-0.5)$) circle (0.1);
   \fill[color=black] ($(nf) + (-0.48,0.0)$) circle (0.1);
-  \fill[color=black] ($(nc) + (0.44,0.0)$) circle (0.1);
+  \fill[color=black] ($(nc) + (-0.5,0.15)$) circle (0.1);
   
   \draw[->, >=stealth, BrickRed, rounded corners, dashed, line width=0.7pt]
     ($(na) + (-0.4,0.2)$) --
@@ -348,12 +348,12 @@ In the \textbf{in-order search} the first node to be checked is the first node w
     ($(na) + (0.0,-0.4)$) --
     ($(nc) + (-0.5,0.15)$) --
     ($(nf) + (-0.45,0.0)$) --
-    ($(nf) + (-0.35,-0.35)$) --
-    ($(nf) + (0.0,-0.45)$) --
-    ($(nf) + (0.35,-0.35)$) --
-    ($(nf) + (0.48,0.0)$) --
-    ($(nc) + (0.64,-0.4)$) --
-    ($(nc) + (0.30,0.4)$);
+    ($(nf) + (-0.35,-0.35)$);
+    %($(nf) + (0.0,-0.45)$);
+    %($(nf) + (0.35,-0.35)$);
+    %($(nf) + (0.48,0.0)$);
+    %($(nc) + (0.64,-0.4)$) --
+    %($(nc) + (0.30,0.4)$);
     %($(na) + (0.4,0.2)$);
 \end{tikzpicture}
 \caption[In-order search.]{In-order search.}
