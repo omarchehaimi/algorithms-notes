@@ -138,6 +138,97 @@ class Graph():
 	\end{center}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
+  
+  \node[main] (na) at (0,0) {$a$};
+  \node[main] (nb) at (2,0) {$b$};
+  \node[main] (nc) at (2,-2) {$c$};
+  \node[main] (nd) at (0,-2) {$d$};
+  \node[main] (ne) at (-2,-1.8) {$e$};
+  
+  \draw (na) -- (nb);
+  \draw (na) -- (nc);
+  \draw (na) -- (nd);
+  \draw (nd) -- (nc);
+  \draw (nd) -- (ne);
+  
+  \draw[->, >=stealth, BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
+  \path[->, BrickRed, >=stealth] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
+  \path[->, BrickRed, >=stealth] (nd.north west) edge [bend right=20] node[draw=none, yshift=4pt] {2} (ne.north east);
+  \path[->, BrickRed, >=stealth] (ne.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {} (nd.south west);
+  \path[->, BrickRed, >=stealth] (nd.south east) edge [bend right=20] node[draw=none, yshift=-5pt] {3} (nc.south west);
+  \path[BrickRed] (nc.north) edge [bend right=20] node[draw=none, xshift=4pt, yshift=4pt] {4} (na.south east);
+  \path[->, BrickRed, >=stealth] (na.south east) edge [bend right=20] node[draw=none, yshift=4pt] {} (nb.south west);
+  
+  \draw ($(na) + (-2.6, 0.4)$) node[rectangle] {Depth-first search};
+  \draw ($(nd) + (-0.5,-1)$) node[align=left] {a, d, e, c, b};
+  
+% Stack 1
+\draw ($(na) + (4, 0.4)$) node[draw=none, rectangle, align=left] (stack) {Stack};
+
+\draw[-] ($(stack.west) + (0,-4mm)$) -- ($(stack.west) + (0,-20mm)$);
+\draw[-] ($(stack.west) + (10mm,-4mm)$) -- ($(stack.west) + (10mm,-20mm)$);
+\draw[-] ($(stack.west) + (0,-20mm)$) -- ($(stack.west) + (10mm,-20mm)$);
+\draw ($(stack.south) + (-1mm,-13.5mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (a1) {a};
+\draw ($(stack.south) + (0,-22mm)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] (visited) {\textcolor{ForestGreen}{a}};
+\path[->, >=stealth] ($(a1.north west) + (-10mm,3mm)$) edge [bend left=20] node[draw=none, xshift=-6pt, yshift=-7pt] {push} (a1.north west);
+\path[->, >=stealth] (a1.north) edge [bend left=20] node[draw=none, xshift=-4pt, yshift=7pt] {pop} ($(a1.north east) + (1mm, 5mm)$);
+
+% Stack 2
+\draw ($(stack) + (1, 0)$) node[draw=none, rectangle, align=left] (stack1) {};
+\draw[-] ($(stack1.west) + (0,-4mm)$) -- ($(stack1.west) + (0,-20mm)$);
+\draw[-] ($(stack1.west) + (10mm,-4mm)$) -- ($(stack1.west) + (10mm,-20mm)$);
+\draw[-] ($(stack1.west) + (0,-20mm)$) -- ($(stack1.west) + (10mm,-20mm)$);
+\draw ($(stack1.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b2) {b};
+\draw ($(stack1.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c2) {c};
+\draw ($(stack1.south) + (3.5mm,-3mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (d2) {d};
+\draw[->, >=stealth] (a1.east) -- (b2.west);
+\draw[->, >=stealth] (a1.east) -- (c2.west);
+\draw[->, >=stealth] (a1.east) -- (d2.west);
+\draw ($(visited.east) + (10mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d}};
+
+% Stack 3
+\draw ($(stack1) + (1.5, 0)$) node[draw=none, rectangle, align=left] (stack2) {};
+\draw[-] ($(stack2.west) + (0,-4mm)$) -- ($(stack2.west) + (0,-20mm)$);
+\draw[-] ($(stack2.west) + (10mm,-4mm)$) -- ($(stack2.west) + (10mm,-20mm)$);
+\draw[-] ($(stack2.west) + (0,-20mm)$) -- ($(stack2.west) + (10mm,-20mm)$);
+\draw ($(stack2.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b3) {b};
+\draw ($(stack2.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c3) {c};
+\draw ($(stack2.south) + (3.5mm,-3mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (e3) {e};
+\draw[->, >=stealth] (d2.east) -- (e3.west);
+\draw ($(visited.east) + (25mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d, e}};
+
+% Stack 4
+\draw ($(stack2) + (1.5, 0)$) node[draw=none, rectangle, align=left] (stack3) {};
+\draw[-] ($(stack3.west) + (0,-4mm)$) -- ($(stack3.west) + (0,-20mm)$);
+\draw[-] ($(stack3.west) + (10mm,-4mm)$) -- ($(stack3.west) + (10mm,-20mm)$);
+\draw[-] ($(stack3.west) + (0,-20mm)$) -- ($(stack3.west) + (10mm,-20mm)$);
+\draw ($(stack3.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b4) {b};
+\draw ($(stack3.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c4) {c};
+\draw ($(visited.east) + (44mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d, e, c}};
+
+% Stack 5
+\draw ($(stack) + (-0.45, -2.5)$) node[draw=none, rectangle, align=left] (stack4) {};
+\draw[-] ($(stack4.west) + (0,-4mm)$) -- ($(stack4.west) + (0,-20mm)$);
+\draw[-] ($(stack4.west) + (10mm,-4mm)$) -- ($(stack4.west) + (10mm,-20mm)$);
+\draw[-] ($(stack4.west) + (0,-20mm)$) -- ($(stack4.west) + (10mm,-20mm)$);
+\draw ($(stack4.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b5) {b};
+\draw ($(stack4.south) + (1mm,-23mm)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d, e, c, b}};
+
+% Stack 6
+\draw ($(stack4) + (1.45, 0)$) node[draw=none, rectangle, align=left] (stack5) {};
+\draw[-] ($(stack5.west) + (0,-4mm)$) -- ($(stack5.west) + (0,-20mm)$);
+\draw[-] ($(stack5.west) + (10mm,-4mm)$) -- ($(stack5.west) + (10mm,-20mm)$);
+\draw[-] ($(stack5.west) + (0,-20mm)$) -- ($(stack5.west) + (10mm,-20mm)$);
+\draw ($(stack5.east) + (20mm,-10mm)$) node[draw=none, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{BrickRed}{Stack empty}}; 
+
+\end{tikzpicture}
+\caption[Depth-first search example.]{Depth-first search example.}
+\label{graphappendix_1}
+\end{figure}
+
 \section{Breadth-first search}
 In the following there are the pesudocode, the python implementation, and an example of execution of the breadth-first search on a graph.
 
@@ -187,6 +278,86 @@ class Graph():
 		\caption[Breadth-first search example.]{Breadth-first search example.}
 		\label{graphappendix_2}
 	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
+  
+  \node[main] (na) at (0,0) {$a$};
+  \node[main] (nb) at (2,0) {$b$};
+  \node[main] (nc) at (2,-2) {$c$};
+  \node[main] (nd) at (0,-2) {$d$};
+  \node[main] (ne) at (-2,-1.8) {$e$};
+  
+  \draw (na) -- (nb);
+  \draw (na) -- (nc);
+  \draw (na) -- (nd);
+  \draw (nd) -- (nc);
+  \draw (nd) -- (ne);
+  
+  \draw[->, >=stealth, BrickRed] ($(na) + (-0.7,0.7)$) -- (na);
+  \path[->, BrickRed, >=stealth] (na.west) edge [bend right=20] node[draw=none, xshift=-4pt] {1} (nd.north west);
+  \path[->, BrickRed, >=stealth] (na.south) edge [bend right=30] node[draw=none, xshift=-4pt, yshift=-4pt] {2} (nc.north west);
+  \path[->, BrickRed, >=stealth] (na.north east) edge [bend left=20] node[draw=none, yshift=5pt] {3} (nb.north west);
+  \path[->, BrickRed, >=stealth] (nd.south west) edge [bend left=20] node[draw=none, yshift=-5pt] {4} (ne.south east);
+  
+  \draw ($(na) + (-2.6, 0.4)$) node[rectangle] {Breadth-first search};
+  \draw ($(nd) + (-0.5,-1)$) node[align=left] {a, d, c, b, e};
+  
+% Queue 1
+\draw ($(na) + (4, 0.4)$) node[draw=none, rectangle, align=left] (queue) {Queue};
+
+\draw[-] ($(queue.west) + (0,-4mm)$) -- ($(queue.west) + (0,-20mm)$);
+\draw[-] ($(queue.west) + (10mm,-4mm)$) -- ($(queue.west) + (10mm,-20mm)$);
+\draw ($(queue.south) + (-2.5mm,-13.5mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (a1) {a};
+\draw ($(queue.south) + (0,-22mm)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] (visited) {\textcolor{ForestGreen}{a}};
+\path[->, >=stealth] ($(a1.north west) + (-10mm,3mm)$) edge [bend left=20] node[draw=none, xshift=-6pt, yshift=-7pt] {enq} (a1.north west);
+\path[->, >=stealth] (a1.south west) edge [bend left=20] node[draw=none, xshift=-6pt, yshift=7pt] {deq} ($(a1.north east) + (-15mm, -10mm)$);
+
+% queue 2
+\draw ($(queue) + (1, 0)$) node[draw=none, rectangle, align=left] (queue1) {};
+\draw[-] ($(queue1.west) + (0,-4mm)$) -- ($(queue1.west) + (0,-20mm)$);
+\draw[-] ($(queue1.west) + (10mm,-4mm)$) -- ($(queue1.west) + (10mm,-20mm)$);
+\draw ($(queue1.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (d2) {d};
+\draw ($(queue1.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c2) {c};
+\draw ($(queue1.south) + (3.5mm,-3mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b2) {b};
+\draw[->, >=stealth] (a1.east) -- (b2.west);
+\draw[->, >=stealth] (a1.east) -- (c2.west);
+\draw[->, >=stealth] (a1.east) -- (d2.west);
+\draw ($(visited.east) + (10mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d}};
+
+% queue 3
+\draw ($(queue1) + (1.5, 0)$) node[draw=none, rectangle, align=left] (queue2) {};
+\draw[-] ($(queue2.west) + (0,-4mm)$) -- ($(queue2.west) + (0,-20mm)$);
+\draw[-] ($(queue2.west) + (10mm,-4mm)$) -- ($(queue2.west) + (10mm,-20mm)$);
+\draw ($(queue2.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (c3) {c};
+\draw ($(queue2.south) + (3.5mm,-9mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b3) {b};
+\draw ($(visited.east) + (25mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d, c}};
+
+% queue 4
+\draw ($(queue2) + (1.5, 0)$) node[draw=none, rectangle, align=left] (queue3) {};
+\draw[-] ($(queue3.west) + (0,-4mm)$) -- ($(queue3.west) + (0,-20mm)$);
+\draw[-] ($(queue3.west) + (10mm,-4mm)$) -- ($(queue3.west) + (10mm,-20mm)$);
+\draw ($(queue3.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (b4) {b};
+\draw ($(visited.east) + (44mm,0)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d, c, b}};
+
+% queue 5
+\draw ($(queue) + (-0.45, -2.5)$) node[draw=none, rectangle, align=left] (queue4) {};
+\draw[-] ($(queue4.west) + (0,-4mm)$) -- ($(queue4.west) + (0,-20mm)$);
+\draw[-] ($(queue4.west) + (10mm,-4mm)$) -- ($(queue4.west) + (10mm,-20mm)$);
+\draw ($(queue4.south) + (3.5mm,-15mm)$) node[draw, rectangle, rounded corners, minimum width=0.5cm, minimum height=0.5cm] (e5) {e};
+\draw ($(queue4.south) + (1mm,-23mm)$) node[draw, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{ForestGreen}{a, d, c, b, e}};
+
+% queue 6
+\draw ($(queue4) + (1.45, 0)$) node[draw=none, rectangle, align=left] (queue5) {};
+\draw[-] ($(queue5.west) + (0,-4mm)$) -- ($(queue5.west) + (0,-20mm)$);
+\draw[-] ($(queue5.west) + (10mm,-4mm)$) -- ($(queue5.west) + (10mm,-20mm)$);
+\draw ($(queue5.east) + (20mm,-10mm)$) node[draw=none, rectangle, minimum width=0.6cm, minimum height=0.6cm] {\textcolor{BrickRed}{queue empty}};
+      
+\end{tikzpicture}  
+\caption[Breadth-first search example.]{Breadth-first search example.}
+\label{graphappendix_2}
 \end{figure}
 
 \chapter{Complexity of Data Structures for Graphs}
