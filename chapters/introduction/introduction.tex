@@ -80,14 +80,6 @@ In recursion a function calls itself again on a smaller size input, until the ex
 \item[3] Input alteration. When the function is called again the input is changed to a smaller dimension than the previous call.
 \end{itemize}
 
-\begin{figure}[hb]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/introduction/images/recursion_1.pdf}
-		\caption[Pseudocode of a recursive function and its internal execution.]{Pseudocode of a recursive function and its internal execution.}
-		\label{fig:recursion_1}
-	\end{center}
-\end{figure}
-
 \begin{lstlisting}[numbers=none, caption={Pseudocode of a recursive function and its internal execution.}]
 function recursive(input):
 	if exit condition: # Element 2
@@ -130,14 +122,6 @@ def factorial(n):
 	else: 
 		return n*factorial(n - 1) # Calling the function on a smaller input
 \end{lstlisting}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/introduction/images/factorial.pdf}
-		\caption[Factorial recursive execution.]{Factorial recursive execution.}
-		\label{fig:factorial_1}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering

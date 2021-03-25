@@ -6,14 +6,6 @@ In this chapter are introduced the fundamentals concepts of tree as abstract dat
 A \textbf{tree} is an abstract datatype that simulate a hierarchical structure \cite{wikitrees} (\href{https://en.wikipedia.org/wiki/Tree_(data_structure)}{Trees, Wikipedia}). A tree is a particular kind of a linked list where there are more next elements. The base element of a tree is called \textbf{node} while the first element is called \textbf{root}.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_1.pdf}
-		\caption[Elements of a tree and linked list.]{Elements of a tree and linked list.}
-		\label{trees_1}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
 
@@ -46,14 +38,6 @@ A \textbf{tree} is an abstract datatype that simulate a hierarchical structure \
 \end{figure}
 
 Trees must be completed connected structures, this means that there are not any nodes which are not connected to anything (Figure \ref{trees_2} case (a)), and there must not be present any cycles (Figure \ref{trees_2} case (c)).
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_2.pdf}
-		\caption[Possible structures of a tree.]{Completed connected structure (a), a non completed connected structure (b), and a cycle (c).}
-		\label{trees_2}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -104,14 +88,6 @@ Trees are a hierarchical structures divided into layers: the first layer is the 
 All this definitions are defined in following figure (Figure \ref{trees_3}).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_3.pdf}
-		\caption[A tree and its fundamentals elements.]{A tree and its fundamentals elements.}
-		\label{trees_3}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
 
@@ -156,14 +132,6 @@ All this definitions are defined in following figure (Figure \ref{trees_3}).
 
 \section{Tree Traversal}
 Which way is the most efficient for visiting all the nodes of a tree? Is it more efficient looking layer by layer or looking at subtrees? There are two different approach to traverse a tree: the \textbf{depth-first search} (\textbf{DFS}) and the \textbf{breadth-first search} (\textbf{BFS}). In the first one the priority is to look at the children of a node, instead in the second one the priority is to look at the node of the same layer \ref{trees_4}.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_4.pdf}
-		\caption[The depth-first search and the breadth-first search.]{The depth-first search and the breadth-first search.}
-		\label{trees_4}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -230,14 +198,6 @@ In the depth-first search there are several different ways to perform a search o
 In the \textbf{pre-order search} the first node to be checked as visited is the root. The following node is the left child by convention. Once checked the left child the process is repeated until the first node without any children is reached. At that point the same process is applied to the right side: all the nodes on the right are checked until all the nodes are checked as visited \ref{trees_5}.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_5.pdf}
-		\caption[Pre-order search.]{Pre-order search.}
-		\label{trees_5}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
 
@@ -298,14 +258,6 @@ In the \textbf{pre-order search} the first node to be checked as visited is the 
 In the \textbf{in-order search} the first node to be checked is the first node without children on the left side (or right side). Once checked off this node the next one to be checked off is its parent, and the process is repeated again on the right side of the nodes, until all the nodes are checked off.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_6.pdf}
-		\caption[In-order search.]{In-order search.}
-		\label{trees_6}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw}, node distance=15mm, thick]
 
@@ -363,14 +315,6 @@ In the \textbf{in-order search} the first node to be checked is the first node w
 \paragraph{Post-order search}
 \label{postorder}
 In the \textbf{post-order search} the first node to be checked off is the first node without children on the left side (or right side). Once checked off this node the next one to be checked off is the one which does not have any children. Once all the nodes of the current left subtree without any children are checked off, the parents can be checked off, and the whole process is repeated until all the nodes are checked off.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_7.pdf}
-		\caption[Post-order search.]{Post-order search.}
-		\label{trees_7}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -433,14 +377,6 @@ In the \textbf{post-order search} the first node to be checked off is the first 
 To search an element in the tree one of the previous methods can be used. Because in a general tree there is no ordering this means that potentially all the elements of the tree can be visited, then the complexity results in \(O(n)\).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_12.pdf}
-		\caption[Example of tree search and traversal.]{Example of tree search and traversal.}
-		\label{trees_12}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw,minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
@@ -500,14 +436,6 @@ Before the delete process there is always a search one for finding the element t
 \end{itemize} 
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_9.pdf}
-		\caption[Delete an element of a tree.]{Delete an element of a tree.}
-		\label{trees_9}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick, ->, >=stealth]
 
@@ -550,14 +478,6 @@ Before the delete process there is always a search one for finding the element t
 AGGIUNGERE IL LIBRO DI ALGORITMI CITANDO CHE SIA UNA LETTURA APPROFONDITA PER MAGGIORI DETTAGLI.
 \subsection{Insert}
 Insert a new element to a binary tree is not a hard operation, because it is enough to find a node which can take a new children node. In the worst case to find the proper node in which a child can be add the farthest leaf must be reached (case 1 \ref{trees_10}).
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_10.pdf}
-		\caption[Add an element of a tree.]{Add an element of a tree.}
-		\label{trees_10}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -627,14 +547,6 @@ Insert a new element to a binary tree is not a hard operation, because it is eno
 AGGIUNGERE IL LIBRO DI ALGORITMI CITANDO CHE SIA UNA LETTURA APPROFONDITA PER MAGGIORI DETTAGLI.
 \subsection{Perfect binary tree}
 A perfect binary tree is a binary tree in which all the nodes have two children except the leaf which do not have any children. In this case the following results are valid
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_11.pdf}
-		\caption[Perfect binary tree results.]{Perfect binary tree results.}
-		\label{trees_11}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -721,14 +633,6 @@ class BinaryTree():
 Performing operations such as search, addition, or removal of an element it is a very efficient process if the binary tree is ordered. A binary tree is ordered if for all nodes the left child has a minor value, and the right child has a greater value than the considered node \cite{wikibinsearchtree}(\href{https://en.wikipedia.org/wiki/Binary_search_tree}{Binary search tree, Wikipedia}).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_13.pdf}
-		\caption[Search on an ordered binary tree.]{Search on an ordered binary tree.}
-		\label{trees_13}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick]
 
@@ -761,14 +665,6 @@ For example in Figure \ref{trees_13} is an ordered tree. Let us consider we woul
 Let us consider instead we would like to add a new node of value 4 to the tree of Figure \ref{trees_13}. Because the tree is ordered, there is only one place in which the node can be added. In the case of the tree in Figure \ref{trees_13} the node can be easily added because there is an empty space that can correctly take it (Figure \ref{trees_14}). In this case the complexity for this operation is again \(log(n)\).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_14.pdf}
-		\caption[Addition on an ordered binary tree.]{Addition on an ordered binary tree.}
-		\label{trees_14}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={circle,draw, minimum size=8mm}, node distance=15mm, thick]
 
@@ -799,14 +695,6 @@ In case the position of the node is already occupied, adding the node could be a
 
 When all the possible nodes are present in each level the tree is said \textbf{balanced}. In Figure \ref{trees_14} there is an example of a balanced tree.
 When instead a tree has all its children nodes which have always a bigger value, all the tree is on the right, and it is said to be \textbf{unbalanced}. In this case the search of an element has a \(O(n)\) complexity in the worst case.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_15.pdf}
-		\caption[An unbalanced binary tree.]{An unbalanced binary tree.}
-		\label{trees_15}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -868,14 +756,6 @@ class BST():
 We say the \textit{max heap} (Figure \ref{max_heap}) if for every node its children have the values less or equal than the one of the parent (the root has always the highest value). We say instead \textit{min heap} (Figure \ref{min_heap}) if for every node its children have the values higher or equal than the on of the parent (the root has the lowest value).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_16.pdf}
-		\caption[Max heap (a) and min heap (b) example.]{Max heap (a) and min heap (b) example.}
-		\label{trees_16}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
@@ -915,14 +795,6 @@ In a max heap tree the search of the biggest value is called \textbf{peek} and i
 Let us consider we would like to add a new node to a heap. In this case the node to be add must respect the heap condition. For doing so the node is added in the first available position, and later the node of the heap are swapped in order to keep true the heap condition.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_17.pdf}
-		\caption[Add a new node to a heap.]{Add a new node to a heap.}
-		\label{trees_17}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[thick, every node/.style={circle,draw}, minimum size=8mm]
 
@@ -954,14 +826,6 @@ In the example of Figure \ref{trees_17} only one swap is necessary. The complexi
 
 \subsection{Heap Implementation}
 To implement a heap we can use an array. An example of this application is shown in the following figure (Figure \ref{trees_18}).
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_18.pdf}
-		\caption[Implementation example of a heap using an array.]{Implementation example of a heap using an array.}
-		\label{trees_18}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -1010,14 +874,6 @@ To implement a heap we can use an array. An example of this application is shown
 
 \section{Self-balancing Binary Search Trees}
 \textbf{Self-balancing binary trees} are binary tree-based structure that automatically maintain the lowest height (number of levels below the root) when an insertion or deletion is done \cite{wikiselfbalancing} (\href{https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree}{Self-balancing binary search tree, Wikipedia}). This structure is an efficient way to implement abstract data type like lists, priority queue, and sets.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_19.pdf}
-		\caption[Example of balanced (b) and unbalanced (a) tree.]{Example of balanced (b) and unbalanced (a) tree. Credits: \href{https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree}{Self-balancing binary search tree, Wikipedia}}
-		\label{trees_19}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -1101,14 +957,6 @@ The rules that a red-black tree must respect are:
 \end{itemize}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_20.pdf}
-		\caption[A red-black tree.]{A red-black tree.}
-		\label{trees_20}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[thick, every node/.style={circle,draw}, minimum size=8mm, ->, >=stealth]
 
@@ -1141,14 +989,6 @@ The rules that a red-black tree must respect are:
 \end{figure}
 
 Usual only red nodes are added and the color of the other nodes are changed accordingly in order to respect the rule for the red-black tree.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_21.pdf}
-		\caption[Insertion of a new node and the following updating of the color nodes.]{Insertion of a new node and the following updating of the color nodes.}
-		\label{trees_21}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -1203,14 +1043,6 @@ Usual only red nodes are added and the color of the other nodes are changed acco
 \end{figure}
 
 In case the insertion or the removal does nor respect the rules of the red-black tree and BST some more complex operations must be done as in the following figure.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/trees/images/trees_22.pdf}
-		\caption[Left and right rotation for balancing the tree after an insertion.]{Left and right rotation for balancing the tree after an insertion.}
-		\label{trees_22}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering

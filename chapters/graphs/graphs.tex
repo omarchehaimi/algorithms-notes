@@ -6,14 +6,6 @@ In this chapter are introduced the fundamentals concepts of \textbf{graphs} as m
 A graph is a discrete mathematical structure in which the connections between its elements, and their relationship are highlighted. A graph is made up by two different elements: \textbf{nodes} or \textbf{vertices}, and \textbf{links} or \textbf{edges}. In case the links do not have any direction the graph is called \textbf{undirected graph} (Figure), in case instead the links have a direction the graph is called \textbf{directed graph}.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_1.pdf}
-		\caption[Undirected (a) and directed (b) graphs and its elements.]{Undirected (a) and directed (b) graphs and its elements.}
-		\label{graphs_1}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{subfigure}[b]{0.4\linewidth}
 \centering
@@ -75,14 +67,6 @@ A directed graph is said to be \textbf{strongly connected} if every pairs of nod
 A directed graph is said to be \textbf{weakly connected} if by replacing all the direct edges with undirectd ones, the new graph is connected. in a directed graph some nodes can not be reached if all the edges exit or enter from them. The graph in Figure \ref{graphs_2} is weakly connected because the node \(g\) has only entering edges.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_2.pdf}
-		\caption[A weakly connected graph.]{A weakly connected graph.}
-		\label{graphs_2}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth]  
   
@@ -122,14 +106,6 @@ In appendix \ref{graphsappendix} there is a summary of the complexities for the 
 The \textbf{edge list} is an unordered list of all pairs of nodes that form an edge. This representation is minimal but it does not allow to locate a specific edge, or the set of edges incident to a particular node \cite{goodrich2013data}.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_3.pdf}
-		\caption[Edge list.]{Edge list.}
-		\label{graphs_3}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}, >=stealth]  
   
@@ -154,14 +130,6 @@ The \textbf{edge list} is an unordered list of all pairs of nodes that form an e
 
 \subsection{Adjacency List}
 The \textbf{adjacency list} is a list containing a separate list for each node containing all the incident edges of that node. In this representation identify all the edges incident to a node is easy \cite{goodrich2013data}. In case of directed graphs for each node there are two different lists: one for entering edges, and another one for the edges that go out.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_4.pdf}
-		\caption[Adjacency list.]{Adjacency list.}
-		\label{graphs_4}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -193,14 +161,6 @@ The \textbf{adjacency list} is a list containing a separate list for each node c
 
 \subsection{Adjacency Matrix}
 The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\) represent the relationship between the edge \(i\) with the edge \(j\). If between \(i\) and \(j\) there is an edge \(A[i, j] = 1\), otherwise \(0\). In case the an ed go out and enter in the same edge \(A[i, i] = 1\). For undirected graphs this matrix is symmetric, and in case there are not edges going in and out the same node the principal diagonal is all of \(0\).
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_5.pdf}
-		\caption[Adjacency matrix.]{Adjacency matrix.}
-		\label{graphs_5}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -239,14 +199,6 @@ Like in the case of trees (Chapter \ref{chp:trees}), also for graphs there are t
 
 \subsection{Depth-first Search (DFS)}
 In the \textbf{depth-fist search} the search starts from an arbitrary node and traverse one of the connected node. This process is repeated until there are not any new nodes on that path and start again with new nodes, until the searched node is found, or all the nodes have been traversed \cite{wikidepthfirst} (\href{https://en.wikipedia.org/wiki/Depth-first_search}{Depth-first search, Wikipedia}). This traversal can be implemented both recursively, and iteratively by using a stack.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_6.pdf}
-		\caption[Depth-first search example.]{Depth-first search example.}
-		\label{graphs_6}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -301,14 +253,6 @@ In appendix \ref{graphimplementationtraversalappendix} there is a detailed recur
 In \textbf{breadth-first search} the traversal is done starting from a node, and the firsy visited nodes are all its neighbors. Once visited all the neighbors the traversal keeps going in the same previous way \cite{wikibreadthfirst} (\href{https://en.wikipedia.org/wiki/Breadth-first_search}{Breadth-first search, Wikipedia}).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_7.pdf}
-		\caption[Breadth-first search example.]{Breadth-first search example.}
-		\label{graphs_7}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
   
@@ -354,14 +298,6 @@ In appendix \ref{graphimplementationtraversalappendix} there is the detailed imp
 AGGIUNGERE LO SPANNING TREE DELLA RICERCA.
 \subsection{Eulerian Path and Circuit}
 An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit} (\href{https://en.wikipedia.org/wiki/Eulerian_path}{Eulerian path, Wikipedia}). Not every graph has an Eulerian path, and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_8.pdf}
-		\caption[Eulerian path (a) and not Eulerian path (b).]{Eulerian path (a) and not Eulerian path (b).}
-		\label{graphs_8}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -411,14 +347,6 @@ An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that v
 An \textbf{Eulerian circuit} (or \textbf{Eulerian cycle}) is an Eulerian path which starts and ends on the same node. As before not every graph has an Eulerian circuit.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_9.pdf}
-		\caption[Eulerian circuit.]{Eulerian circuit.}
-		\label{graphs_9}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
   
@@ -464,14 +392,6 @@ In the following table are summarized some rules for finding if a graph has Eule
 
 \subsection{Hamiltonian Path and Circuit}
 A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all nodes are visited exactly once. A \textbf{Hamiltonian circuit} (or \textbf{Hamiltonian Cycle}) is a Hamiltonian path that starts and ends in the same node \cite{wikihamiltoninanpathcircuit} (\href{https://en.wikipedia.org/wiki/Hamiltonian_path}{Hamiltonian path, Wikipedia}).
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_10.pdf}
-		\caption[Hamiltonian path (a) and Hamiltonian circuit (b).]{Hamiltonian path (a) and Hamiltonian circuit (b).}
-		\label{graphs_10}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -523,14 +443,6 @@ A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all 
 The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath} (\href{https://en.wikipedia.org/wiki/Shortest_path_problem}{Shortest path problem, Wikipedia}).The breadth-first search can be used for finding the shortest path from a node to all the others, but it expects that all the edges are of the same nature, and in several situation this approach is not useful. Let us image we would like to find the best path connecting two cities. In this case the links between the nodes are not the same, as some strees are faster or slower than others. Another interesting application of finding the shortest path in graphs is about routing packages from a computer to another in internet in order to be as fast as possible.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_11.pdf}
-		\caption[Shortest path.]{Shortest path.}
-		\label{graphs_11}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 
 \centering
 \begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
@@ -577,14 +489,6 @@ Where \(d[u]\) is the distance of node u from the starting node (1 in this case)
 \end{definition}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_12.pdf}
-		\caption[Relaxation condition.]{Relaxation condition.}
-		\label{graphs_12}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 
 \centering
 \begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
@@ -618,15 +522,6 @@ In the Dijkstra's algorithm at each step the new node is chosen based on the low
 Let us consider the following graph Figure \ref{graphs_13}, and let us start from the node \(a\) \cite{dijkstraexplaination}.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/graphs/images/graphs_13.pdf}
-		\caption[Dijkstra's algorithms example.]{Dijkstra's algorithm example.}
-		\label{graphs_13}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-
 \centering
 \begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
 
@@ -764,9 +659,9 @@ For example for finding the shortest path for reaching the node \(b\) the steps 
 	\end{tabular}
 	
 	\begin{tikzpicture}[overlay, remember picture]
-		\draw [->, line width=0.3mm] ({pic cs:b}) -- ({pic cs:a});
-		\draw [->, line width=0.3mm] ({pic cs:cc}) -- ({pic cs:bb});
-		\draw [->, line width=0.3mm] ({pic cs:d}) -- ({pic cs:c});
+		\draw [->, >=stealth, line width=0.3mm] ({pic cs:b}) -- ({pic cs:a});
+		\draw [->, >=stealth, line width=0.3mm] ({pic cs:cc}) -- ({pic cs:bb});
+		\draw [->, >=stealth, line width=0.3mm] ({pic cs:d}) -- ({pic cs:c});
 	\end{tikzpicture}
 \end{table}
 

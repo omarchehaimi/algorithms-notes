@@ -131,14 +131,6 @@ class Graph():
 \end{lstlisting}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/appendix/images/appendixgraphs/graphsappendix_1.pdf}
-		\caption[Depth-first search example.]{Depth-first search example.}
-		\label{graphappendix_1}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
   
@@ -273,14 +265,6 @@ class Graph():
 \end{lstlisting}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/appendix/images/appendixgraphs/graphsappendix_2.pdf}
-		\caption[Breadth-first search example.]{Breadth-first search example.}
-		\label{graphappendix_2}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture} [node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]  
   
@@ -371,15 +355,6 @@ As described in the section \ref{sec:dijkstra} the Dijkstra's algorithm is a gre
 Let us consider the following graph (Figure \ref{graphappendix_3}).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/appendix/images/appendixgraphs/graphsappendix_3.pdf}
-		\caption[Dijkstra's algorithms example.]{Dijkstra's algorithms example.}
-		\label{graphappendix_3}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-
 \centering
 \begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle, minimum size=8mm}]
 
@@ -444,9 +419,9 @@ Solving the shortest problem for this graph starting from the node \(a\) leads t
 	\caption[Dijkstra's algorithms example for the graph in figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.]{Dijkstra's algorithms example for the graph in figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.}
 	
 	\begin{tikzpicture}[overlay, remember picture]
-		\draw [->, line width=0.3mm] ({pic cs:era}) -- ({pic cs:cla});
-		\draw [->, line width=0.3mm] ({pic cs:cla}) -- ({pic cs:bra});
-		\draw [->, line width=0.3mm] ({pic cs:bla}) -- ({pic cs:ara});
+		\draw [->, >=stealth, line width=0.3mm] ({pic cs:era}) -- ({pic cs:cla});
+		\draw [->, >=stealth, line width=0.3mm] ({pic cs:cla}) -- ({pic cs:bra});
+		\draw [->, >=stealth, line width=0.3mm] ({pic cs:bla}) -- ({pic cs:ara});
 	\end{tikzpicture}
 \end{table}
 

@@ -5,14 +5,6 @@ In this chapter are introduced the most important and used algorithms about \tex
 Let us consider the problem of finding a number stored in an array with an \textbf{ascending} order (Figure \ref{sorting_1}).
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_1.pdf}
-		\caption[An array with numeric values ordered in an ascending order.]{An array with numeric values ordered in an ascending order.}
-		\label{sorting_1}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
@@ -32,14 +24,6 @@ A first way to tackle the problem could be to check all the numbers of the array
 
 There is a more efficient way to search an element in an ascending ordered array then the method showed previously. This method is called \textbf{binary search} \cite{wikibinarysearch} (\href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{Binary Search Algorithm, Wikipedia}).
 Let us start to check as the first element the central value of the array (in case the array has an even number of elements there are two central values, and one can choose the bigger or the lower). If the central element is the one we are looking for the search ends, otherwise, because the array is ascending ordered, we can ignore one half of the array. If the central number is bigger than the number we are looking for thus we will ignore the right half of the array, if the central number is lower than the number we are looking for thus we will ignore the left half of the array. This procedure is repeated: we consider the central value of the new array, which has half of the size of the previous step, and we check is that value is the one we are looking for, and we repeat the procedure until or we find or we do not find the number we are looking for (Figure \ref{sorting_2}). 
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_2.pdf}
-		\caption[Binary search algorithms steps.]{Binary search algorithms steps.}
-		\label{sorting_2}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -111,14 +95,6 @@ def binary_search(array_input, value):
 \end{lstlisting}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_3.pdf}
-		\caption[Array splitting in the implementation of the binary search algorithm.]{Array splitting in the implementation of the binary search algorithm.}
-		\label{sorting_3}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
@@ -147,22 +123,6 @@ L & M & H' &    &    &    &   \\
 
 \section{Bubble Sort}
 \textbf{Bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two element at each step if they are in the wrong order, repeating this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this algorithm the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_4.pdf}
-		\caption[Bubble sort algorithm.]{In bubble sort the biggest element goes at the and of the array.}
-		\label{sorting_4}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_5.pdf}
-		\caption[The swapping process is repeated until the array is completely ordered.]{The swapping process is repeated until the array is completely ordered.}
-		\label{sorting_5}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -282,14 +242,6 @@ def bubble_sort(array_input):
 
 \section{Merge Sort}
 The \textbf{merge sort} algorithm works by dividing the array in single elements at first, grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort} (\href{https://en.wikipedia.org/wiki/Merge_sort}{Merge Sort, Wikipedia}).  This way of reducing a big problem in several smaller is called \textbf{Divide et impera} (Divide and conquer).
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.52]{chapters/searchandsorting/images/sorting_6.pdf}
-		\caption[Merge sort algorithm.]{In merge sort merging and sorting process is repeated until the array is again unified with all the elements sorted.}
-		\label{sorting_6}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -490,14 +442,6 @@ def mergesort(list):
 \end{lstlisting}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_7.pdf}
-		\caption[Merge sort algorithm implementation.]{Merge sort algorithm implementation.}
-		\label{sorting_7}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
 \centering
 \begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
 
@@ -553,21 +497,6 @@ L &   &   &   &   &   & H \\
 
 \section{Quicksort}
 The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its left or on its right respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort} (\href{https://en.wikipedia.org/wiki/Quicksort}{Qicksort, Wikipedia}). 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_8.pdf}
-		\caption[Quicksort algorithm part one.]{Quicksort algorithm part one.}
-		\label{sorting_8}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_9.pdf}
-		\caption[Quicksort algorithm steps part two.]{Quicksort algorithm steps part two.}
-		\label{sorting_9}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -619,7 +548,7 @@ The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It w
 \label{sorting_8}
 \end{figure}
 
-Here are the steps of quicksort algorithm based on the example of Figure \ref{sorting_8} and Figure \ref{sorting_9}:
+Here are the steps of quicksort algorithm based on the example of Figure \ref{sorting_8}:
 \begin{itemize}
 \item[1] Let us consider the last element as pivot, two in this case, and let us compare it with all the elements to its left. Let us start from the first element of the array, and let us compare their values. In this case \(8 > 2\), so \(8\) is moved on the position of the pivot (\(2\)) which is moved of one position to the left. The number to be removed, \(10\) in this case, is moved in the first position.
 \item[2] Let us repeat the process. Now we have to compare the pivot (\(2\)) in the new position with the first element (\(10\)), and because \(10>2\) we repeat the previous step of moving the elements.
@@ -631,14 +560,6 @@ Here are the steps of quicksort algorithm based on the example of Figure \ref{so
 Evaluating the efficiency of quicksort is very hard. In the following there are some justifications for the worst case, and for the best and average complexity.
 
 Let us consider first the worst case. In this situation the last elements of the array are the bigger ones, so it is necessary to check all the previous elements, by doing \(n^{2}\) comparisons Figure \ref{sorting_10}.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_10.pdf}
-		\caption[Quicksort algorithm worst case.]{Quicksort algorithm worst case.}
-		\label{sorting_10}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -658,14 +579,6 @@ row 3/.style={nodes={font=\tiny, draw=none, fill=none, minimum size=5mm}}] (arra
 \end{figure}
 
 In the best and in the average case the complexity is \(O(n log(n))\). The reason is because the first pivot tends to move at the center of the array, having in this way two subarrays. The pivots of these two subarrays will tend to move at their center and the process is repeated until all the elements have been a pivot, having in this way an ordered array.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_11.pdf}
-		\caption[Quicksort algorithm best and average case.]{Quicksort algorithm best and average case.}
-		\label{sorting_11}
-	\end{center}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -745,9 +658,38 @@ def quick_sort(arr, low, high):
 \end{lstlisting}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=.6]{chapters/searchandsorting/images/sorting_12.pdf}
-		\caption[Quicksort algorithm implementation.]{Quicksort algorithm implementation.}
-		\label{sorting_12}
-	\end{center}
+\centering
+\begin{tikzpicture}[array/.style={matrix of math nodes,nodes={draw, minimum size=7mm},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells}, thick, text height=2.5ex, text depth=0.75ex, text width=3.25ex, align=center, column sep=-\pgflinewidth]
+
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=RoyalPurple!30}}, row 1 column 3/.style={nodes={fill=BrickRed!30}}, row 1 column 8/.style={nodes={fill=ForestGreen!30}}] (array1) {
+ & & & & & & & & \\};
+
+\draw[decorate, decoration={brace, amplitude=3pt, mirror}] 
+    ($(array1-1-3.south west) + (0, -1mm)$) coordinate (array1-1-1.west) -- ($(array1-1-8.south east) + (0, -1mm)$) coordinate (array1-1-8.east);
+
+
+\draw ($(array1-1-5.north) + (10mm,10mm)$) node[draw=none, rectangle, align=left, minimum size=30mm, text width=30ex] (for) {for i in range($0$, elements)};
+\draw ($(array1-1-8.north) + (3mm,3mm)$) node[draw=none, rectangle, align=left, minimum size=7mm, ForestGreen] (i) {i};
+\draw ($(array1-1-3.north) + (10mm,3mm)$) node[draw=none, rectangle, align=left, minimum size=30mm, BrickRed, text width=20ex] (current) {current position};
+\draw ($(array1-1-1.north) + (0,3mm)$) node[draw=none, rectangle, align=left, minimum size=7mm, RoyalPurple] (pivot) {pivot};
+\draw ($(array1-1-5.south) + (8mm,-4mm)$) node[draw=none, rectangle, align=center, minimum size=30mm, text width=60ex] (swap1) {if array\textunderscore input$[i]$ <= array\textunderscore input$[0]$ \\
+SWAP(array\textunderscore input$[i]$, array\textunderscore input$[current\textunderscore position]$)};
+
+\matrix[array, fill=none, row 1 column 1/.style={nodes={fill=RoyalPurple!30}}, row 1 column 8/.style={nodes={fill=BrickRed!30}}] (array2) at ($(array1) + (0,-40mm)$) {
+ & & & & & & & & \\};
+
+\draw[decorate, decoration={brace, amplitude=3pt, mirror}] 
+    ($(array2-1-1.south west) + (0, -1mm)$) coordinate (array2-1-1.west) -- ($(array2-1-8.south east) + (0, -1mm)$) coordinate (array2-1-8.east);
+
+
+\draw ($(array2-1-5.north) + (15mm,10mm)$) node[draw=none, rectangle, align=left, minimum size=30mm, text width=50ex] (for) {At the end of the loop move the pivot};
+\draw ($(array2-1-8.north) + (0,3mm)$) node[draw=none, rectangle, align=left, minimum size=7mm, BrickRed, text width=20ex] (i) {current position};
+\draw ($(array2-1-1.north) + (0,3mm)$) node[draw=none, rectangle, align=left, minimum size=7mm, RoyalPurple] (pivot) {pivot};
+\draw ($(array2-1-5.south) + (8mm,-5mm)$) node[draw=none, rectangle, align=center, minimum size=30mm, text width=60ex] (swap1) {
+SWAP(array\textunderscore input$[0]$, array\textunderscore input$[current\textunderscore position]$)};
+
+\end{tikzpicture}
+
+\caption[Quicksort algorithm implementation.]{Quicksort algorithm implementation.}
+\label{sorting_12}
 \end{figure}
