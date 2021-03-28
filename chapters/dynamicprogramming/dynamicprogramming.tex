@@ -7,7 +7,7 @@ Dynamic programming is a mathematical optimization method and a computer program
 
 In computer science a problem can be solved with a dynamic programming method must have an optimal substructure (the problem can be broken down in smaller parts) and an overlapping sub-problems (the broken down problems share some results). If a problem can be solved with an optimal substructure but with non-overlapping sub-problems then the strategy is called \textbf{divide and conquer}.
 
-When a problem is solved with dynamic programming, the starting point is to find the base case, which is the sub-problem with the lowest computational cost. Once solved this problem its result is saved in a table called \textbf{lookup table}, and the same general formula is called recursively. At each step the result is saved in the lookup table, as in the following steps it might be used. Instead of calculating the same value again, we look at the lookup table and retrieve it. This aspect of dynamic programming makes this technique extremely powerful, as a lot of calculations must not be repeated several times.
+When a problem is solved with dynamic programming, the starting point is to find the \textbf{base case}, which is the sub-problem with the lowest computational cost. Once solved this problem its result is saved in a table called \textbf{lookup table}, and the same general formula is called recursively. At each step the result is saved in the lookup table, as in the following steps it might be used. Instead of calculating the same value again, we look at the lookup table and retrieve it. This aspect of dynamic programming makes this technique extremely powerful, as a lot of calculations must not be repeated several times.
 
 For example, in the calculation of the Fibonacci number we have to use the same function several time in different sub-problems. Let us suppose we want to calculate the fifth number of the Fibonacci sequence:
 
@@ -51,5 +51,57 @@ Some values are used several times in different sub-problem as shown in the foll
 If the values of the functions which are repeated are stored in a lookup table, instead of calculating them again are retrieved from the table and used.
 
 \section{Knapsack Problem}
+Let us consider a knapsack with a limited capacity of weight and number of objects which are defined by a value and a weight. Let us also consider that not all the available objects can be carried. Which objects we can put in the knapsack in order to have the optimal weight-value in the limits of the maximum weight \cite{wikiknapsackproblem}(\href{https://en.wikipedia.org/wiki/Knapsack_problem}{Knapsack Problem, Wikipedia})?
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[thick]
+\node[draw, rounded corners, rectangle, minimum height=20mm, minimum width=38mm] (kn) {};
+\draw ($(kn) + (0,13mm)$) node[draw=none] {knapsack};
+
+\draw ($(kn.north west) + (-28mm,0)$) node[draw, rectangle, align=center, anchor=north] (r1) {$\textcolor{BrickRed}{4}$  \\ $\textcolor{ForestGreen}{6}$};
+
+\draw ($(kn.north west) + (-10mm,0)$) node[draw, rectangle, align=center, anchor=north] (r2) {$\textcolor{BrickRed}{2}$  \quad $\textcolor{ForestGreen}{9}$};
+
+\draw ($(kn.north west) + (-10mm,-8mm)$) node[draw, rectangle, align=center, anchor=north] (r3) {$\textcolor{BrickRed}{3}$  \quad $\textcolor{ForestGreen}{4}$};
+
+\draw ($(kn.north west) + (-18mm,-16mm)$) node[draw, rectangle, align=center, anchor=north] (r4) {$\textcolor{BrickRed}{19}$  \qquad $\textcolor{ForestGreen}{15}$};
+
+\draw ($(r1.north) + (-9mm,-2.5mm)$) node[draw=none] (wl) {\textcolor{BrickRed}{weight}};
+\draw ($(r1.south) + (-9mm,2.5mm)$) node[draw=none] (vl) {\textcolor{ForestGreen}{value}};
+\end{tikzpicture}
+\caption[Knapsack problem.]{Knapsack problem.}
+\end{figure}
+
+In this case we consider to take or not the an entire object. In some variants it is possible to take a fraction.
+
+The easiest way to solve this problem would be to test all the combinations of possible objects and select the optimal value (brute force). The complexity in this case is \(O(2^{n})\), where \(n\) is the number of objects. The complexity of this approach is very high.
+
+Let us try another approach. The idea is to maximize the overall value and have the maximum transportable weight. What we do at first is to find the combination with the lowest weight and the highest value, and add objects until the allowed weight is reached. For doing so let us create an array where the indexes correspond to the highest weight given that value. The highest index corresponds to the highest weight. The values of the array instead correspond to the highest value for the corresponding weight represented by its index. In this case let us consider the weight to be positive integers. 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[thick]
+\node[draw, rounded corners, rectangle, minimum height=20mm, minimum width=38mm] (kn) {};
+\draw ($(kn) + (0,13mm)$) node[draw=none] {knapsack};
+
+\draw ($(kn.north west) + (-28mm,0)$) node[draw, rectangle, align=center, anchor=north] (r1) {$\textcolor{BrickRed}{4}$  \\ $\textcolor{ForestGreen}{6}$};
+
+\draw ($(kn.north west) + (-10mm,0)$) node[draw, rectangle, align=center, anchor=north] (r2) {$\textcolor{BrickRed}{2}$  \quad $\textcolor{ForestGreen}{9}$};
+
+\draw ($(kn.north west) + (-10mm,-8mm)$) node[draw, rectangle, align=center, anchor=north] (r3) {$\textcolor{BrickRed}{3}$  \quad $\textcolor{ForestGreen}{4}$};
+
+\draw ($(kn.north west) + (-18mm,-16mm)$) node[draw, rectangle, align=center, anchor=north] (r4) {$\textcolor{BrickRed}{19}$  \qquad $\textcolor{ForestGreen}{15}$};
+
+\draw ($(r1.north) + (-9mm,-2.5mm)$) node[draw=none] (wl) {\textcolor{BrickRed}{weight}};
+\draw ($(r1.south) + (-9mm,2.5mm)$) node[draw=none] (vl) {\textcolor{ForestGreen}{value}};
+\end{tikzpicture}
+\caption[Knapsack problem solution.]{Knapsack problem solution.}
+\end{figure}
 
 \section{Travelling Salesman Problem}
+Given a graph and the distances between all its nodes, what is the shortest possible rout that connects all the nodes and visits them exactly once and returns to the starting node \cite{wikitravsales} (\href{https://en.wikipedia.org/wiki/Travelling_salesman_problem}{Travelling salesman problem}))?
+
+This is a very hard problem and it belongs to the NP-Hard problems \cite{wikihphard} (\href{https://en.wikipedia.org/wiki/NP-hardness}{NP-hardness, Wikipedia}). NP-Hard problems can not be solved in a polynomial time (\(O(n^{2})\), \(O(n)\), \(O(2)\), ...). The complexity of the travelling salesman problem is said to be \textbf{pseudo polynomial} \cite{wikipseudo} (\href{https://en.wikipedia.org/wiki/Pseudo-polynomial_time}{Pseudo-polynomial time, Wikipedia}). 
+
+There are two ways to solve this problem: the exact ones, which find an exact solution, and the approximated ones, which find an approximated solution. The latests are much faster in the execution that the first ones. If we try to solve with the brute force this problem by testing all the possible routes, we would have a complexity of \(O(n!)\). There are also solutions which use the dynamic programming, such as the \textbf{Held-Karp algorithm} \cite{wikiheldkarp} (\href{https://en.wikipedia.org/wiki/Held–Karp_algorithm}{Held-Karp algorithm, Wikipedia}) whose complexity is \(O(n^{2}2^{n})\). The most common approximated algorithm is the \textbf{Christofides–Serdyukov algorithm} \cite{wikichristofides} (\href{https://en.wikipedia.org/wiki/Christofides_algorithm}{Christofides–Serdyukov algorithm, Wikipedia}).
