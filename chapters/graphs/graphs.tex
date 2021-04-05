@@ -288,14 +288,39 @@ class Graph():
 	...
 	
 	def breadth_first_search(self, start_node):
-		
-		return ret_list
+  		queue = []
+		queue.append(start_node)
+  		while queue:
+    		q = queue.pop(0)
+    		edges_out = [e for e q.edges if e.node_to.value != q.value]
+    		for neighbour in edges_out:
+      			if neighbour not neighbour.visited:
+        			neighbour.visited = True
+        			queue.append(neighbour)
 \end{lstlisting}
 
 The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on complexities evaluation on graphs refer here \cite{goodrich2013data}.
 
+\paragraph{Spanning Tree}
+Using a tree it is possible to visualize how the graph is traversed. For the graph in figure \ref{graphs_7} the spanning tree is the following.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw,minimum size=8mm}, node distance=15mm, thick]
+
+\node {$a$}
+   child{node {$b$}
+             child {node {$e$}}
+        }
+   child{node {$c$}}
+   child{node {$d$}};
+      
+\end{tikzpicture}  
+\caption[Spanning tree.]{Spanning tree.}
+\label{graphs_spanning_tree}
+\end{figure}
+
 In appendix \ref{graphimplementationtraversalappendix} there is the detailed implementation, with also an additional example.
-AGGIUNGERE LO SPANNING TREE DELLA RICERCA.
 \subsection{Eulerian Path and Circuit}
 An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit} (\href{https://en.wikipedia.org/wiki/Eulerian_path}{Eulerian path, Wikipedia}). Not every graph has an Eulerian path, and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
 

@@ -189,13 +189,14 @@ Which way is the most efficient for visiting all the nodes of a tree? Is it more
 \label{trees_4}
 \end{figure}
 
-AGGIUNGERE LA COMPLESSITÀ COMPUTAZIONALE DEI DUE APPROCCI.
+For both ways the average complexity in case of a search is \(O(\vert E \vert + \vert V \vert)\), where \(\vert E \vert\) and \(\vert V \vert\) are the number of edges and the number of vertex respectively. If all the tree is traversed the complexity is \(O(\vert V \vert)\). Breadth-first search is less space-efficient than depth-first search because BFS keeps a priority queue of the entire frontier while DFS maintains a few pointers at each level. More details on this are in the appendix \ref{binappendix} about the full implementation of the two methods. 
 
 \subsection{Depth-first search}
-In the depth-first search there are several different ways to perform a search on a tree. AGGIUNGERE LO SPANNING TREE E IL METODO DI RICERCA: VISIT, LEFT, RIGHT...
+In the depth-first search there are several different ways to perform a search on a tree. Example of applications of this search are for solving mazes and scheduling problems.
+
 \paragraph{Pre-order search}
 \label{preorder}
-In the \textbf{pre-order search} the first node to be checked as visited is the root. The following node is the left child by convention. Once checked the left child the process is repeated until the first node without any children is reached. At that point the same process is applied to the right side: all the nodes on the right are checked until all the nodes are checked as visited \ref{trees_5}.
+In the \textbf{pre-order search} the first node to be checked as visited is the root. The following node is the left child by convention. Once checked the left child the process is repeated until the first node without any children is reached. At that point the same process is applied to the right side: all the nodes on the right are checked until all the nodes are checked as visited \ref{trees_5} (Root-Left-Right). 
 
 \begin{figure}[H]
 \centering
@@ -255,7 +256,7 @@ In the \textbf{pre-order search} the first node to be checked as visited is the 
 
 \paragraph{In-order search}
 \label{inorder}
-In the \textbf{in-order search} the first node to be checked is the first node without children on the left side (or right side). Once checked off this node the next one to be checked off is its parent, and the process is repeated again on the right side of the nodes, until all the nodes are checked off.
+In the \textbf{in-order search} the first node to be checked is the first node without children on the left side (or right side). Once checked off this node the next one to be checked off is its parent, and the process is repeated again on the right side of the nodes, until all the nodes are checked off (Left-Root-Right).
 
 \begin{figure}[H]
 \centering
@@ -314,7 +315,7 @@ In the \textbf{in-order search} the first node to be checked is the first node w
 
 \paragraph{Post-order search}
 \label{postorder}
-In the \textbf{post-order search} the first node to be checked off is the first node without children on the left side (or right side). Once checked off this node the next one to be checked off is the one which does not have any children. Once all the nodes of the current left subtree without any children are checked off, the parents can be checked off, and the whole process is repeated until all the nodes are checked off.
+In the \textbf{post-order search} the first node to be checked off is the first node without children on the left side (or right side). Once checked off this node the next one to be checked off is the one which does not have any children. Once all the nodes of the current left subtree without any children are checked off, the parents can be checked off, and the whole process is repeated until all the nodes are checked off (Left-Right-Root).
 
 \begin{figure}[H]
 \centering
@@ -475,7 +476,6 @@ Before the delete process there is always a search one for finding the element t
 \label{trees_9}
 \end{figure}
 
-AGGIUNGERE IL LIBRO DI ALGORITMI CITANDO CHE SIA UNA LETTURA APPROFONDITA PER MAGGIORI DETTAGLI.
 \subsection{Insert}
 Insert a new element to a binary tree is not a hard operation, because it is enough to find a node which can take a new children node. In the worst case to find the proper node in which a child can be add the farthest leaf must be reached (case 1 \ref{trees_10}).
 
@@ -544,7 +544,6 @@ Insert a new element to a binary tree is not a hard operation, because it is eno
 \label{trees_10}
 \end{figure}
 
-AGGIUNGERE IL LIBRO DI ALGORITMI CITANDO CHE SIA UNA LETTURA APPROFONDITA PER MAGGIORI DETTAGLI.
 \subsection{Perfect binary tree}
 A perfect binary tree is a binary tree in which all the nodes have two children except the leaf which do not have any children. In this case the following results are valid
 

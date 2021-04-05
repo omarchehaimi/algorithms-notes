@@ -118,16 +118,27 @@ class Graph():
 	...
 	
 	def depth_first_search_recursive(self, start_node):
-		ret_list = [start_node]
+		ret_list = [start_node.value]
 		start_node.visited = True
 		edges_out = [e for e in start_node.edges
 					 if e.node_to.value != start_node.value]
 		for e in edges_out:
-			if not edge.node.visited:
-				ret_list.extend(
-					depth_first_search_recursive(
-						
+			if not edge.node_to.visited:
+				ret_list.extend(depth_first_search_recursive(edge.node_to)
+		return ret_list
 	
+	def depth_first_saerch_iterative(self, start_node):
+  		stack = []
+		stack.append(start_node)
+  		while stack:
+  			s = stack[-1]
+  			stack.pop()
+			if not s.visited:
+				s.visit = True 
+    			edges_out = [e for e s.edges if e.node_to.value != s.value]
+    			for neighbour in edges_out:
+    				if not neighbour.visited:
+    					stack.append(neighbour)
 \end{lstlisting}
 
 \begin{figure}[H]
@@ -252,16 +263,15 @@ class Graph():
 	...
 	
 	def breadth_first_search(self, start_node):
-		ret_list = [start_node]
-		start_node.visited = True
-		edges_out = [e for e in start_node.edges
-					 if e.node_to.value != start_node.value]
-		for e in edges_out:
-			if not edge.node.visited:
-				ret_list.extend(
-					depth_first_search_recursive(
-						
-	
+  		queue = []
+		queue.append(start_node)
+  		while queue:
+    		q = queue.pop(0)
+    		edges_out = [e for e q.edges if e.node_to.value != q.value]
+    		for neighbour in edges_out:
+      			if neighbour not neighbour.visited:
+        			neighbour.visited = True
+        			queue.append(neighbour)
 \end{lstlisting}
 
 \begin{figure}[H]
@@ -343,10 +353,6 @@ class Graph():
 \caption[Breadth-first search example.]{Breadth-first search example.}
 \label{graphappendix_2}
 \end{figure}
-
-\chapter{Complexity of Data Structures for Graphs}
-\label{graphsappendix}
-In the following table are summarized the complexities of the most common operations on graphs for the different data structures \cite{goodrich2013data}.
 
 \chapter{Dijkstra's Algorithm Implementation}
 \label{dijkstraimplementation}
@@ -483,14 +489,12 @@ def dijkstra(graph, start):
     queue = [(0, start)]
     distances = {start: 0}
     visited = set()
-
     while queue:
         _, node = heapq.heappop(queue)  # (distance, node), ignore distance
         if node in visited:
             continue
         visited.add(node)
         dist = distances[node]
-
         for neighbour, neighbour_dist in graph[node].items():
             if neighbour in visited:
                 continue
@@ -498,7 +502,5 @@ def dijkstra(graph, start):
             if neighbour_dist < distances.get(neighbour, float('inf')):
                 heapq.heappush(queue, (neighbour_dist, neighbour))
                 distances[neighbour] = neighbour_dist
-
-    return distances
-	
+    return distances	
 \end{lstlisting}
