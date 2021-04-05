@@ -51,7 +51,7 @@ Some values are used several times in different sub-problem as shown in the foll
 If the values of the functions which are repeated are stored in a lookup table, instead of calculating them again are retrieved from the table and used.
 
 \section{Knapsack Problem}
-Let us consider a knapsack with a limited capacity of weight and number of objects which are defined by a value and a weight. Let us also consider that not all the available objects can be carried. Which objects we can put in the knapsack in order to have the optimal weight-value in the limits of the maximum weight \cite{wikiknapsackproblem}(\href{https://en.wikipedia.org/wiki/Knapsack_problem}{Knapsack Problem, Wikipedia})? In this case we consider to take or not the an entire object, it is said the \textbf{\(0/1\) knapsack problem} . In some variants it is possible to take a fraction.
+Let us consider a knapsack with a limited capacity of weight and number of objects which are defined by a value and a weight. Let us also consider that not all the available objects can be carried. Which objects we can put in the knapsack in order to have the optimal weight-value in the limits of the maximum weight \cite{wikiknapsackproblem}(\href{https://en.wikipedia.org/wiki/Knapsack_problem}{Knapsack Problem, Wikipedia})? In this case we consider to take or not the an entire object, and it is said the \textbf{\(0/1\) knapsack problem} . In some variants it is possible to take a fraction.
 
 \begin{figure}[H]
 \centering
@@ -75,28 +75,27 @@ Let us consider a knapsack with a limited capacity of weight and number of objec
 
 The easiest way to solve this problem would be to test all the combinations of possible objects and select the optimal value (brute force). The complexity in this case is \(O(2^{n})\), where \(n\) is the number of objects. The complexity of this approach is very high.
 
-Let us try another approach. The idea is to maximize the overall value and have the maximum transportable weight. What we do at first is to find the combination with the lowest weight and the highest value, and add objects until the allowed weight is reached. For doing so let us create a \textbf{table of values} where in each row there is an item and in each column the maximum capacity which increase. Let us consider the following example, where we have five elements (\(n=5\)), with the maximum capacity of the knapsack of seven kg (\(m=7kg\)). The values and the weights are respectively: \(V={5, 2, 2, 4, 3}[\$]\), and \(W={4, 3, 1, 3, 2}[kg]\).
+Let us try another approach. The idea is to maximize the overall value and have the maximum transportable weight. What we do at first is to find the combination with the lowest weight and the highest value, and add objects until the allowed weight is reached. For doing so let us create a \textbf{table of values} where in each row there is an item and in each column the maximum capacity which increase. Let us consider the following example, where we have five elements (\(n=5\)), with the maximum capacity of the knapsack of seven kg (\(m=7kg\)). The values and the weights are respectively: \(V= \lbrace 2, 3, 2, 4, 5 \rbrace[\$]\), and \(W= \lbrace 1, 2, 3, 3, 4 \rbrace [kg]\).
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
-\hspace*{-3cm}
 
 \matrix (mat) [style={
   matrix of nodes,
   row sep=-\pgflinewidth,
   column sep=-\pgflinewidth,
-  nodes={rectangle, text width=3em, align=center},
+  nodes={rectangle, text width=3ex, align=center},
   text depth=1.25ex,
-  text height=2.5ex,
+  text height=3ex,
   nodes in empty cells}, column 1/.style={nodes={text depth=0.4ex, text width=20ex}}] {
                      &  & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
 Empty                & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
-$v_{1}=2$, $w_{1}=3$ & $1$ & $0$ & $0$ & $0$ & $2$ & $2$ & $2$ & $2$ & $2$ \\
-$v_{2}=2$, $w_{2}=1$ & $2$ & $0$ & $2$ & $2$ & $2$ & $4$ & $4$ & $4$ & $4$ \\
-$v_{3}=4$, $w_{3}=3$ & $3$ & $0$ & $2$ & $2$ & $4$ & $6$ & $6$ & $6$ & $8$ \\
-$v_{4}=5$, $w_{4}=4$ & $4$ & $0$ & $2$ & $2$ & $4$ & $6$ & $7$ & $7$ & $9$ \\
-$v_{5}=3$, $w_{5}=2$ & $5$ & $0$ & $2$ & $3$ & $5$ & $6$ & $7$ & $9$ & $10$ \\
+$v_{1}=2$, $w_{1}=1$ & $1$ & $0$ & $2$ & $2$ & $2$ & $2$ & $2$ & $2$ & $2$ \\
+$v_{2}=3$, $w_{2}=2$ & $2$ & $0$ & $2$ & $3$ & $5$ & $5$ & $5$ & $5$ & $5$ \\
+$v_{3}=2$, $w_{3}=3$ & $3$ & $0$ & $2$ & $3$ & $5$ & $5$ & $5$ & $7$ & $7$ \\
+$v_{4}=4$, $w_{4}=3$ & $4$ & $0$ & $2$ & $3$ & $5$ & $6$ & $7$ & $9$ & $9$ \\
+$v_{5}=5$, $w_{5}=4$ & $5$ & $0$ & $2$ & $3$ & $5$ & $6$ & $7$ & $9$ & $10$ \\
 };
 
 \draw 
@@ -108,26 +107,77 @@ $v_{5}=3$, $w_{5}=2$ & $5$ & $0$ & $2$ & $3$ & $5$ & $6$ & $7$ & $9$ & $10$ \\
     
 \begin{scope}[shorten >=7pt,shorten <= 7pt]
 
-\draw[->, >=stealth] (mat-7-3.center) -- (mat-6-3.center);
-\draw[->, >=stealth] (mat-7-4.center) -- (mat-6-4.center);
-\draw[->, >=stealth] (mat-7-5.center) -- (mat-6-5.center);
-\draw[->, >=stealth] (mat-7-6.center) -- (mat-6-6.center);
-\draw[->, >=stealth, ForestGreen] (mat-7-6.center) -- (mat-6-3.center);
-\draw[->, >=stealth] (mat-7-7.center) -- (mat-6-7.center);
-\draw[->, >=stealth, ForestGreen] (mat-7-7.center) -- (mat-6-4.center);
-\draw[->, >=stealth] (mat-7-8.center) -- (mat-6-8.center);
-\draw[->, >=stealth, ForestGreen] (mat-7-8.center) -- (mat-6-5.center);
-\draw[->, >=stealth] (mat-7-9.center) -- (mat-6-9.center);
-\draw[->, >=stealth, ForestGreen] (mat-7-9.center) -- (mat-6-6.center);
-\draw[->, >=stealth] (mat-7-10.center) -- (mat-6-10.center);
-\draw[->, >=stealth, ForestGreen] (mat-7-10.center) -- (mat-6-7.center);
+\draw[->, >=stealth, BrickRed] (mat-7-7.center) -- (mat-6-3.center);
+\draw[->, >=stealth, ForestGreen] (mat-7-7.center) -- (mat-6-7.center);
+
+\draw[->, >=stealth, ForestGreen] (mat-7-8.center) -- (mat-6-4.center);
+\draw[->, >=stealth, ForestGreen] (mat-7-8.center) -- (mat-6-8.center);
+
+\draw[->, >=stealth, BrickRed] (mat-7-9.center) -- (mat-6-5.center);
+\draw[->, >=stealth, ForestGreen] (mat-7-9.center) -- (mat-6-9.center);
+
+\draw[->, >=stealth, ForestGreen] (mat-7-10.center) -- (mat-6-6.center);
+\draw[->, >=stealth, BrickRed] (mat-7-10.center) -- (mat-6-10.center);
+
 \end{scope}
 \end{tikzpicture}
 \caption[Knapsack problem example.]{Knapsack problem example.}
+\label{knapsack_fig}
+\end{figure}
+
+The green arrows show where the state is update, while the red ones where the state is not update (only the arrows for the last row have been drown for clarity in figure \ref{knapsack_fig}). In case of a tie it is equivalent to take one of the two values (in Figure \ref{knapsack_fig} for the item \(5\) at the capacity \(4\) there are two green arrow). To decide if update or not a value of a table we have to check the previous state (at \(K[i-1, w]\), where \(K\) is the knapsack, \(i\) the index for the row, and \(w\) the maximum capacity) and the previous optimal state (at \(K[i-1, w-w[i]]\), where \(w[i]\) is the weight of the current item). The formula to be used is the following \(K[i, w] = max \lbrace K[i-1, w], K[i-1, w-w[i]] + V[i]\rbrace \), where \(V[i]\) is the weight of the current item. For example for calculating the value at \(5, 3\) the formula becomes: \(K[5, 3]=max \lbrace K[4, 3], K[4, 3-2] + V[3]\rbrace=max \lbrace 4, 3 + 2 \rbrace = max \lbrace 4, 5 \rbrace = 5\), then the state of the is updated. In case there is some undefined positions in the previous formula the state is not updated and it is kept the previous one.
+
+With the table in Figure \ref{knapsack_fig} we found the best value, but what about the the best elements to form the subset? Starting from the last element of previous table (\(K[5, 7]=10\)) the idea is to check whether the previous element is different to the previous optimal solution. If the value is different (red arrows of \ref{knapsack_fig_best}), then the previous step of the best solution is chosen, instead if the previous value is the same (green arrows of \ref{knapsack_fig_best}) we move to the previous step, and we keep doing so until a different value is found, and we repeat the same thing as before. The process stops when we reach the first element of the table.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+
+\matrix (mat) [style={
+  matrix of nodes,
+  row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  nodes={rectangle, text width=3ex, align=center},
+  text depth=1.25ex,
+  text height=3ex,
+  nodes in empty cells}, column 1/.style={nodes={text depth=0.4ex, text width=20ex}}] {
+                     &  & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
+Empty                & $0$ & \mybox[rounded corners=6pt, line width=1pt, draw=black]{mycol}{0} & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+$v_{1}=2$, $w_{1}=1$ & $1$ & $0$ & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{2} & $2$ & $2$ & $2$ & $2$ & $2$ & $2$ \\
+$v_{2}=3$, $w_{2}=2$ & $2$ & $0$ & $2$ & $3$ & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{5} & $5$ & $5$ & $5$ & $5$ \\
+$v_{3}=2$, $w_{3}=3$ & $3$ & $0$ & $2$ & $3$ & \mybox[rounded corners=6pt, line width=1pt, draw=black]{mycol}{5} & $5$ & $5$ & $7$ & $7$ \\
+$v_{4}=4$, $w_{4}=3$ & $4$ & $0$ & $2$ & $3$ & \mybox[rounded corners=6pt, line width=1pt, draw=black]{mycol}{5} & $6$ & $7$ & $9$ & $9$ \\
+$v_{5}=5$, $w_{5}=4$ & $5$ & $0$ & $2$ & $3$ & $5$ & $6$ & $7$ & $9$ & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{10} \\
+};
+
+\draw 
+    ([xshift=-.5\pgflinewidth]mat-1-2.south west) --   
+    ([xshift=-.5\pgflinewidth]mat-1-10.south east);
+\draw 
+    ([yshift=.5\pgflinewidth]mat-1-2.north east) -- 
+    ([yshift=.5\pgflinewidth]mat-7-2.south east);
+    
+\begin{scope}[shorten >=7pt,shorten <= 7pt]
+
+\draw[->, >=stealth, BrickRed] (mat-7-10.center) -- ($(mat-6-10.center) + (0,-2mm)$);
+\draw[->, >=stealth, ForestGreen] (mat-7-10.center) -- ($(mat-6-6.east) + (-2mm, 0)$);
+
+\draw[->, >=stealth, ForestGreen] (mat-6-6.center) -- ($(mat-5-6.center) + (0,-2mm)$);
+\draw[->, >=stealth, ForestGreen] (mat-5-6.center) -- ($(mat-4-6.center) + (0,-2mm)$);
+\draw[->, >=stealth, BrickRed] (mat-4-6.center) -- ($(mat-3-6.center) + (0, -2mm)$);
+\draw[->, >=stealth, ForestGreen] (mat-4-6.center) -- ($(mat-3-4.east) + (-2mm, 0)$);
+\draw[->, >=stealth, BrickRed] (mat-3-4.center) -- ($(mat-2-4.center) + (0,-2mm)$);
+\draw[->, >=stealth, ForestGreen] (mat-3-4.center) -- ($(mat-2-3.east) + (-3mm, -2mm)$);
+
+
+\end{scope}
+\end{tikzpicture}
+\caption[Selection of the optimal subset.]{Selection of the optimal subset.}
+\label{knapsack_fig_best}
 \end{figure}
 
 \section{Travelling Salesman Problem}
-Given a graph and the distances between all its nodes, what is the shortest possible rout that connects all the nodes and visits them exactly once and returns to the starting node \cite{wikitravsales} (\href{https://en.wikipedia.org/wiki/Travelling_salesman_problem}{Travelling salesman problem}))?
+Given a graph and the distances between all its nodes, what is the shortest possible rout that connects all the nodes and visits them exactly once and returns to the starting node \cite{wikitravsales} (\href{https://en.wikipedia.org/wiki/Travelling_salesman_problem}{Travelling salesman problem, Wikipedia}))?
 
 This is a very hard problem and it belongs to the NP-Hard problems \cite{wikihphard} (\href{https://en.wikipedia.org/wiki/NP-hardness}{NP-hardness, Wikipedia}). NP-Hard problems can not be solved in a polynomial time (\(O(n^{2})\), \(O(n)\), \(O(2)\), ...). The complexity of the travelling salesman problem is said to be \textbf{pseudo polynomial} \cite{wikipseudo} (\href{https://en.wikipedia.org/wiki/Pseudo-polynomial_time}{Pseudo-polynomial time, Wikipedia}). 
 
