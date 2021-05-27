@@ -1,14 +1,17 @@
 \chapter{Data Structures}
 \label{chp:datastrucutres}
-A \textbf{data structure} is a data organization, management, and storage format that enables efficient access and modification of the collected data. The relationship among collected data, their properties, the operations that can be done on them, are all properties of the data structure \cite{wikidatastructure} (\href{https://en.wikipedia.org/wiki/Data_structure}{Data Structure, Wikipedia}). Data structure is the basis for an \textbf{abstract data type (ADT)}, a mathematical model for a \textbf{data type} \cite{wikidatatype} (\href{https://en.wikipedia.org/wiki/Data_type}{Data Type, Wikipedia}), which is defined by its behavior from the point of view of a user, its type of data, specifically in terms of possible values, by possible operations on these data, and by the behavior of these operations. This mathematical model contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not of a user \cite{wikiabstractdatatype} (\href{https://en.wikipedia.org/wiki/Abstract_data_type}{Abstract Data Type, Wikipedia}).
-\\
+A \textbf{data structure} is a data organization, management, and storage format that enables efficient access and modification of the collected data. The relationship among collected data, their properties, the operations that can be done on them, are all properties of the data structure \cite{wikidatastructure} (\href{https://en.wikipedia.org/wiki/Data_structure}{Data Structure, Wikipedia}). A data structure is the basis for an \textbf{abstract data type (ADT)}: a mathematical model for a \textbf{data type} \cite{wikidatatype} (\href{https://en.wikipedia.org/wiki/Data_type}{Data Type, Wikipedia}), which is defined by its behaviour from the point of view of a user, its type of data, specifically in terms of possible values, by possible operations on these data, and by the behaviour of these operations. This mathematical model contrasts with data structures, which indeed are concrete representations of data, and are the point of view of an implementer, not of a user \cite{wikiabstractdatatype} (\href{https://en.wikipedia.org/wiki/Abstract_data_type}{Abstract Data Type, Wikipedia}).
+
 In this chapter the most important data structures like \textbf{collections}, \textbf{lists}, \textbf{arrays}, \textbf{linked lists}, \textbf{stacks}, and \textbf{queues} are introduced. For each data structure are shown all the most important properties, operations, and implementations.
+
 \section{Collection}
 A \textbf{collection} is an object that groups several different elements in only single unit. Collections are used to save, to find, to manipulate, and to communicate grouped data \cite{wikicollection} (\href{https://en.wikipedia.org/wiki/Collection_(abstract_data_type)}{Collection (abstract data type), Wikipedia}). Usually the elements belonging to a collection are of the same type, such as a poker hand (a collection of playing cards), a folder containing emails (a collection of emails), or a phone book (a map \textit{name} \(\rightarrow\) \textit{phone number}).
+
 \section{List}
 A \textbf{list} is a collection which represents a set of \textbf{ordered} elements, which can be also of different type. Same value elements can be repeated several times. Lists do not have a fixed size, and it is possible to add, to remove, and to modify all the elements in the list. The complexity of adding or removing an element is constant (\(O(1)\)).
+
 \section{Array}
-An \textbf{array} is a collection of elements of the same or also different type, in which each of them is identified with at least one \textbf{array index} or \textbf{key} \cite{wikiarray} (\href{https://en.wikipedia.org/wiki/Array_data_structure}{Array data structure, Wikipedia}). In some programming languages arrays have a fixed size, in others instead is fixed.
+An \textbf{array} is a collection of elements of the same or also different type, in which each of them is identified with at least one \textbf{array index} or \textbf{key} \cite{wikiarray} (\href{https://en.wikipedia.org/wiki/Array_data_structure}{Array data structure, Wikipedia}). In some programming languages arrays have a fixed size, while in others, instead, it can be variable.
 
 \begin{figure}[H]
 \centering
@@ -32,7 +35,7 @@ at (0.5,0)
 
 For doing any allowed operation to an element of an array it is enough to know its index. 
 
-Adding or removing an element of an array could be a very expensive operation. This is because when a change take place to an element all the following indexes must be updated (Figure \ref{array_2}). The worst case complexity is \(O(n)\), where \(n\) is the size of the array.
+Adding or removing an element of an array could be a very expensive operation. This is because when a change takes place to an element all the following indexes must be updated (Figure \ref{array_2}). The worst case complexity for this operation is \(O(n)\), where \(n\) is the size of the array.
 
 \begin{figure}[H]
 \centering
@@ -63,7 +66,7 @@ at (0.5,0)
 \path[->, >=stealth, BrickRed] (mat1-2-4.south) edge [bend right=60] node[draw=none] {} (mat1-2-5.south);
 
 \end{tikzpicture}
-\caption{Adding an element to an array.}
+\caption{Add an element to an array.}
 \label{adding_arr}
 \end{subfigure}
 %\hspace{1em}
@@ -90,16 +93,16 @@ at (0.5,0)
 \path[->, >=stealth, BrickRed] (mat1-2-3.south) edge [bend left=60] node[draw=none] {} (mat1-2-2.south);
 
 \end{tikzpicture}
-\caption{Removing an element to an array.}
+\caption{Remove an element to an array.}
 \label{removing_arr}
 \end{subfigure}
-\caption[Adding \ref{adding_arr} or removing \ref{removing_arr} an element from an array and the indexes update.]{Adding \ref{adding_arr} or removing \ref{removing_arr} an element from an array and the indexes update.}
+\caption[Addition \ref{adding_arr} and deletion \ref{removing_arr} of an element from an array, and the subsequent update of the indexes.]{Addition \ref{adding_arr} and deletion \ref{removing_arr} of an element from an array, and the subsequent update of the indexes.}
 \label{array_2}
 \end{figure}
 
 \section{Linked List}
 \label{linkedlist}
-A \textbf{linked list} is a linear collection in which each element has the data and a reference to the next element (a link) \cite{wikilinkedlist} (\href{https://en.wikipedia.org/wiki/Linked_list}{Linked List, Wikipedia}). 
+A \textbf{linked list} is a linear collection in which each element has the data, and the reference to the next element (a link) \cite{wikilinkedlist} (\href{https://en.wikipedia.org/wiki/Linked_list}{Linked List, Wikipedia}). 
 
 \begin{figure}[H]
 \centering
@@ -129,7 +132,7 @@ A \textbf{linked list} is a linear collection in which each element has the data
 
 In a linked list the order of the elements is not assured. 
 
-Operations like adding or removing an element in a linked list are very efficient, because it is enough to change the references of the elements involved in the operation. For example for adding a new element is enough to change the previous element reference to the just added element, and change the reference of the new element to the next element (Figure \ref{linked_list_2}). In case of removing an element it is enough to update the previous element's reference to the next element of the removed one (Figure \ref{linked_list_3}). 
+Operations like adding or removing an element in a linked list are very efficient, because it is enough to change the references of the elements involved in the operation. For example for adding a new element is enough to change the previous element reference to the just added element, and change the reference of the new element to the next element (Figure \ref{linked_list_2}). When removing an element it is enough to update the previous element's reference to the next element of the removed one (Figure \ref{linked_list_3}). 
 
 \begin{figure}[H]
 \centering
@@ -161,7 +164,7 @@ Operations like adding or removing an element in a linked list are very efficien
 \draw ($(c) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r3) {\textcolor{BrickRed}{$0x02$}};
 \end{tikzpicture}
 
-\caption[Adding a new element to a linked list.]{Adding a new element to the linked list. As explained before this operation is very efficient because it is enough to change the references of the new element and the previous element to the one just added.}
+\caption[Add a new element to a linked list.]{Add a new element to the linked list. This operation is very efficient because it is enough to change the references of the new element and the previous element to the one just added.}
 \label{linked_list_2}
 \end{figure}
 
@@ -197,7 +200,7 @@ Operations like adding or removing an element in a linked list are very efficien
 \end{figure}
 
 The complexity for adding or removing an element is constant \(O(1)\).
-Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}), which evry element has the reference to the previous and next element of the collection \cite{wikidoublylinkedlist} (\href{https://en.wikipedia.org/wiki/Doubly_linked_list}{Doubly linked list, Wikipedia}).
+Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}), in which every element has the reference to the previous and next element of the collection \cite{wikidoublylinkedlist} (\href{https://en.wikipedia.org/wiki/Doubly_linked_list}{Doubly linked list, Wikipedia}).
 
 \begin{figure}[H]
 \centering
@@ -277,12 +280,12 @@ class LinkedList():
 
 \section{Stack}
 \label{stack}
-A \textbf{stack} is abstract data type belonging to collections, in which only two operations are allowed \cite{wikistack} (\href{https://en.wikipedia.org/wiki/Stack_(abstract_data_type)}{Stack, Wikipedia}):
+A \textbf{stack} is an abstract data type belonging to collections, in which only two operations are allowed \cite{wikistack} (\href{https://en.wikipedia.org/wiki/Stack_(abstract_data_type)}{Stack, Wikipedia}):
 \begin{itemize}
-\item[•] \textbf{Push}: add an element at the top of the stack
-\item[•] \textbf{Pop}: remove the newest element of the stack
+\item[•] addition of an element at the top of the stack (\textbf{push}),
+\item[•] deletion of the newest element of the stack (\textbf{pop}).
 \end{itemize}
-In the stacks only the element at the top of the stack can be modified. The complexity remains constant for adding and removing operations. The stacks are also called \textbf{Last In, First Out} (\textbf{LIFO}).
+In stacks only the element at the top can be modified. The complexity remains constant while adding or removing the element. Stacks usually use the \textbf{Last In, First Out} (\textbf{LIFO}) methodology.
 
 \begin{figure}[H]
 \centering
@@ -340,15 +343,15 @@ class Stack():
 
 \section{Queue}
 \label{queue}
-A \textbf{queue} is abstract data type belonging to collections very similar to the stacks. For a queue the admitted operations are only on the oldest element, thus the first element to be added \cite{wikiqueue} (\href{https://en.wikipedia.org/wiki/Queue_(abstract_data_type)}{Queue, Wikipedia}). The allowed operations on a queue are:
+A \textbf{queue} is an abstract data type belonging to collections and very similar to the stacks. For a queue the admitted operations are only on the oldest element, thus the first added element \cite{wikiqueue} (\href{https://en.wikipedia.org/wiki/Queue_(abstract_data_type)}{Queue, Wikipedia}). The allowed operations on a queue are:
 \begin{itemize}
-\item[•] \textbf{Enque}: adding an element at the bottom of the queue
-\item[•] \textbf{Deque}: removing the element at the head of the queue
-\item[•] \textbf{Pick}: observing the element at the head of the queue
+\item[•] addition of an element at the back of the queue (\textbf{Enque}),
+\item[•] deletion of the element at the front of the queue (\textbf{Deque}),
+\item[•] observation of the element at the front of the queue (\textbf{Pick}).
 \end{itemize}
-For adding and removing operations the complexity remain constant. Queues are also called \textbf{First In, First Out} (\textbf{FIFO}). 
+For adding and removing operations the complexity remain constant. Queues usually use the \textbf{First In, First Out} (\textbf{FIFO}) methodology. 
 
-The most efficient way to implement a queue is using linked lists.
+The most efficient way to implement a queue is by using linked lists.
 
 \begin{figure}[H]
 \centering
@@ -360,10 +363,10 @@ The most efficient way to implement a queue is using linked lists.
     
     \matrix (queue)[matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth]
     {
-      Head \\ 
+      Back \\ 
        \\ 
        \\ 
-       Tail \\
+      Front \\
     };
 
     \draw[->, >=stealth] (0.25,-1.05) -- (dequeue.north);
@@ -373,7 +376,7 @@ The most efficient way to implement a queue is using linked lists.
 \label{queue_1}
 \end{figure}
 
-A generalization of queues and linked lists are \textbf{deques}, in which is possible to perform deque and enque operations on both the \textbf{head} and \textbf{tail}.
+A generalization of queues and linked lists are \textbf{deques}, in which it is possible to perform dequeue and enqueue operations on both the \textbf{back} and \textbf{front} elements.
 
 \begin{figure}[H]
 \centering
@@ -390,10 +393,10 @@ A generalization of queues and linked lists are \textbf{deques}, in which is pos
     
     \matrix (queue)[matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth]
     {
-      Head \\ 
+      Back \\ 
        \\ 
        \\ 
-       Tail \\
+      Front \\
     };
 
     \draw[->, >=stealth] (0.25,-1.052) -- (dequeue.north);
@@ -406,7 +409,7 @@ A generalization of queues and linked lists are \textbf{deques}, in which is pos
 \label{queue_2}
 \end{figure}
 
-Another modification of queue are \textbf{priority queue}, in which each element has a priority (a numeric value that indicates its importance). When an element of the queue is removed (deque), the element to be removed is the one which has the highest priority. In case two or more elements have the same priority the oldest element is removed.
+Another modification of queue is the \textbf{priority queue}, in which each element has a priority (a numeric value that indicates its importance). When an element of the queue is removed (dequeue), the element to be removed is the one which has the highest priority. In case two or more elements have the same priority the oldest element is removed.
 
 \begin{figure}[H]
 \centering
@@ -414,11 +417,11 @@ Another modification of queue are \textbf{priority queue}, in which each element
 
     \matrix (queue)[matrix of nodes, nodes={draw, nodes={draw}}, nodes in empty cells, row sep=-\pgflinewidth]
     {
-      Head, Priority \\ 
+      Back, Priority \\ 
        \\
        \\
        \\
-      Tail, Priority \\
+      Front, Priority \\
     };
 
 \end{tikzpicture}
@@ -444,10 +447,10 @@ class Queue():
 \end{lstlisting}
 
 \section{Set}
-A \textbf{set} is an abstract data type in which the unique values are stored without a particular order \cite{wikiset} (\href{https://en.wikipedia.org/wiki/Set_(abstract_data_type)}{Set, Wikipedia}).
+A \textbf{set} is an abstract data type in which unique values are stored without a particular order \cite{wikiset} (\href{https://en.wikipedia.org/wiki/Set_(abstract_data_type)}{Set, Wikipedia}).
 
 \section{Map}
-A \textbf{map}, \textbf{associative array}, \textbf{symbol table}, or \textbf{dictionary} is an abstract data type composed of a collection of (key, value) pairs \cite{wikihashmap} (\href{https://en.wikipedia.org/wiki/Associative_array}{Hash Map, Wikipedia}). The group of the key is a set, in which each element has a unique value. Map is a very useful data type, used in a lot of situations. 
+A \textbf{map}, \textbf{associative array}, \textbf{symbol table}, or \textbf{dictionary} is an abstract data type composed of a collection of (key, value) pairs \cite{wikihashmap} (\href{https://en.wikipedia.org/wiki/Associative_array}{Hash Map, Wikipedia}). The collection of the keys is a set, then each element is a unique value. The map is a very useful data type, and it is used in a lot of different situations. 
 
 \begin{figure}[H]
 \centering
@@ -475,14 +478,14 @@ A \textbf{map}, \textbf{associative array}, \textbf{symbol table}, or \textbf{di
 \end{figure}
 
 \section{Hash Table}
-A \textbf{hash table} or \textbf{hash map} is a data structure that implements the map abstract data type \cite{wikihashtable} (\href{https://en.wikipedia.org/wiki/Hash_table}{Hash Table, Wikipedia}). Hash table uses the \textbf{hash function} for working \cite{wikihashfunction} (\href{https://en.wikipedia.org/wiki/Hash_function}{Hash Function, Wikipedia}). Using the hash function is called hashing.
+A \textbf{hash table} or \textbf{hash map} is a data structure that implements the map abstract data type \cite{wikihashtable} (\href{https://en.wikipedia.org/wiki/Hash_table}{Hash Table, Wikipedia}). The hash table uses the \textbf{hash function} for working \cite{wikihashfunction} (\href{https://en.wikipedia.org/wiki/Hash_function}{Hash Function, Wikipedia}). The usage of the hash function is called hashing.
 
 \subsection{Hashing}
-Hashing is an operation that allows to transform the value of a variable to another one which is much easier to find within a collection. If we want to find a value inside a collection (list, stack, queue, etc) the time requested for the search is linear with the size of the collection. In fact we have to check all the elements until the searched one is found (in case of stack and queue this is not true is only the last or the first element respectively is checked). For solving this problem and thus to find an element in a constant time hash function are used. 
+Hashing is an operation that allows to map data of an arbitrary size to a fixed-size values, called \textbf{hash values}. The necessary time for finding a value inside an ordered or unordered collection grows linearly with its size. By using a hash function to index the values with more efficient ones, the search of an element can be done in nearly constant time. Moreover, hashing avoids the exponential storage requirements of direct access of state spaces of large or variable-length keys.
 
-Let us consider the follow example, where we have an array in which we would like to store big random numbers. A simple way for hashing these numbers is to consider only the last numbers (56 and 17) and divide them for a fixed number. The reminder of the division is used as the new index of the array associated to the number (Figure ).
+Let us consider an array which stores big random numbers. A simple way for hashing these numbers, for example, is to consider only the last digits (56 and 17) and divide them for a fixed number. The reminder of the division is used as the new index for the hash table where the numbers are stored (Figure \ref{map_2}).
 
-What happen when the hash function transforms two different number in the same? In this case we have a \textbf{collision}. In case of a collision there are several strategies for solving this issue: one way could be to change the the hash function, another one could be to use an array for storing different values associated to the same key (\textbf{bucket}). For the last occurrence the worst case complexity for a search is \(O(n)\) (Figure \ref{map_2}).
+But what happen when the hash function transforms two different numbers into the same? In this case we have a \textbf{collision}, and for solving this problem we have several strategies. One way could be to change to a better hash function, or, alternatively, we could use an array, called \textbf{bucket}, for storing different values associated to the same key. The worst case complexity for a search in the bucket is \(O(n)\) (Figure \ref{map_2}).
 
 \begin{figure}[H]
 \centering
@@ -533,22 +536,23 @@ What happen when the hash function transforms two different number in the same? 
     \draw ($(tab5) + (0,-7mm)$) node[draw=none, rectangle, align=left]  {$O(n)$ worst case complexity};
 
 \end{tikzpicture}
-\caption[An example of collision and a possible way to solve this issue by using the bucket method.]{An example of collision and a possible way to solve this issue by using the bucket method.}
+\caption[Has map and collisions.]{A hash map, and an example of collision and a possible way to solve it by using the bucket method.}
 \label{map_2}
 \end{figure}
 
-It does not exist a perfect hash function and a trade off must always be reached. A way to analyse a hash function is by using the \textbf{load factor} defined as follow: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save 10 values using 1000 buckets the Load Factor is equal to 0.01, and most of the buckets is empty. In this case is convenient to change the hash function by using less buckets. More the Load Factor is closed to 0 more the hash table will be empty (\textbf{sparse}), and more the Load Factor is closed to 1 more the has table will be full and efficient. In case the Load Factor is bigger than 1 there is the certainty there will happen some collisions.
-Another example: let us consider a hash function that divide the numbers by 100. If we consider 100 values all multiple of 5, the Load Factor will be: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets = 100/100 = 1\). But this way is very slow and a different configuration should be used to make this more efficient. For example if we use more bucket, for example 107, we still avoid collisions and we do not have the hash map too much sparse.
+It does not exist a perfect hash function, and a trade off must always be reached. A way to analyse a hash function is by using the \textbf{Load Factor} defined as: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save 10 values using 1000 buckets the \(Load Factor\) is equal to 0.01, and most of the buckets are empty. In this case is convenient to change the hash function by using less buckets. More the \(Load Factor\) is closed to 0 more the hash table will be empty (\textbf{sparse}), and more the \(Load Factor\) is closed to 1 more the hash table will be full and efficient. In case the \(Load Factor\) is bigger than 1 there is the certainty that there will be some collisions.
+
+Another example of hash function: let us consider a hash function that divide the numbers by 100. If we consider 100 values all multiple of 5, we have \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets = 100/100 = 1\). This way is very slow, and a different configuration should be used to make this more efficient. For example if we use more buckets, for example 107, we still avoid collisions and we do not have the hash map too much sparse.
 
 \section{String Keys}
-Let us consider a hash function that associates a word to a numerical value. For example we can use the ASCII character encoding of the first two letters of the string as numerical value. Thus, in case of \textit{UDACIY} we have \textit{U}=85 and \textit{D}=68. For hash function we can use the following: \(S\left[0\right] * 31^{(n-1)} + S\left[1\right] * 31^{(n-2)} + \ldots + S\left[n-1\right]\), where \(n\) is the length of the string. In this way for the word in the previous example, in which only the first two letters are encoded in a numerical value for simplicity, we have \(85*31^{1} + 68 = 2703\).
+Let us consider a hash function that associates a word to a numerical value. For example we can use the ASCII character encoding of the first two letters of the string as numerical value. Thus, in case of \textit{UDACIY} we have \textit{U}=85 and \textit{D}=68. As hash function we can use: \(S\left[0\right] * 31^{(n-1)} + S\left[1\right] * 31^{(n-2)} + \ldots + S\left[n-1\right]\), where \(n\) is the length of the string. In this way for the word in the previous example, in which only the first two letters are encoded in a numerical value for simplicity, we have \(85*31^{1} + 68 = 2703\).
 
-This hash function works very well because it assures a very low probability of collision. \(31\) is a number empirically obtained by several researches and showed good results in hashing strings.
+This hash function works very well because it assures a very low probability of collision. \(31\) is a number empirically obtained by several researches, and showed good results in hashing strings.
 
 \subsection{String Keys Implementation}
 The following is the implementation of the string key map in Python.
 
-The hash function of this implementation is: \(Hash \ Function = (ASCII[0]*100) + ASCII[1]\). In this code \textit{ord()} and \textit{char()} functions are used. \textit{ord()} takes a char as an argument and return the respective ASCII code (\(ord('U')=85\)), and \textit{char()} takes a numeric value as ASCII code and return the respective char (\(char(85)='U'\)).
+The hash function of this implementation is: \(Hash \ Function = (ASCII[0]*100) + ASCII[1]\). In this code \textit{ord()} and \textit{char()} functions of Python are used. \textit{ord()} takes a char as an argument and returns the respective ASCII code (\(ord('U')=85\)), and \textit{char()} takes a numeric value as ASCII code and returns the respective char (\(char(85)='U'\)).
 \begin{lstlisting}[firstnumber=1, caption={String key implementation.}]
 class HashTable():
 	def __init__(self):
