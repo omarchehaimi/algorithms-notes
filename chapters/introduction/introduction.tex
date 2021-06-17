@@ -2,14 +2,14 @@
 \label{preliminariesconcepts}
 
 \section{Computational Complexity}
-The \textbf{computational complexity}, or \textbf{complexity}, of an algorithm is the amount of resources (time and memory) required to run it, and it is the minimum complexity of all possible implementations for solving that given algorithm \cite{wikipediacomplexity} (\href{https://en.wikipedia.org/wiki/Computational_complexity}{Computational complexity, Wikipedia}).
+The \textbf{computational complexity}, or \textbf{complexity}, of an algorithm is the amount of resources (time and memory) required to run it, and it is the minimum complexity of all possible implementations for solving that given algorithm \cite{wikipediacomplexity}.
 
 The amount of needed resources for solving an algorithm varies with the size of the input \(n\). The computational complexity in general is a function \(n \rightarrow f(n)\), and it could represent the worst case complexity (the maximum amount of required resources) or the average complexity (the average amount of required resources) over all the inputs of size \(n\).
 
 When the type of the complexity is not explicitly indicated, typically is meant to be the \textbf{time complexity}, and it is generally expressed as the number of elementary operations required to run a given algorithm. It is assumed that these elementary operations take the same amount of time for being solved on the same computer. The computational complexity can be related also to the memory consumption. In this case we talk about \textbf{space complexity}, which is generally expressed as the amount of memory required by an algorithm over all inputs of size \(n\).
 
 \section{Big O Notation}
-The \textbf{big O notation} \cite{wikipediabigo} (\href{https://en.wikipedia.org/wiki/Big_O_notation}{Big O Notation, Wikipedia}) describes the behaviour of a function when its argument tents to infinity or to a particular value.
+The \textbf{big O notation} \cite{wikipediabigo} describes the behaviour of a function when its argument tents to infinity or to a particular value.
 
 \begin{definition}
 Let \(f\) be a real or complex value function and let \(g\) be a real function. Let both functions be defined on the same positive and real unbounded interval, and let \(g(x)\) be strictly positive for all large enough \(x\) values: \(g(x) > 0, \forall x\) large enough. Thus: \(f(x)=O(g(x)) \) as \(x \rightarrow \infty \) if \(\exists\) \(M \in \mathbb{R} \), \(M>0\) and \(x_{0} \in \mathbb{R} \) such that \(|f(x)| \leq Mg(x)\) \(\forall x \geq x_{0}\). 
@@ -73,7 +73,7 @@ The total time complexity is:
 Where \(O(1)\) is a constant value.
 
 \section{Recursion}
-In recursion a function calls itself again on a smaller size input, until the exit condition stops this self calling (recursive calling) \cite{wikirecursion} (\href{https://en.wikipedia.org/wiki/Recursion_(computer_science)}{Recursion, Wikipedia}). There are three fundamental elements in a recursive function:
+In recursion a function calls itself again on a smaller size input, until the exit condition stops this self calling (recursive calling) \cite{wikirecursion}. There are three fundamental elements in a recursive function:
 \begin{itemize}
 \item[1] A function that calls itself.
 \item[2] An exit condition. Without this condition a recursive function would call itself forever without an end.
