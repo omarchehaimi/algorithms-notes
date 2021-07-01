@@ -1,8 +1,8 @@
 \chapter{Searching and Sorting}
 \label{chp: searchandsorting}
-In this chapter the most important and used algorithms about \textbf{searching}, retrieve some data stored in a particular data structure \cite{wikisearch} (\href{https://en.wikipedia.org/wiki/Search_algorithm}{Search algorithm, Wikipedia}), and \textbf{sorting}, put in a certain order some data stored in a list \cite{wikisorting} (\href{https://en.wikipedia.org/wiki/Sorting_algorithm}{Sorting algorithm, Wikipedia}) are discussed.
+In this chapter the most important and used algorithms about \textbf{searching} (retrieve some data stored in a particular data structure) \cite{wikisearch}, and \textbf{sorting} (put in a certain order some data) \cite{wikisorting} are discussed.
 \section{Binary Search}
-Let us consider the problem of finding a number stored in an array sorted in \textbf{ascending} order (Figure \ref{sorting_1}).
+Let us consider the problem of finding a number in an array sorted in \textbf{ascending} order (Figure \ref{sorting_1}).
 
 \begin{figure}[H]
 \centering
@@ -20,10 +20,9 @@ Let us consider the problem of finding a number stored in an array sorted in \te
 \label{sorting_1}
 \end{figure}
 
-A first way to tackle the problem could be to check all the numbers of the array. In other words, this method consists in performing a loop all over the elements of the array and check one by one each number. The complexity of this method is \(O(n)\) because in the worst case we have to look at all the elements of the array. 
+A first way to tackle this problem might be to check all the numbers of the array. In other words, this method consists in performing a loop all over the elements of the array, and check one by one each number. The complexity of this method is \(O(n)\) since in the worst case we have to look at all the elements of the array.
 
-There is a more efficient way to search an element in an array sorted in ascending way. This method is the \textbf{binary search} \cite{wikibinarysearch} (\href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{Binary Search Algorithm, Wikipedia}).
-Let us start to check, as the first element of the search, the central value of the array (in case the array has an even number of elements there are two central values, and one can choose the bigger or the lower). If the central element is the one we are looking for the search ends, otherwise, because the array is sorted with an ascending order, we can ignore one half of the array. If the central number is bigger than the number we are looking for we will ignore the right half of the array, if the central number is lower than the number we are looking for, instead, we will ignore the left half of the array. This procedure is repeated: we consider the central value of the new array, which has half of the size of the previous step, and we check if that value is the one we are looking for, and we repeat the procedure until or we find or we do not find the number we are looking for (Figure \ref{sorting_2}). 
+A more efficient way to search an element in an array sorted in ascending order is the \textbf{binary search algorithm} \cite{wikibinarysearch}. In this algorithm the first element to be checked is the central value of the array (in case the array has an even number of elements there are two central values, and one can choose the bigger or the lower equally). If the central element is the one we are looking for the search ends, otherwise, since the array is sorted with an ascending order, we can ignore one half of the array. If the central number is bigger than the number we are looking for, we will ignore the right half of the array, instead, if the central number is lower than the number we are looking for we will ignore the left half of the array. This procedure is repeated: we consider the central value of the new subarray, which has half of the size of the previous step, and we check if that value is the one we are looking for. If not, the process is repeated until or we find or we do not find the desired element (Figure \ref{sorting_2}).
 
 \begin{figure}[H]
 \centering
@@ -50,10 +49,10 @@ Let us start to check, as the first element of the search, the central value of 
 \end{figure}
 
 \subsection{Complexity of the Binary Search Algorithm}
-For evaluating the complexity of this algorithm we have to evaluate the number of steps required for solving the problem. We already know that the complexity will not be \(O(n)\), as in this algorithm not all the elements of the array are checked. The way for evaluating the complexity of an algorithm is to execute the algorithms varying the size of the input, and evaluating how many operations are done in the worst case. In the binary search algorithm the worst case is when the size of the array becomes one, so we find or we do not find the searched element at the end of the array splitting process.
+For evaluating the complexity of this algorithm we have to evaluate the number of steps required for solving the problem. We already know that the complexity will not be \(O(n)\), since in this algorithm not all the elements of the array are checked. Typically, the way for evaluating the complexity of an algorithm is to execute its implementation by varying the size of the input, and evaluating how many operations are done in the worst case. In the binary search algorithm the worst case is when the size of the array becomes one, so we find or we do not find the desired element in the last step.
 
 \begin{table}[H]
-\caption[Binary search complexity.]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
+\caption[Binary search complexity.]{The number of iterations grows of one every power of two of the array size, in other words it grows as \(log(n)\).}
 \label{binarysearchefficiency}
 \centering
 \begin{tabular}{ | l | c | c | c | c | c | c | c | c | c |}
@@ -71,11 +70,11 @@ For evaluating the complexity of this algorithm we have to evaluate the number o
 \end{tabular}
 \end{table}
 
-We observe that the exponent of the power of two is the number of iteration minus one, or at the contrary the number of iteration is the exponent of a power plus one.
+We observe that the exponent is the number of iterations minus one, then the logarithm base two of the array size plus one is the number of iterations:
 \begin{center}
-\(log( power\ of\ exponent\ 2 + 1) = log_{2}(n) + 1\)
+\(\#iterations\ = log_{2}(array\ size) + 1 = log_{2}(n) + 1\)
 \end{center}
-In general it is used \(log\) and is said that the binary search algorithm has a complexity of \(log(n)\). 
+In general it is used \(log\), and is said that the binary search algorithm has a complexity of \(log(n)\). 
 
 \subsection{Binary Search Implementation}
 The following code is the python implementation of the binary search algorithm.
@@ -122,7 +121,17 @@ L & M & H' &    &    &    &   \\
 \end{figure}
 
 \section{Bubble Sort}
-\textbf{Bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two elements at each step if they are in the wrong order, and it repeats this process until all the array is not completely ordered \cite{wikibubblesort} (\href{https://en.wikipedia.org/wiki/Bubble_sort}{Bubble Sort, Wikipedia}). In this way the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle.
+\textbf{Bubble sort} is the easiest sorting algorithm working on arrays. Bubble sort works by swapping two elements at each step if they are in the wrong order, and it repeats this process until all the array is completely ordered \cite{wikibubblesort}. In this way, the bigger elements tend to move at the bottom of the array, like bubbles that move at the top of a water bottle (Figure \ref{sorting_4}).
+
+\subsection{Complexity of the Bubble Sort Algorithm}
+For ordering an array using the bubble sort \(n - 1\) iterations are required for every step. The number of total steps are \(n - 1\), thus the total number of operations to be executed for ordering an array is \((n - 1)*(n - 1) = n^{2} - 2n + 1 = O(n^{2})\).
+
+In summary:
+\begin{itemize}
+\item \textbf{Worst Case}: \(O(n^{2})\)
+\item \textbf{Average Case}: \(O(n^{2})\)
+\item \textbf{Best Case}: \(O(n)\). The array is already ordered and it is enough to cycle over all the elements.
+\end{itemize} 
 
 \begin{figure}[H]
 \centering
@@ -215,15 +224,6 @@ L & M & H' &    &    &    &   \\
 \label{sorting_4}
 \end{figure}
 
-\subsection{Efficiency of the Bubble Sort Algorithm}
-For ordering an array using the bubble sort \(n - 1\) iterations are required, every step. The number of total steps are \(n - 1\), thus the total number of operations to be executed for ordering an array is \((n - 1)*(n - 1) = n^{2} - 2n + 1 = O(n^{2})\).
-In summary:
-\begin{itemize}
-\item \textbf{Worst Case}: \(O(n^{2})\)
-\item \textbf{Average Case}: \(O(n^{2})\)
-\item \textbf{Best Case}: \(O(n)\). The array is already completely ordered and it is enough to cycle all the elements.
-\end{itemize} 
-
 \subsection{Bubble Sort Implementation}
 The following code is the python implementation of the bubble sort algorithm.
 \begin{lstlisting}[firstnumber=1, caption={Bubble Sort python implementation}.]
@@ -241,7 +241,7 @@ def bubble_sort(array_input):
 \end{lstlisting}
 
 \section{Merge Sort}
-The \textbf{merge sort} algorithm works by dividing the array in single elements at first, grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort} (\href{https://en.wikipedia.org/wiki/Merge_sort}{Merge Sort, Wikipedia}).  This way of reducing a big problem in several smaller is called \textbf{Divide et impera} (Divide and conquer).
+The \textbf{merge sort} algorithm works by dividing the array in single elements at first, and, grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort}. This way of reducing a big problem in several smaller problems is called \textbf{Divide et impera} (Divide and conquer).
 
 \begin{figure}[H]
 \centering
@@ -329,26 +329,26 @@ The \textbf{merge sort} algorithm works by dividing the array in single elements
 
 \end{tikzpicture}
 
-\caption[Merge sort algorithm.]{In merge sort merging and sorting process is repeated until the array is again unified with all the elements sorted.}
+\caption[Merge sort algorithm.]{In merge sort algorithm the merging and sorting process is repeated until the array is again unified with all the elements sorted.}
 \label{sorting_6}
 \end{figure}
 
 The steps are (Figure \ref{sorting_6}): 
 \begin{itemize}
-\item[1] Divide the array in subarryas of one element. Merge two by two and order the elements. The number of the subarrays is odd, so one array at this step is not merged. \textbf{The number of comparison for this step is 3}.
-\item[2] Merge and order again the new subarrays. For ordering in this case we start from the first element of the array on the left, and we compare this value with all the elements of the array on the right. If the first element is bigger than the picked one from the array on the right is moved, otherwise is not moved and we go to the next element. \textbf{The number of comparison for this step is 5.}   
-\item[3] Merge and order again as at the previous step. \textbf{The number of comparison for this step is 6.}
+\item[1] Divide the array in subarryas of one element. Merge two by two and order the elements. The number of the subarrays is odd, so one array at this step is not merged. \textbf{The number of comparisons for this step is 3}.
+\item[2] Merge and order again the new subarrays. For ordering in this case we start from the first element of the array on the left, and we compare this value with all the elements of the array on the right. If the first element is bigger than the picked one from the array on the right is moved, otherwise is not moved and we go to the next element. \textbf{The number of comparisons for this step is 5.}   
+\item[3] Merge and order again as in the previous step. \textbf{The number of comparisons for this step is 6.}
 \end{itemize}
 
-\subsection{Efficiency of the Merge Sort Algorithm}
-For evaluating the efficiency of this algorithms we have to count the number of iterations and comparisons are being done. By using the example showed in Figure \ref{sorting_6} we will try to extrapolate a general pattern for an array of dimension \(n\).
+\subsection{Complexity of the Merge Sort Algorithm}
+For evaluating the complexity of this algorithm we have to count the number of iterations and comparisons done. By using the example showed in Figure \ref{sorting_6} we will try to extrapolate a general pattern for an array of dimension \(n\).
 
-The number of comparisons depends by the array size. For an array of two elements the number of comparisons is one, for one of three elements are two, for one of four are three, and for one of seven are six. It is impossible to calculate in general the number of comparisons, but it is possible to calculate the worst case given the array dimension. From the previous example we see that for each step the maximum number of comparisons is seven, the size of the array. The reason is that the sum of all subarrays is seven. In general the sum of all subarrays is always the size of the array. Thus the total efficiency is \(O(\# \ of\ comparison \ * \ \# \ of \ iterations \ )\).
+The number of comparisons depends by the size of the array. For an array of two elements the number of comparisons is one, for one of three elements are two, for one of four are three, and for one of seven are six. It is impossible to calculate in general the number of comparisons, but it is possible to calculate the worst case given the array dimension. From the previous example we see that for each step the maximum number of comparisons is seven, the size of the array. The reason is that the sum of all subarrays is seven. In general the sum of all subarrays is always the size of the array. Thus, the total complexity is \(O(\# \ of\ comparison \ * \ \# \ of \ iterations \ )\).
 
-How many iterations are required? In our example for an array of seven elements, the iterations required are three. From the subprocess of our example we observe that for an array of size four the number of iterations are two, for one of size three are two, and for one of size two is one. Thus we can create the following table:
+How many iterations are required? In our example for an array of seven elements the iterations required are three. While from the subprocess we observe that for an array of size four the number of iterations are two, for one of size three are two, and for one of size two is one. Thus, we can create the following table:
 
 \begin{table}[H]
-\caption[Merge Sort Efficiency.]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
+\caption[Merge Sort Complexity.]{The number of iterations grows of one every power of two, in others words it grows as \(log(n)\).}
 \label{mergesortefficiency}
 \centering
 \begin{tabular}{ | l | c | c | c | c | c | c | c | c | c |}
@@ -366,13 +366,13 @@ How many iterations are required? In our example for an array of seven elements,
 \end{tabular}
 \end{table}
 
-In conclusion the efficiency if \(O(n \ log(n))\), which is better than \(O(n^{2})\) of the bubble sort. 
+By considering also the number of comparisons, the complexity is \(O(n \ log(n))\), which is better than \(O(n^{2})\) of the bubble sort. 
 
-The memory efficiency in this case is bigger than the bubble sort algorithm. For the merge sort some subarrays (in the worst case are \(n\)) are used and they need to be stored in the memory.
+The memory complexity in this case is bigger than the bubble sort algorithm. For the merge sort some subarrays (in the worst case are \(n\)) are used, and they need to be stored in the memory.
 
 \subsection{Merge Sort Implementation}
 The following code is the python implementation of the merge sort algorithm.
-\begin{lstlisting}[firstnumber=1, caption={Merge Sort python implementation (for the recursive part credits: \href{https://www.geeksforgeeks.org/iterative-merge-sort/}{Merge Sort, GeeksforGeeks}).}]
+\begin{lstlisting}[firstnumber=1, caption={Merge Sort python implementation (the recursive part is taken from \href{https://www.geeksforgeeks.org/iterative-merge-sort/}{Merge Sort, GeeksforGeeks}).}]
 def merge_sort_iterative(array_input):
 	
 	if len(array_input) > 1:
@@ -496,7 +496,15 @@ L &   &   &   &   &   & H \\
 \end{figure}
 
 \section{Quicksort}
-The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its left or on its right respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort} (\href{https://en.wikipedia.org/wiki/Quicksort}{Qicksort, Wikipedia}). 
+The \textbf{quicksort} is a sorting algorithm of the divide et impera class. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its left and on its right respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort}. 
+
+Here are the steps of the quicksort algorithm based on the example of Figure \ref{sorting_8}:
+\begin{itemize}
+\item[1] Let us consider the last element as pivot, \(2\) in this case, and let us compare it with all the elements on its left. Let us start from the first element of the array, and let us compare their values. In this case \(8 > 2\), so \(8\) is moved on the position of the pivot (\(2\)) which is moved of one position to the left. The number to be removed, \(10\) in this case, is moved in the first position.
+\item[2] Let us repeat the process. Now we have to compare the pivot (\(2\)) in the new position with the first element (\(10\)), and because \(10>2\) we repeat the previous step of moving the elements.
+\item[3] In this case \(0<2\) so we do not have to do anything, and then we move to the next element, \(3\) in this case.
+\item[4] For the pivot \(2\) all the elements on the left are less than it, and all the elements on the right are bigger than it. \(2\) is not moved anymore. At this point we can change the pivot and repeat all the steps for the new pivots until all the elements have been a pivot.
+\end{itemize}
 
 \begin{figure}[H]
 \centering
@@ -548,18 +556,10 @@ The \textbf{quicksort} is a sorting algorithm of the divide et impera type. It w
 \label{sorting_8}
 \end{figure}
 
-Here are the steps of quicksort algorithm based on the example of Figure \ref{sorting_8}:
-\begin{itemize}
-\item[1] Let us consider the last element as pivot, two in this case, and let us compare it with all the elements to its left. Let us start from the first element of the array, and let us compare their values. In this case \(8 > 2\), so \(8\) is moved on the position of the pivot (\(2\)) which is moved of one position to the left. The number to be removed, \(10\) in this case, is moved in the first position.
-\item[2] Let us repeat the process. Now we have to compare the pivot (\(2\)) in the new position with the first element (\(10\)), and because \(10>2\) we repeat the previous step of moving the elements.
-\item[3] In this case \(0<2\) so we do not have to do anything, but going to the next element, \(3\) in this case.
-\item[4] For the pivot \(2\) all the elements to the left are less than it, and all the element to the right are bigger than it. \(2\) is not moved anymore. We can change the pivot and repeat all the steps for the new pivots until all the elements have been a pivot.
-\end{itemize}
+\subsection{Complexity of the Quicksort Algorithm}
+Evaluating the complexity of quicksort is very hard. In the following there are some justifications for the worst, the best, and the average case complexity.
 
-\subsection{Efficiency of the Quicksort Algorithm}
-Evaluating the efficiency of quicksort is very hard. In the following there are some justifications for the worst case, and for the best and average complexity.
-
-Let us consider first the worst case. In this situation the last elements of the array are the bigger ones, so it is necessary to check all the previous elements, by doing \(n^{2}\) comparisons Figure \ref{sorting_10}.
+Let us consider first the worst case complexity. In this situation the last elements of the array are the bigger ones, so it is necessary to check all the previous elements, by doing \(n^{2}\) comparisons Figure \ref{sorting_10}.
 
 \begin{figure}[H]
 \centering
@@ -578,7 +578,7 @@ row 3/.style={nodes={font=\tiny, draw=none, fill=none, minimum size=5mm}}] (arra
 \label{sorting_10}
 \end{figure}
 
-In the best and in the average case the complexity is \(O(n log(n))\). The reason is because the first pivot tends to move at the center of the array, having in this way two subarrays. The pivots of these two subarrays will tend to move at their center and the process is repeated until all the elements have been a pivot, having in this way an ordered array.
+In the best and in the average case the complexity is \(O(n log(n))\). The reason is because the first pivot tends to move at the center of the array, obtaining in this way two subarrays. In turn the pivots of these two subarrays will tend to move at their center (Figue \ref{sorting_11}), and the process is repeated until all the elements have been a pivot, and eventually obtaining an ordered array.
 
 \begin{figure}[H]
 \centering
@@ -605,12 +605,12 @@ In the best and in the average case the complexity is \(O(n log(n))\). The reaso
 
 The space complexity of quicksort is constant, \(O(1)\).
 
-This algorithm can be optimized in several ways. For example it is possible to order at the same time two half of the array, or considering as pivot always the last elements.
+This algorithm can be optimized in several ways. For example it is possible to order at the same time two half of the array, or consider as pivot always the last elements.
 
-\paragraph{Quicksort and Merge Sort Comparison}
-Quicksort is often a better solution than merge sort, because even if its worst case performance is \(O(n^{2})\), this problem can be solved by using the randomized quicksort. If the right pivot is chosen the problem related to having a worst case performance is solved. Moreover the quicksort algorithm dose not require an auxiliary memory, which is a big advance in a lot of situations.
+\subsubsection{Quicksort and Merge Sort Comparison}
+Quicksort is often a better solution than merge sort, because even if its worst case complexity is \(O(n^{2})\), this problem can be solved by using the randomized quicksort. If the right pivot is chosen the problem related to having a worst case performance is solved. Moreover, the quicksort algorithm dose not require any auxiliary memory, which is a big advance in a lot of situations.
 
-On the other hand merge sort is a better solution than quicksort and heapsort \cite{wikiheapsort} (\href{https://en.wikipedia.org/wiki/Heapsort}{Heapsort, Wikipedia}) when the sorting is done on linked lists that do not require big auxilary space and on very large data sets stored on slow-to-access media, such as disk storage or network-attached storage \cite{wikiqicksort}.
+On the other hand, merge sort is a better solution than quicksort and heapsort \cite{wikiheapsort} when the sorting is done on linked lists that do not require big auxiliary space, and on very large data sets stored on slow-to-access media, such as disk storage or network-attached storage \cite{wikiqicksort}.
 
 \textbf{In summary}:
 \begin{itemize}
@@ -621,7 +621,7 @@ On the other hand merge sort is a better solution than quicksort and heapsort \c
 \end{itemize}
 
 \subsection{Quicksort Implementation}
-The following code is the python implementation of the quicksort algorithm \cite{quicksortcode} (\href{https://www.geeksforgeeks.org/python-program-for-quicksort/}{Quicksort Python Implementation}).
+The following code is the python implementation of the quicksort algorithm \cite{quicksortcode}.
 \begin{lstlisting}[firstnumber=1, caption={Quicksort python implementation.}]
 def partition(arr, low, high): 
     i = (low-1)         # Index of smaller element 
