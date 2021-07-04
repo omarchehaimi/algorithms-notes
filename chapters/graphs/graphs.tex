@@ -1,9 +1,9 @@
 \chapter{Graphs}
 \label{chp:graphs}
-In this chapter are introduced the fundamentals concepts of \textbf{graphs} as mathematical objects, and as an abstract data type, its applications in computer science, and the most important and notable algorithms with their implementation. 
+In this chapter are introduced the fundamental concepts of \textbf{graphs} as a mathematical object, and as an abstract data type, its applications to computer science, and the most important and notable algorithms with their implementations. 
  
 \section{General Definitions}
-A graph is a discrete mathematical structure in which the connections between its elements, and their relationship are highlighted. A graph is made up by two different elements: \textbf{nodes} or \textbf{vertices}, and \textbf{links} or \textbf{edges}. In case the links do not have any direction the graph is called \textbf{undirected graph} (Figure), in case instead the links have a direction the graph is called \textbf{directed graph}.
+A graph is a discrete mathematical structure in which the connections between its elements and their relationship are highlighted. A graph is made up by two different elements: \textbf{nodes} or \textbf{vertices}, and \textbf{links} or \textbf{edges}. In case the links do not have any direction the graph is called \textbf{undirected graph} (Figure \ref{undirect_a}), in case, instead, the links have a direction the graph is called \textbf{directed graph} (Figure \ref{direct_b}).
 
 \begin{figure}[H]
 \centering
@@ -25,6 +25,7 @@ A graph is a discrete mathematical structure in which the connections between it
 		\draw (2) -- (4);     
 	\end{tikzpicture}
 	\caption{Undirected graph.}
+	\label{undirect_a}
 \end{subfigure}
 \hspace{1em}
 \begin{subfigure}[b]{0.4\linewidth}
@@ -42,29 +43,30 @@ A graph is a discrete mathematical structure in which the connections between it
 		\draw[->] (22) -- (44);
 	\end{tikzpicture}
 	\caption{Directed graph.}
+	\label{direct_b}
 \end{subfigure}
-\caption[Undirected and directed graphs and its elements.]{Undirected and directed graphs and its elements.}
+\caption[An undirected and a directed graph and its elements.]{An undirected and a directed graph and its elements.}
+\label{graph_1}
 \end{figure}
 
-
-Formally a graph is the pair \(G=(V, E)\), where \(V\) is the set of all vertices, and \(E\) is the set of paired vertices, whose elements are called edges \cite{wikigraphmath} (\href{https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)}{Graph, Wikipedia}).
+Formally a graph is the pair \(G=(V, E)\), where \(V\) is the set of all vertices, and \(E\) is the set of paired vertices, whose elements are called edges \cite{wikigraphmath}.
 
 A \textbf{tree} (Chapter \ref{chp:trees}) is a special kind of graph.
 
 Graphs are very useful to describe a lot of real situations like: connections between people, computers (internet), web pages (world wide web), airports, cities, and gene inside the DNA.
 
-In graphs, differently to trees, closed loops can exist. These kind of closed loops can be dangerous for the algorithms because they could lead to infinite executions.
+In graphs, differently to trees, closed loops can exist. These kind of closed loops can be dangerous for the algorithms since they could lead to infinite executions.
 
 \subsection{Connectivity}
-\textbf{Connectivity} is a measure that describe how much the nodes of a graph are connected. It is defined as the minimum number of elements (nodes or edges) that need to be removed to separate the remaining nodes into isolated subgraphs \cite{wikiconnectivity} (\href{https://en.wikipedia.org/wiki/Connectivity_(graph_theory)}{Connectivity, Wikipedia}).
+\textbf{Connectivity} is a measure that describes how much the nodes of a graph are connected. It is defined as the minimum number of elements (nodes or edges) that need to be removed to separate the remaining nodes into isolated subgraphs \cite{wikiconnectivity}.
 
-A graph is said to be \textbf{connected} if every pairs of nodes are connected. Thus it always exists at least one path that connects every pairs of nodes. If an undirected graphs is not connected then it is \textbf{disconnected}: in this case there is one or more nodes that can not be reached by any paths.
+A graph is said to be \textbf{connected} if every pair of nodes are connected. Thus it always exists at least one path that connects every pair of nodes. If an undirected graph is not connected then it is \textbf{disconnected}: in this case there is one or more nodes that can not be reached by any paths.
 
 \paragraph{Strongly Connected}
-A directed graph is said to be \textbf{strongly connected} if every pairs of nodes can be reached by one or more path.
+A directed graph is said to be \textbf{strongly connected} if every pair of nodes can be reached by one or more path.
 
 \paragraph{Weakly Connected}
-A directed graph is said to be \textbf{weakly connected} if by replacing all the direct edges with undirectd ones, the new graph is connected. in a directed graph some nodes can not be reached if all the edges exit or enter from them. The graph in Figure \ref{graphs_2} is weakly connected because the node \(g\) has only entering edges.
+A directed graph is said to be \textbf{weakly connected} if, by replacing all the directed edges with undirectd ones, the new graph is connected. In a directed graph some nodes can not be reached if all the edges exit or enter from them. The graph in Figure \ref{graphs_2} is weakly connected since the node \(g\) has only entering edges.
 
 \begin{figure}[H]
 \centering
@@ -100,10 +102,10 @@ There are several ways to represent graphs using data structures. For example in
 
 The most common data structures used for representing a graph are: \textbf{edge list}, \textbf{adjacency list}, and \textbf{adjacency matrix} \cite{goodrich2013data}. 
 
-In appendix \ref{graphsappendix} there is a summary of the complexities for the most common operations performed on graphs for the different data structures.
+In appendix \ref{complexityappendix} there is a summary of the complexities for the most common operations performed on graphs for the different data structures.
 
 \subsection{Edge List}
-The \textbf{edge list} is an unordered list of all pairs of nodes that form an edge. This representation is minimal but it does not allow to locate a specific edge, or the set of edges incident to a particular node \cite{goodrich2013data}.
+The \textbf{edge list} is an unordered list of all the pairs of nodes that form an edge. This representation is minimal but it does not allow to locate a specific edge, or the set of edges incident to a particular node \cite{goodrich2013data}.
 
 \begin{figure}[H]
 \centering
@@ -129,7 +131,7 @@ The \textbf{edge list} is an unordered list of all pairs of nodes that form an e
 \end{figure}
 
 \subsection{Adjacency List}
-The \textbf{adjacency list} is a list containing a separate list for each node containing all the incident edges of that node. In this representation identify all the edges incident to a node is easy \cite{goodrich2013data}. In case of directed graphs for each node there are two different lists: one for entering edges, and another one for the edges that go out.
+The \textbf{adjacency list} is a list containing a separate list for each node containing all the incident edges to that node. In this representation identify all the edges incident to a node is easy \cite{goodrich2013data}. In case of directed graphs for each node there are two different lists: one for the entering edges, and another one for the outgoing ones.
 
 \begin{figure}[H]
 \centering
@@ -160,7 +162,7 @@ The \textbf{adjacency list} is a list containing a separate list for each node c
 \end{figure}
 
 \subsection{Adjacency Matrix}
-The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\) represent the relationship between the edge \(i\) with the edge \(j\). If between \(i\) and \(j\) there is an edge \(A[i, j] = 1\), otherwise \(0\). In case the an ed go out and enter in the same edge \(A[i, i] = 1\). For undirected graphs this matrix is symmetric, and in case there are not edges going in and out the same node the principal diagonal is all of \(0\).
+The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\) represent the relationship between the edge \(i\) with the edge \(j\). If between \(i\) and \(j\) there is an edge \(A[i, j] = 1\), otherwise \(0\). In case an edge go out and enter in the same node \(A[i, i] = 1\). For undirected graphs this matrix is symmetric, and in case there are not edges going in and out the same node the principal diagonal is all of \(0\).
 
 \begin{figure}[H]
 \centering
@@ -192,13 +194,13 @@ The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\
 \label{graphs_5}
 \end{figure}
 
-In the appendix \ref{graphimplementationappendix} there is the full python implementation of the graph representation. There are defined the classes for nodes, edges, and graphs objects. Moreover, all the main operations on graphs like: insert a new node, a new edge, get the edge list, the adjacency list, the adjacency matrix, and find the max index are also implemented.
+In appendix \ref{graphimplementationappendix} there is the full Python implementation of the graph representations. There are defined the classes for nodes, edges, and graphs objects. Moreover, all the main operations on graphs like: insert a new node, a new edge, get the edge list, the adjacency list, the adjacency matrix, and find the max index are also implemented.
 
 \section{Graph Traversal}
-Like in the case of trees (Chapter \ref{chp:trees}), also for graphs there are two different ways of traverse: \textbf{depth-first search}, and \textbf{breadth-first search}. But for graphs, differently from trees, there is not a privileged way of traverse, and it is arbitrarily chosen a node where to start the traverse.
+As for trees (Chapter \ref{chp:trees}), also for graphs there are two different ways of traversal: the \textbf{depth-first search}, and the \textbf{breadth-first search}. But for graphs, differently from trees, there is not a privileged way to traverse, and it is arbitrarily chosen a node where to start.
 
 \subsection{Depth-first Search (DFS)}
-In the \textbf{depth-fist search} the search starts from an arbitrary node and traverse one of the connected node. This process is repeated until there are not any new nodes on that path and start again with new nodes, until the searched node is found, or all the nodes have been traversed \cite{wikidepthfirst} (\href{https://en.wikipedia.org/wiki/Depth-first_search}{Depth-first search, Wikipedia}). This traversal can be implemented both recursively, and iteratively by using a stack.
+In the \textbf{depth-fist search} the search starts from an arbitrary node, and traverse one of the connected node. This process is repeated until there are not any new nodes on that path, and starts again with a new node, until the node we are looking for is found or all the nodes have been traversed \cite{wikidepthfirst}. This traversal can be implemented both recursively, and iteratively by using a stack.
 
 \begin{figure}[H]
 \centering
@@ -246,11 +248,11 @@ class Graph():
 		return ret_list
 \end{lstlisting}
 
-The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on complexities evaluation on graphs refer here \cite{goodrich2013data}.
+The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on the complexities evaluation on graphs refer here \cite{goodrich2013data}.
 
 In appendix \ref{graphimplementationtraversalappendix} there is a detailed recursive and iterative implementation, with also an additional example.
 \subsection{Breadth-first Search (BFS)}
-In \textbf{breadth-first search} the traversal is done starting from a node, and the firsy visited nodes are all its neighbors. Once visited all the neighbors the traversal keeps going in the same previous way \cite{wikibreadthfirst} (\href{https://en.wikipedia.org/wiki/Breadth-first_search}{Breadth-first search, Wikipedia}).
+In the \textbf{breadth-first search} the traversal is done by starting from a node, and the first visited nodes are all its neighbors. Once visited all the neighbors the traversal keeps going in the same previous way, looking to all the node's neighbors first.
 
 \begin{figure}[H]
 \centering
@@ -299,10 +301,10 @@ class Graph():
         			queue.append(neighbour)
 \end{lstlisting}
 
-The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on complexities evaluation on graphs refer here \cite{goodrich2013data}.
+The complexity in this case is \(O(\vert E \vert + \vert V \vert)\), where \(E\) is the number of edges and \(V\) the number of vertexes. For more details on the complexities evaluation on graphs refer here \cite{goodrich2013data}.
 
 \paragraph{Spanning Tree}
-Using a tree it is possible to visualize how the graph is traversed. For the graph in figure \ref{graphs_7} the spanning tree is the following.
+Using a tree it is possible to visualize how the graph is traversed. For the graph in Figure \ref{graphs_7} the spanning tree is the following.
 
 \begin{figure}[H]
 \centering
@@ -322,7 +324,7 @@ Using a tree it is possible to visualize how the graph is traversed. For the gra
 
 In appendix \ref{graphimplementationtraversalappendix} there is the detailed implementation, with also an additional example.
 \subsection{Eulerian Path and Circuit}
-An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit} (\href{https://en.wikipedia.org/wiki/Eulerian_path}{Eulerian path, Wikipedia}). Not every graph has an Eulerian path, and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
+An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit}. Not every graph has an Eulerian path, and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
 
 \begin{figure}[H]
 \centering
@@ -365,7 +367,7 @@ An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that v
 	\caption{}
 	\label{noneuler}
 \end{subfigure}
-\caption[Eulerian path (\ref{euler}) and not Eulerian path (\ref{noneuler}).]{Eulerian path (\ref{euler}) and not Eulerian path (\ref{noneuler}).}
+\caption[An Eulerian path (\ref{euler}) and a not Eulerian path (\ref{noneuler}).]{An Eulerian path (\ref{euler}) and a not Eulerian path (\ref{noneuler}).}
 \label{graphs_8}
 \end{figure}
 
@@ -416,7 +418,7 @@ In the following table are summarized some rules for finding if a graph has Eule
 \end{table}
 
 \subsection{Hamiltonian Path and Circuit}
-A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all nodes are visited exactly once. A \textbf{Hamiltonian circuit} (or \textbf{Hamiltonian Cycle}) is a Hamiltonian path that starts and ends in the same node \cite{wikihamiltoninanpathcircuit} (\href{https://en.wikipedia.org/wiki/Hamiltonian_path}{Hamiltonian path, Wikipedia}).
+A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all the nodes are visited exactly once. A \textbf{Hamiltonian circuit} (or \textbf{Hamiltonian Cycle}) is a Hamiltonian path that starts and ends in the same node \cite{wikihamiltoninanpathcircuit}.
 
 \begin{figure}[H]
 \centering
@@ -465,7 +467,7 @@ A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all 
 \end{figure}
 
 \subsection{Shortest Path Problem}
-The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath} (\href{https://en.wikipedia.org/wiki/Shortest_path_problem}{Shortest path problem, Wikipedia}).The breadth-first search can be used for finding the shortest path from a node to all the others, but it expects that all the edges are of the same nature, and in several situation this approach is not useful. Let us image we would like to find the best path connecting two cities. In this case the links between the nodes are not the same, as some strees are faster or slower than others. Another interesting application of finding the shortest path in graphs is about routing packages from a computer to another in internet in order to be as fast as possible.
+The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath}. The breadth-first search can be used for finding the shortest path from a node to all the others, but it expects that all the edges are of the same nature, and in several situations this approach is not useful. Let us image we would like to find the best path connecting two cities. In this case the links between the nodes are not the same, since some streets are faster or slower than others. Another interesting application of finding the shortest path in graphs, is about routing packages from a computer to another in order to be as fast as possible.
 
 \begin{figure}[H]
 
@@ -498,19 +500,19 @@ The \textbf{shorted path problem} is the problem of finding a path between two n
 
 \subsection{Dijkstra's Algorithm}
 \label{sec:dijkstra}
-The Dijkstra's algorithm single source shortest path for a non-negative weighted graphs, in which all the shortest paths from a given node to all the other nodes are found. The distance between two nodes is the sum of the weights of the edges of the path \cite{wikidijkstra}.
+The Dijkstra's single source shortest path algorithm for a non-negative weighted graphs, finds all the shortest paths from a given node to all the others. The distance between two nodes is the sum of the weights of the edges of the path \cite{wikidijkstra}.
 
-This algorithm is part of a broader class of algorithms which is called \textbf{greedy algorithms} \cite{wikigreedy} (\href{https://en.wikipedia.org/wiki/Greedy_algorithm}{Greedy algorithms, Wikipedia}). In greedy algorithms the optimal solution is found by finding the optimal solution at every step without considering the previous ones. This approach does not always find the optimal solution of a problem. A more advanced technique to greedy algorithm is \textbf{dynamic programming}, which will be the topic of the next chapter.
+This algorithm is part of a broader class of algorithms which are called \textbf{greedy algorithms}. In the greedy algorithms the optimal solution is found by finding the optimal solution at every step without considering the previous ones. Anyway, this approach does not always find the optimal solution of a problem. A more advanced technique to greedy algorithm is \textbf{dynamic programming}, which will be the topic of the next chapter.
 
 \paragraph{Relaxation}
-Before introducing the Dijkstra's algorithm it is important to introduce the \textbf{relaxation condition}. Let us consider the following weighted directed graph Figure \ref{graphs_12}. The cost for going from node 1 to node 2 is \(2\), and \(\infty\) from 1 to 3, as there is not any direct link. The relaxation condition is then:
+Before introducing the Dijkstra's algorithm it is important to introduce the \textbf{relaxation condition}. Let us consider the weighted directed graph of Figure \ref{graphs_12}. The cost for going from node \(a\) to node \(u\) is \(2\), and \(\infty\) from \(a\) to \(v\), since there is not any direct link between that nodes. The relaxation condition is then:
 
 \begin{definition}[Relaxation condition]
 \enspace \enspace \textnormal{if (d[u] + w(u, v) < d[v])}
 
 \enspace \enspace \enspace     \textnormal{d[v] = d[u] + w(u, v)}
 
-Where \(d[u]\) is the distance of node u from the starting node (1 in this case), and \(w(u, v)\) is the weight from the node \(u\) to node \(v\).
+Where \(d[u]\) is the distance of node u from the starting node (\(1\) in this case), and \(w(u, v)\) is the weight from the node \(u\) to node \(v\).
 \end{definition}
 
 \begin{figure}[H]
@@ -544,7 +546,7 @@ In other words the relaxation condition says that if there is a shorter path con
 
 In the Dijkstra's algorithm at each step the new node is chosen based on the lowest value of the distance at that given step, and eventually the distances for all the adjacent nodes are updated accordingly the relaxation condition.
 
-Let us consider the following graph Figure \ref{graphs_13}, and let us start from the node \(a\) \cite{dijkstraexplaination}.
+Let us consider the graph in Figure \ref{graphs_13}, and let us start from the node \(a\) \cite{dijkstraexplaination}.
 
 \begin{figure}[H]
 \centering
@@ -578,7 +580,7 @@ Let us consider the following graph Figure \ref{graphs_13}, and let us start fro
 \label{graphs_13}
 \end{figure}
 
-For describing how the algorithm works we use the following table, in which for each column there is a node, and at every step a new row is added for the node for which the shortest path has just been found. At the first step the table it looks like: 
+For describing how the algorithm works we use the following table, in which for each column there is a node, and at every step a new row is added for the node for which the shortest path has just been found. At the first step the table looks like:
 
 \begin{table}[H]
 \centering
@@ -620,7 +622,7 @@ The process is repeated again: the lowest distance is chosen, in this case is th
 \end{table}
 
 
-The same process is repeated again, the new shortest path found is tor the node \(b\) passing through \(e\) with a weight of \(45\). In this case there are two shortest path and for this example is the same choosing one of them.
+The same process is repeated again, the new shortest path found is tor the node \(b\) passing through \(e\) with a weight of \(45\). In this case there are two shortest path, and for this example is the same choosing one of them.
 
 \begin{table}[H]
 \centering
@@ -637,7 +639,7 @@ The same process is repeated again, the new shortest path found is tor the node 
 \end{tabular}
 \end{table}
 
-In the last step all the shortest paths are found. Only the node \(f\) has been left out as it can not be reached in any ways from \(a\).
+In the last step all the shortest paths are found. Only the node \(f\) has been left out since it can not be reached in any ways from \(a\).
 
 \begin{table}[H]
 \centering
@@ -690,6 +692,6 @@ For example for finding the shortest path for reaching the node \(b\) the steps 
 	\end{tikzpicture}
 \end{table}
 
-In the appendix \ref{dijkstraimplementation} the full implementation of the Dijkstra's algorithm is reported. 
+In appendix \ref{dijkstraimplementation} the full implementation of the Dijkstra's algorithm is reported. 
 
 The complexity of this algorithm is \(O(\vert V^{2} \vert)\) where \(V\) is the number of nodes. This is because all the nodes are relaxed with respect all the others, and in the worst case all nodes must be checked. If the implementation of the algorithm is optimized the complexity in this case is \(O(\vert E \vert + \vert V \vert log(\vert V \vert))\), where \(E\) is the number of edges.
