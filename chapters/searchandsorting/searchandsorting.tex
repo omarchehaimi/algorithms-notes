@@ -77,8 +77,8 @@ We observe that the exponent is the number of iterations minus one, then the log
 In general it is used \(log\), and is said that the binary search algorithm has a complexity of \(log(n)\). 
 
 \subsection{Binary Search Implementation}
-The following code is the python implementation of the binary search algorithm.
-\begin{lstlisting}[firstnumber=1, caption={Binary search python implementation.}]
+The following code is the Python implementation of the binary search algorithm.
+\begin{lstlisting}[firstnumber=1, caption={Binary search Python implementation.}]
 def binary_search(array_input, value):
 	low = 0
 	high = len(array_input) - 1
@@ -225,8 +225,8 @@ In summary:
 \end{figure}
 
 \subsection{Bubble Sort Implementation}
-The following code is the python implementation of the bubble sort algorithm.
-\begin{lstlisting}[firstnumber=1, caption={Bubble Sort python implementation}.]
+The following code is the Python implementation of the bubble sort algorithm.
+\begin{lstlisting}[firstnumber=1, caption={Bubble Sort Python implementation}.]
 def bubble_sort(array_input):
 	index = len(array_input) - 1
 	sorted = False
@@ -371,8 +371,8 @@ By considering also the number of comparisons, the complexity is \(O(n \ log(n))
 The memory complexity in this case is bigger than the bubble sort algorithm. For the merge sort some subarrays (in the worst case are \(n\)) are used, and they need to be stored in the memory.
 
 \subsection{Merge Sort Implementation}
-The following code is the python implementation of the merge sort algorithm.
-\begin{lstlisting}[firstnumber=1, caption={Merge Sort python implementation (the recursive part is taken from \href{https://www.geeksforgeeks.org/iterative-merge-sort/}{Merge Sort, GeeksforGeeks}).}]
+The following code is the Python implementation of the merge sort algorithm.
+\begin{lstlisting}[firstnumber=1, caption={Merge sort Python implementation (the recursive part is taken from \href{https://www.geeksforgeeks.org/iterative-merge-sort/}{Merge Sort, GeeksforGeeks}).}]
 def merge_sort_iterative(array_input):
 	
 	if len(array_input) > 1:
@@ -621,8 +621,8 @@ On the other hand, merge sort is a better solution than quicksort and heapsort \
 \end{itemize}
 
 \subsection{Quicksort Implementation}
-The following code is the python implementation of the quicksort algorithm \cite{quicksortcode}.
-\begin{lstlisting}[firstnumber=1, caption={Quicksort python implementation.}]
+The following code is the Python implementation of the quicksort algorithm \cite{quicksortcode}.
+\begin{lstlisting}[firstnumber=1, caption={Quicksort Python implementation.}]
 def partition(arr, low, high): 
     i = (low-1)         # Index of smaller element 
     pivot = arr[high]     # pivot 
