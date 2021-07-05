@@ -8,7 +8,7 @@ small, yet comprehensive notes about the huge world on this topic.
 
 
 
-The notes were written in LaTeX by using the `classicthesis` typographical look ([ClassicThesis]([CTAN: Package ClassicThesis](https://ctan.org/pkg/classicthesis))).
+The notes were written in LaTeX by using the `classicthesis` typographical look ([ClassicThesis](https://ctan.org/pkg/classicthesis)).
 
 # Topics covered in these notes
 
@@ -70,4 +70,4 @@ The notes were written in LaTeX by using the `classicthesis` typographical look 
 
 # Compilation
 
-The LaTeX code was compiled using PDFLaTeX ([PDFLaTeX]([pdfTeX - TeX Users Group](https://www.tug.org/applications/pdftex/))), and for the bibliography with BibLaTeX ([BibLaTeX]([CTAN: Package BibLaTeX](https://www.ctan.org/pkg/biblatex))). The IDE used was Texmaker ([TexMaker]([Texmaker (free cross-platform latex editor)](https://www.xm1math.net/texmaker/))).
+The LaTeX code was compiled using PDFLaTeX ([PDFLaTeX](https://www.tug.org/applications/pdftex/)), and for the bibliography with BibLaTeX ([BibLaTeX](https://www.ctan.org/pkg/biblatex)). The IDE used was Texmaker ([TexMaker](https://www.xm1math.net/texmaker/)).
