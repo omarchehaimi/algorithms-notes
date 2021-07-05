@@ -70,4 +70,4 @@ The notes were written in LaTeX by using the `classicthesis` typographical look 
 
 # Compilation
 
-The LaTeX code was compiled using PDFLaTeX ([PDFLaTeX](https://www.tug.org/applications/pdftex/)), and for the bibliography with BibLaTeX ([BibLaTeX](https://www.ctan.org/pkg/biblatex)). The IDE used was Texmaker ([TexMaker](https://www.xm1math.net/texmaker/)).
+The LaTeX code was compiled using PDFLaTeX ([PDFLaTeX](https://www.tug.org/applications/pdftex/)), and with BibLaTeX ([BibLaTeX](https://www.ctan.org/pkg/biblatex)). The IDE used was Texmaker ([TexMaker](https://www.xm1math.net/texmaker/)).
