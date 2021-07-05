@@ -1,6 +1,6 @@
 \chapter{Binary Search Complete Implementation}
 \label{binappendix}
-The best way to implement the tree data structure is to create a class for the nodes (\textbf{Node}) and a class for the binary tree (\textbf{BinaryTree}). As all the nodes of a binary trees has at most two children, in the class \textbf{Node} is enough to have three attributes: the value of the node, the left, and the right child, in turn of \textbf{Node} type as well. This way of implement tree is very similar to the one used for the \hyperref[linked list]{} linked list (\ref{linkedlist}).
+The best way to implement the tree data structure is to create a class for the nodes (\textbf{Node}) and a class for the binary tree (\textbf{BinaryTree}). Since all the nodes of a binary trees has at most two children, in the class \textbf{Node} is enough to have three attributes: the value of the node, the left, and the right child, in turn of \textbf{Node} type as well. This way of implement a tree is very similar to the one used for the linked list (Section \ref{linkedlist}).
 
 \begin{lstlisting}[firstnumber=1, caption={Class definition for a node and a tree.}]
 class Node():
@@ -18,13 +18,13 @@ class BinaryTree():
 
 In this appendix there is a detailed implementation, both recursive and iterative, of all possible ways to perform a tree traversal in the case of \textbf{depth-first search}: pre-order traversal \ref{preorderappendix}, in-order traversal \ref{inorderappendix}, and post-order traversal \ref{postorderappendix}. The convention followed here is to look up first at the left child always, and later look up the right one. The opposite approach is equivalent.
 
-The pseudocode of the iterative implementations is taken from \cite{wikitreestrav}(\href{https://en.wikipedia.org/wiki/Tree_traversal}{Tree traversal, Wikipedia}).
+The pseudocode of the iterative implementations is taken from \cite{wikitreestrav}.
 
 \section{Pre-order Traversal}
 \label{preorderappendix}
-In the pre-order traversal every new node is first checked as visited, and the left subtree is traversed first, and later the right one. This process is repeated until all the nodes of the tree are visited (\ref{preorder}). 
+In the pre-order traversal every new node is first checked as visited, and the left subtree is traversed first, and later the right one. This process is repeated until all the nodes of the tree are visited (Section \ref{preorder}). 
 
-For implementing the pre-order traversal iteratively a stack (\ref{stack}) is used. The steps are \cite{wikitreestrav}:
+For implementing the pre-order traversal iteratively a stack (Section \ref{stack}) is used. The steps are \cite{wikitreestrav}:
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
@@ -228,7 +228,7 @@ class BinaryTree():
 
 \section{In-order Traversal}
 \label{inorderappendix}
-In the in-order traversal the first node to be checked is the first leaf of the left subtree. The second one is the parent of the first checked node, and then the right subtree is checked repeating the previous process. All this process is repeated until all the nodes are visited or the value is found \ref{inorder}. 
+In the in-order traversal the first node to be checked is the first leaf of the left subtree. The second one is the parent of the first checked node, and then the right subtree is checked repeating the previous process. All this process is repeated until all the nodes are visited or the value is found (Section \ref{inorder}). 
 
 For implementing the in-order traversal iteratively a stack is used. The steps are \cite{wikitreestrav}:
 
@@ -396,7 +396,7 @@ class BinaryTree():
 
 \section{Post-order Traversal}
 \label{postorderappendix}
-In the post-order traversal the first node to be checked is the first leaf of the left subtree. The second node is the right node of the parent of the first checked node. Once checked the right side of the subtree also the parent is checked and the process is repeated until all the node are visited or the value is found \ref{postorder}. 
+In the post-order traversal the first node to be checked is the first leaf of the left subtree. The second node is the right node of the parent of the first checked node. Once checked the right side of the subtree also the parent is checked, and the process is repeated until all the node are visited or the value is found (Section \ref{postorder}). 
 
 Also in this case for implementing the post-order traversal iteratively a stack is used. The steps are \cite{wikitreestrav}:
 
@@ -584,7 +584,7 @@ class BinaryTree():
 \end{figure}
 
 \section{Breadth-first search Implementation}
-In the case of the \textbf{breadth-first search} (Chapter \ref{chp:trees}) the implementation uses a queue (Section \ref{queue}) instead of a stack. Also here the convention is to check the left node first and later the right ones. The pesudocode is adapted from the general case of the breadth-first search taken from here \cite{wikibreadthfirst} (\href{https://en.wikipedia.org/wiki/Breadth-first_search}{Breadth-first search, Wikipedia}).
+In the case of the \textbf{breadth-first search} (Chapter \ref{chp:trees}) the implementation uses a queue (Section \ref{queue}) instead of a stack. Also here the convention is to check the left node first, and later the right ones. The pesudocode is adapted from the general case of the breadth-first search taken from \cite{wikibreadthfirst}.
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon

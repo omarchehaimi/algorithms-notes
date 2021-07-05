@@ -1,15 +1,15 @@
 \chapter{Dynamic Programming}
 \label{chp:dynamicprogramming}
-In this chapter are introduced the fundamentals concepts of \textbf{dynamic programming}.
+In this chapter are introduced the fundamental concepts of \textbf{dynamic programming}.
  
 \section{General Definitions}
-Dynamic programming is a mathematical optimization method and a computer programming method \cite{wikidynamicprogramming} (\href{https://en.wikipedia.org/wiki/Dynamic_programming}{Dynamic Programming, Wikipedia}).
+Dynamic programming is a mathematical optimization and a computer programming method \cite{wikidynamicprogramming}.
 
-In computer science a problem can be solved with a dynamic programming method must have an optimal substructure (the problem can be broken down in smaller parts) and an overlapping sub-problems (the broken down problems share some results). If a problem can be solved with an optimal substructure but with non-overlapping sub-problems then the strategy is called \textbf{divide and conquer}.
+In computer science a problem which can be solved with dynamic programming must have an optimal substructure (the problem can be broken down in smaller parts), and an overlapping sub-problems (the broken down problems share some results). If a problem can be solved with an optimal substructure but with non-overlapping sub-problems, then the strategy is called \textbf{divide and conquer}.
 
-When a problem is solved with dynamic programming, the starting point is to find the \textbf{base case}, which is the sub-problem with the lowest computational cost. Once solved this problem its result is saved in a table called \textbf{lookup table}, and the same general formula is called recursively. At each step the result is saved in the lookup table, as in the following steps it might be used. Instead of calculating the same value again, we look at the lookup table and retrieve it. This aspect of dynamic programming makes this technique extremely powerful, as a lot of calculations must not be repeated several times.
+When a problem is solved with dynamic programming, the starting point is to find the \textbf{base case}, which is the sub-problem with the lowest computational cost. Once solved this problem its result is saved in a table called \textbf{lookup table}, and the same general formula is used recursively. At each step the result is saved in the lookup table, since in the following steps might be used for calculating new results. Instead of calculating the same value again, we look at the lookup table and retrieve it. This aspect of dynamic programming makes this technique extremely powerful, since most of the calculations must not be repeated several times.
 
-For example, in the calculation of the Fibonacci number we have to use the same function several time in different sub-problems. Let us suppose we want to calculate the fifth number of the Fibonacci sequence:
+For example, in the calculation of the Fibonacci numbers we have to use the same function several times in different sub-problems. Let us suppose we want to calculate the fifth number of the Fibonacci sequence:
 
 \begin{figure}[H]
 \centering
@@ -39,7 +39,7 @@ For example, in the calculation of the Fibonacci number we have to use the same 
 \caption[Calculation of the fifth number of the Fibonacci sequence.]{Calculation of the fifth number of the Fibonacci sequence.}
 \end{figure}
 
-Some values are used several times in different sub-problem as shown in the following table:
+Some values are used several times in different sub-problems as shown in the following table:
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c c c c c c c}
@@ -48,10 +48,10 @@ Some values are used several times in different sub-problem as shown in the foll
 	\end{tabular}
 	\caption[Number of computation for each value of the Fibonacci sequence.]{Number of computation for each value of the Fibonacci sequence.}
 \end{table}
-If the values of the functions which are repeated are stored in a lookup table, instead of calculating them again are retrieved from the table and used.
+If the values of the functions which are repeated are stored in a lookup table, instead of calculating them again, they are retrieved from the table and used.
 
 \section{Knapsack Problem}
-Let us consider a knapsack with a limited capacity of weight and number of objects which are defined by a value and a weight. Let us also consider that not all the available objects can be carried. Which objects we can put in the knapsack in order to have the optimal weight-value in the limits of the maximum weight \cite{wikiknapsackproblem}(\href{https://en.wikipedia.org/wiki/Knapsack_problem}{Knapsack Problem, Wikipedia})? In this case we consider to take or not the an entire object, and it is said the \textbf{\(0/1\) knapsack problem} . In some variants it is possible to take a fraction.
+Let us consider a knapsack with a limited capacity of weight and number of objects, which are defined by a value and a weight. Let us also consider that not all the available objects can be carried. Which objects we can put in the knapsack in order to have the optimal weight-value in the limits of the maximum weight \cite{wikiknapsackproblem}? In this case we consider to take or not the an entire object, and it is said the \textbf{\(0/1\) knapsack problem} . In some variants it is possible to take a fraction of an object.
 
 \begin{figure}[H]
 \centering
@@ -73,9 +73,9 @@ Let us consider a knapsack with a limited capacity of weight and number of objec
 \caption[Knapsack problem.]{Knapsack problem.}
 \end{figure}
 
-The easiest way to solve this problem would be to test all the combinations of possible objects and select the optimal value (brute force). The complexity in this case is \(O(2^{n})\), where \(n\) is the number of objects. The complexity of this approach is very high.
+The easiest way to solve this problem would be to test all the combinations of possible objects, and select the optimal value (brute force). The complexity in this case is \(O(2^{n})\), where \(n\) is the number of objects. The complexity of this approach is very high.
 
-Let us try another approach. The idea is to maximize the overall value and have the maximum transportable weight. What we do at first is to find the combination with the lowest weight and the highest value, and add objects until the allowed weight is reached. For doing so let us create a \textbf{table of values} where in each row there is an item and in each column the maximum capacity which increase. Let us consider the following example, where we have five elements (\(n=5\)), with the maximum capacity of the knapsack of seven kg (\(m=7kg\)). The values and the weights are respectively: \(V= \lbrace 2, 3, 2, 4, 5 \rbrace[\$]\), and \(W= \lbrace 1, 2, 3, 3, 4 \rbrace [kg]\).
+Let us try another approach instead. The idea is to maximize the overall value and have the maximum transportable weight. What we do at first is to find the combination with the lowest weight and the highest value, and add objects until the allowed weight is reached. For doing so let us create a \textbf{table of values} where in each row there is an item and in each column the maximum capacity which increases. Let us consider the following example, where we have five elements (\(n=5\)), with the maximum capacity of the knapsack of \(7\) kg (\(m=7kg\)). The values and the weights are respectively: \(V= \lbrace 2, 3, 2, 4, 5 \rbrace[\$]\), and \(W= \lbrace 1, 2, 3, 3, 4 \rbrace [kg]\).
 
 \begin{figure}[H]
 \centering
@@ -125,7 +125,7 @@ $v_{5}=5$, $w_{5}=4$ & $5$ & $0$ & $2$ & $3$ & $5$ & $6$ & $7$ & $9$ & $10$ \\
 \label{knapsack_fig}
 \end{figure}
 
-The green arrows show where the state is update, while the red ones where the state is not update (only the arrows for the last row have been drown for clarity in figure \ref{knapsack_fig}). In case of a tie it is equivalent to take one of the two values (in Figure \ref{knapsack_fig} for the item \(5\) at the capacity \(4\) there are two green arrow). To decide if update or not a value of a table we have to check the previous state (at \(K[i-1, w]\), where \(K\) is the knapsack, \(i\) the index for the row, and \(w\) the maximum capacity) and the previous optimal state (at \(K[i-1, w-w[i]]\), where \(w[i]\) is the weight of the current item). The formula to be used is the following \(K[i, w] = max \lbrace K[i-1, w], K[i-1, w-w[i]] + V[i]\rbrace \), where \(V[i]\) is the weight of the current item. For example for calculating the value at \(5, 3\) the formula becomes: \(K[5, 3]=max \lbrace K[4, 3], K[4, 3-2] + V[3]\rbrace=max \lbrace 4, 3 + 2 \rbrace = max \lbrace 4, 5 \rbrace = 5\), then the state of the is updated. In case there is some undefined positions in the previous formula the state is not updated and it is kept the previous one.
+The green arrows show where the state is update, while the red ones where the state is not update (only the arrows for the last row have been drown for clarity in Figure \ref{knapsack_fig}). In case of a tie it is equivalent to take one of the two values (in Figure \ref{knapsack_fig} for the item \(5\) at the capacity \(4\) there are two green arrow). To decide if update or not a value of the table we have to check the previous state (at \(K[i-1, w]\), where \(K\) is the knapsack, \(i\) the index for the row, and \(w\) the maximum capacity) and the previous optimal state (at \(K[i-1, w-w[i]]\), where \(w[i]\) is the weight of the current item). The formula to be used is the following \(K[i, w] = max \lbrace K[i-1, w], K[i-1, w-w[i]] + V[i]\rbrace \), where \(V[i]\) is the weight of the current item. For example, for calculating the value at \(5, 3\) the formula becomes: \(K[5, 3]=max \lbrace K[4, 3], K[4, 3-2] + V[3]\rbrace=max \lbrace 4, 3 + 2 \rbrace = max \lbrace 4, 5 \rbrace = 5\), then the state is updated. In case there is some undefined positions in the previous formula the state is not updated and it is kept the previous one.
 
 With the table in Figure \ref{knapsack_fig} we found the best value, but what about the the best elements to form the subset? Starting from the last element of previous table (\(K[5, 7]=10\)) the idea is to check whether the previous element is different to the previous optimal solution. If the value is different (red arrows of \ref{knapsack_fig_best}), then the previous step of the best solution is chosen, instead if the previous value is the same (green arrows of \ref{knapsack_fig_best}) we move to the previous step, and we keep doing so until a different value is found, and we repeat the same thing as before. The process stops when we reach the first element of the table.
 
@@ -177,8 +177,8 @@ $v_{5}=5$, $w_{5}=4$ & $5$ & $0$ & $2$ & $3$ & $5$ & $6$ & $7$ & $9$ & \mybox[ro
 \end{figure}
 
 \section{Travelling Salesman Problem}
-Given a graph and the distances between all its nodes, what is the shortest possible rout that connects all the nodes and visits them exactly once and returns to the starting node \cite{wikitravsales} (\href{https://en.wikipedia.org/wiki/Travelling_salesman_problem}{Travelling salesman problem, Wikipedia}))?
+Given a graph and the distances between all its nodes, what is the shortest possible rout that connects all the nodes and visits them exactly once and returns to the starting node \cite{wikitravsales}?
 
-This is a very hard problem and it belongs to the NP-Hard problems \cite{wikihphard} (\href{https://en.wikipedia.org/wiki/NP-hardness}{NP-hardness, Wikipedia}). NP-Hard problems can not be solved in a polynomial time (\(O(n^{2})\), \(O(n)\), \(O(2)\), ...). The complexity of the travelling salesman problem is said to be \textbf{pseudo polynomial} \cite{wikipseudo} (\href{https://en.wikipedia.org/wiki/Pseudo-polynomial_time}{Pseudo-polynomial time, Wikipedia}). 
+This is a very hard problem and it belongs to the NP-Hard problems \cite{wikihphard}. NP-Hard problems can not be solved in a polynomial time (\(O(n^{2})\), \(O(n)\), \(O(2)\), ...). The complexity of the travelling salesman problem is said to be \textbf{pseudo polynomial} \cite{wikipseudo}. 
 
-There are two ways to solve this problem: the exact ones, which find an exact solution, and the approximated ones, which find an approximated solution. The latests are much faster in the execution that the first ones. If we try to solve with the brute force this problem by testing all the possible routes, we would have a complexity of \(O(n!)\). There are also solutions which use the dynamic programming, such as the \textbf{Held-Karp algorithm} \cite{wikiheldkarp} (\href{https://en.wikipedia.org/wiki/Held–Karp_algorithm}{Held-Karp algorithm, Wikipedia}) whose complexity is \(O(n^{2}2^{n})\). The most common approximated algorithm is the \textbf{Christofides–Serdyukov algorithm} \cite{wikichristofides} (\href{https://en.wikipedia.org/wiki/Christofides_algorithm}{Christofides–Serdyukov algorithm, Wikipedia}).
+There are two ways to solve this problem: the exact ones, which find an exact solution, and the approximated ones, which find an approximated solution. The latests are much faster in the execution that the first ones. If we try to solve this problem with the brute force by testing all the possible routes, we would have a complexity of \(O(n!)\). There are also solutions which use the dynamic programming, such as the \textbf{Held-Karp algorithm} whose complexity is \(O(n^{2}2^{n})\). The most common approximated algorithm is the \textbf{Christofides–Serdyukov algorithm} \cite{wikichristofides}.

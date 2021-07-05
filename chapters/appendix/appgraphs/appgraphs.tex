@@ -1,6 +1,6 @@
 \chapter{Implementation of Graph Representation}
 \label{graphimplementationappendix}
-In the following python code there is the implementation for the all the different graph representation, and the operation of insertion of nodes and edges.
+In the following python code there is the implementation for the all the different graph representations, and operation of insertion of nodes and edges.
 
 \begin{lstlisting}[firstnumber=1, caption={Graph representation and fundamental operations.}]
 class Node():
@@ -81,7 +81,7 @@ class Graph():
 \label{graphimplementationtraversalappendix}
 In the following chapter \textbf{depth-first search} and \textbf{breadth-first search} are implemented, with both recursive and iterative implementation.
 \section{Depth-first search}
-In the following there are the pesudocode, the python implementation, and an example of execution of the depth-first search on a graph.
+In the following there are the pesudocode, the python implementation, and an example of execution of the depth-first search on a graph \cite{wikidepthfirst}.
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
@@ -112,8 +112,7 @@ In the following there are the pesudocode, the python implementation, and an exa
 \caption{Depth-first search pseudocode.}
 \end{algorithm}
 
-\begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of depth-first search on graphs.}]
-		
+\begin{lstlisting}[firstnumber=1, caption={Recursive and iterative implementation of depth-first search on graphs.}]	
 class Graph():
 	...
 	
@@ -233,7 +232,7 @@ class Graph():
 \end{figure}
 
 \section{Breadth-first search}
-In the following there are the pesudocode, the python implementation, and an example of execution of the breadth-first search on a graph.
+In the following there are the pesudocode, the python implementation, and an example of execution of the breadth-first search on a graph \cite{wikibreadthfirst}.
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
@@ -257,8 +256,7 @@ In the following there are the pesudocode, the python implementation, and an exa
 \caption{Breadth-first search pseudocode.}
 \end{algorithm}
 
-\begin{lstlisting}[firstnumber=1, caption={Breadth-first search implementation on graphs.}]
-		
+\begin{lstlisting}[firstnumber=1, caption={Breadth-first search implementation on graphs.}]	
 class Graph():
 	...
 	
@@ -356,7 +354,7 @@ class Graph():
 
 \chapter{Dijkstra's Algorithm Implementation}
 \label{dijkstraimplementation}
-As described in the section \ref{sec:dijkstra} the Dijkstra's algorithm is a greedy algorithm that find the optimal solution by finding the optimal solution at each step. The implementation of the Dijkstra's algorithm is based on priority queue.
+As described in Section \ref{sec:dijkstra}, the Dijkstra's algorithm is a greedy algorithm that find the optimal solution by finding the optimal solution at each step. The implementation of the Dijkstra's algorithm is based on priority queue.
 
 Let us consider the following graph (Figure \ref{graphappendix_3}).
 
@@ -422,7 +420,7 @@ Solving the shortest problem for this graph starting from the node \(a\) leads t
 		h & | & | & | & | & | & | & | & \mybox[rounded corners=6pt, line width=1pt, draw=black, fill=green!25]{mycol}{11_{f}} \\
 		
 	\end{tabular}
-	\caption[Dijkstra's algorithms example for the graph in figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.]{Dijkstra's algorithms example for the graph in figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.}
+	\caption[Dijkstra's algorithms example for the graph in Figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.]{Dijkstra's algorithms example for the graph in Figure \ref{graphappendix_3}. The shortest path from \(a\) to \(b\) is also shown.}
 	
 	\begin{tikzpicture}[overlay, remember picture]
 		\draw [->, >=stealth, line width=0.3mm] ({pic cs:era}) -- ({pic cs:cla});
@@ -442,9 +440,9 @@ All the shortest paths from \(a\) are:
 \item h: a \(\rightarrow\) c \(\rightarrow\) d \(\rightarrow\) e \(\rightarrow\) g \(\rightarrow\) f \(\rightarrow\) h, W=11.
 \end{itemize}
 
-For implementing this algorithm there are several ways. The one presented here uses the priority queues. In fact each line of the table where are reported the updated distances with the shortest path can be see as a priority queue in which at every step the shortest value (then the shortest path for the current visited node) is selected.
+For implementing this algorithm there are several ways. The one presented here uses the priority queues. In fact, each line of the table where are reported the updated distances with the shortest path can be see as a priority queue in which at every step the shortest value (then the shortest path for the current visited node) is selected.
 
-In the following the pseudocode \cite{wikidijkstra} and the Python implementation \cite{stackdijkstra} (\href{https://stackoverflow.com/a/57234618}{stackoverflow}) are reported.
+In the following the pseudocode \cite{wikidijkstra} and the Python implementation \cite{stackdijkstra} are reported.
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon
@@ -481,7 +479,7 @@ In the following the pseudocode \cite{wikidijkstra} and the Python implementatio
 \caption{Dijkstra's algorithm pseudocode.}
 \end{algorithm}
 
-\begin{lstlisting}[firstnumber=1, caption={Dijkstra's algorithm.}]
+\begin{lstlisting}[firstnumber=1, caption={Dijkstra's algorithm implementation. Credits: \href{https://stackoverflow.com/a/57234618}{stackoverflow}.}]
 import heapq
 
 def dijkstra(graph, start):
