@@ -20,7 +20,7 @@ Let us consider the problem of finding a number in an array sorted in \textbf{as
 \label{sorting_1}
 \end{figure}
 
-A first way to tackle this problem might be to check all the numbers of the array. In other words, this method consists in performing a loop all over the elements of the array, and check one by one each number. The complexity of this method is \(O(n)\) since in the worst case we have to look at all the elements of the array.
+A first way to tackle this problem might be to check all the numbers of the array. In other words, this method consists in performing a loop all over the elements of the array and check one by one each number. The complexity of this method is \(O(n)\), since in the worst case we have to look at all the elements of the array.
 
 A more efficient way to search an element in an array sorted in ascending order is the \textbf{binary search algorithm} \cite{wikibinarysearch}. In this algorithm the first element to be checked is the central value of the array (in case the array has an even number of elements there are two central values, and one can choose the bigger or the lower equally). If the central element is the one we are looking for the search ends, otherwise, since the array is sorted with an ascending order, we can ignore one half of the array. If the central number is bigger than the number we are looking for, we will ignore the right half of the array, instead, if the central number is lower than the number we are looking for we will ignore the left half of the array. This procedure is repeated: we consider the central value of the new subarray, which has half of the size of the previous step, and we check if that value is the one we are looking for. If not, the process is repeated until or we find or we do not find the desired element (Figure \ref{sorting_2}).
 
@@ -130,7 +130,7 @@ In summary:
 \begin{itemize}
 \item \textbf{Worst Case}: \(O(n^{2})\)
 \item \textbf{Average Case}: \(O(n^{2})\)
-\item \textbf{Best Case}: \(O(n)\). The array is already ordered and it is enough to cycle over all the elements.
+\item \textbf{Best Case}: \(O(n)\). The array is already ordered, and it is enough to cycle over all the elements.
 \end{itemize} 
 
 \begin{figure}[H]
@@ -241,7 +241,7 @@ def bubble_sort(array_input):
 \end{lstlisting}
 
 \section{Merge Sort}
-The \textbf{merge sort} algorithm works by dividing the array in single elements at first, and, grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort}. This way of reducing a big problem in several smaller problems is called \textbf{Divide et impera} (Divide and conquer).
+The \textbf{merge sort} algorithm works by dividing the array in single elements at first and grouping and ordering all the elements two by two. After the first step we will have a lot of subarrays of two elements. The next step is to merge all these subarrays and to order the elements. The merging and ordering process is repeated until the array is unified again \cite{wikimergesort}. This way of reducing a big problem in several smaller problems is called \textbf{Divide et impera} (Divide and conquer).
 
 \begin{figure}[H]
 \centering
@@ -496,7 +496,7 @@ L &   &   &   &   &   & H \\
 \end{figure}
 
 \section{Quicksort}
-The \textbf{quicksort} is a sorting algorithm of the divide et impera class. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its left and on its right respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort}. 
+The \textbf{quicksort} is a sorting algorithm of the divide et impera class. It works by randomly choosing an element of the array, called pivot, and putting all the bigger and lower values on its right and on its left respectively. This procedure is repeated recursively on the two new subarrays until all the elements have been a pivot \cite{wikiqicksort}. 
 
 Here are the steps of the quicksort algorithm based on the example of Figure \ref{sorting_8}:
 \begin{itemize}

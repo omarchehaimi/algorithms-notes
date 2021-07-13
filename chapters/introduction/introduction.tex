@@ -6,7 +6,7 @@ The \textbf{computational complexity}, or \textbf{complexity}, of an algorithm i
 
 The amount of needed resources for solving an algorithm varies with the size of the input \(n\). The computational complexity in general is a function \(n \rightarrow f(n)\), and it could represent the worst case complexity (the maximum amount of required resources) or the average complexity (the average amount of required resources) over all the inputs of size \(n\).
 
-When the type of the complexity is not explicitly indicated, typically is meant to be the \textbf{time complexity}, and it is generally expressed as the number of elementary operations required to run a given algorithm. It is assumed that these elementary operations take the same amount of time for being solved on the same computer. The computational complexity can be related also to the memory consumption. In this case we talk about \textbf{space complexity}, which is generally expressed as the amount of memory required by an algorithm over all inputs of size \(n\).
+When the type of the complexity is not explicitly indicated, typically is meant to be the \textbf{time complexity}, and it is generally expressed as the number of elementary operations required to run a given algorithm. It is assumed that these elementary operations take the same amount of time for being solved on the same computer. The computational complexity can be related also to the memory consumption. In this case we talk about \textbf{space complexity}, which is generally expressed as the amount of memory required by an algorithm over all the inputs of size \(n\).
 
 \section{Big O Notation}
 The \textbf{big O notation} \cite{wikipediabigo} describes the behaviour of a function when its argument tents to infinity or to a particular value.
@@ -19,7 +19,7 @@ Usually \(f(x)=O(g(x))\) is used as \(x \rightarrow \infty\), but it can be also
 \(O\) notation is asymptotic for big \(x\), so the important terms are the ones which grow faster than the others, which become irrelevant.
 
 \begin{example}
-In \(f(x) = 6x^{4} - 2x^{3} + 5\) as \(x \rightarrow \infty\), \(6x^{4}\) is the fastest growing term. \(6\) is a constant, and can be omitted, thus we have \(f(x)=O(x^{4})\).  
+In \(f(x) = 6x^{4} - 2x^{3} + 5\) as \(x \rightarrow \infty\), \(6x^{4}\) is the fastest growing term. \(6\) is a constant and can be omitted, thus we have \(f(x)=O(x^{4})\).  
 \end{example}
 
 \subsection{Properties}
@@ -51,15 +51,15 @@ Let \(c\) be a nonzero constant. \((cn)^{2}=c^{2}n^{2} = O(n^{2})\), but \(2^{n}
 \begin{figure}[hb]
 	\begin{center}
 		\includegraphics[scale=0.3]{chapters/introduction/images/big_o_plots.png}
-		\caption[Plots of the main functions and their evaluation for computational complexity.]{Plots of the main functions and their evaluation for computational complexity. Credits: \href{https://www.bigocheatsheet.com/}{bigocheatsheet.com}.}
+		\caption[Plot of the main functions and their evaluation for computational complexity.]{Plot of the main functions and their evaluation for computational complexity. Credits: \href{https://www.bigocheatsheet.com/}{bigocheatsheet.com}.}
 		\label{fig:bigoplots}
 	\end{center}
 \end{figure}
 
 \section{Time complexity evaluation example}
-Let us suppose we want to calculate the sum of all elements of a \(n\times n\) matrix. For evaluating the time complexity of this function we have to identify all the elementary operations, and evaluating their complexity based on how many times they are repeated. Here is the pseudocode for the function that calculate the sum of all the elements of a matrix.
+Let us suppose we want to calculate the sum of all the elements of a \(n\times n\) matrix. For calculating the time complexity of this function we have to identify all the elementary operations and calculate their complexity based on how many times they are repeated. Here is the pseudocode for the function that calculates the sum of all the elements of a matrix.
 
-\begin{lstlisting}[firstnumber=1, caption={Sum of all elements of a matrix.}]
+\begin{lstlisting}[firstnumber=1, caption={Sum of all the elements of a matrix.}]
 def find_sum_2d(array_2d):
 	totoal = 0 # -> O(1)
 	for each row in array_2d: # -> repeated n times
@@ -89,7 +89,7 @@ function recursive(input):
 		return output # Element 3
 \end{lstlisting}
 
-In recursion the exit condition is fundamental, because if it contains some errors the recursion will never end, resulting in an infinite process.
+In recursion the exit condition is fundamental since if it contains some errors the recursion will never end, resulting in an infinite process.
 
 \subsection{Python Implementation Examples}
 
@@ -115,7 +115,7 @@ def fibonacci_recursive(position):
 	return fibonacci(position - 1) + fibonacci(position - 2) # Calling the function on a smaller size input
 \end{lstlisting}
 
-\begin{lstlisting}[firstnumber=1, caption={Implementation of calculating the factorial of a number using the recursive way.}]
+\begin{lstlisting}[firstnumber=1, caption={Implementation to calculate the factorial of a number using the recursive way.}]
 def factorial(n):
 	if n <= 1: # Exit condition
 		return n

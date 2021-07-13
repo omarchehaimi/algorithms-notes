@@ -1,6 +1,6 @@
 \chapter{Trees}
 \label{chp:trees}
-In this chapter are introduced the fundamentals concepts, and the most used algorithms about the \textbf{trees} as abstract data type.
+In this chapter are introduced the fundamental concepts and the most used algorithms about the \textbf{trees} as abstract data type.
 
 \section{General Definitions}
 A \textbf{tree} is an abstract data type that simulate a hierarchical structure \cite{wikitrees}. A tree is a particular kind of linked list where there are more than one next elements. The base element of a tree is called \textbf{node}, and the first element is called \textbf{root}.
@@ -37,7 +37,7 @@ A \textbf{tree} is an abstract data type that simulate a hierarchical structure 
 \label{trees_1}
 \end{figure}
 
-Trees must be completed connected structures. This means that there are not any nodes which are not connected to anything (Figure \ref{trees_2} case (b)), and there must not be any cycles (Figure \ref{trees_2} case (c)).
+Trees must be completed connected structures (Figure \ref{trees_2} case (a)). This means that there are not any nodes which are not connected to anything (Figure \ref{trees_2} case (b)) and there must not be any cycles (Figure \ref{trees_2} case (c)).
 
 \begin{figure}[H]
 \centering
@@ -84,7 +84,7 @@ Trees must be completed connected structures. This means that there are not any 
 \label{trees_2}
 \end{figure}
 
-Trees are hierarchical structures divided into layers: the first layer is the one belonging to the root node, the first node of a tree. The next element of the root are called children, which in turn become parents in case they have one or more nodes connected. The last nodes of a trees do not have any children, and they are called \textbf{leaf}. The numbers of connections is called \textbf{height}. A set of connections creates a \textbf{path}. The numbers of edges starting from the root to a node is called \textbf{depth}.
+Trees are hierarchical structures divided into layers: the first layer is the one belonging to the root node, the first node of a tree. The next elements of the root are called children, which in turn become parents in case they have one or more nodes connected. The last nodes of a trees do not have any children, and they are called \textbf{leaf}. The numbers of connections is called \textbf{height}. A set of connections creates a \textbf{path}. The numbers of edges starting from the root to a node is called \textbf{depth}.
 
 In Figure \ref{trees_3} are reported all the previous definitions.
 
@@ -257,7 +257,7 @@ In the \textbf{pre-order search} the first node to be checked as visited is the 
 
 \paragraph{In-order search}
 \label{inorder}
-In the \textbf{in-order search} the first node to be checked is the first node without children on the left side (or right side). Once checked this node the next one to be checked is its parent, and the process is repeated again on the right side nodes, until all the nodes are checked (Left-Root-Right) (Figure \ref{trees_6}).
+In the \textbf{in-order search} the first node to be checked is the first node without children on the left side (always by convention). Once checked this node the next one to be checked is its parent, and the process is repeated again on the right side nodes, until all the nodes are checked (Left-Root-Right) (Figure \ref{trees_6}).
 
 \begin{figure}[H]
 \centering
@@ -316,7 +316,7 @@ In the \textbf{in-order search} the first node to be checked is the first node w
 
 \paragraph{Post-order search}
 \label{postorder}
-In the \textbf{post-order search} the first node to be checked is the first node without children on the left side (or right side). Once checked this node the next one to be checked is the one which does not have any children. Once all the nodes of the current left subtree without any children are checked, the parents can be checked, and the whole process is repeated until all the nodes are checked (Left-Right-Root) (Figure \ref{trees_7}).
+In the \textbf{post-order search} the first node to be checked is the first node without children on the left side (always by convention). Once checked this node the next one to be checked is the one which does not have any children. Once all the nodes of the current left subtree without any children are checked, the parents can be checked, and the whole process is repeated until all the nodes are checked (Left-Right-Root) (Figure \ref{trees_7}).
 
 \begin{figure}[H]
 \centering
@@ -374,7 +374,7 @@ In the \textbf{post-order search} the first node to be checked is the first node
 \end{figure}
 
 \section{Binary Trees}
-\textbf{Binary trees} are trees in which the parent has at most two children (0, 1, 2 are the only number of admitted children). On binary trees some operations like searching, deleting, and inserting can be easily and efficiently done. 
+\textbf{Binary trees} are trees in which the parent has at most two children (0, 1, 2 are the only number of admitted children). In binary trees some operations like searching, deleting, and inserting can be easily and efficiently done. 
 \subsection{Search}
 To search an element in this kind of tree one of the previous methods can be used. Typically, in a tree there is no ordering, and this means that potentially all the elements of the tree can be visited. Then the complexity is \(O(n)\).
 
@@ -430,7 +430,7 @@ To search an element in this kind of tree one of the previous methods can be use
 \end{table}
 
 \subsection{Delete}
-Before the deletion of an element there is always the search for finding it in the tree. If the element to be deleted is a leaf, the deletion is not a problem, since there are not any children to be moved. Instead, if the node to be removed has some children there are several ways to reorganize the nodes, since the condition of a binary tree must remain valid (a node can have at most two nodes). Let us consider the tree in Figure \ref{trees_9}.
+Before the deletion of an element there is always the search for finding it in the tree. If the element to be deleted is a leaf, the deletion is not a problem, since there are not any children to be moved. Instead, if the node to be removed has some children there are several ways to reorganize the nodes, since the condition of a binary tree must remain valid (a node can have at most two children). Let us consider the tree in Figure \ref{trees_9}.
 \begin{itemize}
 \item If the node to be removed has only one child it can be replaced by the child node (case 1 Figure \ref{trees_9}).
 \item If the node to be removed has two children it can be replaced with one of the children and reorganize the others (case 2 Figure \ref{trees_9}).
@@ -818,11 +818,11 @@ Let us consider we would like to add a new node to a heap. In this case the node
 \path[->, BrickRed] (n20.east) edge [bend right=60] node[draw=none, xshift=24pt] {} (n21.east);
 \path[->, BrickRed] (n21.south) edge [bend right=60] node[draw=none, xshift=24pt] {} (n20.west);
 \end{tikzpicture}
-\caption[Add a new node to a heap.]{Add a new node to a heap.}
+\caption[Addition of a new node to a heap.]{Addition of a new node to a heap.}
 \label{trees_17}
 \end{figure}
 
-In the example of Figure \ref{trees_17} only one swap is necessary. The complexity of adding a new element, and swap all the necessary nodes, is \(log(n)\), and in the worst case the highest number of operations correspond to the height of the tree.
+In the example in Figure \ref{trees_17} only one swap is necessary. The complexity of adding a new element, and swap all the necessary nodes, is \(log(n)\), and in the worst case the highest number of operations correspond to the height of the tree.
 
 \subsection{Heap Implementation}
 To implement a heap we can use an array. An example of this is shown in Figure \ref{trees_18}.
@@ -1042,7 +1042,7 @@ Usual only red nodes are added and the color of the other nodes are changed acco
 \label{trees_21}
 \end{figure}
 
-In case the insertion or the deletion does nor respect the rules of the red-black tree and BST, some more complex operations must be done as in the following figure. These operations are called rotations, and can be done on the right or on the left.
+In case the insertion or the deletion does nor respect the rules of the red-black tree and BST, some more complex operations must be done as in the following figure. These operations are called rotations and can be done on the right or on the left.
 
 \begin{figure}[H]
 \centering

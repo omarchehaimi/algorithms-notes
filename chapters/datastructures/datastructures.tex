@@ -1,6 +1,6 @@
 \chapter{Data Structures}
 \label{chp:datastrucutres}
-A \textbf{data structure} is a data organization, management, and storage format that enables efficient access and modification of the collected data. The relationship among the data, their properties, and the operations that can be done on them, are all properties of the data structure \cite{wikidatastructure}. Data structures are the basis for the \textbf{abstract data types (ADT)}. An abstract data type is a mathematical model for \textbf{data types} \cite{wikidatatype}, and it is defined by its behaviour, by the type of data it can have, by the possible operations that can be done on these data, and by the behaviour of these operations. This mathematical model contrasts with data structures, which indeed are concrete representations of data, and are the point of view of an implementer, not of a user \cite{wikiabstractdatatype}.
+A \textbf{data structure} is a data organization, management, and storage format that enables efficient access and modification of the collected data. The relationship among the data, their properties, and the operations that can be done on them, are all properties of the data structure \cite{wikidatastructure}. Data structures are the basis for the \textbf{abstract data types (ADT)}. An abstract data type is a mathematical model for \textbf{data types} \cite{wikidatatype}, and it is defined by its behaviour, by the type of data it can have, by the possible operations that can be done on these data, and by the behaviour of these operations. This mathematical model contrasts with data structures, which indeed are concrete representations of data and are the point of view of an implementer, not of a user \cite{wikiabstractdatatype}.
 
 In this chapter the most important data structures like \textbf{collections}, \textbf{lists}, \textbf{arrays}, \textbf{linked lists}, \textbf{stacks}, and \textbf{queues} are introduced. For each data structure are shown all the most important properties, operations, and implementations.
 
@@ -93,16 +93,16 @@ at (0.5,0)
 \path[->, >=stealth, BrickRed] (mat1-2-3.south) edge [bend left=60] node[draw=none] {} (mat1-2-2.south);
 
 \end{tikzpicture}
-\caption{Remove an element to an array.}
+\caption{Remove an element of an array.}
 \label{removing_arr}
 \end{subfigure}
-\caption[Addition \ref{adding_arr} and deletion \ref{removing_arr} of an element of an array, and the subsequent update of the indexes.]{Addition \ref{adding_arr} and deletion \ref{removing_arr} of an element of an array, and the subsequent update of the indexes.}
+\caption[Addition \ref{adding_arr} and deletion \ref{removing_arr} of an element of an array, and the subsequent update of the indexes.]{Addition \ref{adding_arr} and deletion \ref{removing_arr} of an element of an array and the subsequent update of the indexes.}
 \label{array_2}
 \end{figure}
 
 \section{Linked List}
 \label{linkedlist}
-A \textbf{linked list} is a linear collection in which each element has the data, and the reference to the next element (a link) \cite{wikilinkedlist}. 
+A \textbf{linked list} is a linear collection in which each element has the data and the reference to the next one (a link) \cite{wikilinkedlist}. 
 
 \begin{figure}[H]
 \centering
@@ -126,7 +126,7 @@ A \textbf{linked list} is a linear collection in which each element has the data
 \draw[->, >=stealth] (r5.west) -- (c.two east); 
 \end{tikzpicture}
 
-\caption[An example of a linked list with the data and the reference to the next element.]{An example of a linked list with the data and the reference to the next element.}
+\caption[An example of a linked list with the data and the reference to the next one.]{An example of a linked list with the data and the reference to the next one.}
 \label{linked_list_1}
 \end{figure}
 
@@ -195,13 +195,13 @@ Operations like adding or removing an element in a linked list are very efficien
 \draw ($(c) + (0,-5mm)$) node[draw=none, rectangle, align=left] (r3) {\textcolor{BrickRed}{$0x02$}};
 \end{tikzpicture}
 
-\caption[Remove an element to a linked list.]{Remove an element to a linked list.}
+\caption[Remove an element of a linked list.]{Remove an element of a linked list.}
 \label{linked_list_3}
 \end{figure}
 
 The complexity for adding or removing an element is constant \(O(1)\).
 
-Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}), in which every element has the reference to the previous and next element of the collection \cite{wikidoublylinkedlist}.
+Linked lists can be also \textbf{doubly linked lists} (Figure \ref{linked_list_4}), in which every element has the reference to the previous and the next one of the collection \cite{wikidoublylinkedlist}.
 
 \begin{figure}[H]
 \centering
@@ -223,7 +223,7 @@ Linked lists can be also \textbf{doubly linked list} (Figure \ref{linked_list_4}
   \draw[*->, >=stealth] let \p1 = (c.three), \p2 = (c.center) in (\x1,\y2) -- (d);
   \path[*->, >=stealth] ($(c.one)+(0.1,0.1)$) edge [bend left] ($(b.three)+(0,-0.05)$);
 \end{tikzpicture}
-\caption[Doubly linked list.]{Doubly linked list.}
+\caption[A doubly linked list.]{A doubly linked list.}
 \label{linked_list_4}
 \end{figure}
 
@@ -281,7 +281,7 @@ class LinkedList():
 
 \section{Stack}
 \label{stack}
-A \textbf{stack} is an abstract data type belonging to collections, in which only two operations are allowed \cite{wikistack}:
+A \textbf{stack} is an abstract data type belonging to collections in which only two operations are allowed \cite{wikistack}:
 \begin{itemize}
 \item[•] addition of an element at the top of the stack (\textbf{push}),
 \item[•] deletion of the newest element of the stack (\textbf{pop}).
@@ -350,7 +350,7 @@ A \textbf{queue} is an abstract data type belonging to collections and very simi
 \item[•] deletion of the element at the front of the queue (\textbf{Deque}),
 \item[•] observation of the element at the front of the queue (\textbf{Pick}).
 \end{itemize}
-For adding and removing operations the complexity remain constant. Queues usually use the \textbf{First In, First Out} (\textbf{FIFO}) methodology. 
+For addition and deletion operations the complexity remain constant. Queues usually use the \textbf{First In, First Out} (\textbf{FIFO}) methodology. 
 
 The most efficient way to implement a queue is by using linked lists.
 
@@ -373,7 +373,7 @@ The most efficient way to implement a queue is by using linked lists.
     \draw[->, >=stealth] (0.25,-1.05) -- (dequeue.north);
     \draw[->, >=stealth] (enqueue.south) -- (-0.25,1.05);
 \end{tikzpicture}
-\caption[Allowed operations on a queue.]{In a queue an element can be added only at the back (enqueue), and can be removed only at the front (dequeue).}
+\caption[Allowed operations on a queue.]{In a queue an element can be added only at the back (enqueue) and can be removed only at the front (dequeue).}
 \label{queue_1}
 \end{figure}
 
@@ -406,7 +406,7 @@ A generalization of queues and linked lists are \textbf{deques}, in which it is 
     \draw[->, >=stealth] (enqueue1.north) -- (-0.25,-1.05);
     \draw[->, >=stealth] (0.25,1.05) -- (dequeue1.south);
 \end{tikzpicture}
-\caption[Allowed operations on a deque.]{In a deque the operations can be done on both the head and the tail.}
+\caption[Allowed operations on a deque.]{In a deque the operations can be done on both the back and the front.}
 \label{queue_2}
 \end{figure}
 
@@ -484,9 +484,9 @@ A \textbf{hash table} or \textbf{hash map} is a data structure that implements t
 \subsection{Hashing}
 Hashing is an operation that allows to map data of an arbitrary size to a fixed-size values, called \textbf{hash values}. The necessary time for finding a value inside an ordered or unordered collection grows linearly with its size. By using a hash function to index the values with more efficient ones, the search of an element can be done in nearly constant time. Moreover, hashing avoids the exponential storage requirements of direct access of state spaces of large or variable-length keys.
 
-Let us consider an array which stores big random numbers. A simple way for hashing these numbers, for example, is to consider only the last digits (56 and 17) and divide them for a fixed number. The reminder of the division is used as the new index for the hash table where the numbers are stored (Figure \ref{map_2}).
+Let us consider an array which stores big random numbers. A simple way for hashing these numbers, for example, is to consider only the last digits (\(56\) and \(17\)) and divide them for a fixed number. The reminder of the division is used as the new index for the hash table where the numbers are stored (Figure \ref{map_2}).
 
-But what happen when the hash function transforms two different numbers into the same one? In this case we have a \textbf{collision}, and for solving this problem we have several strategies. One way could be to change to a better hash function, or, alternatively, we could use an array, called \textbf{bucket}, for storing different values associated to the same key. The worst case complexity for a search in the bucket is \(O(n)\) (Figure \ref{map_2}).
+But what happen when the hash function transforms two different numbers into the same one? In this case we have a \textbf{collision} and for solving this problem we have several strategies. One way might be to use a better hash function, or, alternatively, we might use an array, called \textbf{bucket}, for storing different values associated to the same key. The worst case complexity for a search in the bucket is \(O(n)\) (Figure \ref{map_2}).
 
 \begin{figure}[H]
 \centering
@@ -541,19 +541,19 @@ But what happen when the hash function transforms two different numbers into the
 \label{map_2}
 \end{figure}
 
-It does not exist a perfect hash function, and a trade off must always be reached. A way to analyse a hash function is by using the \textbf{Load Factor} defined as: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save 10 values using 1000 buckets the \(Load Factor\) is equal to \(0.01\), and most of the buckets are empty. In this case it is convenient to change the hash function by using less buckets. More the \(Load Factor\) is closed to \(0\) more the hash table will be empty (\textbf{sparse}), and more the \(Load Factor\) is closed to 1 more the hash table will be full and efficient. In case the \(Load Factor\) is bigger than 1 there is the certainty that there will be some collisions.
+It does not exist a perfect hash function and a trade off must always be reached. A way to analyse a hash function is by using the \textbf{Load Factor} defined as: \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets\). For example, if we want to save \(10\) values using \(1000\) buckets the \(Load Factor\) is equal to \(0.01\), leaving most of the buckets empty. In this case it is convenient to change the hash function by using less buckets. More the \(Load Factor\) is closed to \(0\) more the hash table will be empty (\textbf{sparse}), and more the \(Load Factor\) is closed to 1 more the hash table will be full and efficient. In case the \(Load Factor\) is bigger than 1 there is the certainty that there will be some collisions.
 
-Another example of hash function: let us consider a hash function that divide the numbers by 100. If we consider 100 values all multiple of 5, we have \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets = 100/100 = 1\). This way is very slow, and a different configuration should be used to make this more efficient. For example if we use 107 buckets, we still avoid collisions and we do not have the hash map too much sparse.
+Another example of hash function: let us consider a hash function that divide the numbers by 100. If we consider 100 values all multiple of 5, we have \(Load \ Factor = \# \ of \ entries / \ \# \ of \ buckets = 100/100 = 1\). This way is very slow, and a different configuration should be used to make this more efficient. For example, if we use \(107\) buckets, we still avoid collisions, and we do not have the hash map too much sparse.
 
 \section{String Keys}
-Let us consider a hash function that associates a word to a numerical value. For example we can use the ASCII character encoding of the first two letters of the string as numerical value. Thus, in case of \textit{UDACIY} we have \textit{U}=\(85\) and \textit{D}=\(68\). The hash function we can use might be: \(S\left[0\right] * 31^{(n-1)} + S\left[1\right] * 31^{(n-2)} + \ldots + S\left[n-1\right]\), where \(n\) is the length of the string. In this way for the word in the previous example, in which only the first two letters are encoded in a numerical value for simplicity, we have \(85*31^{1} + 68 = 2703\).
+Let us consider a hash function that associates a word to a numerical value. For example, we can use the ASCII character encoding of the first two letters of the string as numerical value. Thus, in case of \textit{UDACIY} we have \textit{U}=\(85\) and \textit{D}=\(68\). The hash function we can use might be: \(S\left[0\right] * 31^{(n-1)} + S\left[1\right] * 31^{(n-2)} + \ldots + S\left[n-1\right]\), where \(n\) is the length of the string. In this way for the word in the previous example, in which only the first two letters are encoded in a numerical value for simplicity, we have \(85*31^{1} + 68 = 2703\).
 
-This hash function works very well because it assures a very low probability of collision. \(31\) is a number empirically obtained by several researches, and showed good results in hashing strings.
+This hash function works very well because it assures a very low probability of collision. \(31\) is a number empirically obtained by several researches and showed good results in hashing strings.
 
 \subsection{String Keys Implementation}
 The following is the implementation of the string key map in Python.
 
-The hash function of this implementation is: \(Hash \ Function = (ASCII[0]*100) + ASCII[1]\). In this code \textit{ord()} and \textit{char()} functions of Python are used. \textit{ord()} takes a char as an argument and returns the respective ASCII code (\(ord('U')=85\)), and \textit{char()} takes a numeric value as ASCII code and returns the respective char (\(char(85)='U'\)).
+The hash function of this implementation is: \(Hash \ Function = (ASCII[0]*100) + ASCII[1]\). In the following code \textit{ord()} and \textit{char()} of the standard library of Python are used. \textit{ord()} takes a char as an argument and returns the respective ASCII code (\(ord('U')=85\)), and \textit{char()} takes a numeric value as ASCII code and returns the respective char (\(char(85)='U'\)).
 \begin{lstlisting}[firstnumber=1, caption={String key implementation.}]
 class HashTable():
 	def __init__(self):

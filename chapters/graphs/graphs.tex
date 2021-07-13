@@ -1,6 +1,6 @@
 \chapter{Graphs}
 \label{chp:graphs}
-In this chapter are introduced the fundamental concepts of \textbf{graphs} as a mathematical object, and as an abstract data type, its applications to computer science, and the most important and notable algorithms with their implementations. 
+In this chapter are introduced the fundamental concepts of \textbf{graph} as a mathematical object and as an abstract data type, its applications to computer science, and the most important and notable algorithms with their implementations. 
  
 \section{General Definitions}
 A graph is a discrete mathematical structure in which the connections between its elements and their relationship are highlighted. A graph is made up by two different elements: \textbf{nodes} or \textbf{vertices}, and \textbf{links} or \textbf{edges}. In case the links do not have any direction the graph is called \textbf{undirected graph} (Figure \ref{undirect_a}), in case, instead, the links have a direction the graph is called \textbf{directed graph} (Figure \ref{direct_b}).
@@ -55,7 +55,7 @@ A \textbf{tree} (Chapter \ref{chp:trees}) is a special kind of graph.
 
 Graphs are very useful to describe a lot of real situations like: connections between people, computers (internet), web pages (world wide web), airports, cities, and gene inside the DNA.
 
-In graphs, differently to trees, closed loops can exist. These kind of closed loops can be dangerous for the algorithms since they could lead to infinite executions.
+In graphs, unlike trees, closed loops can exist. These kind of closed loops can be dangerous for the algorithms since they could lead to infinite executions.
 
 \subsection{Connectivity}
 \textbf{Connectivity} is a measure that describes how much the nodes of a graph are connected. It is defined as the minimum number of elements (nodes or edges) that need to be removed to separate the remaining nodes into isolated subgraphs \cite{wikiconnectivity}.
@@ -162,7 +162,7 @@ The \textbf{adjacency list} is a list containing a separate list for each node c
 \end{figure}
 
 \subsection{Adjacency Matrix}
-The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\) represent the relationship between the edge \(i\) with the edge \(j\). If between \(i\) and \(j\) there is an edge \(A[i, j] = 1\), otherwise \(0\). In case an edge go out and enter in the same node \(A[i, i] = 1\). For undirected graphs this matrix is symmetric, and in case there are not edges going in and out the same node the principal diagonal is all of \(0\).
+The \textbf{adjacency matrix} is a matrix \(A\) in which each element \(A[i, j]\) represents the relationship between the edge \(i\) with the edge \(j\). If between \(i\) and \(j\) there is an edge \(A[i, j] = 1\), otherwise \(0\). In case an edge go out and enter in the same node \(A[i, i] = 1\). For undirected graphs this matrix is symmetric, and in case there are not edges going in and out the same node the principal diagonal is all of \(0\).
 
 \begin{figure}[H]
 \centering
@@ -324,7 +324,7 @@ Using a tree it is possible to visualize how the graph is traversed. For the gra
 
 In appendix \ref{graphimplementationtraversalappendix} there is the detailed implementation, with also an additional example.
 \subsection{Eulerian Path and Circuit}
-An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit}. Not every graph has an Eulerian path, and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
+An \textbf{Eulerian path} (or \textbf{Eulerian trail}) is a path of edges that visits all the edges in a graph exactly once \cite{wikieulerianpathcircuit}. Not every graph has an Eulerian path and even if a graph has an Eulerian path it could be found only at specific starting nodes (Figure \ref{graphs_8}).
 
 \begin{figure}[H]
 \centering

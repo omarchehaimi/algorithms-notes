@@ -1,12 +1,8 @@
 # Notes on Data Structures and Algorithms in Python
 
-In this LaTeX project I collected all the materials I studied during the last years on the topic of data structures and algorithms. The main sources are the Udacity online course [Intro to Data Structures and Algorithms](https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513), and the book of M.T. Goodrich, R. Tamassia, and M.H. Goldwasser, *Data Structures and Algorithms in Python* (John Wiley & Sons, Incorporated, 2013). I also added some additional materials from webpages, and YouTube educational videos.
+In this LaTeX project I collected all the material I studied during the last years on the topic of data structures and algorithms. The main sources are the Udacity online course [Intro to Data Structures and Algorithms in Python](https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513), and the book of M.T. Goodrich, R. Tamassia, and M.H. Goldwasser, *Data Structures and Algorithms in Python* (John Wiley \& Sons, Incorporated, 2013). I also used some additional material from webpages and YouTube educational videos.
 
-These notes are not intended to be a book, nor a formal introduction to
-data structures and algorithms, they are just my personal attempt to have a
-small, yet comprehensive notes about the huge world on this topic.
-
-
+These notes are not intended to be a book, nor a formal introduction to data structures and algorithms, they are just my personal attempt to have concise notes of the huge world on this topic.
 
 The notes were written in LaTeX by using the `classicthesis` typographical look ([ClassicThesis](https://ctan.org/pkg/classicthesis)).
 
