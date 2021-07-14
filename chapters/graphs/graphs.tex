@@ -403,7 +403,7 @@ An \textbf{Eulerian circuit} (or \textbf{Eulerian cycle}) is an Eulerian path wh
 In the following table are summarized some rules for finding if a graph has Eulerian path and/or circuit \cite{eulerpathcircuit}.
 
 \begin{table}[H]
-	\caption[Eulerian path and circuit existence rules.]{Eulerian path and circuit existence rules.}
+	\caption[Eulerian path and circuit existence rules.]{Eulerian path and circuit existence rules \cite{eulerpathcircuit}.}
 	\label{eulerpathcircuit}
 	\centering
 	\begin{tabular}{| l | p{0.33\linewidth} | p{0.33\linewidth} |}
@@ -467,7 +467,7 @@ A \textbf{Hamiltonian path} (or \textbf{traceable path}) is a path in which all 
 \end{figure}
 
 \subsection{Shortest Path Problem}
-The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath}. The breadth-first search can be used for finding the shortest path from a node to all the others, but it expects that all the edges are of the same nature, and in several situations this approach is not useful. Let us image we would like to find the best path connecting two cities. In this case the links between the nodes are not the same, since some streets are faster or slower than others. Another interesting application of finding the shortest path in graphs, is about routing packages from a computer to another in order to be as fast as possible.
+The \textbf{shorted path problem} is the problem of finding a path between two nodes such that the sum of the weights is minimized. In case of an undirected graph the shortest path is the path that pass through the minimum number of nodes \cite{wikishortestpath}. The breadth-first search can be used for finding the shortest path from a node to all the others, but it expects that all the edges are of the same nature and in several situations this approach is not useful. Let us image we would like to find the best path connecting two cities. In this case the links between the nodes are not the same, since some streets are faster or slower than others. Another interesting application of finding the shortest path in graphs is about routing packages from a computer to another in order to be as fast as possible.
 
 \begin{figure}[H]
 
@@ -500,19 +500,19 @@ The \textbf{shorted path problem} is the problem of finding a path between two n
 
 \subsection{Dijkstra's Algorithm}
 \label{sec:dijkstra}
-The Dijkstra's single source shortest path algorithm for a non-negative weighted graphs, finds all the shortest paths from a given node to all the others. The distance between two nodes is the sum of the weights of the edges of the path \cite{wikidijkstra}.
+The Dijkstra's single source shortest path algorithm for non-negative weighted graphs, finds all the shortest paths from a given node to all the others. The distance between two nodes is the sum of the weights of the edges of the path \cite{wikidijkstra}.
 
-This algorithm is part of a broader class of algorithms which are called \textbf{greedy algorithms}. In the greedy algorithms the optimal solution is found by finding the optimal solution at every step without considering the previous ones. Anyway, this approach does not always find the optimal solution of a problem. A more advanced technique to greedy algorithm is \textbf{dynamic programming}, which will be the topic of the next chapter.
+This algorithm is part of a broader class of algorithms which are called \textbf{greedy algorithms}. In the greedy algorithms the optimal solution is found by finding the optimal solution at every step without considering the previous ones. However, this approach does not always find the optimal solution of a problem. A more advanced technique to greedy algorithm is \textbf{dynamic programming}, which will be the topic of the next chapter (Chapter \ref{chp:dynamicprogramming}).
 
 \paragraph{Relaxation}
-Before introducing the Dijkstra's algorithm it is important to introduce the \textbf{relaxation condition}. Let us consider the weighted directed graph of Figure \ref{graphs_12}. The cost for going from node \(a\) to node \(u\) is \(2\), and \(\infty\) from \(a\) to \(v\), since there is not any direct link between that nodes. The relaxation condition is then:
+Before introducing the Dijkstra's algorithm it is important to introduce the \textbf{relaxation condition}. Let us consider the weighted directed graph of Figure \ref{graphs_12}. The cost for going from node \(a\) to node \(u\) is \(2\), and \(\infty\) from \(a\) to \(v\), since there is not any direct link between those nodes. The relaxation condition is then:
 
 \begin{definition}[Relaxation condition]
 \enspace \enspace \textnormal{if (d[u] + w(u, v) < d[v])}
 
 \enspace \enspace \enspace     \textnormal{d[v] = d[u] + w(u, v)}
 
-Where \(d[u]\) is the distance of node u from the starting node (\(1\) in this case), and \(w(u, v)\) is the weight from the node \(u\) to node \(v\).
+Where \(d[u]\) is the distance of node u from the starting node, and \(w(u, v)\) is the weight from the node \(u\) to node \(v\).
 \end{definition}
 
 \begin{figure}[H]
@@ -542,7 +542,7 @@ Where \(d[u]\) is the distance of node u from the starting node (\(1\) in this c
 \label{graphs_12}
 \end{figure}
 
-In other words the relaxation condition says that if there is a shorter path connecting two nodes, this distance should be used as the new distance.
+In other words, the relaxation condition says that if there is a shorter path connecting two nodes, this distance should be used as the new distance.
 
 In the Dijkstra's algorithm at each step the new node is chosen based on the lowest value of the distance at that given step, and eventually the distances for all the adjacent nodes are updated accordingly the relaxation condition.
 
@@ -580,7 +580,7 @@ Let us consider the graph in Figure \ref{graphs_13}, and let us start from the n
 \label{graphs_13}
 \end{figure}
 
-For describing how the algorithm works we use the following table, in which for each column there is a node, and at every step a new row is added for the node for which the shortest path has just been found. At the first step the table looks like:
+To describe how the algorithm works we use the following table. For each column there is a node and at every step a new row is added for the node for which the shortest path has just been found. At the first step the table looks like:
 
 \begin{table}[H]
 \centering
@@ -606,7 +606,7 @@ At the second step the lowest distance is chosen: in this case it is for the nod
 \end{tabular}
 \end{table}
 
-The process is repeated again: the lowest distance is chosen, in this case is the distance to reach the node \(e\). As for the previous step we check for all nodes if it is shorter to pass through the new shortest path found, and in case true the weight are updated (relaxation condition). At this step the weight to be updated is the one for the node \(b\) because for reaching it from \(a\) the weight is \(50\) (\(50_{a}\)), while for reaching it passing through \(e\) (which in turn for be reached with its shortest path we have to go through \(d\), which in turn again is reached with its shortest path from \(a\)) is \(45\) (\(25_{d} + 20_{e, b}=45_{e}< 50_{a}\)).
+The process is repeated again: the lowest distance is chosen. In this case is the distance to reach the node \(e\). As for the previous step we check for all nodes if it is shorter to pass through the new shortest path found and if true the weights are updated (relaxation condition). At this step the weight to be updated is the one for the node \(b\) because for reaching it from \(a\) the weight is \(50\) (\(50_{a}\)), while for reaching it passing through \(e\) (which in turn for be reached with its shortest path we have to go through \(d\), which in turn again is reached with its shortest path from \(a\)) is \(45\) (\(25_{d} + 20_{e, b}=45_{e}< 50_{a}\)).
 
 \begin{table}[H]
 \centering
@@ -667,7 +667,7 @@ All the shortest paths from \(a\) are:
 \item f: \(\infty\).
 \end{itemize}
 
-For example for finding the shortest path for reaching the node \(b\) the steps to follow are:
+For example, to find the shortest path to reach the node \(b\) the steps to follow are:
 
 \begin{table}[H]
 	\centering

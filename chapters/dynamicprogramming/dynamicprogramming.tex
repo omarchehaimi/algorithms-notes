@@ -5,9 +5,9 @@ In this chapter are introduced the fundamental concepts of \textbf{dynamic progr
 \section{General Definitions}
 Dynamic programming is a mathematical optimization and a computer programming method \cite{wikidynamicprogramming}.
 
-In computer science a problem which can be solved with dynamic programming must have an optimal substructure (the problem can be broken down in smaller parts), and an overlapping sub-problems (the broken down problems share some results). If a problem can be solved with an optimal substructure but with non-overlapping sub-problems, then the strategy is called \textbf{divide and conquer}.
+In computer science a problem can be solved with dynamic programming if it has an optimal substructure (the problem can be broken down in smaller parts) and has an overlapping sub-problems (the broken down problems share some results). If a problem can be solved with an optimal substructure but with non-overlapping sub-problems, then the strategy is called \textbf{divide and conquer}.
 
-When a problem is solved with dynamic programming, the starting point is to find the \textbf{base case}, which is the sub-problem with the lowest computational cost. Once solved this problem its result is saved in a table called \textbf{lookup table}, and the same general formula is used recursively. At each step the result is saved in the lookup table, since in the following steps might be used for calculating new results. Instead of calculating the same value again, we look at the lookup table and retrieve it. This aspect of dynamic programming makes this technique extremely powerful, since most of the calculations must not be repeated several times.
+When a problem is solved with dynamic programming, the starting point is to find the \textbf{base case}, which is the sub-problem with the lowest computational cost. Once solved this problem its result is saved in a table called \textbf{lookup table}, and the same general formula is used recursively. At each step the result is saved in the lookup table, since in the following steps might be used to calculate new results. Instead of calculating the same value again, we look at the lookup table and retrieve it. This aspect of dynamic programming makes this technique extremely powerful, since most of the calculations must not be repeated several times.
 
 For example, in the calculation of the Fibonacci numbers we have to use the same function several times in different sub-problems. Let us suppose we want to calculate the fifth number of the Fibonacci sequence:
 
@@ -51,7 +51,7 @@ Some values are used several times in different sub-problems as shown in the fol
 If the values of the functions which are repeated are stored in a lookup table, instead of calculating them again, they are retrieved from the table and used.
 
 \section{Knapsack Problem}
-Let us consider a knapsack with a limited capacity of weight and number of objects, which are defined by a value and a weight. Let us also consider that not all the available objects can be carried. Which objects we can put in the knapsack in order to have the optimal weight-value in the limits of the maximum weight \cite{wikiknapsackproblem}? In this case we consider to take or not the an entire object, and it is said the \textbf{\(0/1\) knapsack problem} . In some variants it is possible to take a fraction of an object.
+Let us consider a knapsack with a limited capacity of weight and number of objects, which are defined by a value and a weight. Let us also consider that not all the available objects can be carried. Which objects can we put in the knapsack in order to have the optimal weight-value in the limits of the maximum weight \cite{wikiknapsackproblem}? In this case we consider to take or not an entire object, and it is said the \textbf{\(0/1\) knapsack problem} . In some variants it is possible to take a fraction of an object.
 
 \begin{figure}[H]
 \centering
